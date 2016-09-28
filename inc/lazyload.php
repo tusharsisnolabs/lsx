@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *   envira_gallery_output_image
  */
 class LSX_LazyLoadImages {
-	
+
 	protected static $enabled = true;
 
 	protected static $noscript_id = 0;
@@ -75,7 +75,7 @@ class LSX_LazyLoadImages {
 			|| is_preview()
 			|| intval( get_query_var( 'print' ) ) == 1
 			|| intval( get_query_var( 'printpage' ) ) == 1
-			|| strpos( $_SERVER['HTTP_USER_AGENT'], 'Opera Mini' ) !== false
+			|| strpos( sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ), 'Opera Mini' ) !== false
 		) {
 			return $content;
 		}

@@ -113,7 +113,7 @@ $customizer_colour_choices = apply_filters( 'lsx_customizer_colour_choices', arr
 			'#232222',
 			'#ffffff',
 			'#337ab7',
-			'#969696'
+			'#969696',
 		) )
 	),
 	'red' => array(
@@ -169,7 +169,7 @@ $customizer_colour_choices = apply_filters( 'lsx_customizer_colour_choices', arr
 			'#232222',
 			'#ffffff',
 			'#b64d3f',
-			'#969696'
+			'#969696',
 		) )
 	),
 	'orange' => array(
@@ -225,7 +225,7 @@ $customizer_colour_choices = apply_filters( 'lsx_customizer_colour_choices', arr
 			'#232222',
 			'#ffffff',
 			'#e4701e',
-			'#969696'
+			'#969696',
 		) )
 	),
 	'green' => array(
@@ -281,7 +281,7 @@ $customizer_colour_choices = apply_filters( 'lsx_customizer_colour_choices', arr
 			'#232222',
 			'#ffffff',
 			'#596b46',
-			'#969696'
+			'#969696',
 		) )
 	),
 	'brown' => array(
@@ -337,9 +337,7 @@ $customizer_colour_choices = apply_filters( 'lsx_customizer_colour_choices', arr
 			'#232222',
 			'#ffffff',
 			'#8c6a45',
-			'#969696'
+			'#969696',
 		) )
 	)
 ) );
-
-?>

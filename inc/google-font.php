@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Google_Font Class
 **/
 class LSX_Google_Font {
-	
+
 	private $title; // the name of the font
 	private $location; // the http location of the font file
 	private $cssDeclaration; // the css declaration used to reference the font
