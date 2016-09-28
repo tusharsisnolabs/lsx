@@ -1,7 +1,7 @@
 <?php
 /**
  * The template used for displaying page content in page.php
- * 
+ *
  * @package lsx
  */
 ?>
@@ -20,11 +20,12 @@
 				'before' => '<div class="lsx-postnav-wrapper"><div class="lsx-postnav">',
 				'after' => '</div></div>',
 				'link_before' => '<span>',
-				'link_after' => '</span>'
+				'link_after' => '</span>',
 			) );
 		?>
 	</div><!-- .entry-content -->
-	<?php edit_post_link( __( 'Edit', 'lsx' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+	
+	<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 
 	<?php lsx_entry_bottom(); ?>
 	
