@@ -56,10 +56,10 @@ global $lsx_options;
 			    <div class="header-links">
 					<strong><?php esc_html_e( 'Get your Tourism Establishment Online', 'lsx' ); ?></strong>
 					
-					<?php 
-						if ( is_singular( 'landing-page' ) ) { 
+					<?php
+						if ( is_singular( 'landing-page' ) ) {
 							$email_address = get_post_meta( get_the_ID(), 'email_address', true );
-							
+
 							if ( false === $email_address ) {
 								$email_address = 'email@address.com';
 							}
@@ -74,5 +74,5 @@ global $lsx_options;
 		</header>
 
 		<?php lsx_header_after(); ?>
-		
+
 	<?php endif;
