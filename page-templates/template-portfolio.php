@@ -41,10 +41,10 @@ get_header(); ?>
 
 				$args = array(
 					'post_type'      => 'jetpack-portfolio',
-					'posts_per_page' => -1,
+					'posts_per_page' => 100,
 				);
 
-				$project_query = new WP_Query ( $args );
+				$project_query = new WP_Query( $args );
 				if ( post_type_exists( 'jetpack-portfolio' ) && $project_query->have_posts() ) :
 			?>
 			

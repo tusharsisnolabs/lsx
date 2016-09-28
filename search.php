@@ -24,9 +24,14 @@ get_header(); ?>
 				if ( '1c' === $layout ) {
 					lsx_breadcrumbs();
 				}
-			?>	
+			?>
 
-			<?php if ( have_posts() ) : global $lsx_archive; $lsx_archive = 1; ?>
+			<?php
+				global $lsx_archive;
+				$lsx_archive = 1;
+			?>
+
+			<?php if ( have_posts() ) : ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -40,7 +45,9 @@ get_header(); ?>
 
 				<?php lsx_get_template_part( 'content', 'none' ); ?>
 
-			<?php endif; $lsx_archive = 0; ?>
+			<?php endif; ?>
+
+			<?php $lsx_archive = 0; ?>
 
 			<?php lsx_content_bottom(); ?>
 

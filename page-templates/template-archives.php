@@ -31,10 +31,22 @@ get_header(); ?>
 						<ul>
 							<?php $loop = new WP_Query( array( 'posts_per_page' => 30 ) ); ?>
 							
-							<?php if ( $loop->have_posts() ) { while ( $loop->have_posts() ) { $loop->the_post(); ?>
-								<?php $loop->is_home = false; ?>
-								<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php the_time( get_option( 'date_format' ) ); ?> - <?php echo $post->comment_count; ?> <?php esc_html_e( 'comments', 'lsx' ); ?></li>
-							<?php } } wp_reset_postdata(); ?>
+							<?php if ( $loop->have_posts() ) : ?>
+								
+								<?php while ( $loop->have_posts() ) : ?>
+									
+									<?php
+										$loop->the_post();
+										$loop->is_home = false;
+									?>
+									
+									<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php the_time( get_option( 'date_format' ) ); ?> - <?php echo esc_html( $post->comment_count ); ?> <?php esc_html_e( 'comments', 'lsx' ); ?></li>
+								
+								<?php endwhile; ?>
+
+							<?php endif; ?>
+
+							<?php wp_reset_postdata(); ?>
 						</ul>
 
 						<h2><?php esc_html_e( 'Categories', 'lsx' ); ?></h3>
