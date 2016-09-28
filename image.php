@@ -37,12 +37,12 @@ get_header();
 									esc_html__( 'Published', 'lsx' ),
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() ),
-									esc_html__( 'at', 'lsx' );
+									esc_html__( 'at', 'lsx' ),
 									esc_url( wp_get_attachment_url() ),
 									esc_attr( $metadata['width'] ),
 									esc_attr( $metadata['height'] ),
 									esc_html__( 'in', 'lsx' ),
-									get_permalink( $post->post_parent ),
+									esc_url( get_permalink( $post->post_parent ) ),
 									get_the_title( $post->post_parent )
 								);
 							?>
@@ -126,7 +126,7 @@ get_header();
 					<?php lsx_entry_bottom(); ?>
 
 				</article><!-- #post-<?php the_ID(); ?> -->
-				
+
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
 					if ( comments_open() || '0' != get_comments_number() ) :
