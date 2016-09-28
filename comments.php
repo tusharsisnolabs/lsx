@@ -27,12 +27,7 @@ if ( have_comments() ) : ?>
 		<h3>
 			<?php
 				$count = get_comments_number();
-
-				if ( 1 === $count ) {
-					printf( esc_html__( 'One Response to &ldquo;%2$s&rdquo;', 'lsx' ), esc_html( number_format_i18n( $count ) ), get_the_title() );
-				} else {
-					printf( esc_html( _n( 'One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', $count, 'lsx' ) ), esc_html( number_format_i18n( $count ) ), get_the_title() );
-				}
+				printf( esc_html( _n( 'One Response to &ldquo;%2$s&rdquo;', '%1$s Responses to &ldquo;%2$s&rdquo;', $count, 'lsx' ) ), esc_html( number_format_i18n( $count ) ), get_the_title() );
 			?>
 		</h3>
 
