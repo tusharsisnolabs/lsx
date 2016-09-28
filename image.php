@@ -32,16 +32,16 @@ get_header();
 						<div class="entry-meta">
 							<?php
 								$metadata = wp_get_attachment_metadata();
-								
+
 								printf( wp_kses_post( '%1$s <span class="entry-date"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></span> %4$s <a href="%5$s">%6$s &times; %7$s</a> %8$s <a href="%9$s" title="%10$s" rel="gallery">%10$s</a>' ),
-									esc_html__( 'Published', 'lsx' );
+									esc_html__( 'Published', 'lsx' ),
 									esc_attr( get_the_date( 'c' ) ),
 									esc_html( get_the_date() ),
 									esc_html__( 'at', 'lsx' );
 									esc_url( wp_get_attachment_url() ),
 									esc_attr( $metadata['width'] ),
 									esc_attr( $metadata['height'] ),
-									esc_html__( 'in', 'lsx' );
+									esc_html__( 'in', 'lsx' ),
 									get_permalink( $post->post_parent ),
 									get_the_title( $post->post_parent )
 								);
@@ -73,9 +73,9 @@ get_header();
 									$k++;
 									// If there is more than 1 attachment in a gallery
 									if ( count( $attachments ) > 1 ) {
-										if ( isset( $attachments[$k] ) ) {
+										if ( isset( $attachments[ $k ] ) ) {
 											// get the URL of the next image attachment
-											$next_attachment_url = get_attachment_link( $attachments[$k]->ID );
+											$next_attachment_url = get_attachment_link( $attachments[ $k ]->ID );
 										} else {
 											// or get the URL of the first image attachment
 											$next_attachment_url = get_attachment_link( $attachments[0]->ID );
@@ -123,10 +123,10 @@ get_header();
 						<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<span class="edit-link">', '</span>' ); ?>
 					</footer><!-- .entry-meta -->
 
- 					<?php lsx_entry_bottom(); ?>
+					<?php lsx_entry_bottom(); ?>
 
 				</article><!-- #post-<?php the_ID(); ?> -->
- 
+				
 				<?php
 					// If comments are open or we have at least one comment, load up the comment template
 					if ( comments_open() || '0' != get_comments_number() ) :
