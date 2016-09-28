@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class LsxBootstrapNavwalker extends Walker_Nav_Menu {
 
 	/**
-	 * start_lvl
+	 * Method start_lvl
 	 *
 	 * @see Walker::start_lvl()
 	 * @since 3.0.0
@@ -20,17 +20,16 @@ class LsxBootstrapNavwalker extends Walker_Nav_Menu {
 	}
 
 	/**
-	 * filter_default_pages
+	 * Method filter_default_pages
 	 *
 	 * @param string $item Passed by reference. Used to append additional content.
 	 */
 	public function filter_default_pages( &$item ) {
-		
 		return $item;
-	}	
+	}
 
 	/**
-	 * start_el
+	 * Method start_el
 	 *
 	 * @see Walker::start_el()
 	 * @since 3.0.0
@@ -62,14 +61,13 @@ class LsxBootstrapNavwalker extends Walker_Nav_Menu {
 		 */
 		if ( 0 == strcasecmp( $item->attr_title, 'divider' ) && 1 === $depth ) {
 			$output .= $indent . '<li role="presentation" class="divider">';
-		} elseif ( 0 == strcasecmp( $item->title, 'divider') && 1 === $depth ) {
+		} elseif ( 0 == strcasecmp( $item->title, 'divider' ) && 1 === $depth ) {
 			$output .= $indent . '<li role="presentation" class="divider">';
-		} elseif ( 0 == strcasecmp( $item->attr_title, 'dropdown-header') && 1 === $depth ) {
+		} elseif ( 0 == strcasecmp( $item->attr_title, 'dropdown-header' ) && 1 === $depth ) {
 			$output .= $indent . '<li role="presentation" class="dropdown-header">' . esc_attr( $item->title );
 		} elseif ( 0 == strcasecmp( $item->attr_title, 'disabled' ) ) {
 			$output .= $indent . '<li role="presentation" class="disabled"><a href="#">' . esc_attr( $item->title ) . '</a>';
 		} else {
-
 			$class_names = $value = '';
 
 			$classes = empty( $item->classes ) ? array() : (array) $item->classes;
@@ -79,8 +77,9 @@ class LsxBootstrapNavwalker extends Walker_Nav_Menu {
 
 			$class_names = join( ' ', $classes );
 
-			if ( $args->has_children )
+			if ( $args->has_children ) {
 				$class_names .= ' dropdown';
+			}
 
 			if ( in_array( 'current-menu-item', $classes ) ) {
 				$class_names .= ' active';
@@ -193,19 +192,25 @@ class LsxBootstrapNavwalker extends Walker_Nav_Menu {
 	 */
 	public static function fallback( $args ) {
 		if ( current_user_can( 'manage_options' ) ) {
-			extract( $args );
+			$args = wp_parse_args( $args, array(
+				'container'       => null,
+				'container_id'    => null,
+				'container_class' => null,
+				'menu_id'         => null,
+				'menu_class'      => null,
+			) );
 
 			$fb_output = null;
 
-			if ( $container ) {
-				$fb_output = '<' . $container;
+			if ( $args['container'] ) {
+				$fb_output = '<' . $args['container'];
 
-				if ( $container_id ) {
-					$fb_output .= ' id="' . $container_id . '"';
+				if ( $args['container_id'] ) {
+					$fb_output .= ' id="' . $args['container_id'] . '"';
 				}
 
-				if ( $container_class ) {
-					$fb_output .= ' class="' . $container_class . '"';
+				if ( $args['container_class'] ) {
+					$fb_output .= ' class="' . $args['container_class'] . '"';
 				}
 
 				$fb_output .= '>';
@@ -213,20 +218,20 @@ class LsxBootstrapNavwalker extends Walker_Nav_Menu {
 
 			$fb_output .= '<ul';
 
-			if ( $menu_id ) {
-				$fb_output .= ' id="' . $menu_id . '"';
+			if ( $args['menu_id'] ) {
+				$fb_output .= ' id="' . $args['menu_id'] . '"';
 			}
 
-			if ( $menu_class ) {
-				$fb_output .= ' class="' . $menu_class . '"';
+			if ( $args['menu_class'] ) {
+				$fb_output .= ' class="' . $args['menu_class'] . '"';
 			}
 
 			$fb_output .= '>';
 			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">' . esc_html__( 'Add a menu', 'lsx' ) . '</a></li>';
 			$fb_output .= '</ul>';
 
-			if ( $container ) {
-				$fb_output .= '</' . $container . '>';
+			if ( $args['container'] ) {
+				$fb_output .= '</' . $args['container'] . '>';
 			}
 
 			echo wp_kses_post( $fb_output );
