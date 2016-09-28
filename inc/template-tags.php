@@ -419,7 +419,7 @@ if(!function_exists('lsx_nav_menu')){
 					'depth' => 3,
 					'container' => false,
 					'menu_class' => 'nav navbar-nav',
-					'walker' => new lsx_bootstrap_navwalker())
+					'walker' => new LsxBootstrapNavwalker())
 				);
 				?>
 		   		</nav>
@@ -591,7 +591,7 @@ function lsx_add_top_menu() {
 		    		<?php
 		    			wp_nav_menu( array(
 							'theme_location' => 'top-menu',
-							'walker' => new lsx_bootstrap_navwalker())
+							'walker' => new LsxBootstrapNavwalker())
 						);
 		    		?>
 		    	</nav>	

@@ -1,9 +1,13 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) return; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	return; // Exit if accessed directly
+}
 
-class lsx_bootstrap_navwalker extends Walker_Nav_Menu {
+class LsxBootstrapNavwalker extends Walker_Nav_Menu {
 
 	/**
+	 * start_lvl
+	 *
 	 * @see Walker::start_lvl()
 	 * @since 3.0.0
 	 *
@@ -14,8 +18,10 @@ class lsx_bootstrap_navwalker extends Walker_Nav_Menu {
 		$indent = str_repeat( "\t", $depth );
 		$output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu\">\n";
 	}
-	
+
 	/**
+	 * filter_default_pages
+	 *
 	 * @param string $item Passed by reference. Used to append additional content.
 	 */
 	public function filter_default_pages( &$item ) {
@@ -24,6 +30,8 @@ class lsx_bootstrap_navwalker extends Walker_Nav_Menu {
 	}	
 
 	/**
+	 * start_el
+	 *
 	 * @see Walker::start_el()
 	 * @since 3.0.0
 	 *
@@ -34,13 +42,13 @@ class lsx_bootstrap_navwalker extends Walker_Nav_Menu {
 	 * @param object $args
 	 */
 	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';	
-		
+		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+
 		/**
 		 * If this is a default menu being called we need to fix
 		 * the item object thats coming through.
 		 */
-		if(!isset($item->title)){
+		if ( ! isset( $item->title ) ) {
 			return;
 		}
 
@@ -52,13 +60,13 @@ class lsx_bootstrap_navwalker extends Walker_Nav_Menu {
 		 * comparison that is not case sensitive. The strcasecmp() function returns
 		 * a 0 if the strings are equal.
 		 */
-		if ( strcasecmp( $item->attr_title, 'divider' ) == 0 && $depth === 1 ) {
+		if ( 0 == strcasecmp( $item->attr_title, 'divider' ) && 1 === $depth ) {
 			$output .= $indent . '<li role="presentation" class="divider">';
-		} else if ( strcasecmp( $item->title, 'divider') == 0 && $depth === 1 ) {
+		} elseif ( 0 == strcasecmp( $item->title, 'divider') && 1 === $depth ) {
 			$output .= $indent . '<li role="presentation" class="divider">';
-		} else if ( strcasecmp( $item->attr_title, 'dropdown-header') == 0 && $depth === 1 ) {
+		} elseif ( 0 == strcasecmp( $item->attr_title, 'dropdown-header') && 1 === $depth ) {
 			$output .= $indent . '<li role="presentation" class="dropdown-header">' . esc_attr( $item->title );
-		} else if ( strcasecmp($item->attr_title, 'disabled' ) == 0 ) {
+		} elseif ( 0 == strcasecmp( $item->attr_title, 'disabled' ) ) {
 			$output .= $indent . '<li role="presentation" class="disabled"><a href="#">' . esc_attr( $item->title ) . '</a>';
 		} else {
 
@@ -68,30 +76,32 @@ class lsx_bootstrap_navwalker extends Walker_Nav_Menu {
 			$classes[] = 'menu-item-' . $item->ID;
 
 			$classes = apply_filters( 'lsx_nav_menu_css_class', array_filter( $classes ), $item, $args , $depth );
-			
+
 			$class_names = join( ' ', $classes );
 
 			if ( $args->has_children )
 				$class_names .= ' dropdown';
 
-			if ( in_array( 'current-menu-item', $classes ) )
+			if ( in_array( 'current-menu-item', $classes ) ) {
 				$class_names .= ' active';
-			
-			if ( in_array( 'current-menu-parent', $classes ) )
-				$class_names .= ' active';			
-			
+			}
+
+			if ( in_array( 'current-menu-parent', $classes ) ) {
+				$class_names .= ' active';
+			}
+
 			//Check if this is ment to be a "social" type menu
 			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
-			$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
+			$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
 			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
-			$output .= $indent . '<li' . $id . $value . $class_names .'>';
+			$output .= $indent . '<li' . $id . $value . $class_names . '>';
 
 			$atts = array();
 			$atts['title']  = ! empty( $item->title )	? $item->title	: '';
 			$atts['target'] = ! empty( $item->target )	? $item->target	: '';
-			$atts['rel']    = ! empty( $item->xfn )		? $item->xfn	: '';
+			$atts['rel']	= ! empty( $item->xfn )		? $item->xfn	: '';
 
 			// If item has_children add atts to a.
 			if ( $args->has_children ) {
@@ -123,21 +133,19 @@ class lsx_bootstrap_navwalker extends Walker_Nav_Menu {
 			 * property is NOT null we apply it as the class name for the glyphicon.
 			 */
 			if ( ! empty( $item->attr_title ) ) {
-				$item_output .= '<a'. $attributes .'"><span class="glyphicon ' . esc_attr( $item->attr_title ) . '"></span>&nbsp;';
+				$item_output .= '<a' . $attributes . '"><span class="glyphicon ' . esc_attr( $item->attr_title ) . '"></span>&nbsp;';
 			} else {
-				$item_output .= '<a'. $attributes .'>';
+				$item_output .= '<a' . $attributes . '>';
 			}
 
 			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 			$item_output .= ( $args->has_children && 0 === $depth ) ? ' <span class="caret"></span></a>' : '</a>';
 			$item_output .= $args->after;
 
-			
-			
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		}
 	}
-  
+
 	/**
 	 * Traverse elements to create list from elements.
 	 *
@@ -159,17 +167,19 @@ class lsx_bootstrap_navwalker extends Walker_Nav_Menu {
 	 * @return null Null on failure with no changes to parameters.
 	 */
 	public function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
-        if ( ! $element )
-            return;
+		if ( ! $element ) {
+			return;
+		}
 
-        $id_field = $this->db_fields['id'];
+		$id_field = $this->db_fields['id'];
 
-        // Display this element.
-        if ( is_object( $args[0] ) )
-           $args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
+		// Display this element.
+		if ( is_object( $args[0] ) ) {
+		   $args[0]->has_children = ! empty( $children_elements[ $element->$id_field ] );
+		}
 
-        parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-    }
+		parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+	}
 
 	/**
 	 * Menu Fallback
@@ -180,11 +190,9 @@ class lsx_bootstrap_navwalker extends Walker_Nav_Menu {
 	 * and will add a link to the WordPress menu manager if logged in as an admin.
 	 *
 	 * @param array $args passed from the wp_nav_menu function.
-	 *
 	 */
 	public static function fallback( $args ) {
 		if ( current_user_can( 'manage_options' ) ) {
-
 			extract( $args );
 
 			$fb_output = null;
@@ -192,42 +200,46 @@ class lsx_bootstrap_navwalker extends Walker_Nav_Menu {
 			if ( $container ) {
 				$fb_output = '<' . $container;
 
-				if ( $container_id )
+				if ( $container_id ) {
 					$fb_output .= ' id="' . $container_id . '"';
+				}
 
-				if ( $container_class )
+				if ( $container_class ) {
 					$fb_output .= ' class="' . $container_class . '"';
+				}
 
 				$fb_output .= '>';
 			}
 
 			$fb_output .= '<ul';
 
-			if ( $menu_id )
+			if ( $menu_id ) {
 				$fb_output .= ' id="' . $menu_id . '"';
+			}
 
-			if ( $menu_class )
+			if ( $menu_class ) {
 				$fb_output .= ' class="' . $menu_class . '"';
+			}
 
 			$fb_output .= '>';
-			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">'.__('Add a menu','lsx').'</a></li>';
+			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">' . esc_html__( 'Add a menu', 'lsx' ) . '</a></li>';
 			$fb_output .= '</ul>';
 
-			if ( $container )
+			if ( $container ) {
 				$fb_output .= '</' . $container . '>';
+			}
 
-			echo $fb_output;
+			echo wp_kses_post( $fb_output );
 		}
 	}
 }
 
-
 /**
  * Add in our custom classes to the menus
  */
-function wpml_nav_language_switcher_fix( $items , $args ) {
-	$items = str_replace('menu-item-language-current','menu-item-language-current dropdown',$items);
-	$items = str_replace('submenu-languages','submenu-languages dropdown-menu',$items);
+function wpml_nav_language_switcher_fix( $items, $args ) {
+	$items = str_replace( 'menu-item-language-current', 'menu-item-language-current dropdown', $items );
+	$items = str_replace( 'submenu-languages', 'submenu-languages dropdown-menu', $items );
 	return $items;
 }
 add_filter( 'wp_nav_menu_items', 'wpml_nav_language_switcher_fix', 10, 2 );
