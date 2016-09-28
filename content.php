@@ -8,12 +8,12 @@
 
 <?php lsx_entry_before(); ?>
 
-<?php 
-	if ( has_post_thumbnail() ) { 
+<?php
+	if ( has_post_thumbnail() ) {
 		$thumb_class = 'has-thumb';
 	} else {
 		$thumb_class = 'no-thumb';
-	} 
+	}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( $thumb_class ); ?>>
@@ -28,13 +28,13 @@
 			</div>
 		<?php endif; ?>
 
-		<?php 
+		<?php
 			$format = get_post_format();
 
 			if ( false === $format ) {
 				$format = 'standard';
 				$show_on_front = get_option( 'show_on_front', 'posts' );
-				
+
 				if ( 'page' == $show_on_front ) {
 					$archive_link = get_permalink( get_option( 'page_for_posts' ) );
 				} else {
@@ -55,7 +55,7 @@
 			<?php endif; ?>
 
 			<?php if ( has_post_format( array( 'link' ) ) ) : ?>
-				<a href="<?php echo lsx_get_my_url(); ?>" rel="bookmark"><?php the_title(); ?> <span class="fa fa-external-link"></span></a>
+				<a href="<?php echo esc_url( lsx_get_my_url() ); ?>" rel="bookmark"><?php the_title(); ?> <span class="fa fa-external-link"></span></a>
 			<?php else : ?>
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			<?php endif; ?>
@@ -74,7 +74,7 @@
 		<div class="entry-summary"> 
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
-	<?php elseif ( has_post_format( array('link') ) ) : ?>
+	<?php elseif ( has_post_format( array( 'link' ) ) ) : ?>
 
 	<?php else : ?>
 		<div class="entry-content">
