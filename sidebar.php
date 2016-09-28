@@ -14,13 +14,13 @@ if ( true !== $sidebar_enabled ) {
 
 $show_on_front = get_option( 'show_on_front' );
 
-if ( 'page' == $show_on_front && is_front_page() ) { 
-	$layout  = '1c'; 
+if ( 'page' == $show_on_front && is_front_page() ) {
+	$layout  = '1c';
 	$sidebar = 'home';
 } else {
 	$layout = get_theme_mod( 'lsx_layout', '2cr' );
 	$layout = apply_filters( 'lsx_layout', $layout );
-	
+
 	if ( 'posts' == $show_on_front && is_home() ) {
 		$sidebar = 'home';
 	} else {
