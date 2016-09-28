@@ -10,17 +10,15 @@
 
 			<?php lsx_content_top(); ?>
 			
-			<?php if(is_tax()){ ?> 
-				<div class="entry-content">		
+			<?php if ( is_tax() ) : ?> 
+				<div class="entry-content">
 					<?php the_archive_description(); ?>
 				</div>
-			<?php } ?>
+			<?php endif; ?>
 			
-			<?php
-				if ( post_type_exists( 'jetpack-portfolio' ) && have_posts() ) :
-			?>
+			<?php if ( post_type_exists( 'jetpack-portfolio' ) && have_posts() ) : ?>
 				
-				<?php if(!is_tax()){ lsx_portfolio_sorter(); } ?>
+				<?php if ( ! is_tax() ) { lsx_portfolio_sorter(); } ?>
 
 				<div class="filter-items-wrapper lsx-portfolio-wrapper">
 					<div id="portfolio-infinite-scroll-wrapper" class="filter-items-container lsx-portfolio masonry">
@@ -31,7 +29,7 @@
 						<?php endwhile; ?>
 					</div>
 				
-				<br clear="all" />	
+					<br clear="all" />
 				</div><!-- .portfolio-wrapper -->
 				
 				<?php lsx_paging_nav(); ?>
@@ -40,20 +38,22 @@
 
 				<section class="no-results not-found">
 					<header class="page-header">
-						<h1 class="page-title"><?php _e( 'Nothing Found', 'lsx' ); ?></h1>
+						<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'lsx' ); ?></h1>
 					</header><!-- .page-header -->
 
 					<div class="page-content">
+						
 						<?php if ( current_user_can( 'publish_posts' ) ) : ?>
 
-							<p><?php printf( __( 'Ready to publish your first project? <a href="%1$s">Get started here</a>.', 'lsx' ), esc_url( admin_url( 'post-new.php?post_type=jetpack-portfolio' ) ) ); ?></p>
+							<p><?php printf( esc_html__( 'Ready to publish your first project? <a href="%1$s">Get started here</a>.', 'lsx' ), esc_url( admin_url( 'post-new.php?post_type=jetpack-portfolio' ) ) ); ?></p>
 
 						<?php else : ?>
 
-							<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'lsx' ); ?></p>
+							<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'lsx' ); ?></p>
 							<?php get_search_form(); ?>
 
 						<?php endif; ?>
+
 					</div><!-- .page-content -->
 				</section><!-- .no-results -->
 
