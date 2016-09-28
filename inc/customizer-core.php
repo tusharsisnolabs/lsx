@@ -1,5 +1,7 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) return; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	return; // Exit if accessed directly
+}
 
 /**
  * Customize Swatch Control Class

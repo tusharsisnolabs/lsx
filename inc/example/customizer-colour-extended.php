@@ -1,5 +1,7 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) return; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	return; // Exit if accessed directly
+}
 
 /**
  * Filter: lsx_customizer_colour_names
@@ -81,30 +83,62 @@ add_filter( 'lsx_customizer_colour_choices_brown', 'test_lsx_customizer_colour_c
  */
 function test_lsx_customizer_colour_choices( $array ) {
 	$array['test'] = array(
-		'label'  => __( 'Test', 'lsx' ),
+		'label'  => esc_html__( 'Test', 'lsx' ),
 		'colors' => array(
 			// Button
-			'#428bca', '#2a6496', '#ffffff', '#ffffff',
+			'#428bca',
+			'#2a6496',
+			'#ffffff',
+			'#ffffff',
 			// Button CTA
-			'#f7941d', '#f7741d', '#ffffff', '#ffffff',
+			'#f7941d',
+			'#f7741d',
+			'#ffffff',
+			'#ffffff',
 			// Top Menu
-			'#333333', '#ffffff', '#428bca',
+			'#333333',
+			'#ffffff',
+			'#428bca',
 			// Header
-			'#ffffff', '#337ab7', '#23527c', '#777777',
+			'#ffffff',
+			'#337ab7',
+			'#23527c',
+			'#777777',
 			// Main Menu
-			'#428bca', '#333333', '#555555', '#ffffff', '#ffffff',
+			'#428bca',
+			'#333333',
+			'#555555',
+			'#ffffff',
+			'#ffffff',
 			// Banner
-			'#2a6496', '#ffffff', '#ffffff',
+			'#2a6496',
+			'#ffffff',
+			'#ffffff',
 			// Body
-			'#ffffff', '#dddddd', '#333333', '#333333', '#337ab7', '#23527c',
+			'#ffffff',
+			'#dddddd',
+			'#333333',
+			'#333333',
+			'#337ab7',
+			'#23527c',
 			// Footer CTA
-			'#428bca', '#ffffff', '#eeeeee', '#dddddd',
+			'#428bca',
+			'#ffffff',
+			'#eeeeee',
+			'#dddddd',
 			// Footer Widgets
-			'#333333', '#eeeeee', '#dddddd', '#cccccc',
+			'#333333',
+			'#eeeeee',
+			'#dddddd',
+			'#cccccc',
 			// Footer
-			'#232222', '#ffffff', '#337ab7', '#969696',
+			'#232222',
+			'#ffffff',
+			'#337ab7',
+			'#969696',
 			// Test
-			'#ddddd6', '#eeeee6'
+			'#ddddd6',
+			'#eeeee6',
 		)
 	);
 
@@ -332,5 +366,3 @@ CSS;
 	return $css;
 }
 add_filter( 'lsx_customizer_colour_selectors_footer', 'test_lsx_customizer_colour_selectors_footer', 10, 2 );
-
-?>

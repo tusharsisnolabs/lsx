@@ -1,5 +1,7 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) return; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	return; // Exit if accessed directly
+}
 
 /**
  * Theme Configuration File

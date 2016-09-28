@@ -4,7 +4,6 @@
  * 
  * @package lsx-theme
  * @subpackage sanitize
- * 
  */
 
 /**
@@ -23,9 +22,11 @@ function lsx_sanitize_choices( $value, $setting ) {
 	}
 	$choices = lsx_customizer_sanitize_get_choices( $setting );
 	$allowed_choices = array_keys( $choices );
+	
 	if ( ! in_array( $value, $allowed_choices ) ) {
 		$value = lsx_customizer_sanitize_get_default( $setting );
 	}
+
 	return $value;
 }
 
@@ -38,17 +39,15 @@ function lsx_sanitize_choices( $value, $setting ) {
  * @param string
  * @return mixed $field
  */
-
 function lsx_customizer_sanitize_get_choices( $id ) {
 	global $lsx_customizer;
 	//LSX_Theme_Customizer
-	
+
 	$field = $lsx_customizer->get_control($id);
-	
+
 	if ( isset( $field['choices'] ) ) {
 		return $field['choices'];
 	}
-
 }
 
 /**
@@ -60,7 +59,6 @@ function lsx_customizer_sanitize_get_choices( $id ) {
  * @param string
  * @return mixed $default
  */
-
 function lsx_customizer_sanitize_get_default( $id ) {
 	global $lsx_customizer;
 	//LSX_Theme_Customizer
@@ -105,5 +103,6 @@ function lsx_sanitize_checkbox( $input ) {
 	} else {
 		$output = false;
 	}
+
 	return $output;
 }

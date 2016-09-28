@@ -1,10 +1,13 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) return; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	return; // Exit if accessed directly
+}
+
 /**
  * Google_Font Class
 **/
-class LSX_Google_Font
-{
+class LSX_Google_Font {
+	
 	private $title; // the name of the font
 	private $location; // the http location of the font file
 	private $cssDeclaration; // the css declaration used to reference the font
@@ -13,22 +16,21 @@ class LSX_Google_Font
 	/**
 	 * Constructor
 	**/
-	public function __construct($title, $location, $cssDeclaration, $cssClass)
-	{
-		$this->title = $title;
-		$this->location = $location;
-		$this->cssDeclaration = $cssDeclaration;
-		$this->cssClass = $cssClass;
+	public function __construct( $title, $location, $css_declaration, $css_class ) {
+		$this->title          = $title;
+		$this->location       = $location;
+		$this->cssDeclaration = $css_declaration;
+		$this->cssClass       = $css_class;
 	}
 
 	/**
 	 * Getters
 	 * taken from: http://stackoverflow.com/questions/4478661/getter-and-setter
 	**/
-	public function __get($property) 
-	{
-		if (property_exists($this, $property)) {
+	public function __get( $property ) {
+		if ( property_exists( $this, $property ) ) {
 			return $this->$property;
 		}
 	}
-} // Custom_Font
+
+}

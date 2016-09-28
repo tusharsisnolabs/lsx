@@ -1,12 +1,14 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) return; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	return; // Exit if accessed directly
+}
 
 /**
  * Transform SCSS to CSS
  */
 function lsx_customizer_colour__scss_to_css( $scss ) {
 	$css = '';
-	$scssphp_file = get_template_directory() .'/vendor/leafo/scssphp/scss.inc.php';
+	$scssphp_file = get_template_directory() . '/vendor/leafo/scssphp/scss.inc.php';
 
 	if ( ! empty( $scss ) && file_exists( $scssphp_file ) ) {
 		require_once $scssphp_file;

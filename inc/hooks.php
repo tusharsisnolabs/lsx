@@ -11,7 +11,7 @@
 * it under the terms of the GNU General Public License as published by
 * the Free Software Foundation; either version 2 of the License, or
 * (at your option) any later version.
-* 
+*
 * This program is distributed in the hope thatt it will be useful,
 * but WITHOUT ANY WARRANTY; without even the implied warranty of
 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
@@ -23,17 +23,17 @@
  * HTML <body> hooks
  * $lsx_supports[] = 'body';
  */
- function lsx_body_top() {
-	 do_action( 'lsx_body_top' );
- }
+function lsx_body_top() {
+	do_action( 'lsx_body_top' );
+}
 
- function lsx_body_bottom() {
-	 do_action( 'lsx_body_bottom' );
- }
- 
+function lsx_body_bottom() {
+	do_action( 'lsx_body_bottom' );
+}
+
 /**
 * HTML <head> hooks
-* 
+*
 * $lsx_supports[] = 'head';
 */
 function lsx_head_top() {
@@ -46,7 +46,7 @@ function lsx_head_bottom() {
 
 /**
 * Semantic <header> hooks
-* 
+*
 * $lsx_supports[] = 'header';
 */
 function lsx_header_before() {
@@ -85,7 +85,7 @@ function lsx_banner_content() {
 
 /**
 * Semantic <content> hooks
-* 
+*
 * $lsx_supports[] = 'content';
 */
 function lsx_content_wrap_before() {
@@ -114,7 +114,7 @@ function lsx_content_bottom() {
 
 /**
 * Semantic <entry> hooks
-* 
+*
 * $lsx_supports[] = 'entry';
 */
 function lsx_entry_before() {
@@ -135,7 +135,7 @@ function lsx_entry_bottom() {
 
 /**
 * Comments block hooks
-* 
+*
 * $lsx_supports[] = 'comments';
 */
 function lsx_comments_before() {
@@ -148,7 +148,7 @@ function lsx_comments_after() {
 
 /**
 * Semantic <sidebar> hooks
-* 
+*
 * $lsx_supports[] = 'sidebar';
 */
 function lsx_sidebars_before() {
@@ -169,7 +169,7 @@ function lsx_sidebar_bottom() {
 
 /**
 * Semantic <footer> hooks
-* 
+*
 * $lsx_supports[] = 'footer';
 */
 function lsx_footer_before() {

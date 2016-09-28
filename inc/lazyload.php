@@ -1,16 +1,18 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) return;
+if ( ! defined( 'ABSPATH' ) ) {
+	return;
+}
 
 /*
  * LSX Lazy Load Images Class
- * 
+ *
  * add_filters availables:
  *   lsx_lazyload_is_enabled
  *   lsx_lazyload_placeholder_image
- * 
+ *
  * apply_filters availables:
  *   lsx_lazyload_filter_images
- * 
+ *
  * Currently filtering:
  *   the_content
  *   widget_text
@@ -19,14 +21,16 @@ if ( ! defined( 'ABSPATH' ) ) return;
  *   envira_gallery_output_image
  */
 class LSX_LazyLoadImages {
+	
 	protected static $enabled = true;
 
 	protected static $noscript_id = 0;
 	protected static $noscripts   = array();
 
 	static function init() {
-		if ( is_admin() )
+		if ( is_admin() ) {
 			return;
+		}
 
 		if ( get_theme_mod( 'lsx_lazyload_status', '1' ) === false ) {
 			self::$enabled = false;
@@ -48,7 +52,7 @@ class LSX_LazyLoadImages {
 		add_filter( 'widget_text', array( __CLASS__, 'filter_images' ), 200 );
 		add_filter( 'post_thumbnail_html', array( __CLASS__, 'filter_images' ), 200 );
 		add_filter( 'get_avatar', array( __CLASS__, 'filter_images' ), 200 );
-		
+
 		// LSX
 		add_filter( 'lsx_lazyload_filter_images', array( __CLASS__, 'filter_images' ), 200 );
 
@@ -57,7 +61,7 @@ class LSX_LazyLoadImages {
 	}
 
 	static function add_scripts() {
-		wp_enqueue_script( 'lazysizes', get_template_directory_uri() .'/js/vendor/lazysizes.min.js', array( 'jquery' ), null, true );
+		wp_enqueue_script( 'lazysizes', get_template_directory_uri() . '/js/vendor/lazysizes.min.js', array( 'jquery' ), null, true );
 		// Plugin that enables use lazysizes in brackground images
 		//wp_enqueue_script( 'lazysizes', get_template_directory_uri() .'/js/vendor/ls.unveilhooks.min.js', array( 'jquery', 'lazysizes' ), null, true );
 	}
@@ -82,7 +86,7 @@ class LSX_LazyLoadImages {
 		$matches = array();
 		$search = array();
 		$replace = array();
-		
+
 		$content = preg_replace_callback( '~<noscript.+?</noscript>~s', 'self::noscripts_remove', $content );
 		preg_match_all( '/<img[^>]*>/', $content, $matches );
 
@@ -118,7 +122,7 @@ class LSX_LazyLoadImages {
 				if ( $add_class ) {
 					$replace_html = self::add_class( $replace_html, 'lazyload' );
 					$replace_html .= '<noscript>' . $img_html . '</noscript>';
-					
+
 					array_push( $search, $img_html );
 					array_push( $replace, $replace_html );
 				}
@@ -126,18 +130,18 @@ class LSX_LazyLoadImages {
 		}
 
 		$content = str_replace( $search, $replace, $content );
-		$content = preg_replace_callback( '~' . chr(20) . '([0-9]+)' . chr(20) . '~', 'self::noscripts_restore', $content );
+		$content = preg_replace_callback( '~' . chr( 20 ) . '([0-9]+)' . chr( 20 ) . '~', 'self::noscripts_restore', $content );
 		return $content;
 	}
 
 	static function noscripts_remove( $match ) {
 		self::$noscript_id++;
-		self::$noscripts[self::$noscript_id] = $match[0];
-		return chr(20) . self::$noscript_id . chr(20);
+		self::$noscripts[ self::$noscript_id ] = $match[0];
+		return chr( 20 ) . self::$noscript_id . chr( 20 );
 	}
 
 	static function noscripts_restore( $match ) {
-		return self::$noscripts[(int) $match[1]];
+		return self::$noscripts[ (int) $match[1] ];
 	}
 
 	static function add_class( $html_string = '', $new_class ) {
@@ -165,6 +169,7 @@ class LSX_LazyLoadImages {
 	static function is_enabled() {
 		return self::$enabled;
 	}
+
 }
 
 add_action( 'init', array( 'LSX_LazyLoadImages', 'init' ) );

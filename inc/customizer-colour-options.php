@@ -1,5 +1,7 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) return; // Exit if accessed directly
+if ( ! defined( 'ABSPATH' ) ) {
+	return; // Exit if accessed directly
+}
 
 global $customizer_colour_names;
 global $customizer_colour_choices;
@@ -54,133 +56,288 @@ $customizer_colour_names = apply_filters( 'lsx_customizer_colour_names', array(
 	'footer_background_color'           => esc_html__( 'FOOTER: Background', 'lsx' ),
 	'footer_text_color'                 => esc_html__( 'FOOTER: Text', 'lsx' ),
 	'footer_link_color'                 => esc_html__( 'FOOTER: Link', 'lsx' ),
-	'footer_link_hover_color'           => esc_html__( 'FOOTER: Link (hover)', 'lsx' )
+	'footer_link_hover_color'           => esc_html__( 'FOOTER: Link (hover)', 'lsx' ),
 ) );
 
 $customizer_colour_choices = apply_filters( 'lsx_customizer_colour_choices', array(
 	'default' => array(
-		'label'  => __( 'Default', 'lsx' ),
+		'label'  => esc_html__( 'Default', 'lsx' ),
 		'colors' => apply_filters( 'lsx_customizer_colour_choices_default', array(
 			// Button
-			'#428bca', '#2a6496', '#ffffff', '#ffffff',
+			'#428bca',
+			'#2a6496',
+			'#ffffff',
+			'#ffffff',
 			// Button CTA
-			'#f7941d', '#f7741d', '#ffffff', '#ffffff',
+			'#f7941d',
+			'#f7741d',
+			'#ffffff',
+			'#ffffff',
 			// Top Menu
-			'#333333', '#ffffff', '#428bca',
+			'#333333',
+			'#ffffff',
+			'#428bca',
 			// Header
-			'#ffffff', '#337ab7', '#23527c', '#777777',
+			'#ffffff',
+			'#337ab7',
+			'#23527c',
+			'#777777',
 			// Main Menu
-			'#428bca', '#333333', '#555555', '#ffffff', '#ffffff',
+			'#428bca',
+			'#333333',
+			'#555555',
+			'#ffffff',
+			'#ffffff',
 			// Banner
-			'#2a6496', '#ffffff', '#ffffff',
+			'#2a6496',
+			'#ffffff',
+			'#ffffff',
 			// Body
-			'#ffffff', '#dddddd', '#333333', '#333333', '#337ab7', '#23527c',
+			'#ffffff',
+			'#dddddd',
+			'#333333',
+			'#333333',
+			'#337ab7',
+			'#23527c',
 			// Footer CTA
-			'#428bca', '#ffffff', '#eeeeee', '#dddddd',
+			'#428bca',
+			'#ffffff',
+			'#eeeeee',
+			'#dddddd',
 			// Footer Widgets
-			'#333333', '#eeeeee', '#dddddd', '#cccccc',
+			'#333333',
+			'#eeeeee',
+			'#dddddd',
+			'#cccccc',
 			// Footer
-			'#232222', '#ffffff', '#337ab7', '#969696'
+			'#232222',
+			'#ffffff',
+			'#337ab7',
+			'#969696'
 		) )
 	),
 	'red' => array(
-		'label'  => __( 'Red', 'lsx' ),
+		'label'  => esc_html__( 'Red', 'lsx' ),
 		'colors' => apply_filters( 'lsx_customizer_colour_choices_red', array(
 			// Button
-			'#b64d3f', '#87291c', '#ffffff', '#ffffff',
+			'#b64d3f',
+			'#87291c',
+			'#ffffff',
+			'#ffffff',
 			// Button CTA
-			'#f7941d', '#f7741d', '#ffffff', '#ffffff',
+			'#f7941d',
+			'#f7741d',
+			'#ffffff',
+			'#ffffff',
 			// Top Menu
-			'#333333', '#ffffff', '#eaa520',
+			'#333333',
+			'#ffffff',
+			'#eaa520',
 			// Header
-			'#ffffff', '#b64d3f', '#87291c', '#777777',
+			'#ffffff',
+			'#b64d3f',
+			'#87291c',
+			'#777777',
 			// Main Menu
-			'#b64d3f', '#333333', '#555555', '#ffffff', '#ffffff',
+			'#b64d3f',
+			'#333333',
+			'#555555',
+			'#ffffff',
+			'#ffffff',
 			// Banner
-			'#87291c', '#ffffff', '#ffffff',
+			'#87291c',
+			'#ffffff',
+			'#ffffff',
 			// Body
-			'#ffffff', '#dddddd', '#333333', '#333333', '#b64d3f', '#87291c',
+			'#ffffff',
+			'#dddddd',
+			'#333333',
+			'#333333',
+			'#b64d3f',
+			'#87291c',
 			// Footer CTA
-			'#b64d3f', '#ffffff', '#ffffff', '#eeeeee',
+			'#b64d3f',
+			'#ffffff',
+			'#ffffff',
+			'#eeeeee',
 			// Footer Widgets
-			'#333333', '#eeeeee', '#dddddd', '#cccccc',
+			'#333333',
+			'#eeeeee',
+			'#dddddd',
+			'#cccccc',
 			// Footer
-			'#232222', '#ffffff', '#b64d3f', '#969696'
+			'#232222',
+			'#ffffff',
+			'#b64d3f',
+			'#969696'
 		) )
 	),
 	'orange' => array(
-		'label'  => __( 'Orange', 'lsx' ),
+		'label'  => esc_html__( 'Orange', 'lsx' ),
 		'colors' => apply_filters( 'lsx_customizer_colour_choices_orange', array(
 			// Button
-			'#fbaf3f', '#e49435', '#260e03', '#260e03',
+			'#fbaf3f',
+			'#e49435',
+			'#260e03',
+			'#260e03',
 			// Button CTA
-			'#f7941d', '#f7741d', '#ffffff', '#ffffff',
+			'#f7941d',
+			'#f7741d',
+			'#ffffff',
+			'#ffffff',
 			// Top Menu
-			'#333333', '#ffffff', '#cc4800',
+			'#333333',
+			'#ffffff',
+			'#cc4800',
 			// Header
-			'#ffffff', '#e4701e', '#cc4800', '#777777',
+			'#ffffff',
+			'#e4701e',
+			'#cc4800',
+			'#777777',
 			// Main Menu
-			'#fbaf3f', '#333333', '#555555', '#ffffff', '#ffffff',
+			'#fbaf3f',
+			'#333333',
+			'#555555',
+			'#ffffff',
+			'#ffffff',
 			// Banner
-			'#e49435', '#ffffff', '#ffffff',
+			'#e49435',
+			'#ffffff',
+			'#ffffff',
 			// Body
-			'#ffffff', '#dddddd', '#333333', '#333333', '#e4701e', '#cc4800',
+			'#ffffff',
+			'#dddddd',
+			'#333333',
+			'#333333',
+			'#e4701e',
+			'#cc4800',
 			// Footer CTA
-			'#fbaf3f', '#555555', '#555555', '#333333',
+			'#fbaf3f',
+			'#555555',
+			'#555555',
+			'#333333',
 			// Footer Widgets
-			'#333333', '#eeeeee', '#dddddd', '#cccccc',
+			'#333333',
+			'#eeeeee',
+			'#dddddd',
+			'#cccccc',
 			// Footer
-			'#232222', '#ffffff', '#e4701e', '#969696'
+			'#232222',
+			'#ffffff',
+			'#e4701e',
+			'#969696'
 		) )
 	),
 	'green' => array(
-		'label'  => __( 'Green', 'lsx' ),
+		'label'  => esc_html__( 'Green', 'lsx' ),
 		'colors' => apply_filters( 'lsx_customizer_colour_choices_green', array(
 			// Button
-			'#596b46', '#3d4a30', '#ffffff', '#ffffff',
+			'#596b46',
+			'#3d4a30',
+			'#ffffff',
+			'#ffffff',
 			// Button CTA
-			'#f7941d', '#f7741d', '#ffffff', '#ffffff',
+			'#f7941d',
+			'#f7741d',
+			'#ffffff',
+			'#ffffff',
 			// Top Menu
-			'#333333', '#ffffff', '#a5a370',
+			'#333333',
+			'#ffffff',
+			'#a5a370',
 			// Header
-			'#ffffff', '#596b46', '#3d4a30', '#777777',
+			'#ffffff',
+			'#596b46',
+			'#3d4a30',
+			'#777777',
 			// Main Menu
-			'#596b46', '#333333', '#555555', '#ffffff', '#ffffff',
+			'#596b46',
+			'#333333',
+			'#555555',
+			'#ffffff',
+			'#ffffff',
 			// Banner
-			'#3d4a30', '#ffffff', '#ffffff',
+			'#3d4a30',
+			'#ffffff',
+			'#ffffff',
 			// Body
-			'#ffffff', '#dddddd', '#333333', '#333333', '#596b46', '#3d4a30',
+			'#ffffff',
+			'#dddddd',
+			'#333333',
+			'#333333',
+			'#596b46',
+			'#3d4a30',
 			// Footer CTA
-			'#596b46', '#ffffff', '#ffffff', '#eeeeee',
+			'#596b46',
+			'#ffffff',
+			'#ffffff',
+			'#eeeeee',
 			// Footer Widgets
-			'#333333', '#eeeeee', '#dddddd', '#cccccc',
+			'#333333',
+			'#eeeeee',
+			'#dddddd',
+			'#cccccc',
 			// Footer
-			'#232222', '#ffffff', '#596b46', '#969696'
+			'#232222',
+			'#ffffff',
+			'#596b46',
+			'#969696'
 		) )
 	),
 	'brown' => array(
-		'label'  => __( 'Brown', 'lsx' ),
+		'label'  => esc_html__( 'Brown', 'lsx' ),
 		'colors' => apply_filters( 'lsx_customizer_colour_choices_brown', array(
 			// Button
-			'#8c6a45', '#5b452e', '#ffffff', '#ffffff',
+			'#8c6a45',
+			'#5b452e',
+			'#ffffff',
+			'#ffffff',
 			// Button CTA
-			'#f7941d', '#f7741d', '#ffffff', '#ffffff',
+			'#f7941d',
+			'#f7741d',
+			'#ffffff',
+			'#ffffff',
 			// Top Menu
-			'#333333', '#ffffff', '#dfad55',
+			'#333333',
+			'#ffffff',
+			'#dfad55',
 			// Header
-			'#ffffff', '#8c6a45', '#5b452e', '#777777',
+			'#ffffff',
+			'#8c6a45',
+			'#5b452e',
+			'#777777',
 			// Main Menu
-			'#8c6a45', '#333333', '#555555', '#ffffff', '#ffffff',
+			'#8c6a45',
+			'#333333',
+			'#555555',
+			'#ffffff',
+			'#ffffff',
 			// Banner
-			'#5b452e', '#ffffff', '#ffffff',
+			'#5b452e',
+			'#ffffff',
+			'#ffffff',
 			// Body
-			'#ffffff', '#dddddd', '#333333', '#333333', '#8c6a45', '#5b452e',
+			'#ffffff',
+			'#dddddd',
+			'#333333',
+			'#333333',
+			'#8c6a45',
+			'#5b452e',
 			// Footer CTA
-			'#8c6a45', '#ffffff', '#ffffff', '#eeeeee',
+			'#8c6a45',
+			'#ffffff',
+			'#ffffff',
+			'#eeeeee',
 			// Footer Widgets
-			'#333333', '#eeeeee', '#dddddd', '#cccccc',
+			'#333333',
+			'#eeeeee',
+			'#dddddd',
+			'#cccccc',
 			// Footer
-			'#232222', '#ffffff', '#8c6a45', '#969696'
+			'#232222',
+			'#ffffff',
+			'#8c6a45',
+			'#969696'
 		) )
 	)
 ) );
