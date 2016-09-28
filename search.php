@@ -15,34 +15,34 @@ get_header(); ?>
 
 		<main id="main" class="site-main">
 
-		<?php lsx_content_top(); ?>	
-		
-		<?php 
-		$layout = get_theme_mod('lsx_layout','2cr');
-		$layout = apply_filters( 'lsx_layout', $layout );
-		if('1c' === $layout){
-			lsx_breadcrumbs();
-		}
-		?>	
+			<?php lsx_content_top(); ?>	
+			
+			<?php
+				$layout = get_theme_mod( 'lsx_layout', '2cr' );
+				$layout = apply_filters( 'lsx_layout', $layout );
 
-		<?php if ( have_posts() ) : global $lsx_archive; $lsx_archive = 1; ?>
+				if ( '1c' === $layout ) {
+					lsx_breadcrumbs();
+				}
+			?>	
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+			<?php if ( have_posts() ) : global $lsx_archive; $lsx_archive = 1; ?>
 
-				<?php lsx_get_template_part( 'content', get_post_type() ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; ?>
+					<?php lsx_get_template_part( 'content', get_post_type() ); ?>
 
-			<?php lsx_paging_nav(); ?>
+				<?php endwhile; ?>
 
-		<?php else : ?>
+				<?php lsx_paging_nav(); ?>
 
-			<?php lsx_get_template_part( 'content', 'none' ); ?>
+			<?php else : ?>
 
-		<?php endif; $lsx_archive = 0; ?>
+				<?php lsx_get_template_part( 'content', 'none' ); ?>
 
-		<?php lsx_content_bottom(); ?>
+			<?php endif; $lsx_archive = 0; ?>
+
+			<?php lsx_content_bottom(); ?>
 
 		</main><!-- #main -->
 

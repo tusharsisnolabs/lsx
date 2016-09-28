@@ -117,8 +117,8 @@ get_header();
 						<?php endif ?>
 				
 						<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-					       <span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'lsx' ), esc_html__( '1 Comment', 'lsx' ), esc_html__( '% Comments', 'lsx' ) ); ?></span>
-						<?php endif; ?>			
+							<span class="comments-link"><?php comments_popup_link( esc_html__( 'Leave a comment', 'lsx' ), esc_html__( '1 Comment', 'lsx' ), esc_html__( '% Comments', 'lsx' ) ); ?></span>
+						<?php endif; ?>
 				
 						<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<span class="edit-link">', '</span>' ); ?>
 					</footer><!-- .entry-meta -->
@@ -136,7 +136,7 @@ get_header();
 				
 				<?php lsx_entry_after(); ?>
 
-			<?php endwhile; // end of the loop. ?>
+			<?php endwhile; ?>
 
 		</main><!-- #main -->
 

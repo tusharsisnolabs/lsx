@@ -1,5 +1,9 @@
 <?php
-/* Template Name: No Sidebar */
+/**
+ * Template Name: No Sidebar
+ *
+ * @package lsx
+ */
 
 get_header(); ?>
 
@@ -11,13 +15,13 @@ get_header(); ?>
 		
 		<main id="main" class="site-main">
 
-			<?php lsx_content_top(); ?>		
+			<?php lsx_content_top(); ?>
 			
 				<?php while ( have_posts() ) : the_post(); ?>
 		
 					<?php get_template_part( 'content', 'page' ); ?>
 		
-				<?php endwhile; // end of the loop. ?>		
+				<?php endwhile; ?>
 				
 			<?php lsx_content_bottom(); ?>
 			
@@ -26,7 +30,7 @@ get_header(); ?>
 				if ( comments_open() || '0' != get_comments_number() ) :
 					comments_template();
 				endif;
-			?>			
+			?>
 		
 		</main><!-- #main -->
 		

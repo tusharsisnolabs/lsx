@@ -1,5 +1,9 @@
 <?php
-/* Template Name: Sitemap */
+/**
+ * Template Name: Sitemap
+ *
+ * @package lsx
+ */
 
 get_header(); ?>
 
@@ -22,13 +26,11 @@ get_header(); ?>
 					<?php lsx_entry_top(); ?>
 
 					<div class="entry-content">
-
-                        <?php lsx_sitemap_pages(); ?>
-
-                        <?php lsx_sitemap_custom_post_type(); ?>
-                    	
+						<?php lsx_sitemap_pages(); ?>
+						<?php lsx_sitemap_custom_post_type(); ?>
 					</div><!-- .entry-content -->
-					<?php edit_post_link( __( 'Edit', 'lsx' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+					
+					<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 
 					<?php lsx_entry_bottom(); ?>
 					
@@ -36,7 +38,7 @@ get_header(); ?>
 
 				<?php lsx_entry_after(); ?>
 
-			<?php endwhile; // end of the loop. ?>
+			<?php endwhile; ?>
 
 			<?php lsx_content_bottom(); ?>
 
@@ -48,6 +50,6 @@ get_header(); ?>
 
 	<?php lsx_content_wrap_after(); ?>
 
-<?php get_sidebar('sitemap'); ?>
+<?php get_sidebar( 'sitemap' ); ?>
 
 <?php get_footer();

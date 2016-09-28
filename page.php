@@ -26,7 +26,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', get_post_type() ); ?>
 
-			<?php endwhile; // end of the loop. ?>
+			<?php endwhile; ?>
 			
 			<?php lsx_content_bottom(); ?>
 

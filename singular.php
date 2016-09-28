@@ -21,11 +21,11 @@ get_header(); ?>
 
 				<?php get_template_part( 'content', get_post_type() ); ?>
 
-			<?php endwhile; // end of the loop. ?>
+			<?php endwhile; ?>
 			
 			<?php lsx_content_bottom(); ?>
 
-		</main><!-- #main -->			
+		</main><!-- #main -->
 
 		<?php lsx_content_after(); ?>
 		<?php lsx_post_nav(); ?>

@@ -1,5 +1,9 @@
 <?php
-/* Template Name: Front Page */
+/**
+ * Template Name: Front Page 
+ *
+ * @package lsx
+ */
 
 get_header(); ?>
 
@@ -13,7 +17,7 @@ get_header(); ?>
 
 			<?php lsx_content_top(); ?>		
 			
-			<?php if(have_posts() && !class_exists('Lsx_Banners')) : ?>
+			<?php if ( have_posts() && ! class_exists( 'Lsx_Banners' ) ) : ?>
 			
 				<?php while ( have_posts() ) : the_post(); ?>
 				
@@ -23,25 +27,24 @@ get_header(); ?>
 	
 							<div class="entry-content">
 								<?php the_content(); ?>
-								<?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
+								<?php wp_link_pages( array( 'before' => '<nav class="pagination">', 'after' => '</nav>' ) ); ?>
 							</div><!-- .entry-content -->
 						
 							<?php lsx_entry_bottom(); ?>
 							
 						</article><!-- #post-## -->
 	
-				<?php endwhile; // end of the loop. ?>			
+				<?php endwhile; ?>
 			
 			<?php endif; ?>
 			
 			<div id="home-widgets">
 			
 				<?php if ( ! dynamic_sidebar( 'sidebar-home' ) ) : ?>
-				
-				
+
 				<?php endif; // end sidebar widget area ?>
 				
-			</div>		
+			</div>
 				
 			<?php lsx_content_bottom(); ?>
 		
