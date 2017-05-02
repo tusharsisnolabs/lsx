@@ -24,6 +24,13 @@
 			min-height: 80px;
 			padding-left: 15px;
 			padding-right: 15px;
+
+			.header-expanded &,
+			.header-central & {
+				flex-direction: column;
+			}
+
+			.header-expanded & { align-items: flex-start; }
 		}
 	}
 

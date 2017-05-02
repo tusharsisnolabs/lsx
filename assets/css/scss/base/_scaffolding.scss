@@ -2,7 +2,7 @@
 *:focus,
 *:active:focus { outline: none !important; }
 
-html { overflow-x: hidden; }
+html, body { overflow-x: hidden; }
 
 body { direction: ltr; }
 

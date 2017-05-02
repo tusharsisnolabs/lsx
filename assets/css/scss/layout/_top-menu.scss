@@ -7,9 +7,9 @@
 		justify-content: flex-end;
 		padding: 0;
 		width: 100%;
-	}
 
-	.header-central & { justify-content: center; }
+		.header-central & { justify-content: center; }
+	}
 
 	.top-menu {
 		height: 100%;
@@ -130,6 +130,8 @@
 
 		& > .menu-item {
 			transition: all 300ms ease;
+			// -webkit-backface-visibility: hidden;
+			// -webkit-transform-style: preserve-3d;
 
 			&.dropdown {
 				&:before {
@@ -159,6 +161,8 @@
 			.dropdown-menu {
 				left: 100%;
 				top: 0;
+				// -webkit-backface-visibility: hidden;
+				// -webkit-transform-style: preserve-3d;
 			}
 		}
 	}
