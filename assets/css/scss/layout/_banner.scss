@@ -1,0 +1,61 @@
+.page-has-banner {
+	.page-banner-wrap {}
+
+	.page-banner {
+		align-items: center;
+		display: flex;
+		flex-flow: column nowrap;
+		height: 50vh;
+		justify-content: center;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+
+		@include media('>=tablet') {
+			height: 100vh;
+			max-height: 580px;
+		}
+
+		& > .page-banner-image {
+			bottom: 0;
+			background-color: $body-bg;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 1;
+
+			&:after {
+				background-color: rgba(nth($blue, 2), .33);
+				bottom: 0;
+				content: '';
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 2;
+			}
+		}
+
+		& > .container {
+			margin-bottom: 50px;
+			margin-top: 50px;
+			z-index: 4;
+		}
+
+		.page-header {
+			border: 0 none;
+			margin: 0;
+			padding: 0;
+
+			& > .page-title {
+				color: #FFF;
+				margin: 0;
+				text-align: center;
+			}
+		}
+	}
+}

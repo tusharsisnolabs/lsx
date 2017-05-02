@@ -16,7 +16,10 @@
 
 	body { background-color: $bg; }
 
-	.lsx-breaker { border-bottom-color: $breaker; }
+	.lsx-breaker,
+	.page-header {
+		border-bottom-color: $breaker;
+	}
 
 	.widget {
 		.wrap & {
