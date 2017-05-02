@@ -180,60 +180,72 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 
 			$format = lsx_translate_format_to_fontawesome( $format );
 			?>
-			<header class="archive-header col-<?php echo esc_attr( $size ); ?>-12">
-				<h1 class="archive-title">
-					<i class="format-link fa fa-<?php echo esc_attr( $format ); ?>"></i>
-					<span><?php the_title(); ?></span>
-				</h1>
-			</header>
+			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
+				<header class="archive-header">
+					<h1 class="archive-title">
+						<i class="format-link fa fa-<?php echo esc_attr( $format ); ?>"></i>
+						<span><?php the_title(); ?></span>
+					</h1>
+				</header>
+			</div>
 			<?php
 		elseif ( ( is_page() || is_single() ) && ( 'page' !== $show_on_front || ! is_front_page() ) ) :
 			?>
-			<header class="archive-header col-<?php echo esc_attr( $size ); ?>-12">
-				<h1 class="archive-title"><?php the_title(); ?></h1>
-			</header>
+			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
+				<header class="archive-header">
+					<h1 class="archive-title"><?php the_title(); ?></h1>
+				</header>
+			</div>
 			<?php
 		elseif ( is_search() ) :
 			?>
-			<header class="archive-header col-<?php echo esc_attr( $size ); ?>-12">
-				<h1 class="archive-title">
-					<?php
-						printf(
-							/* Translators: %s: search term/query */
-							esc_html__( 'Search Results for: %s', 'lsx' ),
-							'<span>' . get_search_query() . '</span>'
-						);
-					?>
-				</h1>
-			</header>
+			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
+				<header class="archive-header">
+					<h1 class="archive-title">
+						<?php
+							printf(
+								/* Translators: %s: search term/query */
+								esc_html__( 'Search Results for: %s', 'lsx' ),
+								'<span>' . get_search_query() . '</span>'
+							);
+						?>
+					</h1>
+				</header>
+			</div>
 			<?php
 		elseif ( is_author() ) :
 			?>
-			<header class="archive-header col-<?php echo esc_attr( $size ); ?>-12">
-				<h1 class="archive-title"><?php the_archive_title(); ?></h1>
-				<?php the_archive_description(); ?>
-			</header>
+			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
+				<header class="archive-header">
+					<h1 class="archive-title"><?php the_archive_title(); ?></h1>
+					<?php the_archive_description(); ?>
+				</header>
+			</div>
 			<?php
 		elseif ( is_archive() && class_exists( 'WooCommerce' ) && is_post_type_archive( 'product' ) ) :
 			?>
-			<header class="archive-header col-<?php echo esc_attr( $size ); ?>-12">
-				<h1 class="archive-title"><?php the_archive_title(); ?></h1>
-				<?php the_archive_description(); ?>
-			</header>
+			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
+				<header class="archive-header">
+					<h1 class="archive-title"><?php the_archive_title(); ?></h1>
+					<?php the_archive_description(); ?>
+				</header>
+			</div>
 			<?php
 		elseif ( is_archive() ) :
 			?>
-			<header class="archive-header col-<?php echo esc_attr( $size ); ?>-12">
-				<h1 class="archive-title">
-					<?php if ( has_post_format() && ! is_category() && ! is_tag() && ! is_date() && ! is_tax( 'post_format' ) ) { ?>
-						<?php the_archive_title( esc_html__( 'Type:', 'lsx' ) ); ?>
-					<?php } else { ?>
-						<?php the_archive_title(); ?>
-					<?php } ?>
-				</h1>
+			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
+				<header class="archive-header">
+					<h1 class="archive-title">
+						<?php if ( has_post_format() && ! is_category() && ! is_tag() && ! is_date() && ! is_tax( 'post_format' ) ) { ?>
+							<?php the_archive_title( esc_html__( 'Type:', 'lsx' ) ); ?>
+						<?php } else { ?>
+							<?php the_archive_title(); ?>
+						<?php } ?>
+					</h1>
 
-				<?php the_archive_description(); ?>
-			</header>
+					<?php the_archive_description(); ?>
+				</header>
+			</div>
 			<?php
 		endif;
 	}
