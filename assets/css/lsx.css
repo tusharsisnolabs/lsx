@@ -282,7 +282,17 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 .page-banner-wrap .page-banner .page-header { border: 0 none; margin: 0; padding: 0; }
 
-.page-banner-wrap .page-banner .page-header > .page-title { color: #FFF; margin: 0; text-align: center; }
+.page-banner-wrap .page-banner .page-header > .page-title { margin: 0; text-align: center; }
+
+.archive-header { margin: 0 -999rem; padding: 60px 999rem; text-align: center; }
+
+.archive-header .archive-title { margin: 0; }
+
+.archive-header { background-color: #D84E2E; }
+
+.archive-header .archive-title { color: #FFF; }
+
+.page-banner-wrap .page-banner .page-title { color: #FFF; }
 
 .wrap .widget { padding: 85px 0; }
 

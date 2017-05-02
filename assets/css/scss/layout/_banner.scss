@@ -55,10 +55,19 @@
 			padding: 0;
 
 			& > .page-title {
-				color: #FFF;
 				margin: 0;
 				text-align: center;
 			}
 		}
 	}
 }
+
+.archive-header {
+	margin: 0 -999rem;
+	padding: 60px 999rem;
+	text-align: center;
+
+	.archive-title { margin: 0; }
+}
+
+@include banner-colours ();
