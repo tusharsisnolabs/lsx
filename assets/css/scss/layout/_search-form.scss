@@ -62,12 +62,12 @@
 	#masthead & {
 		font-size: 14px;
 		height: auto;
-		opacity: 1;
+		opacity: 0;
 		padding: 7px 11px;
 		position: absolute;
 		right: 0;
 		transition: all 400ms ease-in-out;
-		width: 290px;
+		width: 10px;
 
 		@include media('>=desktop') {
 			&:hover,

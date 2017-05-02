@@ -256,7 +256,7 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 #masthead #searchform .input-group-btn { width: auto; }
 
-#masthead .search-field { font-size: 14px; height: auto; opacity: 1; padding: 7px 11px; position: absolute; left: 0; transition: all 400ms ease-in-out; width: 290px; }
+#masthead .search-field { font-size: 14px; height: auto; opacity: 0; padding: 7px 11px; position: absolute; left: 0; transition: all 400ms ease-in-out; width: 10px; }
 
 @media (min-width: 1200px) { #masthead .search-field:hover, #masthead .search-field:active, #masthead .search-field:focus { opacity: 1; width: 290px; z-index: 999; } }
 
