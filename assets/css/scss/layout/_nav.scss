@@ -149,6 +149,9 @@
 			margin-left: 100px;
 			padding: 0;
 			position: relative;
+			display: flex !important;
+			flex: 1;
+			flex-direction: column;
 
 			.header-expanded &,
 			.header-central & {
@@ -157,10 +160,10 @@
 			}
 
 			& > .nav {
+				position: relative;
 				height: 100%;
-				left: 0;
-				position: absolute;
-				right: 0;
+				display: flex;
+				flex: 1;
 
 				.header-central & {
 					align-content: center;
@@ -175,16 +178,21 @@
 				}
 
 				& > .menu-item {
-					display: table;
-					height: 100%;
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: flex-start;
 
 					& > a,
 					&.active > a {
-						display: table-cell;
+						align-items: center;
+						display: flex;
 						font-size: 14px;
 						padding: 0 15px;
-						vertical-align: middle;
 						transition: all 300ms ease;
+
+						& > .caret {
+							margin: 2px 0 0 5px;
+						}
 					}
 				}
 
