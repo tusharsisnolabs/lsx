@@ -1,4 +1,4 @@
-@mixin aside-widgets-colours (
+@mixin content-colours (
 	$bg: map-get($aside-widgets, bg),
 	$breaker: map-get($aside-widgets, breaker),
 	$header: map-get($aside-widgets, header),
