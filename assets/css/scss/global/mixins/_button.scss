@@ -35,16 +35,16 @@
 	transition: all 300ms ease;
 }
 
-@mixin custom-buttons-colours ($color: map-get($buttons, color), $color-hover: map-get($buttons, color-hover), $bg: map-get($buttons, bg), $bg-hover: map-get($buttons, bg-hover)) {
-	.btn { @include lsx-button-colour($color, $color-hover, $bg, $bg-hover); }
+@mixin custom-buttons-colours ($color: map-get($buttons, color), $color-hover: map-get($buttons, color-hover), $bg: map-get($buttons, bg), $bg-hover: map-get($buttons, bg-hover), $shadow: map-get($buttons, shadow)) {
+	.btn { @include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow); }
 
 	.border-btn { @include lsx-bordered-button($bg, #FFF, transparent, $bg); }
 
 	.white-border-btn { @include lsx-bordered-button(#FFF, $bg, transparent, #FFF); }
 }
 
-@mixin custom-cta-buttons-colours ($color: map-get($cta-buttons, color), $color-hover: map-get($cta-buttons, color-hover), $bg: map-get($cta-buttons, bg), $bg-hover: map-get($cta-buttons, bg-hover)) {
-	.cta-btn { @include lsx-button-colour($color, $color-hover, $bg, $bg-hover); }
+@mixin custom-cta-buttons-colours ($color: map-get($cta-buttons, color), $color-hover: map-get($cta-buttons, color-hover), $bg: map-get($cta-buttons, bg), $bg-hover: map-get($cta-buttons, bg-hover), $shadow: map-get($cta-buttons, shadow)) {
+	.cta-btn { @include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow); }
 
 	.cta-border-btn { @include lsx-bordered-button($bg, #FFF, transparent, $bg); }
 }

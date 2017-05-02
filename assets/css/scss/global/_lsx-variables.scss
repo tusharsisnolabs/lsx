@@ -51,14 +51,16 @@ $buttons: (
 	color: #FFF,
 	color-hover: #FFF,
 	bg: nth($blue, 1),
-	bg-hover: nth($blue, 3)
+	bg-hover: nth($blue, 3),
+	shadow: darken(nth($blue, 1), 15%)
 );
 
 $cta-buttons: (
 	color: #FFF,
 	color-hover: #FFF,
 	bg: nth($orange, 1),
-	bg-hover: nth($orange, 3)
+	bg-hover: nth($orange, 3),
+	shadow: darken(nth($orange, 1), 15%)
 );
 
 $top-menu: (
