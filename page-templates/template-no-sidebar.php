@@ -12,7 +12,7 @@ get_header(); ?>
 
 	<?php lsx_content_wrap_before(); ?>
 
-	<div id="primary" class="content-area col-sm-8 col-sm-offset-2">
+	<div id="primary" class="content-area col-sm-12">
 
 		<?php lsx_content_before(); ?>
 
