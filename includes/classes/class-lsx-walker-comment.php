@@ -28,7 +28,7 @@ if ( ! class_exists( 'LSX_Walker_Comment' ) ) :
 
 		function start_lvl( &$output, $depth = 0, $args = array() ) {
 			$GLOBALS['comment_depth'] = $depth + 1; ?>
-			<ul <?php comment_class( 'media unstyled comment-' . get_comment_ID() ); ?>>
+			<ul <?php comment_class( 'media media-reply unstyled list-unstyled comment-' . get_comment_ID() ); ?>>
 			<?php
 		}
 
