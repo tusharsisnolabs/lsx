@@ -4,7 +4,9 @@
 
 @import 'base/scaffolding';
 
+@import 'components/typography';
 @import 'components/buttons';
+
 
 @import 'layout/top-menu';
 @import 'layout/header';
@@ -17,3 +19,6 @@
 @import 'layout/footer-cta';
 @import 'layout/footer-widgets';
 @import 'layout/footer';
+
+@import 'templates/common';
+@import 'templates/page';

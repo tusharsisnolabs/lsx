@@ -1,0 +1,127 @@
+.content-area,
+.widget-area {
+
+	h1, h2, h3, h4, h5, h6, .widget-title {
+		margin-top: 0;
+		margin-bottom: $line-height-computed;
+	}
+
+	p { margin-bottom: $line-height-computed; }
+
+	a {
+		&:not(.btn) { transition: color 300ms ease; }
+	}
+
+	strong { font-weight: 700; }
+
+	em { font-style: italic; }
+
+	big { font-size: 120%; }
+
+	small { font-size: 80%; }
+
+	blockquote {
+		border: 0 none;
+		font-size: 16px;
+		margin: 0 0 $line-height-computed;
+		padding: $line-height-computed 0 0;
+		text-align: center;
+
+		& > p {
+			display: inline-block;
+			border: 1px solid rgba(nth($blue, 2), .2);
+			border-radius: 10px;
+			font-style: italic;
+			font-size: inherit;
+			line-height: 1.375;
+			padding: 30px;
+			position: relative;
+
+			@include media('>=tablet') {
+				max-width: 80%;
+				padding: 50px 40px;
+			}
+
+			&:before {
+				background-color: $body-bg;
+				border-radius: 50%;
+				color: $red-accent;
+				content: '”';
+				font-family: $font-family-serif;
+				font-size: 60px;
+				font-style: normal;
+				height: 50px;
+				left: 50%;
+				overflow: hidden;
+				position: absolute;
+				top: -25px;
+				transform: translateX(-50%);
+				width: 50px;
+
+				@include media('>=tablet') {
+					font-size: 72px;
+					height: 60px;
+					top: -30px;
+					width: 60px;
+				}
+			}
+		}
+	}
+
+	dl {
+		& > dt {
+			font-weight: 700;
+		}
+
+		& > dd {
+			font-style: italic;
+
+			& + dt { margin-top: $line-height-computed; }
+		}
+	}
+
+	ul, ol {
+		margin-bottom: $line-height-computed;
+		padding-left: 40px;
+
+		ul, ol { margin-bottom: 0; }
+	}
+
+	pre {
+		background-color: $light-gray;
+		border: 1px solid rgba(nth($blue, 2), .2);
+		border-radius: 5px;
+		color: $text-color;
+		font-size: 14px;
+		padding: 20px;
+		margin-bottom: $line-height-computed;
+	}
+
+	abbr {}
+	acronym {}
+
+	cite {}
+	code {}
+	del {}
+	h1 {}
+	h2 {}
+	h3 {}
+	h4 {}
+	h5 {}
+	h6 {}
+	ins {}
+	kbd {}
+	li {}
+	q {}
+	sub {}
+	sup {}
+	table {}
+	tbody {}
+	td {}
+	tfoot {}
+	th {}
+	thead {}
+	tr {}
+	tt {}
+	var {}
+}
