@@ -13,7 +13,7 @@ if ( isset( $GLOBALS['comment_depth'] ) ) {
 
 $max_depth = intval( get_option( 'thread_comments_depth' ) );
 
-echo get_avatar( $comment, '64' );
+echo get_avatar( $comment, '128' );
 ?>
 <div class="media-body">
 	<h4 class="media-heading"><?php echo get_comment_author_link(); ?></h4>
