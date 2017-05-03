@@ -26,20 +26,20 @@ if ( ! function_exists( 'lsx_layout_selector' ) ) :
 
 		switch ( $layout ) {
 			case '1c':
-				$main_class    = 'col-' . $size . '-12';
-				$sidebar_class = 'col-' . $size . '-12';
+				$main_class    = 'col-' . $size . '-8 col-' . $size . '-offset-2';
+				$sidebar_class = 'col-' . $size . '-8 col-' . $size . '-offset-2';
 				break;
 			case '2cr':
-				$main_class    = 'col-' . $size . '-9';
-				$sidebar_class = 'col-' . $size . '-3';
+				$main_class    = 'col-' . $size . '-8';
+				$sidebar_class = 'col-' . $size . '-4';
 				break;
 			case '2cl':
-				$main_class    = 'col-' . $size . '-9 col-' . $size . '-push-3';
-				$sidebar_class = 'col-' . $size . '-3 col-' . $size . '-pull-9';
+				$main_class    = 'col-' . $size . '-8 col-' . $size . '-push-4';
+				$sidebar_class = 'col-' . $size . '-4 col-' . $size . '-pull-8';
 				break;
 			default:
-				$main_class    = 'col-' . $size . '-9';
-				$sidebar_class = 'col-' . $size . '-3';
+				$main_class    = 'col-' . $size . '-8';
+				$sidebar_class = 'col-' . $size . '-4';
 				break;
 		}
 
