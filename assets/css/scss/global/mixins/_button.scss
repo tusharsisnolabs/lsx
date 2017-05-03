@@ -36,7 +36,10 @@
 }
 
 @mixin custom-buttons-colours ($color: map-get($buttons, color), $color-hover: map-get($buttons, color-hover), $bg: map-get($buttons, bg), $bg-hover: map-get($buttons, bg-hover), $shadow: map-get($buttons, shadow)) {
-	.btn { @include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow); }
+	.btn,
+	#respond > .comment-form input[type="submit"] {
+		@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
+	}
 
 	.border-btn { @include lsx-bordered-button($bg, #FFF, transparent, $bg); }
 

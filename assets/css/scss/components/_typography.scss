@@ -47,7 +47,7 @@
 				border-radius: 50%;
 				color: $red-accent;
 				content: '”';
-				font-family: $font-family-serif;
+				font-family: $headings-font-family;
 				font-size: 60px;
 				font-style: normal;
 				height: 50px;
@@ -96,32 +96,4 @@
 		padding: 20px;
 		margin-bottom: $line-height-computed;
 	}
-
-	abbr {}
-	acronym {}
-
-	cite {}
-	code {}
-	del {}
-	h1 {}
-	h2 {}
-	h3 {}
-	h4 {}
-	h5 {}
-	h6 {}
-	ins {}
-	kbd {}
-	li {}
-	q {}
-	sub {}
-	sup {}
-	table {}
-	tbody {}
-	td {}
-	tfoot {}
-	th {}
-	thead {}
-	tr {}
-	tt {}
-	var {}
 }
