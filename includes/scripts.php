@@ -47,7 +47,7 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 		// Google Fonts
 
 		$font_saved = get_theme_mod( 'lsx_font', 'lora_noto_sans' );
-		$data_fonts = get_theme_mod( 'lsx_font_data' );
+		$data_fonts = get_transient( 'lsx_font_data' );
 
 		if ( is_customize_preview() || false === $data_fonts ) {
 			$data_fonts_file = get_template_directory() . '/assets/jsons/lsx-fonts.json';
@@ -62,7 +62,7 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 					$data_fonts = $wp_filesystem->get_contents( $data_fonts_file );
 
 					if ( ! empty( $data_fonts ) ) {
-						set_theme_mod( 'lsx_font_data', $data_fonts );
+						set_transient( 'lsx_font_data', $data_fonts, 360 );
 					}
 				}
 			}
