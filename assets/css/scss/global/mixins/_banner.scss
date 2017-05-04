@@ -1,8 +1,10 @@
 @mixin banner-colours ($bg: map-get($banner, bg), $color: map-get($banner, color), $color-image: map-get($banner, color-image)) {
 	.archive-header {
-		background-color: $bg;
+		.lsx:not(.single-post) & {
+			background-color: $bg;
 
-		.archive-title { color: $color; }
+			.archive-title { color: $color; }
+		}
 	}
 
 	.page-banner-wrap {

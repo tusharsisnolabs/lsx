@@ -1,5 +1,8 @@
 #respond {
-	margin: 85px auto 0;
+	@include default-vertical-gap(top, margin);
+
+	margin-left: auto;
+	margin-right: auto;
 	padding-left: 0;
 	padding-right: 0;
 	text-align: center;
@@ -54,7 +57,7 @@
 }
 
 #comments {
-	margin-top: 85px;
+	@include default-vertical-gap(top, margin);
 
 	& > h3 { display: none; }
 

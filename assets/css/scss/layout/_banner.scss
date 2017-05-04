@@ -1,6 +1,4 @@
 .page-banner-wrap {
-	& + .wrap .archive-header { display: none; }
-
 	.page-banner {
 		align-items: center;
 		display: flex;
@@ -57,17 +55,11 @@
 			& > .page-title {
 				margin: 0;
 				text-align: center;
+
+				.lsx.single-post & { display: none; }
 			}
 		}
 	}
-}
-
-.archive-header {
-	margin: 0 -999rem;
-	padding: 60px 999rem;
-	text-align: center;
-
-	.archive-title { margin: 0; }
 }
 
 @include banner-colours ();

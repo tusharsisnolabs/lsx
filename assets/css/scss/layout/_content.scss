@@ -1,6 +1,9 @@
 .wrap  {
 	.widget {
-		padding: 85px 0;
+		@include default-vertical-gap();
+
+		padding-left: 0;
+		padding-right: 0;
 
 		&:last-child {
 			.lsx-full-width,
@@ -58,12 +61,16 @@
 
 		.lsx-full-width,
 		.lsx-full-width-alt {
+			@include default-vertical-gap(bottom);
+
 			margin: 0 -9999px;
-			padding: 0 9999px 85px;
+			padding-left: 9999px;
+			padding-right: 9999px;
 
 			h3,
 			.widget-title {
-				margin-top: 85px;
+				@include default-vertical-gap(top, margin);
+
 				&:after { display: none; }
 			}
 		}
