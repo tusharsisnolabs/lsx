@@ -126,6 +126,7 @@ if ( ! function_exists( 'lsx_post_meta_single_top' ) ) :
 	function lsx_post_meta_single_top() {
 		?>
 		<div class="post-meta">
+			<?php lsx_post_meta_avatar(); ?>
 			<?php lsx_post_meta_date(); ?>
 			<?php lsx_post_meta_author(); ?>
 			<div class="clearfix"></div>
@@ -150,6 +151,26 @@ if ( ! function_exists( 'lsx_post_meta_single_bottom' ) ) :
 			<div class="clearfix"></div>
 		</div>
 		<?php
+	}
+
+endif;
+
+if ( ! function_exists( 'lsx_post_meta_avatar' ) ) :
+
+	/**
+	 * Add customisable post meta: post author.
+	 *
+	 * @package    lsx
+	 * @subpackage template-tags
+	 */
+	function lsx_post_meta_avatar() {
+		$author = get_the_author();
+		$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 128 );
+
+		printf(
+			'<figure class="post-meta-avatar">%1$s</figure>',
+			$author_avatar
+		);
 	}
 
 endif;
