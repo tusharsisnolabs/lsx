@@ -10,88 +10,88 @@
 
 get_header(); ?>
 
-	<?php lsx_content_wrap_before(); ?>
+<?php lsx_content_wrap_before(); ?>
 
-	<div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
+<div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
 
-		<?php lsx_content_before(); ?>
+	<?php lsx_content_before(); ?>
 
-		<main id="main" class="site-main">
+	<main id="main" class="site-main">
 
-			<?php lsx_content_top(); ?>
+		<?php lsx_content_top(); ?>
 
-			<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php lsx_entry_before(); ?>
+				<?php lsx_entry_before(); ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-						<?php lsx_entry_top(); ?>
+					<?php lsx_entry_top(); ?>
 
-						<div class="entry-content">
-							<h2><?php esc_html_e( 'The Last 30 Posts', 'lsx' ); ?></h3>
+					<div class="entry-content">
+						<h2><?php esc_html_e( 'The Last 30 Posts', 'lsx' ); ?></h3>
 
-							<ul>
-								<?php
-									$loop = new WP_Query( array(
-										'posts_per_page' => 30,
-									) );
-								?>
+						<ul>
+							<?php
+								$loop = new WP_Query( array(
+									'posts_per_page' => 30,
+								) );
+							?>
 
-								<?php if ( $loop->have_posts() ) : ?>
+							<?php if ( $loop->have_posts() ) : ?>
 
-									<?php while ( $loop->have_posts() ) : ?>
+								<?php while ( $loop->have_posts() ) : ?>
 
-										<?php
-											$loop->the_post();
-											$loop->is_home = false;
-										?>
+									<?php
+										$loop->the_post();
+										$loop->is_home = false;
+									?>
 
-										<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php the_time( get_option( 'date_format' ) ); ?> - <?php echo esc_html( $post->comment_count ); ?> <?php esc_html_e( 'comments', 'lsx' ); ?></li>
+									<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> - <?php the_time( get_option( 'date_format' ) ); ?> - <?php echo esc_html( $post->comment_count ); ?> <?php esc_html_e( 'comments', 'lsx' ); ?></li>
 
-									<?php endwhile; ?>
+								<?php endwhile; ?>
 
-								<?php endif; ?>
+							<?php endif; ?>
 
-								<?php wp_reset_postdata(); ?>
-							</ul>
+							<?php wp_reset_postdata(); ?>
+						</ul>
 
-							<h2><?php esc_html_e( 'Categories', 'lsx' ); ?></h3>
+						<h2><?php esc_html_e( 'Categories', 'lsx' ); ?></h3>
 
-							<ul>
-								<?php wp_list_categories( 'title_li=&hierarchical=0&show_count=1' ); ?>
-							</ul>
+						<ul>
+							<?php wp_list_categories( 'title_li=&hierarchical=0&show_count=1' ); ?>
+						</ul>
 
-							<h2><?php esc_html_e( 'Monthly Archives', 'lsx' ); ?></h3>
+						<h2><?php esc_html_e( 'Monthly Archives', 'lsx' ); ?></h3>
 
-							<ul>
-								<?php wp_get_archives( 'type=monthly&show_post_count=1' ); ?>
-							</ul>
-						</div><!-- .entry-content -->
+						<ul>
+							<?php wp_get_archives( 'type=monthly&show_post_count=1' ); ?>
+						</ul>
+					</div><!-- .entry-content -->
 
-						<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
+					<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 
-						<?php lsx_entry_bottom(); ?>
+					<?php lsx_entry_bottom(); ?>
 
-					</article><!-- #post-## -->
+				</article><!-- #post-## -->
 
-					<?php lsx_entry_after(); ?>
+				<?php lsx_entry_after(); ?>
 
-				<?php endwhile; ?>
+			<?php endwhile; ?>
 
-			<?php endif; ?>
+		<?php endif; ?>
 
-			<?php lsx_content_bottom(); ?>
+		<?php lsx_content_bottom(); ?>
 
-		</main><!-- #main -->
+	</main><!-- #main -->
 
-		<?php lsx_content_after(); ?>
+	<?php lsx_content_after(); ?>
 
-	</div><!-- #primary -->
+</div><!-- #primary -->
 
-	<?php lsx_content_wrap_after(); ?>
+<?php lsx_content_wrap_after(); ?>
 
 <?php get_sidebar(); ?>
 
