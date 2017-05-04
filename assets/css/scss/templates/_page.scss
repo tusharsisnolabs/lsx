@@ -1,0 +1,10 @@
+.page {
+	.page-template-template-no-sidebar & {
+		@include media ('>=tablet') {
+			margin: 0 auto;
+			width: 83.33333%;
+		}
+
+		@include media ('>=desktop') { width: 66.66667%; }
+	}
+}

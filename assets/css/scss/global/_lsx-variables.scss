@@ -94,7 +94,7 @@ $header: (
 );
 
 $banner: (
-	bg: $red-accent,
+	bg: #2B3840,
 	color: #FFF,
 	color-image: #FFF
 );
@@ -126,8 +126,8 @@ $footer: (
 $footer-widgets: (
 	bg: #333,
 	color: #FFF,
-	link: nth($orange, 1),
-	hover: nth($orange, 2)
+	link: #FFF,
+	hover: nth($orange, 1)
 );
 
 $footer-cta: (

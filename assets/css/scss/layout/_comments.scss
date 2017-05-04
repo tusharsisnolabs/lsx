@@ -1,5 +1,60 @@
+#respond {
+	margin: 85px auto 0;
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+	width: 100%;
+
+	@include media ('>=phone') { width: 75%; }
+	@include media ('>=desktop') { width: 50%; }
+
+	.has-sidebar & {
+		width: 100%;
+
+		@include media ('>=tablet') { width: 75%; }
+	}
+
+	.comment-reply-title {
+		color: nth($orange, 1);
+		font-size: 20px;
+		margin-bottom: $line-height-computed / 2;
+
+		& > small {
+			display: block;
+			font-family: $font-family-base;
+			font-size: 13px;
+			margin-top: 5px;
+		}
+	}
+
+	& > .comment-form {
+		& > p {
+			margin-bottom: 0;
+
+			& + p { margin-top: 5px; }
+
+			label,
+			span {
+				display: none;
+			}
+
+			&.comment-notes,
+			&.logged-in-as {
+				margin-bottom: $line-height-computed;
+			}
+
+			&.form-submit { margin-top: $line-height-computed; }
+		}
+
+		input[type="submit"] {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
 #comments {
-	margin-top: 100px;
+	margin-top: 85px;
 
 	& > h3 { display: none; }
 
@@ -119,43 +174,27 @@
 			}
 		}
 	}
-}
 
-#respond {
-	@include make-xs-column(12);
-	@include make-sm-column(10);
-	@include make-sm-column-offset(1);
-	@include make-md-column(8);
-	@include make-md-column-offset(2);
-	@include make-lg-column(6);
-	@include make-lg-column-offset(3);
+	.has-sidebar & {
+		@include media ('>=phone') {
 
-	margin-top: 85px;
-	padding-left: 0;
-	padding-right: 0;
-	text-align: center;
+			.media-list {
+				.media {
+					&:not(.media-reply) {
+						margin-top: 20px;
+						padding-top: 20px;
+					}
 
-	.comment-reply-title {
-		color: nth($orange, 1);
-		font-size: 20px;
-		margin-bottom: $line-height-computed / 2;
-	}
+					.media-object {
+						border-width: 3px;
+						height: 50px;
+						margin-right: 40px;
+						width: 50px;
+					}
+				}
+			}
 
-	& > .comment-form {
-		& > p {
-			margin-bottom: 0;
-
-			& + p { margin-top: 5px; }
-
-			label, span { display: none; }
-
-			&.comment-notes { margin-bottom: $line-height-computed; }
-			&.form-submit { margin-top: $line-height-computed; }
-		}
-
-		input[type="submit"] {
-			display: block;
-			width: 100%;
+			.media-reply { margin-left: -65px; }
 		}
 	}
 }

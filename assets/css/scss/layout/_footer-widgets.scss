@@ -22,7 +22,11 @@
 	.widget {
 		margin-top: 30px;
 
-		a { display: inline-block; }
+		a {
+			display: inline-block;
+
+			&:not(.btn) { transition: color 300ms ease; }
+		}
 
 		br + a { margin-top: 5px; }
 

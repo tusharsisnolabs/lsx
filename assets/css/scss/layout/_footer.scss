@@ -33,8 +33,13 @@
 
 	.credit {
 		margin: 0;
+		text-align: center;
 
 		@include media('>=desktop') { flex-grow: 1; }
+
+		&.credit-float { text-align: left; }
+
+		& > a { transition: color 300ms ease; }
 	}
 }
 

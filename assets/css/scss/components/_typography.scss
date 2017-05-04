@@ -9,7 +9,10 @@
 	p { margin-bottom: $line-height-computed; }
 
 	a {
-		&:not(.btn) { transition: color 300ms ease; }
+		&:not(.btn) {
+			transition: color 300ms ease;
+			word-wrap: break-word;
+		}
 	}
 
 	strong { font-weight: 700; }

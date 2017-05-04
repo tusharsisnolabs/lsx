@@ -9,6 +9,30 @@ if ( post_password_required() ) {
 	return;
 }
 
+$commenter = wp_get_current_commenter();
+$req       = get_option( 'require_name_email' );
+$aria_req  = ( $req ? " aria-required='true'" : '' );
+$html_req  = ( $req ? " required='required'" : '' );
+
+$comment_form_args = array(
+	'comment_field' => '<p class="comment-form-comment"><textarea placeholder="' . esc_html__( 'Comment', 'lsx' ) . '" id="comment" class="form-control" name="comment" cols="45" rows="8"' . $aria_req . $html_req . '></textarea></p>',
+
+	'fields' => array(
+		'author' => '<p class="comment-form-author"><label for="author">' . esc_html__( 'Name', 'lsx' ) . '</label> ' .
+			( $req ? '<span class="required">*</span>' : '' ) .
+			'<input class="form-control" placeholder="' . esc_html__( 'Name', 'lsx' ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . '></p>',
+
+		'email' => '<p class="comment-form-email"><label for="email">' . esc_html__( 'Email', 'lsx' ) . '</label> ' .
+			( $req ? '<span class="required">*</span>' : '' ) .
+			'<input class="form-control" placeholder="' . esc_html__( 'Email', 'lsx' ) . '" id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . $html_req . '></p>',
+
+		'url' => '<p class="comment-form-url"><label for="url">' . esc_html__( 'Website', 'lsx' ) . '</label>' .
+			'<input class="form-control" placeholder="' . esc_html__( 'Website', 'lsx' ) . '" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"></p>',
+	),
+);
+
+comment_form( $comment_form_args );
+
 if ( have_comments() ) : ?>
 
 	<?php lsx_comments_before(); ?>
@@ -87,28 +111,3 @@ if ( have_comments() ) : ?>
 	<?php lsx_comments_after(); ?>
 
 <?php endif; ?>
-
-<?php
-	$commenter = wp_get_current_commenter();
-	$req       = get_option( 'require_name_email' );
-	$aria_req  = ( $req ? " aria-required='true'" : '' );
-	$html_req  = ( $req ? " required='required'" : '' );
-
-	$comment_form_args = array(
-		'comment_field' => '<p class="comment-form-comment"><textarea placeholder="' . esc_html__( 'Comment', 'lsx' ) . '" id="comment" class="form-control" name="comment" cols="45" rows="8"' . $aria_req . $html_req . '></textarea></p>',
-
-		'fields' => array(
-			'author' => '<p class="comment-form-author"><label for="author">' . esc_html__( 'Name', 'lsx' ) . '</label> ' .
-				( $req ? '<span class="required">*</span>' : '' ) .
-				'<input class="form-control" placeholder="' . esc_html__( 'Name', 'lsx' ) . '" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . $html_req . '></p>',
-
-			'email' => '<p class="comment-form-email"><label for="email">' . esc_html__( 'Email', 'lsx' ) . '</label> ' .
-				( $req ? '<span class="required">*</span>' : '' ) .
-				'<input class="form-control" placeholder="' . esc_html__( 'Email', 'lsx' ) . '" id="email" name="email" type="text" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . $html_req . '></p>',
-
-			'url' => '<p class="comment-form-url"><label for="url">' . esc_html__( 'Website', 'lsx' ) . '</label>' .
-				'<input class="form-control" placeholder="' . esc_html__( 'Website', 'lsx' ) . '" id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30"></p>',
-		),
-	);
-
-	comment_form( $comment_form_args );
