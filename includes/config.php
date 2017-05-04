@@ -40,7 +40,7 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 
 		add_theme_support( 'custom-logo', array(
 			'height'      => 50,
-			'width'       => 150,
+			'width'       => 160,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
