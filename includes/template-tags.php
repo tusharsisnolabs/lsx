@@ -95,21 +95,58 @@ if ( ! function_exists( 'lsx_site_title' ) ) :
 
 endif;
 
-if ( ! function_exists( 'lsx_post_meta' ) ) :
+if ( ! function_exists( 'lsx_post_meta_list_top' ) ) :
 
 	/**
-	 * Add customisable post meta.
+	 * Add customisable post meta (post list - above title).
 	 *
 	 * @package    lsx
 	 * @subpackage template-tags
 	 */
-	function lsx_post_meta() {
-		if ( ( is_page() && ! ( is_home() || is_front_page() ) ) && ! is_page_template( 'page-templates/template-blog.php' ) ) {
-			return;
-		}
+	function lsx_post_meta_list_top() {
 		?>
 		<div class="post-meta">
-			<?php lsx_content_post_meta(); ?>
+			<?php lsx_post_meta_date(); ?>
+			<?php lsx_post_meta_author(); ?>
+			<div class="clearfix"></div>
+		</div>
+		<?php
+	}
+
+endif;
+
+if ( ! function_exists( 'lsx_post_meta_single_top' ) ) :
+
+	/**
+	 * Add customisable post meta (single post - above title).
+	 *
+	 * @package    lsx
+	 * @subpackage template-tags
+	 */
+	function lsx_post_meta_single_top() {
+		?>
+		<div class="post-meta">
+			<?php lsx_post_meta_date(); ?>
+			<?php lsx_post_meta_author(); ?>
+			<div class="clearfix"></div>
+		</div>
+		<?php
+	}
+
+endif;
+
+if ( ! function_exists( 'lsx_post_meta_single_bottom' ) ) :
+
+	/**
+	 * Add customisable post meta (single post - below title).
+	 *
+	 * @package    lsx
+	 * @subpackage template-tags
+	 */
+	function lsx_post_meta_single_bottom() {
+		?>
+		<div class="post-meta">
+			<?php lsx_post_meta_category(); ?>
 			<div class="clearfix"></div>
 		</div>
 		<?php
@@ -137,15 +174,13 @@ if ( ! function_exists( 'lsx_post_meta_date' ) ) :
 
 		printf(
 			'<span class="post-meta-time"><span>%1$s</span> <a href="%2$s" rel="bookmark">%3$s</a></span>',
-			esc_html__( 'Posted on:', 'lsx' ),
+			esc_html__( 'On', 'lsx' ),
 			esc_url( get_permalink() ),
 			wp_kses_post( $time_string )
 		);
 	}
 
 endif;
-
-add_action( 'lsx_content_post_meta', 'lsx_post_meta_date', 10 );
 
 if ( ! function_exists( 'lsx_post_meta_author' ) ) :
 
@@ -169,15 +204,13 @@ if ( ! function_exists( 'lsx_post_meta_author' ) ) :
 
 		printf(
 			'<span class="post-meta-author"><span>%1$s</span> <a href="%2$s">%3$s</a></span>',
-			esc_html__( 'Posted by:', 'lsx' ),
+			esc_html__( 'by', 'lsx' ),
 			esc_url( $author_url ),
 			esc_html( $author )
 		);
 	}
 
 endif;
-
-add_action( 'lsx_content_post_meta', 'lsx_post_meta_author', 20 );
 
 if ( ! function_exists( 'lsx_post_meta_category' ) ) :
 
@@ -199,14 +232,12 @@ if ( ! function_exists( 'lsx_post_meta_category' ) ) :
 
 		if ( ! empty( $cats ) ) {
 			?>
-			<span class="post-meta-categories"><span><?php esc_html_e( 'Posted in:', 'lsx' ); ?></span> <?php echo wp_kses_post( implode( ', ', $cats ) ); ?></span>
+			<span class="post-meta-categories"><span><?php esc_html_e( 'Posted in', 'lsx' ); ?></span> <?php echo wp_kses_post( implode( ', ', $cats ) ); ?></span>
 			<?php
 		}
 	}
 
 endif;
-
-add_action( 'lsx_content_post_meta', 'lsx_post_meta_category', 30 );
 
 if ( ! function_exists( 'lsx_post_tags' ) ) :
 

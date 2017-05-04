@@ -167,33 +167,24 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 	 * @subpackage layout
 	 */
 	function lsx_global_header() {
-		$show_on_front = get_option( 'show_on_front' );
-		$default_size  = 'sm';
-		$size          = apply_filters( 'lsx_bootstrap_column_size', $default_size );
+		$show_on_front  = get_option( 'show_on_front' );
+		$queried_object = get_queried_object();
+		$default_size   = 'sm';
+		$size           = apply_filters( 'lsx_bootstrap_column_size', $default_size );
 
-		if ( is_singular( 'post' ) ) :
-			$format = get_post_format();
-
-			if ( false === $format ) {
-				$format = 'standard';
-			}
-
-			$format = lsx_translate_format_to_fontawesome( $format );
-			?>
-			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
-				<header class="archive-header">
-					<h1 class="archive-title">
-						<i class="format-link fa fa-<?php echo esc_attr( $format ); ?>"></i>
-						<span><?php the_title(); ?></span>
-					</h1>
-				</header>
-			</div>
-			<?php
-		elseif ( ( is_page() || is_single() ) && ( 'page' !== $show_on_front || ! is_front_page() ) ) :
+		if ( is_page() && ( 'page' !== $show_on_front || ! is_front_page() ) ) :
 			?>
 			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
 				<header class="archive-header">
 					<h1 class="archive-title"><?php the_title(); ?></h1>
+				</header>
+			</div>
+			<?php
+		elseif ( 'page' === $show_on_front && (int) get_option( 'page_for_posts' ) === $queried_object->ID ) :
+			?>
+			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
+				<header class="archive-header">
+					<h1 class="archive-title"><?php esc_html_e( 'Blog', 'lsx' ); ?></h1>
 				</header>
 			</div>
 			<?php
@@ -254,31 +245,42 @@ endif;
 
 add_action( 'lsx_content_wrap_before', 'lsx_global_header' );
 
-if ( ! function_exists( 'lsx_blog_header' ) ) :
+if ( ! function_exists( 'lsx_post_header' ) ) :
 
 	/**
-	 * Displays the global header in default Blog landing.
+	 * Displays the post header.
 	 *
 	 * @package    lsx
 	 * @subpackage layout
 	 */
-	function lsx_blog_header() {
-		if ( 'page' === get_option( 'show_on_front' ) ) {
-			$queried_object = get_queried_object();
+	function lsx_post_header() {
+		$default_size  = 'sm';
+		$size          = apply_filters( 'lsx_bootstrap_column_size', $default_size );
 
-			if ( (int) get_option( 'page_for_posts' ) === $queried_object->ID ) :
-				?>
+		if ( is_single() ) :
+			$format = get_post_format();
+
+			if ( false === $format ) {
+				$format = 'standard';
+			}
+
+			$format = lsx_translate_format_to_fontawesome( $format );
+			?>
+			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
 				<header class="archive-header">
-					<h1 class="archive-title"><?php esc_html_e( 'Blog', 'lsx' ); ?></h1>
+					<h1 class="archive-title">
+						<i class="format-link fa fa-<?php echo esc_attr( $format ); ?>"></i>
+						<span><?php the_title(); ?></span>
+					</h1>
 				</header>
-				<?php
-			endif;
-		}
+			</div>
+			<?php
+		endif;
 	}
 
 endif;
 
-add_action( 'lsx_content_wrap_before', 'lsx_blog_header' );
+add_action( 'lsx_entry_top', 'lsx_post_header' );
 
 if ( ! function_exists( 'lsx_add_viewport_meta_tag' ) ) :
 

@@ -58,44 +58,44 @@ msgstr ""
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: comments.php:24
+#: comments.php:18
+msgid "Comment"
+msgstr ""
+
+#: comments.php:21, comments.php:23
+msgid "Name"
+msgstr ""
+
+#: comments.php:25, comments.php:27
+msgid "Email"
+msgstr ""
+
+#: comments.php:29, comments.php:30, includes/template-tags.php:382, includes/plugins/jetpack.php:346
+msgid "Website"
+msgstr ""
+
+#: comments.php:48
 msgctxt "lsx"
 msgid "One Response to &ldquo;%s&rdquo;"
 msgstr ""
 
-#: comments.php:30
+#: comments.php:54
 msgctxt "comments.php"
 msgid "%1$s Response to &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s Responses to &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:58
+#: comments.php:82
 msgid "&larr; Older comments"
 msgstr ""
 
-#: comments.php:62
+#: comments.php:86
 msgid "Newer comments &rarr;"
 msgstr ""
 
-#: comments.php:70, comments.php:83
+#: comments.php:94, comments.php:107
 msgid "Comments are closed."
-msgstr ""
-
-#: comments.php:98
-msgid "Comment"
-msgstr ""
-
-#: comments.php:101, comments.php:103
-msgid "Name"
-msgstr ""
-
-#: comments.php:105, comments.php:107
-msgid "Email"
-msgstr ""
-
-#: comments.php:109, comments.php:110, includes/template-tags.php:351, includes/plugins/jetpack.php:346
-msgid "Website"
 msgstr ""
 
 #: footer.php:27
@@ -237,16 +237,16 @@ msgstr ""
 msgid "More"
 msgstr ""
 
-#: includes/layout.php:208
+#: includes/layout.php:187
+msgid "Blog"
+msgstr ""
+
+#: includes/layout.php:199
 msgid "Search Results for: %s"
 msgstr ""
 
-#: includes/layout.php:240
+#: includes/layout.php:231
 msgid "Type:"
-msgstr ""
-
-#: includes/layout.php:272
-msgid "Blog"
 msgstr ""
 
 #: includes/sanitize.php:65
@@ -257,69 +257,69 @@ msgstr ""
 msgid "Not a boolean"
 msgstr ""
 
-#: includes/template-tags.php:140
-msgid "Posted on:"
+#: includes/template-tags.php:177
+msgid "On"
 msgstr ""
 
-#: includes/template-tags.php:172
-msgid "Posted by:"
+#: includes/template-tags.php:207
+msgid "by"
 msgstr ""
 
-#: includes/template-tags.php:197
+#: includes/template-tags.php:230
 msgid "View all posts in %s"
 msgstr ""
 
-#: includes/template-tags.php:202
-msgid "Posted in:"
+#: includes/template-tags.php:235
+msgid "Posted in"
 msgstr ""
 
-#: includes/template-tags.php:223
+#: includes/template-tags.php:254
 msgid "Tagged as:"
 msgstr ""
 
-#: includes/template-tags.php:318, includes/plugins/jetpack.php:337
+#: includes/template-tags.php:349, includes/plugins/jetpack.php:337
 msgid "Client"
 msgstr ""
 
-#: includes/template-tags.php:329
+#: includes/template-tags.php:360
 msgid "Industry"
 msgstr ""
 
-#: includes/template-tags.php:340
+#: includes/template-tags.php:371
 msgid "Services"
 msgstr ""
 
-#: includes/template-tags.php:421
+#: includes/template-tags.php:452
 msgid "Previous"
 msgstr ""
 
-#: includes/template-tags.php:422
+#: includes/template-tags.php:453
 msgid "Next"
 msgstr ""
 
-#: includes/template-tags.php:453
+#: includes/template-tags.php:484
 msgctxt "Previous post link"
 msgid "Previous Post"
 msgstr ""
 
-#: includes/template-tags.php:456
+#: includes/template-tags.php:487
 msgctxt "Next post link"
 msgid "Next Post"
 msgstr ""
 
-#: includes/template-tags.php:502
+#: includes/template-tags.php:533
 msgid "Toggle navigation"
 msgstr ""
 
-#: includes/template-tags.php:508
+#: includes/template-tags.php:539
 msgid "Menu"
 msgstr ""
 
-#: includes/template-tags.php:570
+#: includes/template-tags.php:601
 msgid "Pages"
 msgstr ""
 
-#: includes/template-tags.php:696
+#: includes/template-tags.php:727
 msgid "Subscribe to Our Newsletter"
 msgstr ""
 
@@ -359,7 +359,7 @@ msgstr ""
 msgid "Monthly Archives"
 msgstr ""
 
-#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-page.php:28, partials/content-portfolio-single.php:65, partials/content-post.php:64, partials/content.php:181
+#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-page.php:28, partials/content-portfolio-single.php:65, partials/content-post.php:68, partials/content.php:177
 msgid "Edit"
 msgstr ""
 
@@ -375,7 +375,7 @@ msgstr ""
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: partials/content-post.php:54
+#: partials/content-post.php:58
 msgid "Comments"
 msgstr ""
 
@@ -383,12 +383,12 @@ msgstr ""
 msgid "Featured"
 msgstr ""
 
-#: partials/content.php:141
+#: partials/content.php:137
 msgctxt "lsx"
 msgid "One Comment"
 msgstr ""
 
-#: partials/content.php:145
+#: partials/content.php:141
 msgctxt "content.php"
 msgid "%s Comment"
 msgid_plural "%s Comments"

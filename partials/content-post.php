@@ -10,11 +10,15 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+	<div class="entry-meta">
+		<?php lsx_post_meta_single_top(); ?>
+	</div><!-- .entry-meta -->
+
 	<?php lsx_entry_top(); ?>
 
 	<div class="entry-meta">
-		<?php lsx_post_meta(); ?>
-	</div><!-- .footer-meta -->
+		<?php lsx_post_meta_single_bottom(); ?>
+	</div><!-- .entry-meta -->
 
 	<div class="entry-content">
 		<?php

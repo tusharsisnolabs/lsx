@@ -15,11 +15,7 @@
 		$thumb_class = 'no-thumb';
 	}
 
-	if ( ! is_singular() ) {
-		$blog_layout = apply_filters( 'lsx_blog_layout', 'default' );
-	} else {
-		$blog_layout = 'default';
-	}
+	$blog_layout = apply_filters( 'lsx_blog_layout', 'default' );
 
 	if ( 'list' === $blog_layout ) {
 		$image_class = 'hidden-sm hidden-md hidden-ls';
@@ -48,6 +44,10 @@
 						</a>
 					</div>
 				<?php endif; ?>
+
+				<div class="entry-meta">
+					<?php lsx_post_meta_list_top(); ?>
+				</div><!-- .entry-meta -->
 
 				<?php
 					$format = get_post_format();
@@ -85,13 +85,9 @@
 						<span class="label label-default label-sticky"><?php esc_html_e( 'Featured', 'lsx' ); ?></span>
 					<?php endif; ?>
 				</h1>
-
-				<div class="entry-meta">
-					<?php lsx_post_meta(); ?>
-				</div><!-- .entry-meta -->
 			</header><!-- .entry-header -->
 
-			<?php if ( ! is_singular() && ! has_post_format( array( 'video', 'audio', 'quote', 'link' ) ) && ! apply_filters( 'lsx_blog_force_content_on_list', false ) ) : // Only display Excerpts for Search and Archives ?>
+			<?php if ( ! has_post_format( array( 'video', 'audio', 'quote', 'link' ) ) && ! apply_filters( 'lsx_blog_force_content_on_list', false ) ) : // Only display Excerpts for Search and Archives ?>
 
 				<div class="entry-summary">
 					<?php the_excerpt(); ?>
@@ -180,9 +176,7 @@
 
 	<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<span class="edit-link">', '</span>' ); ?>
 
-	<?php if ( ! is_singular() && ! is_single() ) : // Display full-width divider on Archives ?>
-		<div class="lsx-breaker"></div>
-	<?php endif; ?>
+	<div class="lsx-breaker"></div>
 </article>
 
 <?php lsx_entry_after();
