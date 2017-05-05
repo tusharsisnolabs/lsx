@@ -7,7 +7,7 @@
 			font-size: 30px;
 			letter-spacing: 1px;
 			line-height: 1.2;
-			margin-top: 42.5px;
+			margin-top: $lsx-large-gap / 2;
 			margin-bottom: 5px;
 			text-align: center;
 
@@ -22,7 +22,7 @@
 				position: relative;
 				text-align: center;
 
-				&.post-meta-top { margin-top: -42.5px; }
+				&.post-meta-top { margin-top: calc(-#{$lsx-large-gap} + 42.5px); }
 
 				a { @include lsx-link-colour(#919191, nth($orange, 1)); }
 			}
@@ -43,7 +43,7 @@
 			}
 		}
 
-		.entry-content { margin-top: 50px; }
+		.entry-content { margin-top: $lsx-large-gap / 2; }
 
 		.post-tags {
 			& > a {
@@ -69,13 +69,15 @@
 
 			.previous,
 			.next {
-				position: relative;
+				@include media('<phone') {
+					@include make-xs-column(12);
+				}
 
 				& > a {
 					&:before {
 						@include fa-icon();
 
-						font-size: 50px;
+						font-size: 5.5rem;
 						position: absolute;
 						top: 50%;
 						transform: translateY(-50%);
@@ -87,11 +89,11 @@
 				text-align: left;
 
 				& > a {
-					padding-left: 45px;
+					padding-left: 4.5rem;
 
 					&:before {
 						content: $fa-var-angle-left;
-						left: 0;
+						left: 15px;
 					}
 				}
 			}
@@ -100,11 +102,11 @@
 				text-align: right;
 
 				& > a {
-					padding-right: 45px;
+					padding-right: 4.5rem;
 
 					&:before {
 						content: $fa-var-angle-right;
-						right: 0;
+						right: 15px;
 					}
 				}
 			}

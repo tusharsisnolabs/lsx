@@ -8,7 +8,7 @@
 		&:last-child {
 			.lsx-full-width,
 			.lsx-full-width-alt {
-				margin-bottom: -85px;
+				margin-bottom: $lsx-large-gap * -1;
 			}
 		}
 
@@ -19,7 +19,7 @@
 			font-size: 30px;
 			letter-spacing: 1px;
 			line-height: 1.2;
-			margin-bottom: 45px;
+			margin-bottom: $lsx-large-gap / 2;
 			margin-top: 0;
 			text-align: center;
 
@@ -28,7 +28,7 @@
 				content: '';
 				display: block;
 				height: 2px;
-				margin: 20px auto 0;
+				margin: $lsx-gap auto 0;
 				width: 80px;
 			}
 
@@ -47,25 +47,25 @@
 			color: inherit;
 
 			& + p {
-				margin-top: $line-height-computed;
+				margin-top: $lsx-gap;
 
-				& > .btn { margin-top: 45px - $line-height-computed; }
+				& > .btn { margin-top: $lsx-gap; }
 			}
 		}
 
-		img ~ p { margin-top: 25px; }
+		img ~ p { margin-top: $lsx-gap; }
 
 		a:not(.btn) { transition: all 300ms ease; }
 
-		.btn { margin-top: 45px; }
+		.btn { margin-top: $lsx-large-gap / 2; }
 
 		.lsx-full-width,
 		.lsx-full-width-alt {
 			@include default-vertical-gap(bottom);
 
-			margin: 0 -9999px;
-			padding-left: 9999px;
-			padding-right: 9999px;
+			margin: 0 -9999rem;
+			padding-left: 9999rem;
+			padding-right: 9999rem;
 
 			h3,
 			.widget-title {

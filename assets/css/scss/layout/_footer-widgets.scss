@@ -1,5 +1,5 @@
 #footer-widgets {
-	padding: 15px 0 45px;
+	padding: 15px 0 $lsx-large-gap / 2;
 
 	.row {
 		display: flex;
@@ -20,7 +20,7 @@
 	}
 
 	.widget {
-		margin-top: 30px;
+		margin-top: 3rem;
 
 		a {
 			display: inline-block;
@@ -39,7 +39,7 @@
 
 	.widget-title {
 		font-weight: 700;
-		margin-bottom: 20px;
+		margin-bottom: $lsx-gap;
 		margin-top: 0;
 	}
 

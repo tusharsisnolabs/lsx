@@ -24,7 +24,7 @@
 	.comment-reply-title {
 		color: nth($orange, 1);
 		font-size: 20px;
-		margin-bottom: $line-height-computed / 2;
+		margin-bottom: $lsx-gap / 2;
 
 		& > small {
 			display: block;
@@ -47,10 +47,10 @@
 
 			&.comment-notes,
 			&.logged-in-as {
-				margin-bottom: $line-height-computed;
+				margin-bottom: $lsx-gap;
 			}
 
-			&.form-submit { margin-top: $line-height-computed; }
+			&.form-submit { margin-top: $lsx-gap; }
 		}
 
 		input[type="submit"] {
@@ -95,13 +95,8 @@
 		.media {
 			&:not(.media-reply) {
 				border-top: 1px solid #E2E2E2;
-				margin-top: 20px;
-				padding-top: 20px;
-
-				@include media('>=tablet') {
-					margin-top: 40px;
-					padding-top: 40px;
-				}
+				margin-top: 4rem;
+				padding-top: 4rem;
 			}
 
 			.media-object {
@@ -122,9 +117,9 @@
 
 				@include media('>=tablet') {
 					border-width: 5px;
-					height: 100px;
-					margin-right: 80px;
-					width: 100px;
+					height: 10rem;
+					margin-right: 8rem;
+					width: 10rem;
 				}
 			}
 
@@ -133,7 +128,7 @@
 
 				& > p {
 					margin-bottom: 0;
-					margin-top: $line-height-computed;
+					margin-top: $lsx-gap;
 				}
 
 				& > time {
@@ -162,7 +157,7 @@
 			padding-left: 0;
 
 			@include media('>=phone') { margin-left: -65px; }
-			@include media('>=tablet') { margin-left: -130px; }
+			@include media('>=tablet') { margin-left: -13rem; }
 		}
 
 		.comment-edit-link { font-size: 13px; }

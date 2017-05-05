@@ -13,9 +13,9 @@
 
 @mixin default-vertical-gap ($direction: false, $type: padding) {
 	@if $direction {
-		#{$type}-#{$direction}: $vertical-gap;
+		#{$type}-#{$direction}: $lsx-large-gap;
 	} @else {
-		#{$type}-bottom: $vertical-gap;
-		#{$type}-top: $vertical-gap;
+		#{$type}-bottom: $lsx-large-gap;
+		#{$type}-top: $lsx-large-gap;
 	}
 }

@@ -1,6 +1,6 @@
 #footer-cta {
-	padding-bottom: 40px;
-	padding-top: 40px;
+	padding-bottom: $lsx-large-gap / 2;
+	padding-top: $lsx-large-gap / 2;
 
 	.lsx-hero-unit {
 		margin: 0 auto;
@@ -19,7 +19,7 @@
 	p,
 	.textwidget {
 		line-height: 1.35;
-		margin-bottom: 30px;
+		margin-bottom: 3rem;
 
 		@include media('>=desktop') { font-size: 22px; }
 	}

@@ -15,8 +15,8 @@
 
 	.archive-header {
 		.lsx:not(.single-post):not(.page-has-banner) & {
-			margin: 0 -999rem;
-			padding: 60px 999rem;
+			margin: 0 -9999rem;
+			padding: 60rem 9999rem;
 			text-align: center;
 		}
 
@@ -27,10 +27,10 @@
 article.page,
 article.post {
 	.entry-content {
-		.wp-audio-shortcode { margin-bottom: $line-height-computed; }
+		.wp-audio-shortcode { margin-bottom: $lsx-gap; }
 
 		.wp-caption {
-			margin-bottom: $line-height-computed;
+			margin-bottom: $lsx-gap;
 
 			& > .wp-caption-text {
 				font-size: 13px;
@@ -43,7 +43,7 @@ article.post {
 		p img[class*="wp-image-"] {
 			&.alignleft,
 			&.alignright {
-				padding-bottom: $line-height-computed;
+				padding-bottom: $lsx-gap;
 			}
 		}
 
@@ -59,25 +59,19 @@ article.post {
 
 			&.alignleft {
 				float: left;
-				padding-right: $line-height-computed;
+				padding-right: $lsx-gap;
 			}
 
 			&.alignright {
 				float: right;
-				padding-left: $line-height-computed;
+				padding-left: $lsx-gap;
 			}
 
 			&.alignnone {
 				@include media('>=phone') {
-					margin-left: -50px;
-					margin-right: -50px;
-					max-width: calc(100% + 100px);
-				}
-
-				@include media('>=desktop') {
-					margin-left: -100px;
-					margin-right: -100px;
-					max-width: calc(100% + 200px);
+					margin-left: -10rem;
+					margin-right: -10rem;
+					max-width: calc(100% + 20rem);
 				}
 			}
 		}
