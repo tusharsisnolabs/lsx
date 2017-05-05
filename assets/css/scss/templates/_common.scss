@@ -1,6 +1,8 @@
 .content-area,
 .widget-area {
 	@include default-vertical-gap();
+
+	z-index: 4;
 }
 
 .archive-header-wrapper {

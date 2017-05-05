@@ -11,10 +11,14 @@
 	@include media ('>=phone') { width: 75%; }
 	@include media ('>=desktop') { width: 50%; }
 
-	.has-sidebar & {
+	.has-sidebar:not(.single-post) & {
 		width: 100%;
 
 		@include media ('>=tablet') { width: 75%; }
+	}
+
+	.single-post & {
+		@include media ('>=tablet') { width: 90%; }
 	}
 
 	.comment-reply-title {
