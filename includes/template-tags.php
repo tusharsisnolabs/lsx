@@ -158,7 +158,7 @@ endif;
 if ( ! function_exists( 'lsx_post_meta_avatar' ) ) :
 
 	/**
-	 * Add customisable post meta: post author.
+	 * Add customisable post meta: author's avatar.
 	 *
 	 * @package    lsx
 	 * @subpackage template-tags

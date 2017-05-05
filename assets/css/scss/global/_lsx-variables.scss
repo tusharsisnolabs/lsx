@@ -3,7 +3,7 @@
 // This file contains the theme's variables declarations and some vendor's variables overriding.
 // Also, it was created separately so we can import it in the vendor's files. In this way, our variables are available to the entire project.
 
-$blue: (#418AD0, #374750, #367DC0, darken(#418AD0, 3%));
+$blue: (#418AD0, #374750, #367DC0, #2B3840);
 $dark-gray: #434343;
 $light-gray: #F6F6F6;
 $orange: (#F7AE00, #CE9100, #EDA700);
@@ -47,8 +47,6 @@ $input-border-radius: 2px;
 $input-border-focus: nth($blue, 1);
 $input-color-placeholder: #9F9C9C;
 
-$vertical-gap: 85px;
-
 $lsx-gap: 2.4rem;
 $lsx-large-gap: 8.5rem;
 
@@ -75,7 +73,7 @@ $top-menu: (
 	icon: $dark-gray,
 	icon-hover: nth($orange, 1),
 	dropdown: nth($blue, 2),
-	dropdown-hover: #2B3840,
+	dropdown-hover: nth($blue, 4),
 	dropdown-link: #FFF,
 	dropdown-link-hover: nth($blue, 1),
 	height: 32px
@@ -86,7 +84,7 @@ $nav: (
 	link: #515151,
 	hover: nth($blue, 1),
 	dropdown: nth($blue, 2),
-	dropdown-hover: #2B3840,
+	dropdown-hover: nth($blue, 4),
 	dropdown-link: #FFF,
 	dropdown-link-hover: nth($blue, 1)
 );
@@ -99,7 +97,7 @@ $header: (
 );
 
 $banner: (
-	bg: #2B3840,
+	bg: nth($blue, 4),
 	color: #FFF,
 	color-image: #FFF
 );
@@ -122,21 +120,21 @@ $aside-widgets: (
 );
 
 $footer: (
-	bg: #232222,
+	bg: nth($blue, 4),
 	color: #FFF,
 	link: nth($orange, 1),
 	hover: nth($orange, 2)
 );
 
 $footer-widgets: (
-	bg: #333,
+	bg: nth($blue, 2),
 	color: #FFF,
 	link: #FFF,
 	hover: nth($orange, 1)
 );
 
 $footer-cta: (
-	bg: #2B3840,
+	bg: nth($blue, 4),
 	color: #FFF,
 	link: nth($blue, 1),
 	hover: nth($blue, 3)

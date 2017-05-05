@@ -485,6 +485,7 @@ body { background-color: #F6F6F6; }
 
 @media (min-width: 768px) { .has-sidebar #comments .media-list .media:not(.media-reply) { margin-top: 20px; padding-top: 20px; }
   .has-sidebar #comments .media-list .media .media-object { border-width: 3px; height: 50px; margin-left: 40px; width: 50px; }
+  .has-sidebar #comments .media-list > .media:first-of-type { margin-top: 0; padding-top: 0; }
   .has-sidebar #comments .media-reply { margin-right: -65px; } }
 
 #footer-cta { padding-bottom: 4.25rem; padding-top: 4.25rem; }
@@ -533,7 +534,7 @@ body { background-color: #F6F6F6; }
 
 #footer-widgets .textwidget { letter-spacing: .5px; }
 
-#footer-widgets { background-color: #333; color: #FFF; }
+#footer-widgets { background-color: #374750; color: #FFF; }
 
 #footer-widgets a:not(.btn):not(button), #footer-widgets a:not(.btn):not(button):active, #footer-widgets a:not(.btn):not(button):visited { color: #FFF; }
 
@@ -633,7 +634,7 @@ body { background-color: #F6F6F6; }
 
 .footer-navigation > ul > li > a { transition: color 300ms ease-in-out; }
 
-.content-info { background-color: #232222; color: #FFF; }
+.content-info { background-color: #2B3840; color: #FFF; }
 
 .content-info a, .content-info a:before { color: #F7AE00; }
 
@@ -647,7 +648,7 @@ body { background-color: #F6F6F6; }
 
 .lsx.single-post .archive-header-wrapper { float: none; padding: 0; }
 
-.lsx:not(.single-post):not(.page-has-banner) .archive-header-wrapper .archive-header { margin: 0 -9999rem; padding: 60rem 9999rem; text-align: center; }
+.lsx:not(.single-post):not(.page-has-banner) .archive-header-wrapper .archive-header { margin: 0 -9999rem; padding: 6rem 9999rem; text-align: center; }
 
 .archive-header-wrapper .archive-header .archive-title { margin: 0; }
 
