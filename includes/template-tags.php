@@ -105,7 +105,8 @@ if ( ! function_exists( 'lsx_post_meta_list_top' ) ) :
 	 */
 	function lsx_post_meta_list_top() {
 		?>
-		<div class="post-meta">
+		<div class="post-meta post-meta-top">
+			<?php lsx_post_meta_avatar(); ?>
 			<?php lsx_post_meta_date(); ?>
 			<?php lsx_post_meta_author(); ?>
 			<div class="clearfix"></div>
