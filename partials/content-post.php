@@ -50,12 +50,6 @@
 				?>
 			</div>
 		<?php endif ?>
-
-		<?php
-			if ( comments_open() ) :
-				comments_template();
-			endif;
-		?>
 	</footer><!-- .footer-meta -->
 
 	<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>

@@ -35,6 +35,12 @@ get_header(); ?>
 
 	<?php lsx_post_nav(); ?>
 
+	<?php
+		if ( comments_open() ) {
+			comments_template();
+		}
+	?>
+
 </div><!-- #primary -->
 
 <?php lsx_content_wrap_after(); ?>

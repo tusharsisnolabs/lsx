@@ -29,15 +29,15 @@ get_header(); ?>
 
 		<?php lsx_content_bottom(); ?>
 
-		<?php
-			if ( comments_open() ) {
-				comments_template();
-			}
-		?>
-
 	</main><!-- #main -->
 
 	<?php lsx_content_after(); ?>
+
+	<?php
+		if ( comments_open() ) {
+			comments_template();
+		}
+	?>
 
 </div><!-- #primary -->
 
