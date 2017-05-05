@@ -11,14 +11,10 @@
 	@include media ('>=phone') { width: 75%; }
 	@include media ('>=desktop') { width: 50%; }
 
-	.has-sidebar:not(.single-post) & {
+	.has-sidebar & {
 		width: 100%;
 
 		@include media ('>=tablet') { width: 75%; }
-	}
-
-	.single-post & {
-		@include media ('>=tablet') { width: 90%; }
 	}
 
 	.comment-reply-title {
@@ -66,26 +62,6 @@
 	& > h3 { display: none; }
 
 	.media-list {
-		.media-object { border-color: $text-color; }
-
-		.media-reply {
-			.media-object { border-color: nth($orange, 1); }
-
-			.media-reply {
-				.media-object { border-color: nth($blue, 1); }
-
-				.media-reply {
-					.media-object { border-color: $red-accent; }
-
-					.media-reply {
-						.media-object { border-color: $text-color; }
-					}
-				}
-			}
-		}
-	}
-
-	.media-list {
 		margin-bottom: 0;
 		overflow: visible;
 		padding-left: 0;
@@ -100,6 +76,8 @@
 			}
 
 			.media-object {
+				background-color: $text-color;
+				border-color: $text-color;
 				border-style: solid;
 				border-width: 1px;
 				border-radius: 50%;
@@ -121,6 +99,11 @@
 					margin-right: 8rem;
 					width: 10rem;
 				}
+			}
+
+			&.bypostauthor > .media-object {
+				border-color: nth($orange, 1);
+				background-color: nth($orange, 1);
 			}
 
 			.media-body {

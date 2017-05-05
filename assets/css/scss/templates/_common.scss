@@ -68,7 +68,7 @@ article.post {
 			}
 
 			&.alignnone {
-				@include media('>=phone') {
+				@include media('>=tablet') {
 					margin-left: -10rem;
 					margin-right: -10rem;
 					max-width: calc(100% + 20rem);
