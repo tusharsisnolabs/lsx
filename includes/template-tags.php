@@ -125,7 +125,7 @@ if ( ! function_exists( 'lsx_post_meta_single_top' ) ) :
 	 */
 	function lsx_post_meta_single_top() {
 		?>
-		<div class="post-meta">
+		<div class="post-meta post-meta-top">
 			<?php lsx_post_meta_avatar(); ?>
 			<?php lsx_post_meta_date(); ?>
 			<?php lsx_post_meta_author(); ?>
@@ -165,10 +165,13 @@ if ( ! function_exists( 'lsx_post_meta_avatar' ) ) :
 	 */
 	function lsx_post_meta_avatar() {
 		$author = get_the_author();
-		$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 128 );
+		$author_id = get_the_author_meta( 'ID' );
+		$author_avatar = get_avatar( $author_id, 80 );
+		$author_url = get_author_posts_url( $author_id );
 
 		printf(
-			'<figure class="post-meta-avatar">%1$s</figure>',
+			'<a href="%1$s" class="post-meta-avatar">%2$s</a>',
+			esc_url( $author_url ),
 			$author_avatar
 		);
 	}
@@ -194,8 +197,7 @@ if ( ! function_exists( 'lsx_post_meta_date' ) ) :
 		);
 
 		printf(
-			'<span class="post-meta-time"><span>%1$s</span> <a href="%2$s" rel="bookmark">%3$s</a></span>',
-			esc_html__( 'On', 'lsx' ),
+			'<span class="post-meta-time"><a href="%1$s" rel="bookmark">%2$s</a></span>',
 			esc_url( get_permalink() ),
 			wp_kses_post( $time_string )
 		);
@@ -272,7 +274,7 @@ if ( ! function_exists( 'lsx_post_tags' ) ) :
 		if ( has_tag() ) :
 			?>
 			<div class="post-tags">
-				<span><?php esc_html_e( 'Tagged as:', 'lsx' ); ?></span> <?php echo wp_kses_post( get_the_tag_list( '' ) ); ?>
+				<?php echo wp_kses_post( get_the_tag_list( '' ) ); ?>
 			</div>
 			<?php
 		endif;
@@ -497,14 +499,17 @@ if ( ! function_exists( 'lsx_post_nav' ) ) :
 		if ( ! $next && ! $previous ) {
 			return;
 		}
+
+		$default_size = 'sm';
+		$size         = apply_filters( 'lsx_bootstrap_column_size', $default_size );
 		?>
 		<nav class="navigation post-navigation" role="navigation">
 			<div class="lsx-breaker"></div>
 			<div class="nav-links pager row">
-				<div class="previous col-md-6">
+				<div class="previous <?php echo 'col-' . $size . '-6'; ?>">
 					<?php previous_post_link( '%link', '<p class="nav-links-description">' . _x( 'Previous Post', 'Previous post link', 'lsx' ) . '</p><h3>%title</h3>' ); ?>
 				</div>
-				<div class="next col-md-6">
+				<div class="next <?php echo 'col-' . $size . '-6'; ?>">
 					<?php next_post_link( '%link', '<p class="nav-links-description">' . _x( 'Next Post', 'Next post link', 'lsx' ) . '</p><h3>%title</h3>' ); ?>
 				</div>
 			</div><!-- .nav-links -->
