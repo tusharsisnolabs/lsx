@@ -120,43 +120,37 @@
 
 			<div class="clearfix"></div>
 
-			<?php
-				$comments_number = get_comments_number();
+			<?php $comments_number = get_comments_number(); ?>
 
-				if ( has_tag() || ( comments_open() && ! empty( $comments_number ) ) ) :
-					?>
+			<div class="post-tags-wrapper">
+				<?php lsx_post_meta_category(); ?>
 
-					<div class="post-tags-wrapper">
-						<?php lsx_content_post_tags(); ?>
+				<?php lsx_content_post_tags(); ?>
 
-						<?php if ( comments_open() && ! empty( $comments_number ) ) : ?>
-							<div class="post-comments">
-								<a href="<?php the_permalink() ?>#comments">
-									<?php
-										if ( '1' === $comments_number ) {
-											echo esc_html( _x( 'One Comment', 'lsx' ) );
-										} else {
-											printf(
-												/* Translators: %s: number of comments */
-												esc_html( _nx(
-													'%s Comment',
-													'%s Comments',
-													$comments_number,
-													'content.php',
-													'lsx'
-												) ),
-												esc_html( number_format_i18n( $comments_number ) )
-											);
-										}
-									?>
-								</a>
-							</div>
-						<?php endif ?>
+				<?php if ( comments_open() && ! empty( $comments_number ) ) : ?>
+					<div class="post-comments">
+						<a href="<?php the_permalink() ?>#comments">
+							<?php
+								if ( '1' === $comments_number ) {
+									echo esc_html( _x( 'One Comment', 'lsx' ) );
+								} else {
+									printf(
+										/* Translators: %s: number of comments */
+										esc_html( _nx(
+											'%s Comment',
+											'%s Comments',
+											$comments_number,
+											'content.php',
+											'lsx'
+										) ),
+										esc_html( number_format_i18n( $comments_number ) )
+									);
+								}
+							?>
+						</a>
 					</div>
-
-					<?php
-				endif;
-			?>
+				<?php endif ?>
+			</div>
 		</div>
 
 		<?php if ( has_post_thumbnail() ) : ?>
