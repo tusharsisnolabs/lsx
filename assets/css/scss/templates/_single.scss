@@ -52,13 +52,17 @@
 
 				display: inline-block;
 				font-size: 13px;
+				margin-right: 5px;
 
 				&:before {
 					content: '#';
 					display: inline-block;
 				}
 
-				& + a { margin-left: 5px; }
+				&:last-child,
+				&:only-child {
+					margin-right: 0;
+				}
 			}
 		}
 	}
