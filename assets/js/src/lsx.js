@@ -295,42 +295,6 @@ var lsx = Object.create( null );
 	};
 
 	/**
-	 * Comments anchor effect (using location.hash)
-	 *
-	 * @package    lsx
-	 * @subpackage scripts
-	 */
-	lsx.set_comments_anchor_effect = function() {
-		var margin;
-
-		if ( document.location.hash == '#comments' ) {
-			margin = $( 'body' ).hasClass( 'top-menu-fixed' ) ? $( 'header.navbar' ).height() : 0;
-			margin += $( 'body' ).hasClass( 'admin-bar' ) ? $( '#wpadminbar' ).height() : 0;
-
-			$( 'html, body' ).animate( {
-				scrollTop: $( '.comments-link' ).offset().top - margin
-			}, 500, function() {
-				$( '.comments-link' ).trigger( 'click' );
-			} );
-		}
-
-		if ( ( new RegExp( '#comment-', 'gi' ) ).test( document.location.hash ) ) {
-			margin  = $( 'body' ).hasClass( 'top-menu-fixed' ) ? $( 'header.navbar' ).height() : 0;
-			margin += $( 'body' ).hasClass( 'admin-bar' ) ? $( '#wpadminbar' ).height() : 0;
-
-			$( 'html, body' ).animate( {
-				scrollTop: $( '.comments-link' ).offset().top - margin
-			}, 500, function() {
-				$( '.comments-link' ).trigger( 'click' );
-
-				$( 'html, body' ).animate( {
-					scrollTop: $( document.location.hash ).offset().top - margin
-				}, 500);
-			} );
-		}
-	};
-
-	/**
 	 * On window resize.
 	 *
 	 * @package    lsx
@@ -376,7 +340,6 @@ var lsx = Object.create( null );
 
 		lsx.set_search_form_effect_mobile();
 		lsx.set_banner_effect_parallax();
-		lsx.set_comments_anchor_effect();
 
 		/* LAST CODE TO EXECUTE */
 		$( 'body.preloader-content-enable' ).addClass( 'html-loaded' );
