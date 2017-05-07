@@ -27,7 +27,7 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 .content-area p, .widget-area p { margin-bottom: 2.4rem; }
 
-.content-area a:not(.btn), .widget-area a:not(.btn) { transition: color 300ms ease; word-wrap: break-word; }
+.content-area a:not(.btn), .widget-area a:not(.btn) { transition: all 300ms ease; word-wrap: break-word; }
 
 .content-area strong, .widget-area strong { font-weight: 700; }
 
@@ -403,6 +403,30 @@ body { background-color: #F6F6F6; }
 
 .wrap .widget .lsx-full-width-alt a:not(.btn):hover, .wrap .widget .lsx-full-width-alt a:not(.btn):hover:active, .wrap .widget .lsx-full-width-alt a:not(.btn):focus { color: #F7AE00; }
 
+.lsx-pagination-wrapper { display: block; margin-top: 8.5rem; position: relative; text-align: center; }
+
+.lsx-pagination > .page-numbers, .lsx-pagination > .page-numbers.prev:before, .lsx-pagination > .page-numbers.next:before { border: 2px solid #418AD0; border-radius: 3px; color: #418AD0; display: inline-block; height: 40px; line-height: 36px; text-align: center; vertical-align: top; width: 40px; }
+
+.lsx-pagination > .page-numbers:not(.dots) + .page-numbers:not(.dots) { margin-right: 5px; }
+
+.lsx-pagination > .page-numbers.current, .lsx-pagination > .page-numbers:hover, .lsx-pagination > .page-numbers:active:hover, .lsx-pagination > .page-numbers:focus { background-color: #418AD0; color: #FFF; }
+
+.lsx-pagination > .page-numbers > .meta-nav { display: none; }
+
+.lsx-pagination > span.dots { border-color: transparent; color: #4A4A4A; width: 20px; }
+
+.lsx-pagination > span.dots:hover, .lsx-pagination > span.dots:active:hover, .lsx-pagination > span.dots:focus { background-color: transparent; color: inherit; }
+
+.lsx-pagination > .prev:before { content: ""; }
+
+.lsx-pagination > .next:before { content: ""; }
+
+.lsx-pagination > .prev, .lsx-pagination > .next { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; }
+
+.lsx-pagination > .prev:before, .lsx-pagination > .next:before { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 15px; transition: color 300ms ease; }
+
+.lsx-pagination > .prev:hover:before, .lsx-pagination > .next:hover:before { color: #FFF; }
+
 #respond { margin-top: 8.5rem; margin-right: auto; margin-left: auto; padding-right: 0; padding-left: 0; text-align: center; width: 100%; }
 
 @media (min-width: 768px) { #respond { width: 75%; } }
@@ -730,6 +754,8 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 
 .blog article.post .entry-layout, .archive article.post .entry-layout { background-color: #FFF; padding-bottom: 15px; }
 
+.blog article.post .entry-header, .archive article.post .entry-header { position: relative; }
+
 .blog article.post .thumbnail, .archive article.post .thumbnail { border: 0 none; border-radius: 0; display: block; margin-bottom: 0; height: 0; overflow: hidden; padding: 0 0 39.47%; position: relative; }
 
 .blog article.post .thumbnail > .attachment-responsive, .archive article.post .thumbnail > .attachment-responsive { border: 0; bottom: 0; height: auto; right: 0; position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 100%; }
@@ -749,6 +775,8 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 .blog article.post .entry-title, .archive article.post .entry-title { font-size: 30px; margin-top: 15px; padding: 0 10rem; text-align: center; }
 
 .blog article.post .entry-title .fa, .archive article.post .entry-title .fa { display: none; }
+
+.blog article.post .entry-title .label-sticky, .archive article.post .entry-title .label-sticky { background-color: #418AD0; border-radius: 0; color: #FFF; font-family: "Noto Sans", sans-serif; font-size: 15px; font-weight: 400; padding: 1rem; position: absolute; left: 1rem; top: 1rem; box-shadow: 0 10px 6px -6px rgba(0, 0, 0, 0.15); }
 
 .blog article.post .entry-summary, .archive article.post .entry-summary { padding: 0 10rem; }
 

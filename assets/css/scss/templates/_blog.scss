@@ -20,6 +20,8 @@
 			padding-bottom: 15px;
 		}
 
+		.entry-header { position: relative; }
+
 		.thumbnail {
 			border: 0 none;
 			border-radius: 0;
@@ -79,6 +81,20 @@
 			text-align: center;
 
 			& .fa { display: none; }
+
+			& .label-sticky {
+				background-color: nth($blue, 1);
+				border-radius: 0;
+				color: #FFF;
+				font-family: $font-family-base;
+				font-size: $font-size-base;
+				font-weight: 400;
+				padding: 1rem;
+				position: absolute;
+				right: 1rem;
+				top: 1rem;
+				box-shadow: 0 10px 6px -6px rgba(0, 0, 0, .15);
+			}
 		}
 
 		.entry-summary { padding: 0 10rem; }
