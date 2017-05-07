@@ -1,4 +1,4 @@
-.wrap  {
+/* .wrap  {
 	.widget {
 		@include default-vertical-gap();
 
@@ -59,21 +59,23 @@
 
 		.btn { margin-top: $lsx-large-gap / 2; }
 
-		.lsx-full-width,
-		.lsx-full-width-alt {
-			@include default-vertical-gap(bottom);
 
-			margin: 0 -9999rem;
-			padding-left: 9999rem;
-			padding-right: 9999rem;
+	}
+} */
 
-			h3,
-			.widget-title {
-				@include default-vertical-gap(top, margin);
+.lsx-full-width,
+.lsx-full-width-alt {
+	@include default-vertical-gap(bottom);
 
-				&:after { display: none; }
-			}
-		}
+	margin: 0 -9999rem;
+	padding-left: 9999rem;
+	padding-right: 9999rem;
+
+	h3,
+	.widget-title {
+		@include default-vertical-gap(top, margin);
+
+		&:after { display: none; }
 	}
 }
 

@@ -20,5 +20,7 @@
 	font-size: 18px;
 	line-height: 1.33;
 	padding: 10px 20px;
-	transition: border-color 150ms ease-in-out;
+	transition: all 150ms ease;
+
+	&:focus { box-shadow: none; }
 }

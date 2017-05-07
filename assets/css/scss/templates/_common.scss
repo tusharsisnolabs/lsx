@@ -1,10 +1,3 @@
-.content-area,
-.widget-area {
-	@include default-vertical-gap();
-
-	z-index: 4;
-}
-
 .archive-header-wrapper {
 	.lsx.page-has-banner:not(.single-post) & { display: none; }
 
@@ -18,10 +11,22 @@
 			margin: 0 -9999rem;
 			padding: 6rem 9999rem;
 			text-align: center;
+
+			& > p {
+				color: #FFF;
+				margin: $lsx-gap 0 0;
+			}
 		}
 
 		.archive-title { margin: 0; }
 	}
+}
+
+.content-area,
+.widget-area {
+	padding-bottom: $lsx-large-gap;
+	padding-top: $lsx-large-gap;
+	z-index: 4;
 }
 
 article.page,
@@ -88,5 +93,47 @@ article.post {
 				}
 			}
 		}
+	}
+}
+
+.widget-area {
+	& > .widget {
+		& + .widget { margin-top: $lsx-large-gap / 2; }
+
+		h1, h2, h3, h4, h5, h6, .widget-title { text-align: center; }
+
+		& > ul,
+		& > ol {
+			list-style: none;
+			margin-bottom: 0;
+			padding-left: 0;
+		}
+
+		.textwidget {
+			& > p {
+				margin-bottom: 0;
+
+				& + p { margin-top: $lsx-gap; }
+			}
+		}
+
+		&.widget_rss {
+			& > .widget-title {
+				& > .rsswidget {
+					&:first-child { display: none; }
+
+					&:last-child {
+						&:before {
+							@include fa-icon();
+
+							content: $fa-var-rss;
+							display: inline-block;
+							margin-right: 10px;
+						}
+					}
+				}
+			}
+		}
+
 	}
 }

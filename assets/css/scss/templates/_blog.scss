@@ -1,5 +1,6 @@
 .blog,
-.archive {
+.archive,
+.search.search-results {
 	&:not(.has-sidebar) {
 		.site-main {
 			@include media ('>=tablet') {
@@ -11,9 +12,11 @@
 		}
 	}
 
-	article.post {
+	article.post,
+	article.page {
 
-		& + article.post { margin-top: $lsx-large-gap; }
+		& + article.post,
+		& + article.page { margin-top: $lsx-large-gap; }
 
 		.entry-layout {
 			background-color: #FFF;
