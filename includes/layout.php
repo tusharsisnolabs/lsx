@@ -205,13 +205,25 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 			</div>
 			<?php
 		elseif ( is_author() ) :
+			$author = get_the_author();
+			$author_avatar = get_avatar( get_the_author_meta( 'ID' ), 256 );
+			$author_bio = get_the_archive_description();
 			?>
 			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
 				<header class="archive-header">
 					<h1 class="archive-title"><?php the_archive_title(); ?></h1>
-					<?php the_archive_description(); ?>
 				</header>
+
+				<div class="archive-author-data">
+					<figure class="archive-author-avatar"><?php echo $author_avatar; ?></figure>
+					<?php if ( !empty( $author_bio ) ) : ?>
+						<h2 class="archive-author-title text-center">About the author</h2>
+						<p class="archive-author-bio"><?php echo $author_bio; ?></p>
+					<?php endif; ?>
+					<h2 class="archive-author-posts text-center">All posts by <?php echo $author; ?></h2>
+				</div>
 			</div>
+
 			<?php
 		elseif ( is_archive() && class_exists( 'WooCommerce' ) && is_post_type_archive( 'product' ) ) :
 			?>
