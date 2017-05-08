@@ -48,7 +48,8 @@ $input-border-radius: 2px;
 $input-border-focus: nth($blue, 1);
 $input-color-placeholder: #9F9C9C;
 
-$table-border-color: #DADDDF;
+$table-border-color: $breaker;
+$page-header-border-color: $breaker;
 
 $lsx-gap: 2.4rem;
 $lsx-large-gap: 8.5rem;

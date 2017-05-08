@@ -376,6 +376,10 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 .content-area .lsx-full-width h1:after, .content-area .lsx-full-width h2:after, .content-area .lsx-full-width h3:after, .content-area .lsx-full-width h4:after, .content-area .lsx-full-width h5:after, .content-area .lsx-full-width h6:after, .content-area .lsx-full-width .widget-title:after, .content-area .lsx-full-width-alt h1:after, .content-area .lsx-full-width-alt h2:after, .content-area .lsx-full-width-alt h3:after, .content-area .lsx-full-width-alt h4:after, .content-area .lsx-full-width-alt h5:after, .content-area .lsx-full-width-alt h6:after, .content-area .lsx-full-width-alt .widget-title:after { display: none; }
 
+.page-header { margin: 0 0 2.4rem; padding: 0; }
+
+.page-header > .page-title { font-size: 30px; margin-bottom: 12px; }
+
 body { background-color: #F6F6F6; }
 
 .lsx-breaker, .page-header { border-bottom-color: #DADDDF; }
