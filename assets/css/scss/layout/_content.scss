@@ -64,12 +64,13 @@
 }
 
 .page-header {
+	border: 0 none;
 	margin: 0 0 $lsx-gap;
 	padding: 0;
 
 	& > .page-title {
 		font-size: 30px;
-		margin-bottom: 12px;
+		margin-bottom: 0;
 	}
 }
 

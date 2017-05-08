@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php echo esc_attr( lsx_main_class() ); ?>">
+	<div id="primary" class="content-area col-sm-8 col-sm-offset-2">
 		<main id="main" class="site-main">
 			<section class="error-404 not-found">
 				<header class="page-header">
