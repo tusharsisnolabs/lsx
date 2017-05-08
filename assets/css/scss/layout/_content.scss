@@ -1,9 +1,8 @@
-/* .wrap  {
-	.widget {
-		@include default-vertical-gap();
+#home-widgets {
+	margin-top: $lsx-large-gap;
 
-		padding-left: 0;
-		padding-right: 0;
+	& > .widget {
+		margin-bottom: $lsx-large-gap;
 
 		&:last-child {
 			.lsx-full-width,
@@ -11,71 +10,56 @@
 				margin-bottom: $lsx-large-gap * -1;
 			}
 		}
-
-		& + .widget { padding-top: 0; }
-
-		h3,
-		.widget-title {
-			font-size: 30px;
-			letter-spacing: 1px;
-			line-height: 1.2;
-			margin-bottom: $lsx-large-gap / 2;
-			margin-top: 0;
-			text-align: center;
-
-			&:after {
-				background-color: #E2E1E1;
-				content: '';
-				display: block;
-				height: 2px;
-				margin: $lsx-gap auto 0;
-				width: 80px;
-			}
-
-			& > small {
-				color: inherit;
-				display: block;
-				letter-spacing: .7px;
-				line-height: inherit;
-				margin-top: 8px;
-			}
-		}
-
-		.textwidget, p { margin-bottom: 0; }
-
-		p {
-			color: inherit;
-
-			& + p {
-				margin-top: $lsx-gap;
-
-				& > .btn { margin-top: $lsx-gap; }
-			}
-		}
-
-		img ~ p { margin-top: $lsx-gap; }
-
-		a:not(.btn) { transition: all 300ms ease; }
-
-		.btn { margin-top: $lsx-large-gap / 2; }
-
-
 	}
-} */
-
-.lsx-full-width,
-.lsx-full-width-alt {
-	@include default-vertical-gap(bottom);
-
-	margin: 0 -9999rem;
-	padding-left: 9999rem;
-	padding-right: 9999rem;
 
 	h3,
 	.widget-title {
-		@include default-vertical-gap(top, margin);
+		font-size: 30px;
+		line-height: 1.2;
+		margin-bottom: $lsx-large-gap / 2;
+		margin-top: 0;
+		text-align: center;
 
-		&:after { display: none; }
+		&:after {
+			content: '';
+			display: block;
+			height: 2px;
+			margin: $lsx-gap auto 0;
+			width: 80px;
+		}
+
+		& > small {
+			color: inherit;
+			display: block;
+			line-height: inherit;
+			margin-top: 8px;
+		}
+	}
+
+	.textwidget, p { margin-bottom: 0; }
+
+	p {
+		& + p {
+			margin-top: $lsx-gap;
+
+			& > .btn { margin-top: $lsx-gap; }
+		}
+	}
+
+	img ~ p { margin-top: $lsx-gap; }
+
+	.btn { margin-top: $lsx-large-gap / 2; }
+}
+
+.content-area {
+	.lsx-full-width,
+	.lsx-full-width-alt {
+		margin: 0 -9999rem;
+		padding: $lsx-large-gap 9999rem;
+
+		h1, h2, h3, h4, h5, h6, .widget-title {
+			&:after { display: none; }
+		}
 	}
 }
 

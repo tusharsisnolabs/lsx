@@ -1,6 +1,9 @@
-.btn,
-#respond > .comment-form input[type="submit"] {
-	@include lsx-button-scaffolding();
+.btn { @include lsx-button-scaffolding(); }
+
+#respond {
+	& > .comment-form {
+		input[type="submit"] { @include lsx-button-scaffolding(); }
+	}
 }
 
 .btn-lg {

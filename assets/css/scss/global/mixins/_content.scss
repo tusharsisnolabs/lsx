@@ -1,18 +1,19 @@
 @mixin content-colours (
-	$bg: map-get($aside-widgets, bg),
-	$breaker: map-get($aside-widgets, breaker),
-	$header: map-get($aside-widgets, header),
-	$color: map-get($aside-widgets, color),
-	$link: map-get($aside-widgets, link),
-	$hover: map-get($aside-widgets, hover),
-	$full-bg: map-get($aside-widgets, full-bg),
-	$full-color: map-get($aside-widgets, full-color),
-	$full-link: map-get($aside-widgets, full-link),
-	$full-hover: map-get($aside-widgets, full-hover),
-	$full-cta-bg: map-get($aside-widgets, full-cta-bg),
-	$full-cta-color: map-get($aside-widgets, full-cta-color),
-	$full-cta-link: map-get($aside-widgets, full-cta-link),
-	$full-cta-hover: map-get($aside-widgets, full-cta-hover)) {
+	$bg: map-get($content, bg),
+	$breaker: map-get($content, breaker),
+	$header: map-get($content, header),
+	$color: map-get($content, color),
+	$link: map-get($content, link),
+	$hover: map-get($content, hover),
+	$small: map-get($content, small),
+	$full-bg: map-get($content, full-bg),
+	$full-color: map-get($content, full-color),
+	$full-link: map-get($content, full-link),
+	$full-hover: map-get($content, full-hover),
+	$full-cta-bg: map-get($content, full-cta-bg),
+	$full-cta-color: map-get($content, full-cta-color),
+	$full-cta-link: map-get($content, full-cta-link),
+	$full-cta-hover: map-get($content, full-cta-hover)) {
 
 	body { background-color: $bg; }
 
@@ -21,30 +22,207 @@
 		border-bottom-color: $breaker;
 	}
 
-	.widget {
-		.wrap & {
-			color: $color;
-
-			h3, .widget-title { color: $header; }
-
-			a:not(.btn) { @include lsx-link-colour($link, $hover); }
-
-			.lsx-full-width {
-				background-color: $full-bg;
-				color: $full-color;
-
-				h3, .widget-title { color: $full-color; }
-
-				a:not(.btn) { @include lsx-link-colour($full-link, $full-hover); }
+	#masthead {
+		#searchform {
+			@media (min-width: 1200px) {
+				&:hover,
+				&:active,
+				&:active:hover,
+				&:focus {
+					.search-submit { color: $link; }
+				}
 			}
 
-			.lsx-full-width-alt {
-				background-color: $full-cta-bg;
-				color: $full-cta-color;
+			@media (max-width: 1199px) {
+				&.hover {
+					.search-submit { color: $color; }
+				}
+			}
 
-				h3, .widget-title { color: $full-cta-color; }
+			.search-field {
+				background-color: $bg;
+				color: $link;
+			}
 
-				a:not(.btn) { @include lsx-link-colour($full-cta-link, $full-cta-hover); }
+			.search-submit { color: $color; }
+		}
+	}
+
+	.content-area,
+	.widget-area {
+		color: $color;
+
+		a:not(.btn) { @include lsx-link-colour($link, $hover); }
+
+		blockquote {
+			& > p {
+				border-color: $breaker;
+
+				&:before { background-color: $bg; }
+			}
+		}
+
+		pre {
+			border-color: $breaker;
+			color: $color;
+		}
+	}
+
+	#home-widgets {
+		h3, .widget-title {
+			&:after { background-color: $breaker; }
+		}
+
+		h1, h2, h3, h4, h5, h6, .widget-title { color: $header; }
+	}
+
+	.content-area {
+		.lsx-full-width {
+			background-color: $full-bg;
+			color: $full-color;
+
+			h1, h2, h3, h4, h5, h6, .widget-title { color: $full-color; }
+
+			a:not(.btn) { @include lsx-link-colour($full-link, $full-hover); }
+		}
+
+		.lsx-full-width-alt {
+			background-color: $full-cta-bg;
+			color: $full-cta-color;
+
+			h1, h2, h3, h4, h5, h6, .widget-title { color: $full-cta-color; }
+
+			a:not(.btn) { @include lsx-link-colour($full-cta-link, $full-cta-hover); }
+		}
+
+		.lsx-pagination {
+			& > .page-numbers {
+				&,
+				&.prev:before,
+				&.next:before {
+					border-color: $link;
+					color: $link;
+				}
+
+				&.current,
+				&:hover,
+				&:active:hover,
+				&:focus {
+					background-color: $link;
+					color: #FFF;
+				}
+			}
+
+			& > span.dots {
+				border-color: transparent;
+				color: $color;
+
+				&:hover,
+				&:active:hover,
+				&:focus {
+					background-color: transparent;
+					color: inherit;
+				}
+			}
+
+			& > .prev,
+			& > .next {
+				&:hover:before { color: #FFF; }
+			}
+		}
+	}
+
+	.blog,
+	.archive,
+	.search.search-results {
+		article.post,
+		article.page {
+			.entry-meta {
+				.post-meta {
+					color: $small;
+
+					a { @include lsx-link-colour($small, $hover); }
+				}
+
+				.post-meta-avatar {
+					background-color: $link;
+
+					&:hover { border-color: $orange; }
+				}
+			}
+
+			.entry-title {
+				.label-sticky { background-color: $link; }
+			}
+
+			.post-tags-wrapper {
+				.post-meta-categories,
+				.post-tags,
+				.post-comments {
+					color: $small;
+
+					& > a { @include lsx-link-colour($small, $hover); }
+				}
+			}
+		}
+	}
+
+	.single-post {
+		article.post {
+			.entry-meta {
+				.post-meta {
+					color: $small;
+
+					a { @include lsx-link-colour($small, $hover); }
+				}
+
+				.post-meta-avatar {
+					background-color: $link;
+
+					&:hover { border-color: $hover; }
+				}
+			}
+
+			.post-tags {
+				& > a { @include lsx-link-colour($small, $hover); }
+			}
+		}
+
+		.post-navigation {
+			.nav-links {
+				a {
+					& > p { color: $small; }
+				}
+			}
+		}
+	}
+
+	#respond {
+		.comment-reply-title { color: $hover; }
+	}
+
+	#comments {
+		.media-list {
+			.media {
+				&:not(.media-reply) { border-top-color: $breaker; }
+
+				.media-object {
+					background-color: $color;
+					border-color: $color;
+				}
+
+				&.bypostauthor > .media-object {
+					border-color: $hover;
+					background-color: $hover;
+				}
+
+				.media-body {
+					& > time {
+						color: $small;
+
+						& > a { @include lsx-link-colour($small, $hover); }
+					}
+				}
 			}
 		}
 	}

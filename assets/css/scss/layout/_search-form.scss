@@ -28,7 +28,6 @@
 				}
 
 				.search-submit {
-					color: nth($blue, 1);
 					cursor: pointer;
 					z-index: 9999;
 				}
@@ -44,7 +43,6 @@
 				}
 
 				.search-submit {
-					color: $text-color;
 					cursor: pointer;
 					z-index: 9999;
 				}
@@ -56,9 +54,7 @@
 		.input-group-btn { width: auto; }
 
 		.search-field {
-			background-color: $body-bg;
 			border: 0 none;
-			color: nth($blue, 1);
 			font-size: 14px;
 			height: auto;
 			opacity: 0;
@@ -82,7 +78,6 @@
 		.search-submit {
 			background: none;
 			box-shadow: none;
-			color: $text-color;
 			line-height: 1;
 			padding: 9px 10px;
 			z-index: 999;

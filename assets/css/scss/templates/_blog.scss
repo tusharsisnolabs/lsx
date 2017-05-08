@@ -51,17 +51,13 @@
 			padding: 42.5px 10rem 0;
 
 			.post-meta {
-				color: #919191;
 				display: block;
 				font-size: 13px;
 				position: relative;
 				text-align: center;
-
-				a { @include lsx-link-colour(#919191, nth($orange, 1)); }
 			}
 
 			.post-meta-avatar {
-				background-color: nth($blue, 1);
 				border: 2px solid #FFF;
 				border-radius: 50%;
 				height: 75px;
@@ -72,8 +68,6 @@
 				transform: translateX(-50%);
 				transition: border 300ms ease;
 				width: 75px;
-
-				&:hover { border-color: nth($orange, 1); }
 			}
 		}
 
@@ -86,7 +80,6 @@
 			& .fa { display: none; }
 
 			& .label-sticky {
-				background-color: nth($blue, 1);
 				border-radius: 0;
 				color: #FFF;
 				font-family: $font-family-base;
@@ -122,15 +115,9 @@
 			.post-meta-categories,
 			.post-tags,
 			.post-comments {
-				color: #919191;
 				display: inline;
 				font-size: 13px;
-
-				& > a {
-					@include lsx-link-colour(#919191, nth($orange, 1));
-				}
 			}
-
 		}
 
 		.post-tags {

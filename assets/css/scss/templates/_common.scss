@@ -27,6 +27,11 @@
 	padding-bottom: $lsx-large-gap;
 	padding-top: $lsx-large-gap;
 	z-index: 4;
+
+	.home & {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
 }
 
 article.page,
@@ -134,6 +139,5 @@ article.post {
 				}
 			}
 		}
-
 	}
 }

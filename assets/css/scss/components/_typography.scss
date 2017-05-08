@@ -1,12 +1,7 @@
 .content-area,
 .widget-area {
 
-	h1, h2, h3, h4, h5, h6, .widget-title {
-		margin-top: 0;
-		margin-bottom: $lsx-gap;
-	}
-
-	p { margin-bottom: $lsx-gap; }
+	address { margin-bottom: $lsx-gap; }
 
 	a {
 		&:not(.btn) {
@@ -15,13 +10,7 @@
 		}
 	}
 
-	strong { font-weight: 700; }
-
-	em { font-style: italic; }
-
 	big { font-size: 120%; }
-
-	small { font-size: 80%; }
 
 	blockquote {
 		border: 0 none;
@@ -31,21 +20,21 @@
 		text-align: center;
 
 		& > p {
-			display: inline-block;
-			border: 1px solid rgba(nth($blue, 2), .2);
 			border-radius: 10px;
+			border-style: solid;
+			border-width: 1px;
+			display: inline-block;
 			font-style: italic;
 			font-size: inherit;
 			line-height: 1.375;
-			padding: 5rem 4rem;
+			padding: 4rem;
 			position: relative;
 
 			@include media('>=tablet') { max-width: 80%; }
 
 			&:before {
-				background-color: $body-bg;
 				border-radius: 50%;
-				color: $red-accent;
+				color: $red-accent; 	// TODO: is it going to be a fixed color?
 				content: '”';
 				font-family: $headings-font-family;
 				font-size: 60px;
@@ -69,9 +58,9 @@
 	}
 
 	dl {
-		& > dt {
-			font-weight: 700;
-		}
+		margin-bottom: $lsx-gap;
+
+		& > dt { font-weight: 700; }
 
 		& > dd {
 			font-style: italic;
@@ -80,20 +69,34 @@
 		}
 	}
 
-	ul, ol {
+	em { font-style: italic; }
+
+	h1, h2, h3, h4, h5, h6, .widget-title {
+		margin-top: 0;
+		margin-bottom: $lsx-gap;
+	}
+
+	ol, ul {
 		margin-bottom: $lsx-gap;
 		padding-left: 4rem;
 
-		ul, ol { margin-bottom: 0; }
+		ol, ul { margin-bottom: 0; }
 	}
 
+	p { margin-bottom: $lsx-gap; }
+
 	pre {
-		background-color: $light-gray;
-		border: 1px solid rgba(nth($blue, 2), .2);
 		border-radius: 5px;
-		color: $text-color;
+		border-style: solid;
+		border-width: 1px;
 		font-size: 14px;
-		padding: 2rem;
 		margin-bottom: $lsx-gap;
+		padding: 2rem;
 	}
+
+	small { font-size: 80%; }
+
+	strong { font-weight: 700; }
+
+	table, .table { margin-bottom: $lsx-gap; }
 }

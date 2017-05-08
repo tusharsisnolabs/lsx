@@ -1,8 +1,15 @@
-*,
-*:focus,
-*:active:focus { outline: none !important; }
+* {
+	&,
+	&:focus,
+	&:active:focus {
+		outline: none !important;
+	}
+}
 
-html, body { overflow-x: hidden; }
+html,
+body {
+	overflow-x: hidden;
+}
 
 html {
 	font-size: 5px;
@@ -15,7 +22,3 @@ html {
 body { direction: ltr; }
 
 img { @include img-responsive(inline-block); }
-
-.form-control {
-	@extend %lsx-form-field;
-}

@@ -16,19 +16,15 @@
 
 		.entry-meta {
 			.post-meta {
-				color: #919191;
 				display: block;
 				font-size: 13px;
 				position: relative;
 				text-align: center;
 
 				&.post-meta-top { margin-top: $lsx-large-gap; }
-
-				a { @include lsx-link-colour(#919191, nth($orange, 1)); }
 			}
 
 			.post-meta-avatar {
-				background-color: nth($blue, 1);
 				border: 2px solid #FFF;
 				border-radius: 50%;
 				height: 75px;
@@ -39,8 +35,6 @@
 				transform: translateX(-50%);
 				transition: border 300ms ease;
 				width: 75px;
-
-				&:hover { border-color: nth($orange, 1); }
 			}
 		}
 
@@ -48,8 +42,6 @@
 
 		.post-tags {
 			& > a {
-				@include lsx-link-colour(#919191, nth($orange, 1));
-
 				display: inline-block;
 				font-size: 13px;
 				margin-right: 5px;
@@ -124,7 +116,6 @@
 				}
 
 				& > p {
-					color: #919191;
 					font-size: 13px;
 					line-height: 2;
 				}
