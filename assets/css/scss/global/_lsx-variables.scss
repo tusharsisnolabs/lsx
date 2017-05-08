@@ -9,6 +9,7 @@ $light-gray: #F6F6F6;
 $orange: (#F7AE00, #CE9100, #EDA700);
 $red-accent: #D84E2E;
 $breaker: #DADDDF;
+$small: #919191;
 
 $grid-float-breakpoint: 1200px;
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
@@ -113,7 +114,7 @@ $content: (
 	color: $text-color,
 	link: nth($blue, 1),
 	hover: nth($orange, 1),
-	small: #919191,
+	small: $small,
 	full-bg: #FFF,
 	full-color: $text-color,
 	full-link: nth($blue, 1),

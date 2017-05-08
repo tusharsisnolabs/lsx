@@ -23,8 +23,10 @@
 
 		& cite {
 			display: block;
+			font-style: normal;
 			margin-top: 1rem;
-			text-align: right;
+			text-align: left;
+			color: $small;
 		}
 
 		& > p {
