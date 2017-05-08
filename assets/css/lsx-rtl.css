@@ -31,7 +31,9 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 .content-area big, .widget-area big { font-size: 120%; }
 
-.content-area blockquote, .widget-area blockquote { border: 0 none; font-size: 16px; margin: 0 0 2.4rem; padding: 2.4rem 0 0; text-align: center; }
+.content-area blockquote, .widget-area blockquote { border: 0 none; font-size: 16px; margin: 0 0 2.4rem; padding: 25px 0 0; text-align: center; }
+
+@media (min-width: 992px) { .content-area blockquote, .widget-area blockquote { padding-top: 30px; } }
 
 .content-area blockquote > p, .widget-area blockquote > p { border-radius: 10px; border-style: solid; border-width: 1px; display: inline-block; font-style: italic; font-size: inherit; line-height: 1.375; padding: 4rem; position: relative; }
 
@@ -851,13 +853,13 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 
 .blog article.post .thumbnail > .attachment-responsive, .blog article.page .thumbnail > .attachment-responsive, .archive article.post .thumbnail > .attachment-responsive, .archive article.page .thumbnail > .attachment-responsive, .search.search-results article.post .thumbnail > .attachment-responsive, .search.search-results article.page .thumbnail > .attachment-responsive { border: 0; bottom: 0; height: auto; right: 0; position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 100%; }
 
-.blog article.post .entry-meta, .blog article.page .entry-meta, .archive article.post .entry-meta, .archive article.page .entry-meta, .search.search-results article.post .entry-meta, .search.search-results article.page .entry-meta { padding: 42.5px 10rem 0; }
+.blog article.post .entry-meta, .blog article.page .entry-meta, .archive article.post .entry-meta, .archive article.page .entry-meta, .search.search-results article.post .entry-meta, .search.search-results article.page .entry-meta { padding: 42.5px 10rem 15px; }
 
 .blog article.post .entry-meta .post-meta, .blog article.page .entry-meta .post-meta, .archive article.post .entry-meta .post-meta, .archive article.page .entry-meta .post-meta, .search.search-results article.post .entry-meta .post-meta, .search.search-results article.page .entry-meta .post-meta { display: block; font-size: 13px; position: relative; text-align: center; }
 
 .blog article.post .entry-meta .post-meta-avatar, .blog article.page .entry-meta .post-meta-avatar, .archive article.post .entry-meta .post-meta-avatar, .archive article.page .entry-meta .post-meta-avatar, .search.search-results article.post .entry-meta .post-meta-avatar, .search.search-results article.page .entry-meta .post-meta-avatar { border: 2px solid #FFF; border-radius: 50%; height: 75px; right: 50%; overflow: hidden; position: absolute; top: -80px; -webkit-transform: translateX(50%); transform: translateX(50%); transition: border 300ms ease; width: 75px; }
 
-.blog article.post .entry-title, .blog article.page .entry-title, .archive article.post .entry-title, .archive article.page .entry-title, .search.search-results article.post .entry-title, .search.search-results article.page .entry-title { font-size: 30px; margin-top: 15px; padding: 0 10rem; text-align: center; }
+.blog article.post .entry-title, .blog article.page .entry-title, .archive article.post .entry-title, .archive article.page .entry-title, .search.search-results article.post .entry-title, .search.search-results article.page .entry-title { font-size: 30px; padding: 0 10rem; text-align: center; }
 
 .blog article.post .entry-title .fa, .blog article.page .entry-title .fa, .archive article.post .entry-title .fa, .archive article.page .entry-title .fa, .search.search-results article.post .entry-title .fa, .search.search-results article.page .entry-title .fa { display: none; }
 
@@ -886,6 +888,8 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 .blog article.post.has-thumb .entry-meta, .blog article.page.has-thumb .entry-meta, .archive article.post.has-thumb .entry-meta, .archive article.page.has-thumb .entry-meta, .search.search-results article.post.has-thumb .entry-meta, .search.search-results article.page.has-thumb .entry-meta { padding-top: 0; }
 
 .blog article.post.has-thumb .entry-meta .post-meta-top, .blog article.page.has-thumb .entry-meta .post-meta-top, .archive article.post.has-thumb .entry-meta .post-meta-top, .archive article.page.has-thumb .entry-meta .post-meta-top, .search.search-results article.post.has-thumb .entry-meta .post-meta-top, .search.search-results article.page.has-thumb .entry-meta .post-meta-top { margin-top: 42.5px; }
+
+.blog article.post.format-quote .entry-title, .blog article.page.format-quote .entry-title, .archive article.post.format-quote .entry-title, .archive article.page.format-quote .entry-title, .search.search-results article.post.format-quote .entry-title, .search.search-results article.page.format-quote .entry-title { display: none; }
 
 .archive-author-data { display: block; margin: 8.5rem auto 0; max-width: 585px; }
 
