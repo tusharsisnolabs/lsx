@@ -70,7 +70,7 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: comments.php:29, comments.php:30, includes/template-tags.php:382, includes/plugins/jetpack.php:346
+#: comments.php:29, comments.php:30, includes/template-tags.php:406, includes/plugins/jetpack.php:346
 msgid "Website"
 msgstr ""
 
@@ -245,7 +245,7 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: includes/layout.php:231
+#: includes/layout.php:243
 msgid "Type:"
 msgstr ""
 
@@ -257,69 +257,61 @@ msgstr ""
 msgid "Not a boolean"
 msgstr ""
 
-#: includes/template-tags.php:177
-msgid "On"
-msgstr ""
-
-#: includes/template-tags.php:207
+#: includes/template-tags.php:231
 msgid "by"
 msgstr ""
 
-#: includes/template-tags.php:230
+#: includes/template-tags.php:254
 msgid "View all posts in %s"
 msgstr ""
 
-#: includes/template-tags.php:235
+#: includes/template-tags.php:259
 msgid "Posted in"
 msgstr ""
 
-#: includes/template-tags.php:254
-msgid "Tagged as:"
-msgstr ""
-
-#: includes/template-tags.php:349, includes/plugins/jetpack.php:337
+#: includes/template-tags.php:373, includes/plugins/jetpack.php:337
 msgid "Client"
 msgstr ""
 
-#: includes/template-tags.php:360
+#: includes/template-tags.php:384
 msgid "Industry"
 msgstr ""
 
-#: includes/template-tags.php:371
+#: includes/template-tags.php:395
 msgid "Services"
 msgstr ""
 
-#: includes/template-tags.php:452
+#: includes/template-tags.php:476
 msgid "Previous"
 msgstr ""
 
-#: includes/template-tags.php:453
+#: includes/template-tags.php:477
 msgid "Next"
 msgstr ""
 
-#: includes/template-tags.php:484
+#: includes/template-tags.php:511
 msgctxt "Previous post link"
 msgid "Previous Post"
 msgstr ""
 
-#: includes/template-tags.php:487
+#: includes/template-tags.php:514
 msgctxt "Next post link"
 msgid "Next Post"
 msgstr ""
 
-#: includes/template-tags.php:533
+#: includes/template-tags.php:560
 msgid "Toggle navigation"
 msgstr ""
 
-#: includes/template-tags.php:539
+#: includes/template-tags.php:566
 msgid "Menu"
 msgstr ""
 
-#: includes/template-tags.php:601
+#: includes/template-tags.php:628
 msgid "Pages"
 msgstr ""
 
-#: includes/template-tags.php:727
+#: includes/template-tags.php:754
 msgid "Subscribe to Our Newsletter"
 msgstr ""
 
@@ -359,7 +351,7 @@ msgstr ""
 msgid "Monthly Archives"
 msgstr ""
 
-#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-page.php:28, partials/content-portfolio-single.php:65, partials/content-post.php:68, partials/content.php:177
+#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-page.php:28, partials/content-portfolio-single.php:65, partials/content-post.php:55, partials/content.php:171
 msgid "Edit"
 msgstr ""
 
@@ -375,20 +367,16 @@ msgstr ""
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
-#: partials/content-post.php:58
-msgid "Comments"
-msgstr ""
-
 #: partials/content.php:85
 msgid "Featured"
 msgstr ""
 
-#: partials/content.php:137
+#: partials/content.php:135
 msgctxt "lsx"
 msgid "One Comment"
 msgstr ""
 
-#: partials/content.php:141
+#: partials/content.php:139
 msgctxt "content.php"
 msgid "%s Comment"
 msgid_plural "%s Comments"
