@@ -328,6 +328,14 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 #masthead #searchform .search-submit:active { box-shadow: none; right: 0; top: 0; }
 
+#primary #searchform, #secondary #searchform { text-align: center; }
+
+#primary #searchform .search-field, #secondary #searchform .search-field { border-radius: 0 2px 2px 0; z-index: 1; }
+
+#primary #searchform .search-submit, #secondary #searchform .search-submit { box-shadow: none; margin-right: -2px; padding-bottom: 16px; padding-top: 16px; }
+
+#primary #searchform .search-submit:active, #secondary #searchform .search-submit:active { right: 0; top: 0; }
+
 .page-banner-wrap .page-banner { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column nowrap; flex-flow: column nowrap; height: 50vh; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; max-height: 40rem; overflow: hidden; position: relative; width: 100%; }
 
 @media (min-width: 992px) { .home .page-banner-wrap .page-banner { height: 100vh; max-height: 58rem; } }
@@ -757,9 +765,9 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 
 .has-sidebar article.page .entry-content .wp-caption.alignnone, .has-sidebar article.page .entry-content p img[class*="wp-image-"].alignnone, .has-sidebar article.post .entry-content .wp-caption.alignnone, .has-sidebar article.post .entry-content p img[class*="wp-image-"].alignnone { margin-right: 0; margin-left: 0; max-width: 100%; }
 
-.widget-area > .widget + .widget { margin-top: 4.25rem; }
+.widget-area h1, .widget-area h2, .widget-area h3, .widget-area h4, .widget-area h5, .widget-area h6, .widget-area .widget-title { text-align: center; }
 
-.widget-area > .widget h1, .widget-area > .widget h2, .widget-area > .widget h3, .widget-area > .widget h4, .widget-area > .widget h5, .widget-area > .widget h6, .widget-area > .widget .widget-title { text-align: center; }
+.widget-area > .widget + .widget { margin-top: 4.25rem; }
 
 .widget-area > .widget > ul, .widget-area > .widget > ol { list-style: none; margin-bottom: 0; padding-right: 0; }
 

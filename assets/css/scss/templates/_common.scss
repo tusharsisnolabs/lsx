@@ -102,10 +102,10 @@ article.post {
 }
 
 .widget-area {
+	h1, h2, h3, h4, h5, h6, .widget-title { text-align: center; }
+
 	& > .widget {
 		& + .widget { margin-top: $lsx-large-gap / 2; }
-
-		h1, h2, h3, h4, h5, h6, .widget-title { text-align: center; }
 
 		& > ul,
 		& > ol {

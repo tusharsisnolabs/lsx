@@ -97,3 +97,27 @@
 		}
 	}
 }
+
+#primary,
+#secondary {
+	#searchform {
+		text-align: center;
+
+		.search-field {
+			border-radius: 2px 0 0 2px;
+			z-index: 1;
+		}
+
+		.search-submit {
+			box-shadow: none;
+			margin-left: -2px;
+			padding-bottom: 16px;
+			padding-top: 16px;
+
+			&:active {
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+}
