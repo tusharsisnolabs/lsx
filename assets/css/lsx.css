@@ -378,7 +378,9 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 .page-header { border: 0 none; margin: 0 0 2.4rem; padding: 0; }
 
-.page-header > .page-title { font-size: 30px; margin-bottom: 0; }
+.page-header > .page-title { margin-bottom: 0; }
+
+.lsx:not(.error404) .page-header > .page-title { font-size: 30px; }
 
 body { background-color: #F6F6F6; }
 
