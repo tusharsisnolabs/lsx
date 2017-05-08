@@ -107,13 +107,6 @@ article.post {
 	& > .widget {
 		& + .widget { margin-top: $lsx-large-gap / 2; }
 
-		& > ul,
-		& > ol {
-			list-style: none;
-			margin-bottom: 0;
-			padding-left: 0;
-		}
-
 		.textwidget {
 			& > p {
 				margin-bottom: 0;

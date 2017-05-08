@@ -773,8 +773,6 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 
 .widget-area > .widget + .widget { margin-top: 4.25rem; }
 
-.widget-area > .widget > ul, .widget-area > .widget > ol { list-style: none; margin-bottom: 0; padding-right: 0; }
-
 .widget-area > .widget .textwidget > p { margin-bottom: 0; }
 
 .widget-area > .widget .textwidget > p + p { margin-top: 2.4rem; }
