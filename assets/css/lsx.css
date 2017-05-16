@@ -352,7 +352,7 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 .page-banner-wrap .page-banner .page-header { border: 0 none; margin: 0; padding: 0; }
 
-.page-banner-wrap .page-banner .page-header > .page-title { margin: 0; text-align: center; }
+.page-banner-wrap .page-banner .page-header > .page-title { margin: 0; text-align: center; word-break: break-all; }
 
 .lsx.single-post .page-banner-wrap .page-banner .page-header > .page-title { display: none; }
 
@@ -361,6 +361,8 @@ img { display: inline-block; max-width: 100%; height: auto; }
 .lsx:not(.single-post) .archive-header .archive-title { color: #FFF; }
 
 .page-banner-wrap .page-banner .page-title { color: #FFF; }
+
+#lsx-banner .soliloquy-caption-inside { color: #FFF; }
 
 #home-widgets { margin-top: 8.5rem; }
 
@@ -391,8 +393,6 @@ img { display: inline-block; max-width: 100%; height: auto; }
 .page-header { border: 0 none; margin: 0 0 2.4rem; padding: 0; }
 
 .page-header > .page-title { margin-bottom: 0; }
-
-.lsx:not(.error404) .page-header > .page-title { font-size: 30px; }
 
 body { background-color: #F6F6F6; }
 
@@ -898,5 +898,7 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 .archive-author-data > .archive-author-bio { display: block; margin-bottom: 4.25rem; }
 
 .archive-author-data > .archive-author-title, .archive-author-data > .archive-author-posts { margin: 4.25rem 0; }
+
+#lsx-banner .soliloquy-caption-inside { font-family: "Lora", serif; font-size: 40px; }
 
 /*# sourceMappingURL=maps/lsx.css.map */

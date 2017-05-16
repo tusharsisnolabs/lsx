@@ -9,3 +9,5 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: [font-family
 #respond .comment-reply-title > small { font-family: [font-family-body]; }
 
 #comments .media-list .media .media-heading { font-family: [font-family-body]; }
+
+#lsx-banner .soliloquy-caption-inside { font-family: [font-family-headings]; }

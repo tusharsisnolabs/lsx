@@ -68,11 +68,7 @@
 	margin: 0 0 $lsx-gap;
 	padding: 0;
 
-	& > .page-title {
-		margin-bottom: 0;
-
-		.lsx:not(.error404) & { font-size: 30px; }
-	}
+	& > .page-title { margin-bottom: 0; }
 }
 
 @include content-colours();

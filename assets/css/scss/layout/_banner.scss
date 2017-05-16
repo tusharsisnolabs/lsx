@@ -55,6 +55,7 @@
 			& > .page-title {
 				margin: 0;
 				text-align: center;
+				word-break: break-all;
 
 				.lsx.single-post & { display: none; }
 			}
