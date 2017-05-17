@@ -39,7 +39,11 @@ get_header(); ?>
 
 	<?php lsx_content_after(); ?>
 
-	<?php lsx_post_nav(); ?>
+	<?php
+		if ( is_singular( 'post' ) ) {
+			lsx_post_nav();
+		}
+	?>
 
 	<?php
 		if ( comments_open() ) {
