@@ -363,7 +363,7 @@ msgstr ""
 msgid "Monthly Archives"
 msgstr ""
 
-#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-page.php:28, partials/content-portfolio-single.php:65, partials/content-post.php:55, partials/content.php:171
+#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-custom.php:28, partials/content-page.php:28, partials/content-portfolio-single.php:65, partials/content-post.php:55, partials/content.php:171
 msgid "Edit"
 msgstr ""
 

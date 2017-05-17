@@ -1,6 +1,6 @@
 <?php
 /**
- * The template used for displaying page content in singular.php
+ * The template used for displaying page content in single.php (custom post type)
  *
  * @package lsx
  */
