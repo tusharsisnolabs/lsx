@@ -255,7 +255,7 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 			),
 
 			'theme_mods' => array(
-				'lsx_header_fixed' => '1',
+				'lsx_header_fixed' => true,
 				'lsx_header_search' => false,
 				'lsx_layout' => '1c',
 			),
