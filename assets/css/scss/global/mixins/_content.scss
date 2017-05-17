@@ -77,22 +77,24 @@
 	}
 
 	.content-area {
-		.lsx-full-width {
-			background-color: $full-bg;
-			color: $full-color;
+		#home-widgets {
+			.lsx-full-width {
+				background-color: $full-bg;
+				color: $full-color;
 
-			h1, h2, h3, h4, h5, h6, .widget-title { color: $full-color; }
+				h1, h2, h3, h4, h5, h6, .widget-title { color: $full-color; }
 
-			a:not(.btn) { @include lsx-link-colour($full-link, $full-hover); }
-		}
+				a:not(.btn) { @include lsx-link-colour($full-link, $full-hover); }
+			}
 
-		.lsx-full-width-alt {
-			background-color: $full-cta-bg;
-			color: $full-cta-color;
+			.lsx-full-width-alt {
+				background-color: $full-cta-bg;
+				color: $full-cta-color;
 
-			h1, h2, h3, h4, h5, h6, .widget-title { color: $full-cta-color; }
+				h1, h2, h3, h4, h5, h6, .widget-title { color: $full-cta-color; }
 
-			a:not(.btn) { @include lsx-link-colour($full-cta-link, $full-cta-hover); }
+				a:not(.btn) { @include lsx-link-colour($full-cta-link, $full-cta-hover); }
+			}
 		}
 
 		.lsx-pagination {
