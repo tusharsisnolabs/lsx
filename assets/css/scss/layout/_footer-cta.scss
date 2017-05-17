@@ -19,7 +19,6 @@
 	p,
 	.textwidget {
 		line-height: 1.35;
-		margin-bottom: 3rem;
 
 		@include media('>=desktop') { font-size: 22px; }
 	}
