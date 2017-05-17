@@ -126,7 +126,7 @@ msgstr ""
 msgid "Meta"
 msgstr ""
 
-#: includes/config.php:31, includes/config.php:204
+#: includes/config.php:31, includes/config.php:194
 msgid "Primary Menu"
 msgstr ""
 
@@ -138,46 +138,58 @@ msgstr ""
 msgid "Top Menu (left)"
 msgstr ""
 
-#: includes/config.php:34, includes/config.php:243
+#: includes/config.php:34, includes/config.php:233
 msgid "Social Menu"
 msgstr ""
 
-#: includes/config.php:35, includes/config.php:258
+#: includes/config.php:35, includes/config.php:248
 msgid "Footer Menu"
 msgstr ""
 
-#: includes/config.php:122, includes/config.php:131, includes/config.php:140
-msgid "Footer Widget"
+#: includes/config.php:113, includes/config.php:122
+msgid "Space for Footer Widgets"
 msgstr ""
 
-#: includes/config.php:123, includes/config.php:132, includes/config.php:141
-msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ipsum nec sapien consectetur convallis eu sit amet diam. Praesent dignissim vel arcu et gravida."
+#: includes/config.php:114, includes/config.php:123
+msgid "This is here to showcase some footer widgets. You can decide what to add and what to hide. Nam nostrum evertitur ad, ut pri nibh veniam, urbanitas definitionem eum ex."
 msgstr ""
 
-#: includes/config.php:151
-msgid "Footer Call to Action Widget"
+#: includes/config.php:131
+msgid "Contact us:"
 msgstr ""
 
-#: includes/config.php:152
+#: includes/config.php:142
+msgid "A Footer Call to Action"
+msgstr ""
+
+#: includes/config.php:143
 msgid "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
 msgstr ""
 
-#: includes/config.php:181
-msgctxt "Theme starter content"
-msgid "Banner Placeholder 01"
+#: includes/config.php:153
+msgid "LSX is a free WordPress theme"
 msgstr ""
 
-#: includes/config.php:186
+#: includes/config.php:170
 msgctxt "Theme starter content"
-msgid "Banner Placeholder 02"
+msgid "Banner Example 01"
 msgstr ""
 
-#: includes/config.php:191
+#: includes/config.php:175
 msgctxt "Theme starter content"
-msgid "Banner Placeholder 03"
+msgid "Banner Example 02"
 msgstr ""
 
-#: includes/config.php:215
+#: includes/config.php:180
+msgctxt "Theme starter content"
+msgid "Banner Example 03"
+msgstr ""
+
+#: includes/config.php:189
+msgid "LSX starter content example"
+msgstr ""
+
+#: includes/config.php:205
 msgid "Top Menu"
 msgstr ""
 

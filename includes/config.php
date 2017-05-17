@@ -82,7 +82,7 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 
 						array(
 							'title' => '',
-							'text'  => wp_kses_post( '<div class="lsx-full-width"><div class="row"><div class="col-sm-6"><h3>Full Width Widget</h3><p>Lorem ipsum dolor sit amet, <a href="#">consectetuer adipiscing elit</a>. Donec odio. Quisque volutpat mattis eros.</p><p><a href="#" class="btn cta-btn">Lorem ipsum</a></p></div><div class="col-sm-6"><h3>Full Width Widget</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p></div></div></div>' ),
+							'text'  => wp_kses_post( '<div class="row"><div class="col-sm-12 text-center"><h3>Build your perfect website <small>with the LSX theme</small></h3></div></div><div class="row"><div class="col-sm-4 text-center"><h4>Fast</h4><p>"Quick" isn\'t a word most people use when describing their website building experience.</p></div><div class="col-sm-4 text-center"><h4>Easy</h4><p>We\'ve built websites for countless clients, and we know what kind of back-end makes sense easily.</p></div><div class="col-sm-4 text-center"><h4>Comprehensive</h4><p>The LSX extensions come with features out the box that are essential.</p></div></div>' ),
 						),
 					),
 
@@ -91,7 +91,7 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 
 						array(
 							'title' => '',
-							'text'  => wp_kses_post( '<div class="row"><div class="col-sm-6"><h3 style="margin-top:0">Text Widget</h3><p>Lorem ipsum dolor sit amet, <a href="#">consectetuer adipiscing elit</a>. Donec odio. Quisque volutpat mattis eros.</p></div><div class="col-sm-6"><h3 style="margin-top:0">Text Widget</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque <a href="#">volutpat mattis eros</a>.</p></div></div>' ),
+							'text'  => wp_kses_post( '<div class="lsx-full-width-alt"><div class="row"><div class="col-xs-12"><h3>A big CTA title</h3><p class="text-center"><a class="btn cta-btn" href="http://www.lsdeb.biz/" target="_blank">Hire Us</a><p></div></div></div>' ),
 						),
 					),
 
@@ -100,16 +100,7 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 
 						array(
 							'title' => '',
-							'text'  => wp_kses_post( '<div class="lsx-full-width-alt"><div class="row"><div class="col-sm-6"><h3>Full Width CTA Widget</h3><p>Lorem ipsum dolor sit amet, <a href="#">consectetuer adipiscing elit</a>. Donec odio. Quisque volutpat mattis eros.</p><p><a href="#" class="btn cta-btn">Lorem ipsum</a></p></div><div class="col-sm-6"><h3>Full Width CTA Widget</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p><p><a href="#" class="btn">Lorem ipsum</a></p></div></div></div>' ),
-						),
-					),
-
-					'custom_widget_4' => array(
-						'text',
-
-						array(
-							'title' => '',
-							'text'  => wp_kses_post( '<div class="row"><div class="col-sm-12"><h3 style="margin-top:0">Text Widget</h3><p>Lorem ipsum dolor sit amet, <a href="#">consectetuer adipiscing elit</a>. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p></div></div>' ),
+							'text'  => wp_kses_post( '<div class="row"><div class="col-xs-12"><h3>Homepage Widget</h3><p>Lorem ipsum dolor sit amet, <a href="#">consectetuer adipiscing elit</a>. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p></div></div>' ),
 						),
 					),
 				),
@@ -119,8 +110,8 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 						'text',
 
 						array(
-							'title' => esc_html__( 'Footer Widget', 'lsx' ),
-							'text'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ipsum nec sapien consectetur convallis eu sit amet diam. Praesent dignissim vel arcu et gravida.', 'lsx' ),
+							'title' => esc_html__( 'Space for Footer Widgets', 'lsx' ),
+							'text'  => esc_html__( 'This is here to showcase some footer widgets. You can decide what to add and what to hide. Nam nostrum evertitur ad, ut pri nibh veniam, urbanitas definitionem eum ex.', 'lsx' ),
 						),
 					),
 
@@ -128,8 +119,8 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 						'text',
 
 						array(
-							'title' => esc_html__( 'Footer Widget', 'lsx' ),
-							'text'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ipsum nec sapien consectetur convallis eu sit amet diam. Praesent dignissim vel arcu et gravida.', 'lsx' ),
+							'title' => esc_html__( 'Space for Footer Widgets', 'lsx' ),
+							'text'  => esc_html__( 'This is here to showcase some footer widgets. You can decide what to add and what to hide. Nam nostrum evertitur ad, ut pri nibh veniam, urbanitas definitionem eum ex.', 'lsx' ),
 						),
 					),
 
@@ -137,8 +128,8 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 						'text',
 
 						array(
-							'title' => esc_html__( 'Footer Widget', 'lsx' ),
-							'text'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae ipsum nec sapien consectetur convallis eu sit amet diam. Praesent dignissim vel arcu et gravida.', 'lsx' ),
+							'title' => esc_html__( 'Contact us:', 'lsx' ),
+							'text'  => wp_kses_post( '<a href="mailto:info@lsdev.biz><i class="fa fa-envelope fa-fw"></i> info@lsdev.biz</a><br><a href="tel:+27214489843"><i class="fa fa-phone fa-fw"></i> +27 21 448 9843</a><br><i class="fa fa-skype fa-fw"></i> /lightspeeddevelopment' ),
 						),
 					),
 				),
@@ -148,48 +139,46 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 						'text',
 
 						array(
-							'title' => esc_html__( 'Footer Call to Action Widget', 'lsx' ),
+							'title' => esc_html__( 'A Footer Call to Action', 'lsx' ),
 							'text'  => esc_html__( 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.', 'lsx' ),
 						),
 					),
-				),
-
-				'sidebar-1' => array(
-					'search',
 				),
 			),
 
 			'posts' => array(
 				'home' => array(
 					'template' => 'page-templates/template-front-page.php',
-					'thumbnail' => '{{image-banner-placeholder-01}}',
+					'thumbnail' => '{{image-banner-example-01}}',
+					'post_title' => esc_html__( 'LSX is a free WordPress theme', 'lsx' ),
+					'post_content' => '',
 				),
 
 				'about' => array(
-					'thumbnail' => '{{image-banner-placeholder-02}}',
+					'thumbnail' => '{{image-banner-example-02}}',
 				),
 
 				'blog',
 
 				'contact' => array(
-					'thumbnail' => '{{image-banner-placeholder-03}}',
+					'thumbnail' => '{{image-banner-example-03}}',
 				),
 			),
 
 			'attachments' => array(
-				'image-banner-placeholder-01' => array(
-					'post_title' => esc_html_x( 'Banner Placeholder 01', 'Theme starter content', 'lsx' ),
-					'file' => 'assets/images/admin/banner-placeholder-01.jpg',
+				'image-banner-example-01' => array(
+					'post_title' => esc_html_x( 'Banner Example 01', 'Theme starter content', 'lsx' ),
+					'file' => 'assets/images/admin/banner-example-01.jpg',
 				),
 
-				'image-banner-placeholder-02' => array(
-					'post_title' => esc_html_x( 'Banner Placeholder 02', 'Theme starter content', 'lsx' ),
-					'file' => 'assets/images/admin/banner-placeholder-02.jpg',
+				'image-banner-example-02' => array(
+					'post_title' => esc_html_x( 'Banner Example 02', 'Theme starter content', 'lsx' ),
+					'file' => 'assets/images/admin/banner-example-02.jpg',
 				),
 
-				'image-banner-placeholder-03' => array(
-					'post_title' => esc_html_x( 'Banner Placeholder 03', 'Theme starter content', 'lsx' ),
-					'file' => 'assets/images/admin/banner-placeholder-03.jpg',
+				'image-banner-example-03' => array(
+					'post_title' => esc_html_x( 'Banner Example 03', 'Theme starter content', 'lsx' ),
+					'file' => 'assets/images/admin/banner-example-03.jpg',
 				),
 			),
 
@@ -197,6 +186,7 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 				'show_on_front' => 'page',
 				'page_on_front' => '{{home}}',
 				'page_for_posts' => '{{blog}}',
+				'blogdescription' => esc_html__( 'LSX starter content example', 'lsx' ),
 			),
 
 			'nav_menus' => array(
@@ -266,7 +256,7 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 
 			'theme_mods' => array(
 				'lsx_header_fixed' => '1',
-				'lsx_header_search' => '1',
+				'lsx_header_search' => false,
 				'lsx_layout' => '1c',
 			),
 		) );
