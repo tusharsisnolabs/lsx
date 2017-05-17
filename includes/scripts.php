@@ -65,6 +65,7 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 		}
 
 		if ( false !== $data_fonts ) {
+			$data_fonts = '{' . $data_fonts . '}';
 			$data_fonts = json_decode( $data_fonts, true );
 
 			if ( isset( $data_fonts[ $font_saved ] ) ) {
