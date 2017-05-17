@@ -180,6 +180,14 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 				</header>
 			</div>
 			<?php
+		elseif ( is_single() && ! is_singular( 'post' ) ) :
+			?>
+			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
+				<header class="archive-header">
+					<h1 class="archive-title"><?php the_title(); ?></h1>
+				</header>
+			</div>
+			<?php
 		elseif ( 'page' === $show_on_front && (int) get_option( 'page_for_posts' ) === $queried_object->ID ) :
 			?>
 			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
@@ -269,7 +277,7 @@ if ( ! function_exists( 'lsx_post_header' ) ) :
 		$default_size  = 'sm';
 		$size          = apply_filters( 'lsx_bootstrap_column_size', $default_size );
 
-		if ( is_single() ) :
+		if ( is_singular( 'post' ) ) :
 			$format = get_post_format();
 
 			if ( false === $format ) {

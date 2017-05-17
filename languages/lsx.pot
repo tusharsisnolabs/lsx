@@ -249,15 +249,15 @@ msgstr ""
 msgid "More"
 msgstr ""
 
-#: includes/layout.php:187
+#: includes/layout.php:195
 msgid "Blog"
 msgstr ""
 
-#: includes/layout.php:199
+#: includes/layout.php:207
 msgid "Search Results for: %s"
 msgstr ""
 
-#: includes/layout.php:243
+#: includes/layout.php:251
 msgid "Type:"
 msgstr ""
 
