@@ -40,8 +40,8 @@ if ( ! function_exists( 'lsx_widget_area_init' ) ) :
 		register_sidebar( array(
 			'name'          => esc_html__( 'Footer', 'lsx' ),
 			'id'            => 'sidebar-footer',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
+			'before_widget' => '<div class="styler"><aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside></div>',
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		) );
