@@ -55,6 +55,7 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 
 				if ( $wp_filesystem ) {
 					$data_fonts = $wp_filesystem->get_contents( $data_fonts_file );
+					$data_fonts = apply_filters( 'lsx_fonts_json', $data_fonts );
 
 					if ( ! empty( $data_fonts ) ) {
 						set_transient( 'lsx_font_data', $data_fonts, 360 );
@@ -94,6 +95,7 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 
 					if ( $wp_filesystem ) {
 						$css_fonts = $wp_filesystem->get_contents( $css_fonts_file );
+						$css_fonts = apply_filters( 'lsx_fonts_css', $css_fonts );
 
 						if ( ! empty( $css_fonts ) ) {
 							$css_fonts = str_replace( '[font-family-headings]', $font['header']['cssDeclaration'], $css_fonts );
