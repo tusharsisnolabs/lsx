@@ -93,7 +93,15 @@
 		ol, ul { margin-bottom: 0; }
 	}
 
-	p { margin-bottom: $lsx-gap; }
+	p {
+		margin-bottom: $lsx-gap;
+
+		&:last-child,
+		&:only-child {
+			margin-bottom: 0;
+		}
+
+	}
 
 	pre {
 		border-radius: 5px;

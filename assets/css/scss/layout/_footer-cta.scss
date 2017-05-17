@@ -23,6 +23,10 @@
 		@include media('>=desktop') { font-size: 22px; }
 	}
 
+	p {
+		& + p { margin-top: $lsx-gap; }
+	}
+
 	.widget + .widget { margin-top: 3rem; }
 
 	input[type="submit"] { @include lsx-button-colour(); }

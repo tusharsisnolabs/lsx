@@ -63,6 +63,8 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 .content-area p, .widget-area p { margin-bottom: 2.4rem; }
 
+.content-area p:last-child, .content-area p:only-child, .widget-area p:last-child, .widget-area p:only-child { margin-bottom: 0; }
+
 .content-area pre, .widget-area pre { border-radius: 5px; border-style: solid; border-width: 1px; font-size: 14px; margin-bottom: 2.4rem; padding: 2rem; }
 
 .content-area small, .widget-area small { font-size: 80%; }
@@ -590,6 +592,8 @@ body { background-color: #F6F6F6; }
 #footer-cta p, #footer-cta .textwidget { line-height: 1.35; }
 
 @media (min-width: 1200px) { #footer-cta p, #footer-cta .textwidget { font-size: 22px; } }
+
+#footer-cta p + p { margin-top: 2.4rem; }
 
 #footer-cta .widget + .widget { margin-top: 3rem; }
 
