@@ -39,11 +39,9 @@
 	.textwidget, p { margin-bottom: 0; }
 
 	p {
-		& + p {
-			margin-top: $lsx-gap;
+		& + p { margin-top: $lsx-gap; }
 
-			& > .btn { margin-top: $lsx-gap; }
-		}
+		& > .btn { margin-top: 0; }
 	}
 
 	img ~ p { margin-top: $lsx-gap; }

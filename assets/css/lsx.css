@@ -380,7 +380,7 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 #home-widgets p + p { margin-top: 2.4rem; }
 
-#home-widgets p + p > .btn { margin-top: 2.4rem; }
+#home-widgets p > .btn { margin-top: 0; }
 
 #home-widgets img ~ p { margin-top: 2.4rem; }
 
@@ -590,6 +590,8 @@ body { background-color: #F6F6F6; }
 #footer-cta p, #footer-cta .textwidget { line-height: 1.35; margin-bottom: 3rem; }
 
 @media (min-width: 1200px) { #footer-cta p, #footer-cta .textwidget { font-size: 22px; } }
+
+#footer-cta .widget + .widget { margin-top: 3rem; }
 
 #footer-cta input[type="submit"], #footer-cta input[type="submit"]:active, #footer-cta input[type="submit"]:visited { background-color: #418AD0; box-shadow: 2px 2px 0 0 #27639e; color: #FFF; }
 
