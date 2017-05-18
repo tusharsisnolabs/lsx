@@ -233,11 +233,11 @@ msgstr ""
 msgid "Search Box in Header"
 msgstr ""
 
-#: includes/customizer.php:184
+#: includes/customizer.php:187
 msgid "Font"
 msgstr ""
 
-#: includes/customizer.php:185
+#: includes/customizer.php:188
 msgid "Change the fonts sitewide."
 msgstr ""
 
@@ -257,16 +257,16 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: includes/layout.php:229
+#: includes/layout.php:241
+msgid "Type:"
+msgstr ""
+
+#: includes/layout.php:279
 msgid "About the author:"
 msgstr ""
 
-#: includes/layout.php:237
+#: includes/layout.php:287
 msgid "All posts by: %s"
-msgstr ""
-
-#: includes/layout.php:260
-msgid "Type:"
 msgstr ""
 
 #: includes/sanitize.php:65

@@ -176,6 +176,9 @@ if ( ! function_exists( 'lsx_customizer_font_controls' ) ) :
 
 			if ( $wp_filesystem ) {
 				$data_fonts = $wp_filesystem->get_contents( $data_fonts_file );
+				$data_fonts = apply_filters( 'lsx_fonts_json', $data_fonts );
+
+				$data_fonts = '{' . $data_fonts . '}';
 				$data_fonts = json_decode( $data_fonts, true );
 			}
 		}
