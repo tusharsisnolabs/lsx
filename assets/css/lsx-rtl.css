@@ -364,8 +364,6 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 .page-banner-wrap .page-banner .page-title { color: #FFF; }
 
-#lsx-banner .soliloquy-caption-inside { color: #FFF; }
-
 #home-widgets { margin-top: 8.5rem; }
 
 #home-widgets > .widget { margin-bottom: 8.5rem; }
@@ -904,5 +902,3 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 .archive-author-data > .archive-author-bio { display: block; margin-bottom: 4.25rem; }
 
 .archive-author-data > .archive-author-title, .archive-author-data > .archive-author-posts { margin: 4.25rem 0; }
-
-#lsx-banner .soliloquy-caption-inside { font-family: "Lora", serif; font-size: 40px; }
