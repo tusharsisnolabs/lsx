@@ -262,11 +262,11 @@ msgid "Type:"
 msgstr ""
 
 #: includes/layout.php:310
-msgid "About the author:"
+msgid "About the author"
 msgstr ""
 
 #: includes/layout.php:318
-msgid "All posts by: %s"
+msgid "All posts by %s"
 msgstr ""
 
 #: includes/sanitize.php:65

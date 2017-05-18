@@ -307,7 +307,7 @@ if ( ! function_exists( 'lsx_author_extra_info' ) ) :
 					<?php endif; ?>
 
 					<?php if ( ! empty( $author_bio ) ) : ?>
-						<h2 class="archive-author-title text-center"><?php esc_html_e( 'About the author:', 'lsx' ); ?></h2>
+						<h2 class="archive-author-title text-center"><?php esc_html_e( 'About the author', 'lsx' ); ?></h2>
 						<p class="archive-author-bio"><?php echo wp_kses_post( $author_bio ); ?></p>
 					<?php endif; ?>
 
@@ -315,7 +315,7 @@ if ( ! function_exists( 'lsx_author_extra_info' ) ) :
 						<?php
 							printf(
 								/* Translators: %s: author name */
-								esc_html__( 'All posts by: %s', 'lsx' ),
+								esc_html__( 'All posts by %s', 'lsx' ),
 								esc_html( $author )
 							);
 						?>
