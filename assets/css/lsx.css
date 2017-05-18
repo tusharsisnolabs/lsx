@@ -905,4 +905,10 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 
 .archive-author-data > .archive-author-posts { margin: 4.25rem 0 0 0; }
 
+.archive-author-data .archive-author-social-links { margin-bottom: 4.25rem; text-align: center; }
+
+.archive-author-data .archive-author-social-links .archive-author-social-link { display: inline-block; padding-left: 8px; padding-right: 8px; }
+
+.archive-author-data .archive-author-social-links .archive-author-social-link .fa:before { font-size: 22px; }
+
 /*# sourceMappingURL=maps/lsx.css.map */
