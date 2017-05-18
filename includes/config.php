@@ -275,6 +275,8 @@ if ( ! function_exists( 'lsx_init' ) ) :
 	 * @subpackage config
 	 */
 	function lsx_init() {
+		add_post_type_support( 'page', 'excerpt' );
+
 		if ( class_exists( 'WooCommerce' ) ) {
 			remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 		}
