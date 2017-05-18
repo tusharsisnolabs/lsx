@@ -19,8 +19,11 @@
 		margin-bottom: $lsx-large-gap / 2;
 	}
 
-	& > .archive-author-title,
-	& > .archive-author-posts {
+	& > .archive-author-title {
 		margin: ($lsx-large-gap / 2) 0;
+	}
+
+	& > .archive-author-posts {
+		margin: ($lsx-large-gap / 2) 0 0 0;
 	}
 }

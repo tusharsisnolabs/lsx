@@ -901,6 +901,8 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 
 .archive-author-data > .archive-author-bio { display: block; margin-bottom: 4.25rem; }
 
-.archive-author-data > .archive-author-title, .archive-author-data > .archive-author-posts { margin: 4.25rem 0; }
+.archive-author-data > .archive-author-title { margin: 4.25rem 0; }
+
+.archive-author-data > .archive-author-posts { margin: 4.25rem 0 0 0; }
 
 /*# sourceMappingURL=maps/lsx.css.map */
