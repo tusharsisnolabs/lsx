@@ -257,7 +257,15 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: includes/layout.php:251
+#: includes/layout.php:229
+msgid "About the author:"
+msgstr ""
+
+#: includes/layout.php:237
+msgid "All posts by: %s"
+msgstr ""
+
+#: includes/layout.php:260
 msgid "Type:"
 msgstr ""
 
