@@ -5,12 +5,14 @@
 		flex-flow: column nowrap;
 		height: 50vh;
 		justify-content: center;
-		max-height: 40rem;
+		max-height: 25rem;
 		overflow: hidden;
 		position: relative;
 		width: 100%;
 
 		@include media('>=tablet') {
+			.single-post & { max-height: 39rem; }
+
 			.home & {
 				height: 100vh;
 				max-height: 58rem;

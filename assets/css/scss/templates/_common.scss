@@ -8,8 +8,12 @@
 
 	.archive-header {
 		.lsx:not(.single-post):not(.page-has-banner) & {
+			align-items: center;
+			display: flex;
+			justify-content: center;
 			margin: 0 -9999rem;
-			padding: 6rem 9999rem;
+			min-height: 25rem;
+			padding: 0 9999rem;
 			text-align: center;
 
 			& > p {
