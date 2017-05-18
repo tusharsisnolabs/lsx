@@ -14,12 +14,17 @@
 			justify-content: center;
 			margin: 0 -9999rem;
 			min-height: 25rem;
-			padding: 0 9999rem;
+			padding: ($lsx-large-gap / 2) 9999rem;
 			text-align: center;
 
 			& > p {
 				color: #FFF;
 				margin: $lsx-gap 0 0;
+			}
+
+			.archive-title,
+			& > p {
+				@include media('>=tablet') { max-width: 70%; }
 			}
 		}
 

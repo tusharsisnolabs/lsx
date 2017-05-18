@@ -742,9 +742,11 @@ body { background-color: #F6F6F6; }
 
 .lsx.single-post .archive-header-wrapper { float: none; padding: 0; }
 
-.lsx:not(.single-post):not(.page-has-banner) .archive-header-wrapper .archive-header { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column wrap; flex-flow: column wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin: 0 -9999rem; min-height: 25rem; padding: 0 9999rem; text-align: center; }
+.lsx:not(.single-post):not(.page-has-banner) .archive-header-wrapper .archive-header { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column wrap; flex-flow: column wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin: 0 -9999rem; min-height: 25rem; padding: 4.25rem 9999rem; text-align: center; }
 
 .lsx:not(.single-post):not(.page-has-banner) .archive-header-wrapper .archive-header > p { color: #FFF; margin: 2.4rem 0 0; }
+
+@media (min-width: 992px) { .lsx:not(.single-post):not(.page-has-banner) .archive-header-wrapper .archive-header .archive-title, .lsx:not(.single-post):not(.page-has-banner) .archive-header-wrapper .archive-header > p { max-width: 70%; } }
 
 .archive-header-wrapper .archive-header .archive-title { margin: 0; }
 
