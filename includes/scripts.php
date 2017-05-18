@@ -58,7 +58,7 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 					$data_fonts = apply_filters( 'lsx_fonts_json', $data_fonts );
 
 					if ( ! empty( $data_fonts ) ) {
-						set_transient( 'lsx_font_data', $data_fonts, 360 );
+						set_transient( 'lsx_font_data', $data_fonts, ( 5 * 60 ) );
 					}
 				}
 			}
@@ -83,7 +83,7 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 			wp_enqueue_style( 'lsx-header-font', esc_url( $http_var . '://fonts.googleapis.com/css?family=' . $font['header']['location'] ) );
 			wp_enqueue_style( 'lsx-body-font', esc_url( $http_var . '://fonts.googleapis.com/css?family=' . $font['body']['location'] ) );
 
-			$font_styles = get_theme_mod( 'lsx_font_styles' );
+			$font_styles = get_transient( 'lsx_font_styles' );
 
 			if ( is_customize_preview() || false === $font_styles ) {
 				$css_fonts_file = get_template_directory() . '/assets/css/lsx-fonts.css';
@@ -104,7 +104,7 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 							$css_fonts = preg_replace( '/(\/\*# ).+( \*\/)/', '', $css_fonts );
 
 							$font_styles = $css_fonts;
-							set_theme_mod( 'lsx_font_styles', $font_styles );
+							set_transient( 'lsx_font_styles', $font_styles, ( 24 * 60 * 60 ) );
 						}
 					}
 				}

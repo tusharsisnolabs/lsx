@@ -121,7 +121,7 @@ if ( ! class_exists( 'LSX_Customize_Font_Control' ) ) :
 					$font_styles = $this->get_css( $font['header']['cssDeclaration'], $font['body']['cssDeclaration'] );
 
 					if ( ! empty( $font_styles ) ) {
-						set_theme_mod( 'lsx_font_styles', $font_styles );
+						set_transient( 'lsx_font_styles', $font_styles, ( 24 * 60 * 60 ) );
 					}
 				}
 			}
