@@ -143,6 +143,7 @@ if ( ! class_exists( 'LSX_Customize_Font_Control' ) ) :
 
 				if ( $wp_filesystem ) {
 					$css_fonts = $wp_filesystem->get_contents( $css_fonts_file );
+					$css_fonts = apply_filters( 'lsx_fonts_css', $css_fonts );
 
 					if ( ! empty( $css_fonts ) ) {
 						$css_fonts = str_replace( '[font-family-headings]', $font_header, $css_fonts );
