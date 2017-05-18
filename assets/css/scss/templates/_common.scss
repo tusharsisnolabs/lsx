@@ -10,6 +10,7 @@
 		.lsx:not(.single-post):not(.page-has-banner) & {
 			align-items: center;
 			display: flex;
+			flex-flow: column wrap;
 			justify-content: center;
 			margin: 0 -9999rem;
 			min-height: 25rem;
