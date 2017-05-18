@@ -26,4 +26,23 @@
 	& > .archive-author-posts {
 		margin: ($lsx-large-gap / 2) 0 0 0;
 	}
+
+	.archive-author-social-links {
+		margin-bottom: $lsx-large-gap / 2;
+		text-align: center;
+
+		.archive-author-social-link {
+			display: inline-block;
+			padding: {
+				left: 8px;
+				right: 8px;
+			}
+
+			.fa {
+				&:before {
+					font-size: 22px;
+				}
+			}
+		}
+	}
 }
