@@ -45,7 +45,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('styles', function () {
-	return gulp.src(['assets/css/scss/*.scss'])
+	return gulp.src('assets/css/scss/*.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
 				console.log(err);
@@ -66,7 +66,7 @@ gulp.task('styles', function () {
 });
 
 gulp.task('styles-rtl', function () {
-	return gulp.src(['assets/css/scss/*.scss'])
+	return gulp.src('assets/css/scss/*.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
 				console.log(err);
@@ -89,7 +89,7 @@ gulp.task('styles-rtl', function () {
 });
 
 gulp.task('vendor-styles', function () {
-	return gulp.src(['assets/css/vendor/*.scss'])
+	return gulp.src('assets/css/vendor/*.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
 				console.log(err);
@@ -108,7 +108,7 @@ gulp.task('vendor-styles', function () {
 });
 
 gulp.task('vendor-styles-rtl', function () {
-	return gulp.src(['assets/css/vendor/*.scss'])
+	return gulp.src('assets/css/vendor/*.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
 				console.log(err);
@@ -131,7 +131,7 @@ gulp.task('vendor-styles-rtl', function () {
 });
 
 gulp.task('admin-styles', function () {
-	return gulp.src(['assets/css/admin/*.scss'])
+	return gulp.src('assets/css/admin/*.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
 				console.log(err);
@@ -152,7 +152,7 @@ gulp.task('admin-styles', function () {
 });
 
 gulp.task('admin-styles-rtl', function () {
-	return gulp.src(['assets/css/admin/*.scss'])
+	return gulp.src('assets/css/admin/*.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
 				console.log(err);
@@ -175,7 +175,7 @@ gulp.task('admin-styles-rtl', function () {
 });
 
 gulp.task('plugins-styles', function () {
-	return gulp.src(['assets/css/plugins/*.scss'])
+	return gulp.src('assets/css/plugins/*.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
 				console.log(err);
@@ -196,7 +196,7 @@ gulp.task('plugins-styles', function () {
 });
 
 gulp.task('plugins-styles-rtl', function () {
-	return gulp.src(['assets/css/plugins/*.scss'])
+	return gulp.src('assets/css/plugins/*.scss')
 		.pipe(plumber({
 			errorHandler: function(err) {
 				console.log(err);
@@ -237,9 +237,15 @@ gulp.task('sass-sensei', function() {
 gulp.task('compile-css', ['styles', 'styles-rtl', 'vendor-styles', 'vendor-styles-rtl', 'admin-styles', 'admin-styles-rtl', 'plugins-styles', 'plugins-styles-rtl']);
 
 gulp.task('js', function() {
-	gulp.src('assets/js/src/**/*.js')
+	return gulp.src('assets/js/src/**/*.js')
+		.pipe(plumber({
+			errorHandler: function(err) {
+				console.log(err);
+				this.emit('end');
+			}
+		}))
 		.pipe(jshint())
-		.pipe(errorreporter)
+		//.pipe(errorreporter)
 		.pipe(concat('lsx.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('assets/js'))
@@ -247,13 +253,12 @@ gulp.task('js', function() {
 
 gulp.task('compile-js', ['js']);
 
-
 gulp.task('watch-css', function () {
-	gulp.watch('assets/css/**/*.scss', ['compile-css']);
+	return gulp.watch('assets/css/**/*.scss', ['compile-css']);
 });
 
 gulp.task('watch-js', function () {
-	gulp.watch('assets/js/src/**/*.js', ['compile-js']);
+	return gulp.watch('assets/js/src/**/*.js', ['compile-js']);
 });
 
 gulp.task('watch', ['watch-css', 'watch-js']);
