@@ -22,14 +22,6 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: 404.php:21
-msgid "Alternatively, you can check out the"
-msgstr ""
-
-#: 404.php:21
-msgid "sitemap"
-msgstr ""
-
 #: archive-jetpack-portfolio.php:58, page-templates/template-portfolio.php:82, partials/content-none.php:11
 msgid "Nothing Found"
 msgstr ""
