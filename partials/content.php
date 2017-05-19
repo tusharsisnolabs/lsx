@@ -9,8 +9,7 @@
 <?php lsx_entry_before(); ?>
 
 <?php
-	$no_thumb_post_formats = array("gallery", "link", "image", "quote", "video", "audio");
-	$has_thumb = has_post_thumbnail() && ! has_post_format( $no_thumb_post_formats );
+	$has_thumb = has_post_thumbnail() && ! has_post_format();
 
 	if ( $has_thumb ) {
 		$thumb_class = 'has-thumb';
