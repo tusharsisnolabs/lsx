@@ -104,7 +104,10 @@ $header: (
 $banner: (
 	bg: nth($blue, 4),
 	color: #FFF,
-	color-image: #FFF
+	color-image: #FFF,
+	breadcrumb-bg: nth($blue, 2),
+	breadcrumb-color: $small,
+	breadcrumb-current: #FFF
 );
 
 $content: (

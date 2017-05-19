@@ -1,7 +1,7 @@
 .breadcrumbs-container {
 	font-size: 13px;
 	line-height: 20px;
-	opacity: 0.86;
+	opacity: .86;
 	padding: {
 		bottom: 15px;
 		top: 15px;
@@ -22,18 +22,5 @@
 		width: auto;
 	}
 
-	.fa {
-		margin: 0 2px;
-	}
-}
-
-// @include breadcrumbs-colours ();
-
-.breadcrumbs-container {
-	background-color: nth($blue, 2);
-	color: $small;
-
-	.breadcrumb_last {
-		color: white;
-	}
+	.fa { margin: 0 2px; }
 }

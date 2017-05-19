@@ -1,4 +1,11 @@
-@mixin banner-colours ($bg: map-get($banner, bg), $color: map-get($banner, color), $color-image: map-get($banner, color-image)) {
+@mixin banner-colours (
+	$bg: map-get($banner, bg),
+	$color: map-get($banner, color),
+	$color-image: map-get($banner, color-image),
+	$breadcrumb-bg: map-get($banner, breadcrumb-bg),
+	$breadcrumb-color: map-get($banner, breadcrumb-color),
+	$breadcrumb-current: map-get($banner, breadcrumb-current)) {
+
 	.archive-header {
 		.lsx:not(.single-post) & {
 			background-color: $bg;
@@ -11,5 +18,12 @@
 		.page-banner {
 			.page-title { color: $color-image; }
 		}
+	}
+
+	.breadcrumbs-container {
+		background-color: $breadcrumb-bg;
+		color: $breadcrumb-color;
+
+		.breadcrumb_last { color: $breadcrumb-current; }
 	}
 }
