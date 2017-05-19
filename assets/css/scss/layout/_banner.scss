@@ -96,6 +96,17 @@
 				.lsx.single-post & { display: none; }
 			}
 		}
+
+		.banner-content {
+			margin-top: $lsx-gap;
+			text-align: center;
+
+			& p {
+				margin-bottom: $lsx-gap;
+
+				&:last-child { margin-bottom: 0; }
+			}
+		}
 	}
 }
 

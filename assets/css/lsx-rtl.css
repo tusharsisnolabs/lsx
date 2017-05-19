@@ -73,9 +73,13 @@ figure { max-width: 100%; }
 
 .content-area table, .content-area .table, .widget-area table, .widget-area .table { margin-bottom: 2.4rem; }
 
-.btn, .btn:active, .btn:visited { border: 0 none; border-radius: 3px; display: inline-block; font-size: 15px; right: 0; letter-spacing: 0.6px; line-height: 1.25; padding: 15px 40px; position: relative; text-transform: uppercase; top: 0; transition: all 100ms ease; }
+.btn, .btn:active, .btn:visited { border: 0 none; border-radius: 3px; display: inline-block; font-size: 15px; font-weight: 400; right: 0; letter-spacing: 0.6px; line-height: 1.25; padding: 15px 40px; position: relative; text-transform: uppercase; top: 0; transition: all 100ms ease; }
 
-#respond > .comment-form input[type="submit"], #respond > .comment-form input[type="submit"]:active, #respond > .comment-form input[type="submit"]:visited { border: 0 none; border-radius: 3px; display: inline-block; font-size: 15px; right: 0; letter-spacing: 0.6px; line-height: 1.25; padding: 15px 40px; position: relative; text-transform: uppercase; top: 0; transition: all 100ms ease; }
+.btn > .fa { margin-right: 10px; }
+
+#respond > .comment-form input[type="submit"], #respond > .comment-form input[type="submit"]:active, #respond > .comment-form input[type="submit"]:visited { border: 0 none; border-radius: 3px; display: inline-block; font-size: 15px; font-weight: 400; right: 0; letter-spacing: 0.6px; line-height: 1.25; padding: 15px 40px; position: relative; text-transform: uppercase; top: 0; transition: all 100ms ease; }
+
+#respond > .comment-form input[type="submit"] > .fa { margin-right: 10px; }
 
 .btn-lg, .btn-lg:active, .btn-lg:visited, .btn-lg:hover, .btn-lg:hover:active, .btn-lg:focus { font-size: 21px; }
 
@@ -174,7 +178,9 @@ figure { max-width: 100%; }
 
 #top-menu .top-menu > .menu > .menu-item.cta { margin-right: 15px; padding-left: 0; }
 
-#top-menu .top-menu > .menu > .menu-item.cta > a, #top-menu .top-menu > .menu > .menu-item.cta > a:active, #top-menu .top-menu > .menu > .menu-item.cta > a:visited { border: 0 none; border-radius: 3px; display: inline-block; font-size: 15px; right: 0; letter-spacing: 0.6px; line-height: 1.25; padding: 15px 40px; position: relative; text-transform: uppercase; top: 0; transition: all 100ms ease; }
+#top-menu .top-menu > .menu > .menu-item.cta > a, #top-menu .top-menu > .menu > .menu-item.cta > a:active, #top-menu .top-menu > .menu > .menu-item.cta > a:visited { border: 0 none; border-radius: 3px; display: inline-block; font-size: 15px; font-weight: 400; right: 0; letter-spacing: 0.6px; line-height: 1.25; padding: 15px 40px; position: relative; text-transform: uppercase; top: 0; transition: all 100ms ease; }
+
+#top-menu .top-menu > .menu > .menu-item.cta > a > .fa { margin-right: 10px; }
 
 #top-menu .top-menu > .menu > .menu-item.cta > a, #top-menu .top-menu > .menu > .menu-item.cta > a:active, #top-menu .top-menu > .menu > .menu-item.cta > a:visited { background-color: #F7AE00; box-shadow: -2px 2px 0 0 #27639e; color: #FFF; }
 
@@ -377,6 +383,12 @@ figure { max-width: 100%; }
 .page-banner-wrap .page-banner .page-header > .page-title { margin: 0; text-align: center; word-wrap: break-word; }
 
 .lsx.single-post .page-banner-wrap .page-banner .page-header > .page-title { display: none; }
+
+.page-banner-wrap .page-banner .banner-content { margin-top: 2.4rem; text-align: center; }
+
+.page-banner-wrap .page-banner .banner-content p { margin-bottom: 2.4rem; }
+
+.page-banner-wrap .page-banner .banner-content p:last-child { margin-bottom: 0; }
 
 .lsx:not(.single-post) .archive-header { background-color: #2B3840; }
 
