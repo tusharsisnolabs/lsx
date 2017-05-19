@@ -62,7 +62,7 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: comments.php:29, comments.php:30, includes/template-tags.php:406, includes/plugins/jetpack.php:346
+#: comments.php:29, comments.php:30, includes/template-tags.php:394, includes/plugins/jetpack.php:346
 msgid "Website"
 msgstr ""
 
@@ -233,11 +233,11 @@ msgstr ""
 msgid "Change the fonts sitewide."
 msgstr ""
 
-#: includes/extras.php:382
+#: includes/extras.php:385
 msgid "Continue reading"
 msgstr ""
 
-#: includes/extras.php:440
+#: includes/extras.php:443
 msgid "More"
 msgstr ""
 
@@ -269,61 +269,61 @@ msgstr ""
 msgid "Not a boolean"
 msgstr ""
 
-#: includes/template-tags.php:231
+#: includes/template-tags.php:219
 msgid "by"
 msgstr ""
 
-#: includes/template-tags.php:254
+#: includes/template-tags.php:242
 msgid "View all posts in %s"
 msgstr ""
 
-#: includes/template-tags.php:259
+#: includes/template-tags.php:247
 msgid "Posted in"
 msgstr ""
 
-#: includes/template-tags.php:373, includes/plugins/jetpack.php:337
+#: includes/template-tags.php:361, includes/plugins/jetpack.php:337
 msgid "Client"
 msgstr ""
 
-#: includes/template-tags.php:384
+#: includes/template-tags.php:372
 msgid "Industry"
 msgstr ""
 
-#: includes/template-tags.php:395
+#: includes/template-tags.php:383
 msgid "Services"
 msgstr ""
 
-#: includes/template-tags.php:476
+#: includes/template-tags.php:464
 msgid "Previous"
 msgstr ""
 
-#: includes/template-tags.php:477
+#: includes/template-tags.php:465
 msgid "Next"
 msgstr ""
 
-#: includes/template-tags.php:511
+#: includes/template-tags.php:499
 msgctxt "Previous post link"
 msgid "Previous Post"
 msgstr ""
 
-#: includes/template-tags.php:514
+#: includes/template-tags.php:502
 msgctxt "Next post link"
 msgid "Next Post"
 msgstr ""
 
-#: includes/template-tags.php:560
+#: includes/template-tags.php:548
 msgid "Toggle navigation"
 msgstr ""
 
-#: includes/template-tags.php:566
+#: includes/template-tags.php:554
 msgid "Menu"
 msgstr ""
 
-#: includes/template-tags.php:628
+#: includes/template-tags.php:616
 msgid "Pages"
 msgstr ""
 
-#: includes/template-tags.php:754
+#: includes/template-tags.php:742
 msgid "Subscribe to Our Newsletter"
 msgstr ""
 

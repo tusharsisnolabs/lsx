@@ -348,7 +348,7 @@ figure { max-width: 100%; }
 
 @media (min-width: 992px) { .page-has-banner-full .page-banner-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; } }
 
-.page-banner-wrap .page-banner { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column nowrap; flex-flow: column nowrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; overflow: hidden; position: relative; width: 100%; }
+.page-banner-wrap .page-banner { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column nowrap; flex-flow: column nowrap; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; overflow: hidden; position: relative; width: 100%; }
 
 .home .page-banner-wrap .page-banner { min-height: 68vh; }
 
@@ -364,7 +364,7 @@ figure { max-width: 100%; }
 
 .page-banner-wrap .page-banner > .page-banner-image:after { background-color: rgba(55, 71, 80, 0.33); bottom: 0; content: ''; left: 0; position: absolute; right: 0; top: 0; z-index: 2; }
 
-.page-banner-wrap .page-banner > .container { margin-bottom: 50px; margin-top: 50px; z-index: 4; }
+.page-banner-wrap .page-banner > .container { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 50px; margin-top: 50px; z-index: 4; }
 
 .page-banner-wrap .page-banner .page-header { border: 0 none; margin: 0; padding: 0; }
 
@@ -377,6 +377,14 @@ figure { max-width: 100%; }
 .lsx:not(.single-post) .archive-header .archive-title { color: #FFF; }
 
 .page-banner-wrap .page-banner .page-title { color: #FFF; }
+
+.breadcrumbs-container { font-size: 13px; line-height: 50px; margin-left: -9999px; margin-right: -9999px; opacity: 0.86; padding-left: 9999px; padding-right: 9999px; position: relative; z-index: 4; }
+
+.breadcrumbs-container .fa { margin: 0 2px; }
+
+.breadcrumbs-container { background-color: #374750; color: #919191; }
+
+.breadcrumbs-container .breadcrumb_last { color: white; }
 
 #home-widgets { margin-top: 8.5rem; }
 

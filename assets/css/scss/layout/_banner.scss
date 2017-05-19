@@ -24,7 +24,7 @@
 		align-items: center;
 		display: flex;
 		flex-flow: column nowrap;
-		justify-content: center;
+		justify-content: flex-end;
 		overflow: hidden;
 		position: relative;
 		width: 100%;
@@ -73,6 +73,11 @@
 		}
 
 		& > .container {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			justify-content: center;
 			margin-bottom: 50px;
 			margin-top: 50px;
 			z-index: 4;

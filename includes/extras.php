@@ -247,12 +247,15 @@ if ( ! function_exists( 'lsx_page_banner' ) ) :
 					<div class="page-banner-wrap">
 						<div class="page-banner">
 							<div class="page-banner-image" style="background-image:url(<?php echo esc_attr( $bg_image ); ?>);"></div>
+
 							<div class="container">
 								<header class="page-header">
 									<h1 class="page-title"><?php the_title(); ?></h1>
 									<?php lsx_banner_content(); ?>
 								</header>
 							</div>
+
+							<?php lsx_banner_inner_bottom(); ?>
 						</div>
 					</div>
 				<?php

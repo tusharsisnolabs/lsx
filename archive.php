@@ -15,15 +15,6 @@ get_header(); ?>
 
 	<main id="main" class="site-main">
 
-		<?php
-			$layout = get_theme_mod( 'lsx_layout', '2cr' );
-			$layout = apply_filters( 'lsx_layout', $layout );
-
-			if ( '1c' === $layout && ! is_post_type_archive( 'tribe_events' ) ) {
-				lsx_breadcrumbs();
-			}
-		?>
-
 		<?php lsx_content_top(); ?>
 
 		<?php if ( have_posts() ) : ?>

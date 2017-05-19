@@ -24,6 +24,7 @@ if ( ! function_exists( 'lsx_breadcrumbs' ) ) :
 		}
 
 		$show_on_front = get_option( 'show_on_front' );
+
 		if ( ( 'posts' === $show_on_front && is_home() ) || ( 'page' === $show_on_front && is_front_page() ) ) {
 			return;
 		}
@@ -34,21 +35,8 @@ if ( ! function_exists( 'lsx_breadcrumbs' ) ) :
 			$output = ob_get_clean();
 			$output = str_replace( 'woocommerce-breadcrumb', 'woocommerce-breadcrumb breadcrumbs-container', $output );
 		} elseif ( function_exists( 'yoast_breadcrumb' ) ) {
-			// Default Yoast Breadcrumbs Separator
-			$old_sep = '\&raquo\;';
-
-			// Get the crumbs
-			$crumbs = yoast_breadcrumb( null, null, false );
-
-			// Remove wrapper <span xmlns:v />
-			$output = preg_replace( '/^\<span xmlns\:v=\"http\:\/\/rdf\.data\-vocabulary\.org\/#\"\>/', '', $crumbs );
-			$output = preg_replace( '/\<\/span\><\/span\>$/', '', $output );
-
-			$crumb = preg_split( "/\40(" . $old_sep . ")\40/", $output );
-
-			$output = implode( ' ', $crumb );
-			$output = str_replace( '</a>', '</a> / ', $output );
-			$output = '<div class="breadcrumbs-container">' . $output . '</div>';
+			$output = yoast_breadcrumb( null, null, false );
+			$output = '<div class="breadcrumbs-container"><div class="container"><div class="row"><div class="col-xs-12">' . $output . '</div></div></div></div>';
 		}
 
 		$output = apply_filters( 'lsx_breadcrumbs', $output );
@@ -58,7 +46,7 @@ if ( ! function_exists( 'lsx_breadcrumbs' ) ) :
 
 endif;
 
-add_action( 'lsx_content_top', 'lsx_breadcrumbs', 100 );
+add_action( 'lsx_banner_inner_bottom', 'lsx_breadcrumbs', 100 );
 
 if ( ! function_exists( 'lsx_breadcrumbs_seperator_filter' ) ) :
 
@@ -69,7 +57,7 @@ if ( ! function_exists( 'lsx_breadcrumbs_seperator_filter' ) ) :
 	 * @subpackage template-tags
 	 */
 	function lsx_breadcrumbs_seperator_filter( $seperator ) {
-		return '';
+		return '<i class="fa fa-angle-right" aria-hidden="true"></i>';
 	}
 
 endif;

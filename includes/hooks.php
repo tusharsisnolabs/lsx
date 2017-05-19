@@ -71,11 +71,15 @@ function lsx_nav_after() {
 /**
  * Semantic <content> hooks
  *
- * $lsx_supports[] = 'lsx_banner_content';
+ * $lsx_supports[] = 'banner';
  */
 
 function lsx_banner_content() {
 	do_action( 'lsx_banner_content' );
+}
+
+function lsx_banner_inner_bottom() {
+	do_action( 'lsx_banner_inner_bottom' );
 }
 
 /**

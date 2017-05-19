@@ -286,27 +286,6 @@ endif;
 
 add_action( 'init', 'lsx_init', 100 );
 
-if ( ! function_exists( 'lsx_wp_head' ) ) :
-
-	/**
-	 * Theme wp_head action.
-	 *
-	 * @package    lsx
-	 * @subpackage config
-	 */
-	function lsx_wp_head() {
-		$layout = get_theme_mod( 'lsx_layout', '2cr' );
-		$layout = apply_filters( 'lsx_layout', $layout );
-
-		if ( '1c' === $layout && ( is_author() || is_search() || is_post_type_archive( array( 'post', 'page', 'jetpack-portfolio' ) ) || is_tag() || is_category() || is_date() || is_tax() ) ) {
-			remove_action( 'lsx_content_top', 'lsx_breadcrumbs', 100 );
-		}
-	}
-
-endif;
-
-add_action( 'wp_head', 'lsx_wp_head', 100 );
-
 if ( ! function_exists( 'lsx_process_content_width' ) ) :
 
 	/**

@@ -1,0 +1,30 @@
+.breadcrumbs-container {
+	font-size: 13px;
+	line-height: 50px;
+	margin: {
+		left: -9999px;
+		right: -9999px;
+	}
+	opacity: 0.86;
+	padding: {
+		left: 9999px;
+		right: 9999px;
+	}
+	position: relative;
+	z-index: 4;
+
+	.fa {
+		margin: 0 2px;
+	}
+}
+
+// @include breadcrumbs-colours ();
+
+.breadcrumbs-container {
+	background-color: nth($blue, 2);
+	color: $small;
+
+	.breadcrumb_last {
+		color: white;
+	}
+}
