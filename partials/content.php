@@ -94,6 +94,7 @@
 
 				<div class="entry-summary">
 					<?php the_excerpt(); ?>
+					<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<p class="edit-link">', '</p>' ); ?>
 				</div><!-- .entry-summary -->
 
 			<?php elseif ( has_post_format( array( 'link' ) ) ) : ?>
@@ -170,8 +171,6 @@
 	<?php lsx_entry_bottom(); ?>
 
 	<div class="clearfix"></div>
-
-	<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<span class="edit-link">', '</span>' ); ?>
 
 	<div class="lsx-breaker"></div>
 </article>
