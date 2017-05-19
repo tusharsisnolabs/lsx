@@ -1,21 +1,50 @@
+.header-wrap {
+	.page-has-banner-full & {
+		@include media (">=tablet") {
+			display: flex;
+			flex-direction: column;
+			min-height: 100vh;
+		}
+	}
+
+	.page-has-banner-full.admin-bar & {
+		@include media('>=tablet') { min-height: calc(100vh - 32px); }
+	}
+}
+
 .page-banner-wrap {
+	.page-has-banner-full & {
+		@include media (">=tablet") {
+			display: flex;
+			flex: 1;
+		}
+	}
+
 	.page-banner {
 		align-items: center;
 		display: flex;
 		flex-flow: column nowrap;
-		height: 50vh;
 		justify-content: center;
-		max-height: 25rem;
 		overflow: hidden;
 		position: relative;
 		width: 100%;
 
-		@include media('>=tablet') {
-			.single-post & { max-height: 39rem; }
+		.home & { min-height: 68vh; }
 
-			.home & {
-				height: 100vh;
-				max-height: 58rem;
+		.single-post & { min-height: 46vh; }
+
+		@include media('>=tablet') {
+			min-height: 25rem;
+
+			.single-post & { min-height: 39rem; }
+
+			.home & { min-height: 58rem; }
+		}
+
+		.page-has-banner-full & {
+			@include media (">=tablet") {
+				flex: 1;
+				min-height: 0;
 			}
 		}
 
@@ -57,7 +86,7 @@
 			& > .page-title {
 				margin: 0;
 				text-align: center;
-				word-break: break-all;
+				word-wrap: break-word;
 
 				.lsx.single-post & { display: none; }
 			}
