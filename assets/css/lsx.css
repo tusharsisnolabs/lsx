@@ -423,21 +423,21 @@ body { background-color: #F6F6F6; }
 
 #home-widgets h1, #home-widgets h2, #home-widgets h3, #home-widgets h4, #home-widgets h5, #home-widgets h6, #home-widgets .widget-title { color: #4A4A4A; }
 
-.content-area #home-widgets .lsx-full-width { background-color: #FFF; color: #4A4A4A; }
+.content-area .lsx-full-width { background-color: #FFF; color: #4A4A4A; }
 
-.content-area #home-widgets .lsx-full-width h1, .content-area #home-widgets .lsx-full-width h2, .content-area #home-widgets .lsx-full-width h3, .content-area #home-widgets .lsx-full-width h4, .content-area #home-widgets .lsx-full-width h5, .content-area #home-widgets .lsx-full-width h6, .content-area #home-widgets .lsx-full-width .widget-title { color: #4A4A4A; }
+.content-area .lsx-full-width h1, .content-area .lsx-full-width h2, .content-area .lsx-full-width h3, .content-area .lsx-full-width h4, .content-area .lsx-full-width h5, .content-area .lsx-full-width h6, .content-area .lsx-full-width .widget-title { color: #4A4A4A; }
 
-.content-area #home-widgets .lsx-full-width a:not(.btn), .content-area #home-widgets .lsx-full-width a:not(.btn):active, .content-area #home-widgets .lsx-full-width a:not(.btn):visited { color: #418AD0; }
+.content-area .lsx-full-width a:not(.btn), .content-area .lsx-full-width a:not(.btn):active, .content-area .lsx-full-width a:not(.btn):visited { color: #418AD0; }
 
-.content-area #home-widgets .lsx-full-width a:not(.btn):hover, .content-area #home-widgets .lsx-full-width a:not(.btn):hover:active, .content-area #home-widgets .lsx-full-width a:not(.btn):focus { color: #F7AE00; }
+.content-area .lsx-full-width a:not(.btn):hover, .content-area .lsx-full-width a:not(.btn):hover:active, .content-area .lsx-full-width a:not(.btn):focus { color: #F7AE00; }
 
-.content-area #home-widgets .lsx-full-width-alt { background-color: #418AD0; color: #FFF; }
+.content-area .lsx-full-width-alt { background-color: #418AD0; color: #FFF; }
 
-.content-area #home-widgets .lsx-full-width-alt h1, .content-area #home-widgets .lsx-full-width-alt h2, .content-area #home-widgets .lsx-full-width-alt h3, .content-area #home-widgets .lsx-full-width-alt h4, .content-area #home-widgets .lsx-full-width-alt h5, .content-area #home-widgets .lsx-full-width-alt h6, .content-area #home-widgets .lsx-full-width-alt .widget-title { color: #FFF; }
+.content-area .lsx-full-width-alt h1, .content-area .lsx-full-width-alt h2, .content-area .lsx-full-width-alt h3, .content-area .lsx-full-width-alt h4, .content-area .lsx-full-width-alt h5, .content-area .lsx-full-width-alt h6, .content-area .lsx-full-width-alt .widget-title { color: #FFF; }
 
-.content-area #home-widgets .lsx-full-width-alt a:not(.btn), .content-area #home-widgets .lsx-full-width-alt a:not(.btn):active, .content-area #home-widgets .lsx-full-width-alt a:not(.btn):visited { color: #374750; }
+.content-area .lsx-full-width-alt a:not(.btn), .content-area .lsx-full-width-alt a:not(.btn):active, .content-area .lsx-full-width-alt a:not(.btn):visited { color: #374750; }
 
-.content-area #home-widgets .lsx-full-width-alt a:not(.btn):hover, .content-area #home-widgets .lsx-full-width-alt a:not(.btn):hover:active, .content-area #home-widgets .lsx-full-width-alt a:not(.btn):focus { color: #F7AE00; }
+.content-area .lsx-full-width-alt a:not(.btn):hover, .content-area .lsx-full-width-alt a:not(.btn):hover:active, .content-area .lsx-full-width-alt a:not(.btn):focus { color: #F7AE00; }
 
 .content-area .lsx-pagination > .page-numbers, .content-area .lsx-pagination > .page-numbers.prev:before, .content-area .lsx-pagination > .page-numbers.next:before { border-color: #418AD0; color: #418AD0; }
 
