@@ -378,7 +378,9 @@ figure { max-width: 100%; }
 
 .page-banner-wrap .page-banner .page-title { color: #FFF; }
 
-.breadcrumbs-container { font-size: 13px; line-height: 50px; margin-left: -9999px; margin-right: -9999px; opacity: 0.86; padding-left: 9999px; padding-right: 9999px; position: relative; z-index: 4; }
+.breadcrumbs-container { font-size: 13px; line-height: 20px; opacity: 0.86; padding-bottom: 15px; padding-top: 15px; position: relative; width: 100%; z-index: 4; }
+
+@media (min-width: 768px) { .breadcrumbs-container { margin-left: -9999px; margin-right: -9999px; padding-left: 9999px; padding-right: 9999px; width: auto; } }
 
 .breadcrumbs-container .fa { margin: 0 2px; }
 
@@ -865,7 +867,7 @@ article.page .entry-content .wp-caption.alignright, article.page .entry-content 
 
 .single-post .post-navigation .nav-links a > h3 { font-size: 20px; line-height: 1.35; }
 
-.single-post.page-has-banner article.post .entry-meta .post-meta-top { margin-top: calc(-8.5rem + 42.5px); }
+.single-post.page-has-banner article.post .entry-meta .post-meta-top { margin-top: calc(-8.5rem + 42.5px + 30px); }
 
 @media (min-width: 992px) { .blog:not(.has-sidebar) .site-main, .archive:not(.has-sidebar) .site-main, .search.search-results:not(.has-sidebar) .site-main { margin: 0 auto; width: 83.33333%; } }
 

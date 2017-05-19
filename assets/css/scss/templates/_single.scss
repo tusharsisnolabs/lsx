@@ -131,7 +131,7 @@
 	&.page-has-banner {
 		article.post {
 			.entry-meta {
-				.post-meta-top { margin-top: calc(-#{$lsx-large-gap} + 42.5px); }
+				.post-meta-top { margin-top: calc(-#{$lsx-large-gap} + 42.5px + 30px); }
 			}
 		}
 	}
