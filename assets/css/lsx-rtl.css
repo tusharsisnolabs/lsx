@@ -25,6 +25,8 @@ body { direction: rtl; }
 
 img { display: inline-block; max-width: 100%; height: auto; }
 
+figure { max-width: 100%; }
+
 .content-area address, .widget-area address { margin-bottom: 2.4rem; }
 
 .content-area a:not(.btn), .widget-area a:not(.btn) { transition: all 300ms ease; word-wrap: break-word; }

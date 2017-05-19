@@ -22,3 +22,5 @@ html {
 body { direction: ltr; }
 
 img { @include img-responsive(inline-block); }
+
+figure { max-width: 100%; }
