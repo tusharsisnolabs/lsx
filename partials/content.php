@@ -9,7 +9,10 @@
 <?php lsx_entry_before(); ?>
 
 <?php
-	if ( has_post_thumbnail() ) {
+	$no_thumb_post_formats = array("gallery", "link", "image", "quote", "video", "audio");
+	$has_thumb = has_post_thumbnail() && ! has_post_format( $no_thumb_post_formats );
+
+	if ( $has_thumb ) {
 		$thumb_class = 'has-thumb';
 	} else {
 		$thumb_class = 'no-thumb';
@@ -37,7 +40,7 @@
 	<div class="entry-layout">
 		<div class="entry-layout-content entry-layout-content-<?php echo has_post_thumbnail() ? '67' : '100'; ?>">
 			<header class="entry-header">
-				<?php if ( has_post_thumbnail() ) : ?>
+				<?php if ( $has_thumb ) : ?>
 					<div class="entry-image <?php echo esc_attr( $image_class ); ?>">
 						<a class="thumbnail" href="<?php the_permalink(); ?>">
 							<?php lsx_thumbnail( 'lsx-single-thumbnail' ); ?>
