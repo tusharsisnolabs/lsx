@@ -22,20 +22,23 @@ global $lsx_options;
 
 	<body <?php body_class( 'lsx' ); ?>>
 		<?php lsx_body_top(); ?>
-		<?php lsx_header_before(); ?>
 
-		<header id="masthead" class="<?php lsx_header_classes(); ?>" role="banner">
-			<?php lsx_header_top(); ?>
+		<div class="header-wrap">
+			<?php lsx_header_before(); ?>
 
-			<div class="container">
-				<?php lsx_nav_before(); ?>
-				<?php lsx_nav_menu(); ?>
-				<?php lsx_nav_after(); ?>
-				<?php lsx_header_bottom(); ?>
-			</div>
-		</header>
+			<header id="masthead" class="<?php lsx_header_classes(); ?>" role="banner">
+				<?php lsx_header_top(); ?>
 
-		<?php lsx_header_after(); ?>
+				<div class="container">
+					<?php lsx_nav_before(); ?>
+					<?php lsx_nav_menu(); ?>
+					<?php lsx_nav_after(); ?>
+					<?php lsx_header_bottom(); ?>
+				</div>
+			</header>
+
+			<?php lsx_header_after(); ?>
+		</div>
 
 		<div class="wrap container" role="document" tabindex="-1">
 			<div class="content role row">
