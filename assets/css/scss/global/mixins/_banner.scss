@@ -24,6 +24,7 @@
 		background-color: $breadcrumb-bg;
 		color: $breadcrumb-color;
 
-		.breadcrumb_last { color: $breadcrumb-current; }
+		&.breadcrumbs-yoast .breadcrumb_last,
+		&.breadcrumbs-woocommerce span:last-child { color: $breadcrumb-current; }
 	}
 }

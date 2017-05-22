@@ -10,6 +10,18 @@
 	width: 100%;
 	z-index: 4;
 
+	a, span {
+		display: inline-block;
+	}
+
+	&.breadcrumbs-woocommerce {
+		.fa { margin: 0 5px; }
+	}
+
+	&.breadcrumbs-yoast {
+		.fa { margin: 0 2px; }
+	}
+
 	@include media('>=phone') {
 		margin: {
 			left: -9999px;
@@ -21,6 +33,4 @@
 		}
 		width: auto;
 	}
-
-	.fa { margin: 0 2px; }
 }

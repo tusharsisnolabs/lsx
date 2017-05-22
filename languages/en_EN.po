@@ -62,7 +62,7 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: comments.php:29, comments.php:30, includes/template-tags.php:394, includes/plugins/jetpack.php:346
+#: comments.php:29, comments.php:30, includes/template-tags.php:418, includes/plugins/jetpack.php:346
 msgid "Website"
 msgstr ""
 
@@ -118,7 +118,7 @@ msgstr ""
 msgid "Meta"
 msgstr ""
 
-#: includes/config.php:31, includes/config.php:194
+#: includes/config.php:31, includes/config.php:192
 msgid "Primary Menu"
 msgstr ""
 
@@ -130,58 +130,58 @@ msgstr ""
 msgid "Top Menu (left)"
 msgstr ""
 
-#: includes/config.php:34, includes/config.php:233
+#: includes/config.php:34, includes/config.php:231
 msgid "Social Menu"
 msgstr ""
 
-#: includes/config.php:35, includes/config.php:248
+#: includes/config.php:35, includes/config.php:246
 msgid "Footer Menu"
 msgstr ""
 
-#: includes/config.php:113, includes/config.php:122
+#: includes/config.php:111, includes/config.php:120
 msgid "Space for Footer Widgets"
 msgstr ""
 
-#: includes/config.php:114, includes/config.php:123
+#: includes/config.php:112, includes/config.php:121
 msgid "This is here to showcase some footer widgets. You can decide what to add and what to hide. Nam nostrum evertitur ad, ut pri nibh veniam, urbanitas definitionem eum ex."
 msgstr ""
 
-#: includes/config.php:131
+#: includes/config.php:129
 msgid "Contact us:"
 msgstr ""
 
-#: includes/config.php:142
+#: includes/config.php:140
 msgid "A Footer Call to Action"
 msgstr ""
 
-#: includes/config.php:143
+#: includes/config.php:141
 msgid "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
 msgstr ""
 
-#: includes/config.php:153
+#: includes/config.php:151
 msgid "LSX is a free WordPress theme"
 msgstr ""
 
-#: includes/config.php:170
+#: includes/config.php:168
 msgctxt "Theme starter content"
 msgid "Banner Example 01"
 msgstr ""
 
-#: includes/config.php:175
+#: includes/config.php:173
 msgctxt "Theme starter content"
 msgid "Banner Example 02"
 msgstr ""
 
-#: includes/config.php:180
+#: includes/config.php:178
 msgctxt "Theme starter content"
 msgid "Banner Example 03"
 msgstr ""
 
-#: includes/config.php:189
+#: includes/config.php:187
 msgid "LSX starter content example"
 msgstr ""
 
-#: includes/config.php:205
+#: includes/config.php:203
 msgid "Top Menu"
 msgstr ""
 
@@ -269,61 +269,61 @@ msgstr ""
 msgid "Not a boolean"
 msgstr ""
 
-#: includes/template-tags.php:219
+#: includes/template-tags.php:243
 msgid "by"
 msgstr ""
 
-#: includes/template-tags.php:242
+#: includes/template-tags.php:266
 msgid "View all posts in %s"
 msgstr ""
 
-#: includes/template-tags.php:247
+#: includes/template-tags.php:271
 msgid "Posted in"
 msgstr ""
 
-#: includes/template-tags.php:361, includes/plugins/jetpack.php:337
+#: includes/template-tags.php:385, includes/plugins/jetpack.php:337
 msgid "Client"
 msgstr ""
 
-#: includes/template-tags.php:372
+#: includes/template-tags.php:396
 msgid "Industry"
 msgstr ""
 
-#: includes/template-tags.php:383
+#: includes/template-tags.php:407
 msgid "Services"
 msgstr ""
 
-#: includes/template-tags.php:464
+#: includes/template-tags.php:488
 msgid "Previous"
 msgstr ""
 
-#: includes/template-tags.php:465
+#: includes/template-tags.php:489
 msgid "Next"
 msgstr ""
 
-#: includes/template-tags.php:499
+#: includes/template-tags.php:523
 msgctxt "Previous post link"
 msgid "Previous Post"
 msgstr ""
 
-#: includes/template-tags.php:502
+#: includes/template-tags.php:526
 msgctxt "Next post link"
 msgid "Next Post"
 msgstr ""
 
-#: includes/template-tags.php:548
+#: includes/template-tags.php:572
 msgid "Toggle navigation"
 msgstr ""
 
-#: includes/template-tags.php:554
+#: includes/template-tags.php:578
 msgid "Menu"
 msgstr ""
 
-#: includes/template-tags.php:616
+#: includes/template-tags.php:640
 msgid "Pages"
 msgstr ""
 
-#: includes/template-tags.php:742
+#: includes/template-tags.php:766
 msgid "Subscribe to Our Newsletter"
 msgstr ""
 

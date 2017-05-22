@@ -31,12 +31,18 @@ if ( ! function_exists( 'lsx_breadcrumbs' ) ) :
 
 		if ( function_exists( 'woocommerce_breadcrumb' ) ) {
 			ob_start();
-			woocommerce_breadcrumb();
+
+			woocommerce_breadcrumb( array(
+				'wrap_before' => '<div class="breadcrumbs-container breadcrumbs-woocommerce"><div class="container"><div class="row"><div class="col-xs-12">',
+				'wrap_after'  => '</div></div></div></div>',
+				'before'      => '<span>',
+				'after'       => '</span>',
+			) );
+
 			$output = ob_get_clean();
-			$output = str_replace( 'woocommerce-breadcrumb', 'woocommerce-breadcrumb breadcrumbs-container', $output );
 		} elseif ( function_exists( 'yoast_breadcrumb' ) ) {
 			$output = yoast_breadcrumb( null, null, false );
-			$output = '<div class="breadcrumbs-container"><div class="container"><div class="row"><div class="col-xs-12">' . $output . '</div></div></div></div>';
+			$output = '<div class="breadcrumbs-container breadcrumbs-yoast"><div class="container"><div class="row"><div class="col-xs-12">' . $output . '</div></div></div></div>';
 		}
 
 		$output = apply_filters( 'lsx_breadcrumbs', $output );
@@ -48,21 +54,39 @@ endif;
 
 add_action( 'lsx_banner_inner_bottom', 'lsx_breadcrumbs', 100 );
 
-if ( ! function_exists( 'lsx_breadcrumbs_seperator_filter' ) ) :
+if ( ! function_exists( 'lsx_breadcrumbs_wpseo_seperator_filter' ) ) :
 
 	/**
-	 * Replaces the seperator with a blank space.
+	 * Replaces the seperator.
 	 *
 	 * @package    lsx
 	 * @subpackage template-tags
 	 */
-	function lsx_breadcrumbs_seperator_filter( $seperator ) {
-		return '<i class="fa fa-angle-right" aria-hidden="true"></i>';
+	function lsx_breadcrumbs_wpseo_seperator_filter( $seperator ) {
+		$seperator = '<i class="fa fa-angle-right" aria-hidden="true"></i>';
+		return $seperator;
 	}
 
 endif;
 
-add_filter( 'wpseo_breadcrumb_separator', 'lsx_breadcrumbs_seperator_filter' );
+add_filter( 'wpseo_breadcrumb_separator', 'lsx_breadcrumbs_wpseo_seperator_filter' );
+
+if ( ! function_exists( 'lsx_breadcrumbs_woocommerce_seperator_filter' ) ) :
+
+	/**
+	 * Replaces the seperator.
+	 *
+	 * @package    lsx
+	 * @subpackage template-tags
+	 */
+	function lsx_breadcrumbs_woocommerce_seperator_filter( $defaults ) {
+		$defaults['delimiter'] = '<i class="fa fa-angle-right" aria-hidden="true"></i>';
+		return $defaults;
+	}
+
+endif;
+
+add_filter( 'woocommerce_breadcrumb_defaults', 'lsx_breadcrumbs_woocommerce_seperator_filter' );
 
 if ( ! function_exists( 'lsx_site_title' ) ) :
 
