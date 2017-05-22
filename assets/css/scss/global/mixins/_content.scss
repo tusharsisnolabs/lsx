@@ -76,8 +76,10 @@
 		h1, h2, h3, h4, h5, h6, .widget-title { color: $header; }
 	}
 
-	.content-area {
-		.lsx-full-width {
+
+	.lsx-full-width {
+		.content-area &,
+		#home-widgets & {
 			background-color: $full-bg;
 			color: $full-color;
 
@@ -85,8 +87,11 @@
 
 			a:not(.btn) { @include lsx-link-colour($full-link, $full-hover); }
 		}
+	}
 
-		.lsx-full-width-alt {
+	.lsx-full-width-alt {
+		.content-area &,
+		#home-widgets & {
 			background-color: $full-cta-bg;
 			color: $full-cta-color;
 
@@ -94,7 +99,9 @@
 
 			a:not(.btn) { @include lsx-link-colour($full-cta-link, $full-cta-hover); }
 		}
+	}
 
+	.content-area {
 		.lsx-pagination {
 			& > .page-numbers {
 				&,

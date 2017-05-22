@@ -41,7 +41,8 @@
 	p {
 		& + p { margin-top: $lsx-gap; }
 
-		& > .btn { margin-top: 0; }
+
+		& .btn { margin-top: 0; }
 	}
 
 	img ~ p { margin-top: $lsx-gap; }
