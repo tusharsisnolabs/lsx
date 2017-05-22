@@ -52,9 +52,7 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 			'video',
 			'gallery',
 			'audio',
-			'link',
 			'quote',
-			'aside',
 		) );
 
 		add_theme_support( 'post-thumbnails' );
