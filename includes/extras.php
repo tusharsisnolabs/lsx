@@ -414,7 +414,7 @@ if ( ! function_exists( 'lsx_custom_wp_trim_excerpt' ) ) :
 				$wpse_excerpt = strip_shortcodes( $wpse_excerpt );
 				$wpse_excerpt = apply_filters( 'the_content', $wpse_excerpt );
 				$wpse_excerpt = str_replace( ']]>', ']]>', $wpse_excerpt );
-				$wpse_excerpt = strip_tags( $wpse_excerpt, '<h1>,<h2>,<h3>,<h4>,<h5>,<h6>,<a>,<button>,<blockquote>,<p>,<br>,<b>,<strong>,<i>,<u>,<ul>,<ol>,<li>,<span>,<div>' );
+				$wpse_excerpt = strip_tags( $wpse_excerpt, apply_filters( 'excerpt_strip_tags', '<h1>,<h2>,<h3>,<h4>,<h5>,<h6>,<a>,<button>,<blockquote>,<p>,<br>,<b>,<strong>,<i>,<u>,<ul>,<ol>,<li>,<span>,<div>' ) );
 
 				$excerpt_word_count = 50;
 				$excerpt_word_count = apply_filters( 'excerpt_length', $excerpt_word_count );
