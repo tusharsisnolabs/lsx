@@ -33,19 +33,20 @@ figure { max-width: 100%; }
 
 .content-area big, .widget-area big { font-size: 120%; }
 
-.content-area blockquote, .widget-area blockquote { border: 0 none; font-size: 16px; margin: 0 0 2.4rem; padding: 25px 0 0; text-align: center; }
+.content-area blockquote, .widget-area blockquote { border-radius: 10px; border-style: solid; border-width: 1px; display: block; font-size: 16px; margin: calc(25px + 1.2rem) 0 2.4rem; padding: 4rem 4rem 2.4rem; position: relative; text-align: center; }
 
-@media (min-width: 992px) { .content-area blockquote, .widget-area blockquote { padding-top: 30px; } }
+@media (min-width: 992px) { .content-area blockquote, .widget-area blockquote { margin-right: auto; margin-left: auto; margin-top: calc(30px + 1.2rem); max-width: 80%; }
+  .blog .content-area blockquote, .archive .content-area blockquote, .blog .widget-area blockquote, .archive .widget-area blockquote { max-width: none; } }
 
-.content-area blockquote cite, .widget-area blockquote cite { display: block; font-style: normal; margin-top: 1rem; text-align: right; color: #919191; }
+.content-area blockquote:before, .widget-area blockquote:before { border-radius: 50%; content: '”'; font-family: "Lora", serif; font-size: 60px; font-style: normal; height: 50px; right: 50%; line-height: 1.375; overflow: hidden; position: absolute; top: -25px; -webkit-transform: translateX(50%); transform: translateX(50%); width: 50px; }
 
-.content-area blockquote > p, .widget-area blockquote > p { border-radius: 10px; border-style: solid; border-width: 1px; display: inline-block; font-style: italic; font-size: inherit; line-height: 1.375; padding: 4rem; position: relative; }
+@media (min-width: 992px) { .content-area blockquote:before, .widget-area blockquote:before { font-size: 72px; height: 60px; top: -30px; width: 60px; } }
 
-@media (min-width: 992px) { .content-area blockquote > p, .widget-area blockquote > p { max-width: 80%; } }
+.content-area blockquote cite, .widget-area blockquote cite { display: block; font-size: 13px; font-style: normal; margin-top: 2.4rem; text-align: right; }
 
-.content-area blockquote > p:before, .widget-area blockquote > p:before { border-radius: 50%; color: #D84E2E; content: '”'; font-family: "Lora", serif; font-size: 60px; font-style: normal; height: 50px; right: 50%; overflow: hidden; position: absolute; top: -25px; -webkit-transform: translateX(50%); transform: translateX(50%); width: 50px; }
+.content-area blockquote cite:before, .widget-area blockquote cite:before { content: '\2014'; display: inline-block; margin-left: 5px; }
 
-@media (min-width: 992px) { .content-area blockquote > p:before, .widget-area blockquote > p:before { font-size: 72px; height: 60px; top: -30px; width: 60px; } }
+.content-area blockquote p, .widget-area blockquote p { font-style: italic; font-size: inherit; line-height: 1.375; }
 
 .content-area dl, .widget-area dl { margin-bottom: 2.4rem; }
 
@@ -262,6 +263,8 @@ figure { max-width: 100%; }
 
 #masthead .navbar-header .site-description { color: #434343; }
 
+.content-area blockquote:before, .widget-area blockquote:before { color: #D84E2E; }
+
 @media (max-width: 1199px) { #masthead .wrapper-toggle { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-right: -15px; margin-left: -15px; -webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; width: calc(100% + 30px); }
   #masthead .wrapper-toggle.open .mobile-menu-title:after { content: ""; }
   #masthead .wrapper-toggle .mobile-menu-title { font-size: 14px; font-weight: 700; letter-spacing: .5px; line-height: 1; text-transform: uppercase; text-align: left; }
@@ -452,9 +455,11 @@ body { background-color: #F6F6F6; }
 
 .content-area a:not(.btn):hover, .content-area a:not(.btn):hover:active, .content-area a:not(.btn):focus, .widget-area a:not(.btn):hover, .widget-area a:not(.btn):hover:active, .widget-area a:not(.btn):focus { color: #F7AE00; }
 
-.content-area blockquote > p, .widget-area blockquote > p { border-color: #DADDDF; }
+.content-area blockquote, .widget-area blockquote { border-color: #DADDDF; }
 
-.content-area blockquote > p:before, .widget-area blockquote > p:before { background-color: #F6F6F6; }
+.content-area blockquote:before, .widget-area blockquote:before { background-color: #F6F6F6; }
+
+.content-area blockquote cite, .widget-area blockquote cite { color: #919191; }
 
 .content-area pre, .widget-area pre { border-color: #DADDDF; color: #4A4A4A; }
 

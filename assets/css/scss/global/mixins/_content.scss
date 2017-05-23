@@ -55,11 +55,11 @@
 		a:not(.btn) { @include lsx-link-colour($link, $hover); }
 
 		blockquote {
-			& > p {
-				border-color: $breaker;
+			border-color: $breaker;
 
-				&:before { background-color: $bg; }
-			}
+			&:before { background-color: $bg; }
+
+			& cite { color: $small; }
 		}
 
 		pre {

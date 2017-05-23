@@ -10,4 +10,11 @@
 			.site-description { color: $description; }
 		}
 	}
+
+	.content-area,
+	.widget-area {
+		blockquote {
+			&:before { color: $link; }
+		}
+	}
 }

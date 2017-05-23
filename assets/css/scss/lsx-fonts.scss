@@ -8,9 +8,7 @@ h1, h2, h3, h4, h5, h6,
 .content-area,
 .widget-area {
 	blockquote {
-		& > p {
-			&:before { font-family: [font-family-headings]; }
-		}
+		&:before { font-family: [font-family-headings]; }
 	}
 }
 
