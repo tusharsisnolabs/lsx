@@ -141,6 +141,8 @@
 
 @include media('>=desktop') {
 	#masthead {
+		backface-visibility: hidden;
+
 		.mobile-menu-title { display: none; }
 
 		.primary-navbar {
