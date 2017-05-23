@@ -470,3 +470,87 @@ endif;
 
 remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 add_filter( 'get_the_excerpt', 'lsx_custom_wp_trim_excerpt' );
+
+if ( ! function_exists( 'lsx_full_width_widget_classes' ) ) :
+
+	/**
+	 * Filter sidebar widget params, to add the widget_lsx_full_width_alt or widget_lsx_full_width classes to the text widget.
+	 *
+	 * @package    lsx
+	 * @subpackage extras
+	 */
+	function lsx_full_width_widget_classes( $params ) {
+		if ( is_admin() ) {
+			return $params;
+		}
+
+		global $wp_registered_widgets;
+
+		$widget_id   = $params[0]['widget_id'];
+		$widget_name = $params[0]['widget_name'];
+
+		if ( 'Text' === $widget_name ) {
+			$wp_registered_widgets[ $widget_id ]['original_callback'] = $wp_registered_widgets[ $widget_id ]['callback'];
+			$wp_registered_widgets[ $widget_id ]['callback'] = 'lsx_full_width_widget_custom_callback';
+		}
+
+		return $params;
+	}
+
+endif;
+
+add_filter( 'dynamic_sidebar_params', 'lsx_full_width_widget_classes' );
+
+if ( ! function_exists( 'lsx_full_width_widget_custom_callback' ) ) :
+
+	/**
+	 * Filter sidebar widget params, to add the widget_lsx_full_width_alt or widget_lsx_full_width classes to the text widget.
+	 *
+	 * @package    lsx
+	 * @subpackage extras
+	 */
+	function lsx_full_width_widget_custom_callback() {
+		global $wp_registered_widgets;
+
+		$original_callback_params = func_get_args();
+		$widget_id = $original_callback_params[0]['widget_id'];
+
+		$original_callback = $wp_registered_widgets[ $widget_id ]['original_callback'];
+		$wp_registered_widgets[ $widget_id ]['callback'] = $original_callback;
+
+		$widget_id_base = $wp_registered_widgets[ $widget_id ]['callback'][0]->id_base;
+
+		if ( is_callable( $original_callback ) ) {
+			ob_start();
+			call_user_func_array( $original_callback, $original_callback_params );
+			$widget_output = ob_get_clean();
+
+			echo apply_filters( 'lsx_widget_output', $widget_output, $widget_id_base, $widget_classname, $widget_id );
+		}
+	}
+
+endif;
+
+if ( ! function_exists( 'lsx_full_width_widget_output' ) ) :
+
+	/**
+	 * Filter sidebar widget params, to add the widget_lsx_full_width_alt or widget_lsx_full_width classes to the text widget.
+	 *
+	 * @package    lsx
+	 * @subpackage extras
+	 */
+	function lsx_full_width_widget_output( $widget_output, $widget_id_base, $widget_id ) {
+		if ( 'text' === $widget_id_base ) {
+			if ( false !== strpos( $widget_output, '<div class="lsx-full-width-alt">' ) ) {
+				$widget_output = str_replace( 'class="widget widget_text"', 'class="widget widget_text widget_lsx_full_width_alt"', $widget_output );
+			} elseif ( false !== strpos( $widget_output, '<div class="lsx-full-width">' ) ) {
+				$widget_output = str_replace( 'class="widget widget_text"', 'class="widget widget_text widget_lsx_full_width"', $widget_output );
+			}
+		}
+
+		return $widget_output;
+	}
+
+endif;
+
+add_filter( 'lsx_widget_output', 'lsx_full_width_widget_output', 10, 3 );
