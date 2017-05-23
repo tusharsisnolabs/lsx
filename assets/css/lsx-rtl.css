@@ -411,7 +411,7 @@ figure { max-width: 100%; }
 
 #home-widgets > .widget { margin-bottom: 8.5rem; }
 
-#home-widgets > .widget:last-child .lsx-full-width, #home-widgets > .widget:last-child .lsx-full-width-alt { margin-bottom: -8.5rem; }
+#home-widgets > .widget.widget_lsx_full_width_alt:last-child, #home-widgets > .widget.widget_lsx_full_width:last-child { margin-bottom: 0; }
 
 #home-widgets h3, #home-widgets .widget-title { font-size: 30px; line-height: 1.2; margin-bottom: 4.25rem; margin-top: 0; text-align: center; }
 

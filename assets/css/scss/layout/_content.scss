@@ -4,11 +4,9 @@
 	& > .widget {
 		margin-bottom: $lsx-large-gap;
 
-		&:last-child {
-			.lsx-full-width,
-			.lsx-full-width-alt {
-				margin-bottom: $lsx-large-gap * -1;
-			}
+		&.widget_lsx_full_width_alt,
+		&.widget_lsx_full_width {
+			&:last-child { margin-bottom: 0; }
 		}
 	}
 
