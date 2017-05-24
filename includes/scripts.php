@@ -21,12 +21,6 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 	function lsx_scripts() {
 		global $wp_filesystem;
 
-		if ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) {
-			$min = '';
-		} else {
-			$min = '.min';
-		}
-
 		// Styles
 
 		wp_register_style( 'fontawesome', get_template_directory_uri() . '/assets/css/vendor/font-awesome.css', array(), LSX_VERSION );
@@ -130,7 +124,7 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 		wp_enqueue_script( 'scrolltofixed', get_template_directory_uri() . '/assets/js/vendor/jquery-scrolltofixed-min.js', array( 'jquery' ), LSX_VERSION, true );
 		wp_enqueue_script( 'picturefill', get_template_directory_uri() . '/assets/js/vendor/picturefill.min.js', array(), LSX_VERSION, true );
 
-		wp_enqueue_script( 'lsx_script', get_template_directory_uri() . '/assets/js/lsx' . $min . '.js', array( 'jquery', 'bootstrap', 'modernizr', 'masonry', 'imagesLoaded', 'scrolltofixed', 'picturefill' ), LSX_VERSION, true );
+		wp_enqueue_script( 'lsx_script', get_template_directory_uri() . '/assets/js/lsx.min.js', array( 'jquery', 'bootstrap', 'modernizr', 'masonry', 'imagesLoaded', 'scrolltofixed', 'picturefill' ), LSX_VERSION, true );
 
 		// Script parameters
 
