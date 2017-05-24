@@ -237,7 +237,7 @@ msgstr ""
 msgid "Continue reading"
 msgstr ""
 
-#: includes/extras.php:443
+#: includes/extras.php:444
 msgid "More"
 msgstr ""
 
