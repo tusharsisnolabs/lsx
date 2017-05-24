@@ -62,7 +62,7 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: comments.php:29, comments.php:30, includes/template-tags.php:418, includes/plugins/jetpack.php:346
+#: comments.php:29, comments.php:30, includes/template-tags.php:419, includes/plugins/jetpack.php:346
 msgid "Website"
 msgstr ""
 
@@ -241,23 +241,23 @@ msgstr ""
 msgid "More"
 msgstr ""
 
-#: includes/layout.php:195
+#: includes/layout.php:199
 msgid "Blog"
 msgstr ""
 
-#: includes/layout.php:207
+#: includes/layout.php:213
 msgid "Search Results for: %s"
 msgstr ""
 
-#: includes/layout.php:241
+#: includes/layout.php:253
 msgid "Type:"
 msgstr ""
 
-#: includes/layout.php:310
+#: includes/layout.php:324
 msgid "About the author"
 msgstr ""
 
-#: includes/layout.php:318
+#: includes/layout.php:332
 msgid "All posts by %s"
 msgstr ""
 
@@ -269,61 +269,61 @@ msgstr ""
 msgid "Not a boolean"
 msgstr ""
 
-#: includes/template-tags.php:243
+#: includes/template-tags.php:244
 msgid "by"
 msgstr ""
 
-#: includes/template-tags.php:266
+#: includes/template-tags.php:267
 msgid "View all posts in %s"
 msgstr ""
 
-#: includes/template-tags.php:271
+#: includes/template-tags.php:272
 msgid "Posted in"
 msgstr ""
 
-#: includes/template-tags.php:385, includes/plugins/jetpack.php:337
+#: includes/template-tags.php:386, includes/plugins/jetpack.php:337
 msgid "Client"
 msgstr ""
 
-#: includes/template-tags.php:396
+#: includes/template-tags.php:397
 msgid "Industry"
 msgstr ""
 
-#: includes/template-tags.php:407
+#: includes/template-tags.php:408
 msgid "Services"
 msgstr ""
 
-#: includes/template-tags.php:488
+#: includes/template-tags.php:489
 msgid "Previous"
 msgstr ""
 
-#: includes/template-tags.php:489
+#: includes/template-tags.php:490
 msgid "Next"
 msgstr ""
 
-#: includes/template-tags.php:523
+#: includes/template-tags.php:524
 msgctxt "Previous post link"
 msgid "Previous Post"
 msgstr ""
 
-#: includes/template-tags.php:526
+#: includes/template-tags.php:527
 msgctxt "Next post link"
 msgid "Next Post"
 msgstr ""
 
-#: includes/template-tags.php:572
+#: includes/template-tags.php:573
 msgid "Toggle navigation"
 msgstr ""
 
-#: includes/template-tags.php:578
+#: includes/template-tags.php:579
 msgid "Menu"
 msgstr ""
 
-#: includes/template-tags.php:640
+#: includes/template-tags.php:641
 msgid "Pages"
 msgstr ""
 
-#: includes/template-tags.php:766
+#: includes/template-tags.php:767
 msgid "Subscribe to Our Newsletter"
 msgstr ""
 

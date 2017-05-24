@@ -178,6 +178,8 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 				<header class="archive-header">
 					<h1 class="archive-title"><?php the_title(); ?></h1>
 				</header>
+
+				<?php lsx_global_header_inner_bottom(); ?>
 			</div>
 			<?php
 		elseif ( is_single() && ! is_singular( 'post' ) ) :
@@ -186,6 +188,8 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 				<header class="archive-header">
 					<h1 class="archive-title"><?php the_title(); ?></h1>
 				</header>
+
+				<?php lsx_global_header_inner_bottom(); ?>
 			</div>
 			<?php
 		elseif ( 'page' === $show_on_front && (int) get_option( 'page_for_posts' ) === $queried_object->ID ) :
@@ -194,6 +198,8 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 				<header class="archive-header">
 					<h1 class="archive-title"><?php esc_html_e( 'Blog', 'lsx' ); ?></h1>
 				</header>
+
+				<?php lsx_global_header_inner_bottom(); ?>
 			</div>
 			<?php
 		elseif ( is_search() ) :
@@ -210,6 +216,8 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 						?>
 					</h1>
 				</header>
+
+				<?php lsx_global_header_inner_bottom(); ?>
 			</div>
 			<?php
 		elseif ( is_author() ) :
@@ -221,6 +229,8 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 				<header class="archive-header">
 					<h1 class="archive-title"><?php the_archive_title(); ?></h1>
 				</header>
+
+				<?php lsx_global_header_inner_bottom(); ?>
 			</div>
 			<?php
 		elseif ( is_archive() && class_exists( 'WooCommerce' ) && is_post_type_archive( 'product' ) ) :
@@ -230,6 +240,8 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 					<h1 class="archive-title"><?php the_archive_title(); ?></h1>
 					<?php the_archive_description(); ?>
 				</header>
+
+				<?php lsx_global_header_inner_bottom(); ?>
 			</div>
 			<?php
 		elseif ( is_archive() ) :
@@ -246,6 +258,8 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 
 					<?php the_archive_description(); ?>
 				</header>
+
+				<?php lsx_global_header_inner_bottom(); ?>
 			</div>
 			<?php
 		endif;

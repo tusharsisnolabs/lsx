@@ -360,7 +360,9 @@ figure { max-width: 100%; }
 
 .breadcrumbs-container.breadcrumbs-yoast .fa { margin: 0 2px; }
 
-@media (min-width: 768px) { .breadcrumbs-container { margin-left: -9999px; margin-right: -9999px; padding-left: 9999px; padding-right: 9999px; width: auto; } }
+.archive-header-wrapper .breadcrumbs-container { margin-left: -15px; margin-right: -15px; width: calc(100% + 30px); }
+
+@media (min-width: 768px) { .breadcrumbs-container, .archive-header-wrapper .breadcrumbs-container { margin-left: -9999px; margin-right: -9999px; padding-left: 9999px; padding-right: 9999px; width: auto; } }
 
 @media (min-width: 992px) { .page-has-banner-full .header-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; min-height: 100vh; } }
 

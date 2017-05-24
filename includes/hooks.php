@@ -85,6 +85,16 @@ function lsx_banner_inner_bottom() {
 /**
  * Semantic <content> hooks
  *
+ * $lsx_supports[] = 'global_header';
+ */
+
+function lsx_global_header_inner_bottom() {
+	do_action( 'lsx_global_header_inner_bottom' );
+}
+
+/**
+ * Semantic <content> hooks
+ *
  * $lsx_supports[] = 'content';
  */
 

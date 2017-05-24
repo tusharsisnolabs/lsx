@@ -22,15 +22,26 @@
 		.fa { margin: 0 2px; }
 	}
 
-	@include media('>=phone') {
+	.archive-header-wrapper & {
 		margin: {
-			left: -9999px;
-			right: -9999px;
+			left: -15px;
+			right: -15px;
 		}
-		padding: {
-			left: 9999px;
-			right: 9999px;
+		width: calc(100% + 30px);
+	}
+
+	&,
+	.archive-header-wrapper & {
+		@include media('>=phone') {
+			margin: {
+				left: -9999px;
+				right: -9999px;
+			}
+			padding: {
+				left: 9999px;
+				right: 9999px;
+			}
+			width: auto;
 		}
-		width: auto;
 	}
 }
