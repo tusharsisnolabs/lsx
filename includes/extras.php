@@ -50,7 +50,7 @@ if ( ! function_exists( 'lsx_body_class' ) ) :
 			$post_types = array( 'page', 'post' );
 			$post_types = apply_filters( 'lsx_allowed_post_type_banners', $post_types );
 
-			if ( ( is_singular( $post_types ) && has_post_thumbnail() ) || ( is_singular( 'jetpack-portfolio' ) ) ) {
+			if ( is_singular( $post_types ) && has_post_thumbnail() ) {
 				$classes[] = 'page-has-banner';
 			}
 		}
@@ -234,7 +234,7 @@ if ( ! function_exists( 'lsx_page_banner' ) ) :
 		$post_types = array( 'page', 'post' );
 		$post_types = apply_filters( 'lsx_allowed_post_type_banners', $post_types );
 
-		if ( ( is_singular( $post_types ) && has_post_thumbnail() ) || ( is_singular( 'jetpack-portfolio' ) ) ) :
+		if ( is_singular( $post_types ) && has_post_thumbnail() ) :
 			$bg_image = '';
 
 			if ( has_post_thumbnail() ) {

@@ -128,15 +128,8 @@ if ( ! function_exists( 'lsx_scripts' ) ) :
 
 		// Script parameters
 
-		$is_portfolio = false;
-
-		if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) || is_page_template( 'page-templates/template-portfolio.php' ) ) {
-			$is_portfolio = true;
-		}
-
 		$param_array = array(
-			'is_portfolio' => $is_portfolio,
-			'columns'      => apply_filters( 'lsx_archive_column_number', 3 ),
+			'columns' => apply_filters( 'lsx_archive_column_number', 3 ),
 		);
 
 		wp_localize_script( 'lsx_script', 'lsx_params', $param_array );

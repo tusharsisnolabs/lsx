@@ -296,12 +296,8 @@ if ( ! function_exists( 'lsx_process_content_width' ) ) :
 		global $content_width;
 
 		if (
-			is_page_template( 'page-templates/template-portfolio.php' ) ||
 			is_page_template( 'page-templates/template-front-page.php' ) ||
-			is_page_template( 'page-templates/template-full-width.php' ) ||
-			is_post_type_archive( 'jetpack-portfolio' ) ||
-			is_tax( array( 'jetpack-portfolio-type', 'jetpack-portfolio-tag' ) ) ||
-			is_singular( 'jetpack-portfolio' )
+			is_page_template( 'page-templates/template-full-width.php' )
 		) {
 			$content_width = 1140;
 		}

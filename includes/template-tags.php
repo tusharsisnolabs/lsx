@@ -298,30 +298,6 @@ endif;
 
 add_action( 'lsx_content_post_tags', 'lsx_post_tags', 10 );
 
-if ( ! function_exists( 'lsx_related_posts' ) ) :
-
-	/**
-	 * Add customisable post info: related posts.
-	 *
-	 * @package    lsx
-	 * @subpackage template-tags
-	 */
-	function lsx_related_posts() {
-		if ( is_singular( 'post' ) && class_exists( 'Jetpack_RelatedPosts' ) ) {
-			?>
-			<div class="row row-related-posts">
-				<div class="col-md-12">
-					<?php echo do_shortcode( '[jetpack-related-posts]' ); ?>
-				</div>
-			</div>
-			<?php
-		}
-	}
-
-endif;
-
-add_action( 'lsx_entry_bottom', 'lsx_related_posts', 10 );
-
 if ( ! function_exists( 'lsx_translate_format_to_fontawesome' ) ) :
 
 	/**
@@ -359,102 +335,6 @@ if ( ! function_exists( 'lsx_translate_format_to_fontawesome' ) ) :
 		}
 
 		return $format;
-	}
-
-endif;
-
-if ( ! function_exists( 'lsx_portfolio_meta' ) ) :
-
-	/**
-	 * Add customisable portfolio meta.
-	 *
-	 * Add customisable portfolio meta, using shortcodes,
-	 * to be added/modified where necessary.
-	 *
-	 * @package    lsx
-	 * @subpackage template-tags
-	 */
-	function lsx_portfolio_meta() {
-		?>
-		<div id="portfolio-meta" class="portfolio-meta info-box-sticky info-box sticky-wrapper">
-			<?php
-				$client = get_post_meta( get_the_ID(), 'lsx-client', true );
-
-				if ( ! empty( $client ) ) :
-					?>
-					<div class="portfolio-client">
-						<span><span class="fa fa-user"></span><?php esc_html_e( 'Client','lsx' ); ?></span>
-						<span><?php echo esc_html( $client ); ?></span>
-					</div>
-					<?php
-				endif;
-
-				$portfolio_type = get_the_term_list( get_the_ID(), 'jetpack-portfolio-type', '', ', ', '' );
-
-				if ( ! empty( $portfolio_type ) ) :
-					?>
-					<div class="portfolio-industry">
-						<span><span class="fa fa-folder-open"></span><?php esc_html_e( 'Industry', 'lsx' ); ?></span>
-						<?php echo wp_kses_post( $portfolio_type ); ?>
-					</div>
-					<?php
-				endif;
-
-				$services = get_the_term_list( get_the_ID(), 'jetpack-portfolio-tag', '', ', ', '' );
-
-				if ( ! empty( $services ) ) :
-					?>
-					<div class="portfolio-services">
-						<span><span class="fa fa-cog"></span><?php esc_html_e( 'Services', 'lsx' ); ?></span>
-						<?php echo wp_kses_post( $services ); ?>
-					</div>
-					<?php
-				endif;
-
-				$website = esc_url( get_post_meta( get_the_ID(), 'lsx-website', true ) );
-
-				if ( ! empty( $website ) ) :
-					?>
-					<div class="portfolio-website">
-						<span><span class="fa fa-link"></span><?php esc_html_e( 'Website', 'lsx' ); ?></span>
-						<a target="_blank" href="<?php echo esc_url( $website ); ?>"><?php echo esc_html( $website ) ?></a>
-					</div>
-					<?php
-				endif;
-			?>
-		</div>
-		<?php
-	}
-
-endif;
-
-if ( ! function_exists( 'lsx_portfolio_gallery' ) ) :
-
-	/**
-	 * Add customisable portfolio gallery.
-	 *
-	 * @package    lsx
-	 * @subpackage template-tags
-	 */
-	function lsx_portfolio_gallery() {
-		$media = get_attached_media( 'image' );
-		$media_array = array();
-		$post_thumbnail_id = get_post_thumbnail_id( get_the_ID() );
-
-		if ( ! empty( $media ) ) {
-			foreach ( $media as $media_item ) {
-				if ( $post_thumbnail_id !== $media_item->ID ) {
-					$media_array[] = $media_item->ID;
-				}
-			}
-
-			if ( ! empty( $media_array ) ) {
-				echo wp_kses_post( gallery_shortcode( array(
-					'size' => 'full',
-					'ids' => implode( ',', $media_array ),
-				) ) );
-			}
-		}
 	}
 
 endif;
@@ -544,8 +424,6 @@ if ( ! function_exists( 'lsx_site_identity' ) ) :
 	function lsx_site_identity() {
 		if ( function_exists( 'has_custom_logo' ) && has_custom_logo() ) {
 			the_custom_logo();
-		} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
-			jetpack_the_site_logo();
 		} else {
 			if ( get_theme_mod( 'site_logo_header_text', 1 ) ) {
 				lsx_site_title();

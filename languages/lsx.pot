@@ -22,22 +22,6 @@ msgstr ""
 msgid "It looks like nothing was found at this location. Maybe try a search?"
 msgstr ""
 
-#: archive-jetpack-portfolio.php:58, page-templates/template-portfolio.php:82, partials/content-none.php:11
-msgid "Nothing Found"
-msgstr ""
-
-#: archive-jetpack-portfolio.php:65, page-templates/template-portfolio.php:89
-msgid "Ready to publish your first project?"
-msgstr ""
-
-#: archive-jetpack-portfolio.php:65, page-templates/template-portfolio.php:89, partials/content-none.php:18
-msgid "Get started here"
-msgstr ""
-
-#: archive-jetpack-portfolio.php:69, page-templates/template-portfolio.php:93, partials/content-none.php:27
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr ""
-
 #: comment.php:26
 msgid "%1$s on %2$s"
 msgstr ""
@@ -62,7 +46,7 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: comments.php:29, comments.php:30, includes/template-tags.php:419, includes/plugins/jetpack.php:346
+#: comments.php:29, comments.php:30
 msgid "Website"
 msgstr ""
 
@@ -281,49 +265,37 @@ msgstr ""
 msgid "Posted in"
 msgstr ""
 
-#: includes/template-tags.php:386, includes/plugins/jetpack.php:337
-msgid "Client"
-msgstr ""
-
-#: includes/template-tags.php:397
-msgid "Industry"
-msgstr ""
-
-#: includes/template-tags.php:408
-msgid "Services"
-msgstr ""
-
-#: includes/template-tags.php:489
+#: includes/template-tags.php:369
 msgid "Previous"
 msgstr ""
 
-#: includes/template-tags.php:490
+#: includes/template-tags.php:370
 msgid "Next"
 msgstr ""
 
-#: includes/template-tags.php:524
+#: includes/template-tags.php:404
 msgctxt "Previous post link"
 msgid "Previous Post"
 msgstr ""
 
-#: includes/template-tags.php:527
+#: includes/template-tags.php:407
 msgctxt "Next post link"
 msgid "Next Post"
 msgstr ""
 
-#: includes/template-tags.php:573
+#: includes/template-tags.php:451
 msgid "Toggle navigation"
 msgstr ""
 
-#: includes/template-tags.php:579
+#: includes/template-tags.php:457
 msgid "Menu"
 msgstr ""
 
-#: includes/template-tags.php:641
+#: includes/template-tags.php:519
 msgid "Pages"
 msgstr ""
 
-#: includes/template-tags.php:767
+#: includes/template-tags.php:645
 msgid "Subscribe to Our Newsletter"
 msgstr ""
 
@@ -363,20 +335,32 @@ msgstr ""
 msgid "Monthly Archives"
 msgstr ""
 
-#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-custom.php:28, partials/content-page.php:28, partials/content-portfolio-single.php:65, partials/content-post.php:55, partials/content.php:97
+#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-custom.php:28, partials/content-page.php:28, partials/content-post.php:55, partials/content.php:97
 msgid "Edit"
 msgstr ""
 
-#: page-templates/template-front-page.php:36, page-templates/template-portfolio.php:32, partials/content-portfolio-single.php:57
+#: page-templates/template-front-page.php:36
 msgid "Pages:"
+msgstr ""
+
+#: partials/content-none.php:11
+msgid "Nothing Found"
 msgstr ""
 
 #: partials/content-none.php:18
 msgid "Ready to publish your first post?"
 msgstr ""
 
+#: partials/content-none.php:18
+msgid "Get started here"
+msgstr ""
+
 #: partials/content-none.php:22
 msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr ""
+
+#: partials/content-none.php:27
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
 #: partials/content.php:88
@@ -397,34 +381,6 @@ msgstr[1] ""
 
 #: includes/classes/class-lsx-bootstrap-navwalker.php:235
 msgid "Add a menu"
-msgstr ""
-
-#: includes/plugins/jetpack.php:373
-msgid "Enter the name of the project client"
-msgstr ""
-
-#: includes/plugins/jetpack.php:395
-msgid "Enter the URL of the project website"
-msgstr ""
-
-#: includes/plugins/jetpack.php:415
-msgid "All"
-msgstr ""
-
-#: includes/plugins/jetpack.php:449
-msgid "Older"
-msgstr ""
-
-#: includes/plugins/jetpack.php:450
-msgid "Newer"
-msgstr ""
-
-#: includes/plugins/jetpack.php:451
-msgid "Portfolio navigation"
-msgstr ""
-
-#: includes/plugins/jetpack.php:522
-msgid "Related Posts"
 msgstr ""
 
 #: includes/plugins/the-events-calendar.php:48, includes/plugins/the-events-calendar.php:58, includes/plugins/the-events-calendar.php:61, includes/plugins/the-events-calendar.php:65, includes/plugins/the-events-calendar.php:69, includes/plugins/the-events-calendar.php:72, includes/plugins/the-events-calendar.php:74
