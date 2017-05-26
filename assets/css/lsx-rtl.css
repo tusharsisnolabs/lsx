@@ -120,6 +120,12 @@ figure { max-width: 100%; }
 
 .white-border-btn:active { right: 0; top: 0; }
 
+#top-menu .top-menu > .menu > .menu-item.cta > a, #top-menu .top-menu > .menu > .menu-item.cta > a:active, #top-menu .top-menu > .menu > .menu-item.cta > a:visited { background-color: #418AD0; box-shadow: -2px 2px 0 0 #27639e; color: #FFF; }
+
+#top-menu .top-menu > .menu > .menu-item.cta > a:hover, #top-menu .top-menu > .menu > .menu-item.cta > a:hover:active, #top-menu .top-menu > .menu > .menu-item.cta > a:focus { background-color: #367DC0; color: #FFF; }
+
+#top-menu .top-menu > .menu > .menu-item.cta > a:active { right: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
+
 .cta-btn, .cta-btn:active, .cta-btn:visited { background-color: #F7AE00; box-shadow: -2px 2px 0 0 #ab7800; color: #FFF; }
 
 .cta-btn:hover, .cta-btn:hover:active, .cta-btn:focus { background-color: #EDA700; color: #FFF; }
@@ -183,9 +189,9 @@ figure { max-width: 100%; }
 
 #top-menu .top-menu > .menu > .menu-item.cta > a > .fa { margin-right: 10px; }
 
-#top-menu .top-menu > .menu > .menu-item.cta > a, #top-menu .top-menu > .menu > .menu-item.cta > a:active, #top-menu .top-menu > .menu > .menu-item.cta > a:visited { background-color: #F7AE00; box-shadow: -2px 2px 0 0 #27639e; color: #FFF; }
+#top-menu .top-menu > .menu > .menu-item.cta > a, #top-menu .top-menu > .menu > .menu-item.cta > a:active, #top-menu .top-menu > .menu > .menu-item.cta > a:visited { background-color: #418AD0; box-shadow: -2px 2px 0 0 #27639e; color: #FFF; }
 
-#top-menu .top-menu > .menu > .menu-item.cta > a:hover, #top-menu .top-menu > .menu > .menu-item.cta > a:hover:active, #top-menu .top-menu > .menu > .menu-item.cta > a:focus { background-color: #EDA700; color: #FFF; }
+#top-menu .top-menu > .menu > .menu-item.cta > a:hover, #top-menu .top-menu > .menu > .menu-item.cta > a:hover:active, #top-menu .top-menu > .menu > .menu-item.cta > a:focus { background-color: #367DC0; color: #FFF; }
 
 #top-menu .top-menu > .menu > .menu-item.cta > a:active { right: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
