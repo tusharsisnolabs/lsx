@@ -265,37 +265,37 @@ msgstr ""
 msgid "Posted in"
 msgstr ""
 
-#: includes/template-tags.php:369
+#: includes/template-tags.php:386
 msgid "Previous"
 msgstr ""
 
-#: includes/template-tags.php:370
+#: includes/template-tags.php:387
 msgid "Next"
 msgstr ""
 
-#: includes/template-tags.php:404
+#: includes/template-tags.php:421
 msgctxt "Previous post link"
 msgid "Previous Post"
 msgstr ""
 
-#: includes/template-tags.php:407
+#: includes/template-tags.php:424
 msgctxt "Next post link"
 msgid "Next Post"
 msgstr ""
 
-#: includes/template-tags.php:451
+#: includes/template-tags.php:468
 msgid "Toggle navigation"
 msgstr ""
 
-#: includes/template-tags.php:457
+#: includes/template-tags.php:474
 msgid "Menu"
 msgstr ""
 
-#: includes/template-tags.php:519
+#: includes/template-tags.php:536
 msgid "Pages"
 msgstr ""
 
-#: includes/template-tags.php:645
+#: includes/template-tags.php:662
 msgid "Subscribe to Our Newsletter"
 msgstr ""
 
@@ -335,7 +335,7 @@ msgstr ""
 msgid "Monthly Archives"
 msgstr ""
 
-#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-custom.php:28, partials/content-page.php:28, partials/content-post.php:55, partials/content.php:97
+#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-custom.php:28, partials/content-page.php:28, partials/content-post.php:58, partials/content.php:97
 msgid "Edit"
 msgstr ""
 

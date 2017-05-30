@@ -298,6 +298,23 @@ endif;
 
 add_action( 'lsx_content_post_tags', 'lsx_post_tags', 10 );
 
+if ( ! function_exists( 'lsx_sharing_output' ) ) :
+
+	/**
+	 * Display sharing buttons.
+	 *
+	 * @package    lsx
+	 * @subpackage template-tags
+	 */
+	function lsx_sharing_output() {
+		global $lsx_sharing;
+		echo wp_kses_post( $lsx_sharing->sharing_buttons() );
+	}
+
+endif;
+
+add_action( 'lsx_content_sharing', 'lsx_sharing_output', 20 );
+
 if ( ! function_exists( 'lsx_translate_format_to_fontawesome' ) ) :
 
 	/**
