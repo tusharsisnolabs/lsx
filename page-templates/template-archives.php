@@ -31,7 +31,7 @@ get_header(); ?>
 					<?php lsx_entry_top(); ?>
 
 					<div class="entry-content">
-						<h2><?php esc_html_e( 'The Last 30 Posts', 'lsx' ); ?></h3>
+						<h2><?php esc_html_e( 'The Last 30 Posts', 'lsx' ); ?></h2>
 
 						<ul>
 							<?php
@@ -58,13 +58,13 @@ get_header(); ?>
 							<?php wp_reset_postdata(); ?>
 						</ul>
 
-						<h2><?php esc_html_e( 'Categories', 'lsx' ); ?></h3>
+						<h2><?php esc_html_e( 'Categories', 'lsx' ); ?></h2>
 
 						<ul>
 							<?php wp_list_categories( 'title_li=&hierarchical=0&show_count=1' ); ?>
 						</ul>
 
-						<h2><?php esc_html_e( 'Monthly Archives', 'lsx' ); ?></h3>
+						<h2><?php esc_html_e( 'Monthly Archives', 'lsx' ); ?></h2>
 
 						<ul>
 							<?php wp_get_archives( 'type=monthly&show_post_count=1' ); ?>
