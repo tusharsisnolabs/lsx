@@ -20,11 +20,7 @@
 
 	$blog_layout = apply_filters( 'lsx_blog_layout', 'default' );
 
-	if ( 'list' === $blog_layout ) {
-		$image_class = 'hidden-sm hidden-md hidden-ls';
-	} else {
-		$image_class = '';
-	}
+	$image_class = '';
 
 	$thumbnail_id = get_post_thumbnail_id( get_the_ID() );
 	$image_arr    = wp_get_attachment_image_src( $thumbnail_id, 'lsx-single-thumbnail' );
@@ -159,7 +155,7 @@
 
 		<?php if ( has_post_thumbnail() ) : ?>
 
-			<div class="entry-image hidden hidden-xs">
+			<div class="entry-image hidden-xs">
 				<a class="thumbnail" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo esc_url( $image_src ); ?>);">
 					<?php lsx_thumbnail( 'lsx-single-thumbnail' ); ?>
 				</a>
