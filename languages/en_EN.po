@@ -335,7 +335,7 @@ msgstr ""
 msgid "Monthly Archives"
 msgstr ""
 
-#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-custom.php:28, partials/content-page.php:28, partials/content-post.php:58, partials/content.php:97
+#: page-templates/template-archives.php:74, page-templates/template-sitemap.php:38, partials/content-custom.php:28, partials/content-page.php:28, partials/content-post.php:58, partials/content.php:93
 msgid "Edit"
 msgstr ""
 
@@ -363,16 +363,16 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: partials/content.php:88
+#: partials/content.php:84
 msgid "Featured"
 msgstr ""
 
-#: partials/content.php:139
+#: partials/content.php:135
 msgctxt "lsx"
 msgid "One Comment"
 msgstr ""
 
-#: partials/content.php:143
+#: partials/content.php:139
 msgctxt "content.php"
 msgid "%s Comment"
 msgid_plural "%s Comments"
