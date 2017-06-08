@@ -11,9 +11,15 @@
 			@include media ('>=desktop') { width: 66.66667%; }
 		}
 	}
+}
 
-	article.post,
-	article.page {
+article.post,
+article.page {
+
+	.blog &,
+	.archive &,
+	.search.search-results &,
+	.lsx-related-posts & {
 
 		& + article.post,
 		& + article.page { margin-top: $lsx-large-gap; }
