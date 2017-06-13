@@ -410,7 +410,7 @@ if ( ! function_exists( 'lsx_header_search_form' ) ) :
 	function lsx_header_search_form() {
 		$search_form = get_theme_mod( 'lsx_header_search', false );
 
-		if ( true === $search_form || is_customize_preview() ) {
+		if ( false !== $search_form || is_customize_preview() ) {
 			get_search_form( true );
 		}
 	}

@@ -10,7 +10,7 @@ $style = 'body #searchform { display: block; }';
 if ( is_customize_preview() ) {
 	$search_form = get_theme_mod( 'lsx_header_search', false );
 
-	if ( true !== $search_form ) {
+	if ( false === $search_form ) {
 		$style = 'body #searchform { display: none; }';
 	}
 }

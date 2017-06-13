@@ -138,7 +138,7 @@ if ( ! function_exists( 'lsx_customizer_layout_controls' ) ) :
 			'render_callback'   => function() {
 				$search_form = get_theme_mod( 'lsx_header_search' );
 
-				if ( true === $search_form ) {
+				if ( false !== $search_form ) {
 					echo 'body #searchform { display: block; }';
 				} else {
 					echo 'body #searchform { display: none; }';
