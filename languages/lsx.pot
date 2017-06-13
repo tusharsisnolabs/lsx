@@ -94,7 +94,7 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: sidebar.php:45
+#: sidebar.php:45, page-templates/template-archives.php:4
 msgid "Archives"
 msgstr ""
 
@@ -339,8 +339,24 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
+#: page-templates/template-front-page.php:4
+msgid "Front Page"
+msgstr ""
+
 #: page-templates/template-front-page.php:36
 msgid "Pages:"
+msgstr ""
+
+#: page-templates/template-full-width.php:4
+msgid "Full Width"
+msgstr ""
+
+#: page-templates/template-no-sidebar.php:4
+msgid "No Sidebar"
+msgstr ""
+
+#: page-templates/template-sitemap.php:4
+msgid "Sitemap"
 msgstr ""
 
 #: partials/content-none.php:11
