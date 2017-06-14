@@ -56,7 +56,6 @@ if ( ! class_exists( 'LSX_Lazy_Load_Images' ) ) :
 			add_action( 'wp_enqueue_scripts', array( __CLASS__, 'add_scripts' ) );
 			add_action( 'wp_head', array( __CLASS__, 'setup_filters' ), 9999 );
 			add_filter( 'wp_kses_allowed_html', array( __CLASS__, 'kses_allowed_html' ), 10, 2 );
-			add_filter( 'kses_allowed_protocols', array( __CLASS__, 'kses_allowed_protocols' ) );
 		}
 
 		static function setup_filters() {
@@ -97,7 +96,7 @@ if ( ! class_exists( 'LSX_Lazy_Load_Images' ) ) :
 			}
 
 			$skip_images_regex = '/class=".*(lazyload|disable-lazyload).*"/';
-			$placeholder_image = apply_filters( 'lsx_lazyload_placeholder_image', 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==' );
+			$placeholder_image = apply_filters( 'lsx_lazyload_placeholder_image', get_template_directory_uri() . '/assets/images/empty.gif' );
 
 			$matches = array();
 			$search = array();
@@ -194,11 +193,6 @@ if ( ! class_exists( 'LSX_Lazy_Load_Images' ) ) :
 			$allowedtags['img']['data-sizes'] = true;
 
 			return $allowedtags;
-		}
-
-		static function kses_allowed_protocols( $allowedprotocols ) {
-			$allowedprotocols[] = 'data';
-			return $allowedprotocols;
 		}
 	}
 
