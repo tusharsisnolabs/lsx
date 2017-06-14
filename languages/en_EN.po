@@ -395,7 +395,7 @@ msgid_plural "%s Comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/classes/class-lsx-bootstrap-navwalker.php:235
+#: includes/classes/class-lsx-bootstrap-navwalker.php:223
 msgid "Add a menu"
 msgstr ""
 
