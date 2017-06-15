@@ -225,23 +225,23 @@ msgstr ""
 msgid "More"
 msgstr ""
 
-#: includes/layout.php:199
+#: includes/layout.php:202
 msgid "Blog"
 msgstr ""
 
-#: includes/layout.php:213
+#: includes/layout.php:216
 msgid "Search Results for: %s"
 msgstr ""
 
-#: includes/layout.php:253
+#: includes/layout.php:256
 msgid "Type:"
 msgstr ""
 
-#: includes/layout.php:324
+#: includes/layout.php:327
 msgid "About the author"
 msgstr ""
 
-#: includes/layout.php:332
+#: includes/layout.php:335
 msgid "All posts by %s"
 msgstr ""
 

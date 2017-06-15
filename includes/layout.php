@@ -19,6 +19,7 @@ if ( ! function_exists( 'lsx_layout_selector' ) ) :
 	 * @subpackage layout
 	 */
 	function lsx_layout_selector( $class, $area = 'site' ) {
+		$return_class = '';
 		$layout       = get_theme_mod( 'lsx_layout', '2cr' );
 		$layout       = apply_filters( 'lsx_layout', $layout );
 		$default_size = 'sm';
@@ -44,12 +45,14 @@ if ( ! function_exists( 'lsx_layout_selector' ) ) :
 		}
 
 		if ( 'main' === $class ) {
-			return $main_class;
+			$return_class = apply_filters( 'lsx_layout_selector', $main_class, $class, $layout, $size );
 		}
 
 		if ( 'sidebar' === $class ) {
-			return $sidebar_class;
+			$return_class = apply_filters( 'lsx_layout_selector', $sidebar_class, $class, $layout, $size );
 		}
+
+		return $return_class;
 	}
 
 endif;
