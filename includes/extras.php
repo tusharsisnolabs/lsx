@@ -521,6 +521,8 @@ if ( ! function_exists( 'lsx_full_width_widget_custom_callback' ) ) :
 
 		$widget_id_base = $wp_registered_widgets[ $widget_id ]['callback'][0]->id_base;
 
+		$widget_classname = '';
+
 		if ( is_callable( $original_callback ) ) {
 			ob_start();
 			call_user_func_array( $original_callback, $original_callback_params );
