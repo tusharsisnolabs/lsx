@@ -52,25 +52,12 @@
 					}
 				}
 
-				@include media('<phone') {
-					&:not(.cta) > a {
-						@include hide-text();
-
-						padding: 0;
-
-						&:before {
-							font-size: 18px;
-							padding: 0 5px;
-						}
-					}
-				}
-
 				&.map > a:before { content: $fa-var-map-o; }
 				&.tel > a:before { content: $fa-var-phone; }
 				&.email > a:before { content: $fa-var-envelope-o; }
 
 				&.cta {
-					margin-left: 15px;
+					margin-left: 5px;
 					padding-right: 0;
 
 					& > a {
@@ -87,6 +74,45 @@
 							padding-bottom: 0;
 							padding-top: 0;
 							transition: all 300ms ease;
+						}
+					}
+				}
+			}
+		}
+
+		&.pull-left {
+			& > .menu {
+				& > .menu-item {
+					@include media('<phone') {
+						&:not(.cta) {
+							& > a { padding: 0 5px; }
+
+							&:first-child { margin-left: 5px; }
+						}
+					}
+
+					.caret { display: none; }
+
+					&.wpml-ls-menu-item {
+						.wpml-ls-flag + span { display: none; }
+					}
+				}
+			}
+		}
+
+		&:not(.pull-left) {
+			& > .menu {
+				& > .menu-item {
+					@include media('<phone') {
+						&:not(.cta) > a {
+							@include hide-text();
+
+							padding: 0;
+
+							&:before {
+								font-size: 18px;
+								padding: 0 5px;
+							}
 						}
 					}
 				}
