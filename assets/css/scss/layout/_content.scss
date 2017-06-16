@@ -8,6 +8,14 @@
 		&.widget_lsx_full_width {
 			&:last-child { margin-bottom: 0; }
 		}
+
+		&.widget_text {
+			[class*="col-"] + [class*="col-"] {
+				@include media('<phone') {
+					margin-top: $lsx-large-gap;
+				}
+			}
+		}
 	}
 
 	h3,
