@@ -93,7 +93,9 @@
 						.caret { display: none; }
 
 						&.wpml-ls-menu-item {
-							.wpml-ls-flag + span { display: none; }
+							& > a {
+								& > .wpml-ls-flag + span { display: none; }
+							}
 						}
 					}
 				}

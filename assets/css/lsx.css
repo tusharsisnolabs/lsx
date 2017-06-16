@@ -197,7 +197,7 @@ figure { max-width: 100%; }
 @media (max-width: 767px) { #top-menu .top-menu.pull-left > .menu > .menu-item:not(.cta) > a { padding: 0 5px; }
   #top-menu .top-menu.pull-left > .menu > .menu-item:not(.cta):first-child { margin-left: 5px; }
   #top-menu .top-menu.pull-left > .menu > .menu-item .caret { display: none; }
-  #top-menu .top-menu.pull-left > .menu > .menu-item.wpml-ls-menu-item .wpml-ls-flag + span { display: none; } }
+  #top-menu .top-menu.pull-left > .menu > .menu-item.wpml-ls-menu-item > a > .wpml-ls-flag + span { display: none; } }
 
 @media (max-width: 767px) { #top-menu .top-menu:not(.pull-left) > .menu > .menu-item:not(.cta) > a { font: 0/0 a; color: transparent; text-shadow: none; background-color: transparent; border: 0; padding: 0; }
   #top-menu .top-menu:not(.pull-left) > .menu > .menu-item:not(.cta) > a:before { font-size: 18px; padding: 0 5px; } }
