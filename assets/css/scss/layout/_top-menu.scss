@@ -89,12 +89,12 @@
 
 							&:first-child { margin-left: 5px; }
 						}
-					}
 
-					.caret { display: none; }
+						.caret { display: none; }
 
-					&.wpml-ls-menu-item {
-						.wpml-ls-flag + span { display: none; }
+						&.wpml-ls-menu-item {
+							.wpml-ls-flag + span { display: none; }
+						}
 					}
 				}
 			}
