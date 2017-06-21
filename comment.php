@@ -45,5 +45,4 @@ comment_text();
 comment_reply_link( array(
 	'depth'     => $depth,
 	'max_depth' => $max_depth,
-	)
-);
+) );

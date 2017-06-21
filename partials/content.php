@@ -9,7 +9,7 @@
 <?php lsx_entry_before(); ?>
 
 <?php
-	$no_thumb_post_formats = array("audio", "gallery", "image", "link", "quote", "video");
+	$no_thumb_post_formats = array( 'audio', 'gallery', 'image', 'link', 'quote', 'video' );
 	$has_thumb = has_post_thumbnail() && ! has_post_format( $no_thumb_post_formats );
 
 	if ( $has_thumb ) {
@@ -69,9 +69,9 @@
 
 				<h1 class="entry-title">
 					<?php if ( has_post_thumbnail() ) : ?>
-						<a href="<?php echo esc_url( $archive_link ) ?>" class="format-link has-thumb fa fa-<?php echo esc_attr( $format ) ?>"></a>
+						<a href="<?php echo esc_url( $archive_link ); ?>" class="format-link has-thumb fa fa-<?php echo esc_attr( $format ); ?>"></a>
 					<?php else : ?>
-						<a href="<?php echo esc_url( $archive_link ) ?>" class="format-link fa fa-<?php echo esc_attr( $format ) ?>"></a>
+						<a href="<?php echo esc_url( $archive_link ); ?>" class="format-link fa fa-<?php echo esc_attr( $format ); ?>"></a>
 					<?php endif; ?>
 
 					<?php if ( has_post_format( array( 'link' ) ) ) : ?>
@@ -129,7 +129,7 @@
 
 				<?php if ( comments_open() && ! empty( $comments_number ) ) : ?>
 					<div class="post-comments">
-						<a href="<?php the_permalink() ?>#comments">
+						<a href="<?php the_permalink(); ?>#comments">
 							<?php
 								if ( '1' === $comments_number ) {
 									echo esc_html( _x( 'One Comment', 'lsx' ) );

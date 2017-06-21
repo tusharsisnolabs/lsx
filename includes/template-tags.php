@@ -186,7 +186,7 @@ if ( ! function_exists( 'lsx_post_meta_avatar' ) ) :
 		printf(
 			'<a href="%1$s" class="post-meta-avatar">%2$s</a>',
 			esc_url( $author_url ),
-			$author_avatar
+			wp_kses_post( $author_avatar )
 		);
 	}
 
@@ -417,10 +417,10 @@ if ( ! function_exists( 'lsx_post_nav' ) ) :
 		<nav class="navigation post-navigation" role="navigation">
 			<div class="lsx-breaker"></div>
 			<div class="nav-links pager row">
-				<div class="previous <?php echo 'col-' . $size . '-6'; ?>">
+				<div class="previous <?php echo 'col-' . esc_attr( $size ) . '-6'; ?>">
 					<?php previous_post_link( '%link', '<p class="nav-links-description">' . _x( 'Previous Post', 'Previous post link', 'lsx' ) . '</p><h3>%title</h3>' ); ?>
 				</div>
-				<div class="next <?php echo 'col-' . $size . '-6'; ?>">
+				<div class="next <?php echo 'col-' . esc_attr( $size ) . '-6'; ?>">
 					<?php next_post_link( '%link', '<p class="nav-links-description">' . _x( 'Next Post', 'Next post link', 'lsx' ) . '</p><h3>%title</h3>' ); ?>
 				</div>
 			</div><!-- .nav-links -->

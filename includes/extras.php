@@ -330,9 +330,9 @@ if ( ! function_exists( 'lsx_form_submit_button' ) ) :
 	 * @package    lsx
 	 * @subpackage extras
 	 *
-	 * @param		$button		String
-	 * @param		$form		Object
-	 * @return		String
+	 * @param  $button String
+	 * @param  $form   Object
+	 * @return String
 	 */
 	function lsx_form_submit_button( $button, $form ) {
 		return "<button class='btn btn-primary' id='gform_submit_button_{$form["id"]}'><span>Submit</span></button>";
@@ -528,7 +528,7 @@ if ( ! function_exists( 'lsx_full_width_widget_custom_callback' ) ) :
 			call_user_func_array( $original_callback, $original_callback_params );
 			$widget_output = ob_get_clean();
 
-			echo apply_filters( 'lsx_widget_output', $widget_output, $widget_id_base, $widget_classname, $widget_id );
+			echo wp_kses_post( apply_filters( 'lsx_widget_output', $widget_output, $widget_id_base, $widget_classname, $widget_id ) );
 		}
 	}
 

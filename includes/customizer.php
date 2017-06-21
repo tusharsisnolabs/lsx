@@ -18,7 +18,7 @@ if ( ! function_exists( 'lsx_customizer_core_controls' ) ) :
 	 * @package    lsx
 	 * @subpackage customizer
 	 *
-	 * @return		$lsx_controls array()
+	 * @return $lsx_controls array()
 	 */
 	function lsx_customizer_core_controls( $lsx_controls ) {
 		$lsx_controls['sections']['lsx-core'] = array(
@@ -64,9 +64,9 @@ if ( ! function_exists( 'lsx_customizer_layout_controls' ) ) :
 	 * Returns an array of the layout panel.
 	 *
 	 * @package    lsx
-	 * @subpackage	customizer
+	 * @subpackage customizer
 	 *
-	 * @return		$lsx_controls array()
+	 * @return $lsx_controls array()
 	 */
 	function lsx_customizer_layout_controls( $lsx_controls ) {
 		$lsx_controls['sections']['lsx-layout'] = array(
@@ -159,9 +159,9 @@ if ( ! function_exists( 'lsx_customizer_font_controls' ) ) :
 	 * Returns an array of the font controls.
 	 *
 	 * @package    lsx
-	 * @subpackage	customizer
+	 * @subpackage customizer
 	 *
-	 * @return		$lsx_controls array()
+	 * @return $lsx_controls array()
 	 */
 	function lsx_customizer_font_controls( $lsx_controls ) {
 		global $wp_filesystem;
@@ -217,9 +217,9 @@ if ( ! function_exists( 'lsx_get_customizer_controls' ) ) :
 	 * Returns an array of $controls for the customizer class to generate.
 	 *
 	 * @package    lsx
-	 * @subpackage	customizer
+	 * @subpackage customizer
 	 *
-	 * @return		$lsx_controls array()
+	 * @return $lsx_controls array()
 	 */
 	function lsx_get_customizer_controls() {
 		$lsx_controls = array();
