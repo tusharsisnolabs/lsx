@@ -86,7 +86,7 @@
 				</h1>
 			</header><!-- .entry-header -->
 
-			<?php if ( ! has_post_format( array( 'video', 'audio', 'quote', 'link' ) ) && ! apply_filters( 'lsx_blog_force_content_on_list', false ) ) : // Only display Excerpts for Search and Archives ?>
+			<?php if ( ! has_post_format( array( 'video', 'audio', 'quote', 'link' ) ) && ! apply_filters( 'lsx_blog_force_content_on_list', false ) ) : ?>
 
 				<div class="entry-summary">
 					<?php the_excerpt(); ?>
