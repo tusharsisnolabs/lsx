@@ -463,8 +463,8 @@ if ( ! function_exists( 'lsx_navbar_header' ) ) :
 			<?php
 				if ( has_nav_menu( 'primary' ) ) :
 					?>
-					<div class="wrapper-toggle">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".primary-navbar">
+					<div class="wrapper-toggle" data-toggle="collapse" data-target=".primary-navbar">
+						<button type="button" class="navbar-toggle">
 							<span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'lsx' ); ?></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>

@@ -50,9 +50,8 @@ var lsx = Object.create( null );
 	 */
 
 	lsx.navbar_toggle_handler = function () {
-		$( '.navbar-toggle' ).on( 'click', function () {
-			var $parent = $( this ).parent();
-
+		$( '.navbar-toggle' ).parent().on( 'click', function () {
+			var $parent = $( this );
 			$parent.toggleClass( 'open' );
 		});
 	};
@@ -99,44 +98,24 @@ var lsx = Object.create( null );
 			} else {
 				$( '.navbar-nav li.dropdown a, #top-menu li.dropdown a' ).each( function() {
 					$( this ).addClass( 'dropdown-toggle' );
-					$( this ).attr( 'data-toggle','dropdown' );
+					$( this ).attr( 'data-toggle', 'dropdown' );
 				} );
 			}
 		} );
 	};
 
 	/**
-	 * Fix Bootstrap menus (dropdown - grandchild items).
+	 * Fix Bootstrap menus (dropdown inside dropdown - click).
 	 *
 	 * @package    lsx
 	 * @subpackage scripts
 	 */
-	lsx.fix_bootstrap_menus_dropdown_grandchild_items = function() {
-		if ( windowWidth > 1199 ) {
-			$( '.navbar-nav > .menu-item:last-child' ).each( function() {
-				if ( $( this ).hasClass( 'menu-item-has-children' ) ) {
-					var $firstMenuItem = $( this ),
-						$dropdown      = $firstMenuItem.children( '.dropdown-menu' ),
-						$dropdownItem  = $dropdown.children( '.menu-item-has-children' ),
-						dropdownWidth,
-						firstMenuItemRight;
-
-					//if ( $dropdownItem.length > 0 ) {
-						dropdownWidth      = $dropdown.outerWidth();
-						firstMenuItemRight = ( windowWidth - ( $firstMenuItem.offset().left + $firstMenuItem.outerWidth() ) );
-
-						if ( firstMenuItemRight < dropdownWidth ) {
-							$dropdown.addClass( 'pull-right' );
-							$dropdownItem.addClass( 'dropdown-menu-left' );
-						}
-					//}
-				}
-			} );
-		} else {
+	lsx.fix_bootstrap_menus_dropdown_click = function() {
+		if ( windowWidth < 1200 ) {
 			$( '.dropdown .dropdown > a' ).on( 'click', function( e ) {
 				if ( ! $( this ).parent().hasClass( 'open' ) ) {
 					$( this ).parent().addClass( 'open' );
-					$( this ).next( '.dropdown-menu' ).dropdown('toggle');
+					$( this ).next( '.dropdown-menu' ).dropdown( 'toggle' );
 					e.stopPropagation();
 					e.preventDefault();
 				}
@@ -317,7 +296,7 @@ var lsx = Object.create( null );
 
 		lsx.navbar_toggle_handler();
 
-		lsx.fix_bootstrap_menus_touchstart();
+		// lsx.fix_bootstrap_menus_touchstart();
 
 		lsx.add_class_sidebar_to_body();
 		lsx.add_class_bootstrap_to_table();
@@ -335,7 +314,7 @@ var lsx = Object.create( null );
 	$window.load( function() {
 
 		lsx.fix_bootstrap_menus_dropdown();
-		lsx.fix_bootstrap_menus_dropdown_grandchild_items();
+		lsx.fix_bootstrap_menus_dropdown_click();
 		lsx.fix_lazyload_envira_gallery();
 
 		lsx.set_search_form_effect_mobile();
