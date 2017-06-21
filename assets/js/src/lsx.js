@@ -191,50 +191,31 @@ var lsx = Object.create( null );
 	lsx.set_banner_effect_parallax = function() {
 		var $banner,
 			$bannerImage,
-			$bannerContainer,
-			bannerHeight            = 0,
-			bannerContainerBaseSize = 0,
+			bannerEndPosition,
+			base = -40,
 
 			bannerParallax = function() {
-				if ( $window.scrollTop() <= windowHeight ) {
-					var scrolled   = $window.scrollTop() / windowHeight * 100,
-						paddingTop = ( 7 * scrolled ),
-						base       = -130,
-						top        = base + ( 3 * scrolled ),
-						bottom     = base - ( 3 * scrolled ),
-						breakpoint = bannerContainerBaseSize + paddingTop;
+				if ( $window.scrollTop() <= bannerEndPosition ) {
+					var scrolled  = $window.scrollTop() / bannerEndPosition * 100,
+						top       = base + scrolled,
+						bottom    = base - scrolled;
 
-					$bannerImage.css( 'top', top + 'px' );
-					$bannerImage.css( 'bottom', bottom + 'px' );
-
-					if ( breakpoint < bannerHeight ) {
-						$bannerContainer.css( 'padding-top', paddingTop + 'px' );
-					}
+					$bannerImage.css({
+						'top': top + 'px',
+						'bottom': bottom + 'px'
+					});
 				}
 			};
 
-		if ( windowWidth > 991 ) {
-			$banner = $( '.page-banner:not(.gmap-banner)' );
+		if ( windowWidth > 1199 ) {
+			$banner           = $( '.page-banner:not(.gmap-banner)' );
+			bannerEndPosition = $banner.height() + $banner.offset().top;
 
 			if ( $banner.length > 0 ) {
-				$bannerImage     = $banner.children( '.page-banner-image' );
-				$bannerContainer = $banner.children( '.container' );
+				$bannerImage = $banner.children( '.page-banner-image' );
 
-				if ( $bannerContainer.length > 0 ) {
-					bannerHeight            = $banner.height();
-					bannerContainerBaseSize = $bannerContainer.height() +
-												parseInt( ( $bannerContainer.css( 'margin-top' ) ).replace( 'px', '' ) ) +
-												parseInt( ( $bannerContainer.css( 'margin-bottom' ) ).replace( 'px', '' ) ) +
-												parseInt( ( $bannerContainer.css( 'padding-bottom' ) ).replace( 'px', '' ) );
+				if ( $bannerImage.length > 0 ) {
 					bannerParallax();
-
-					$window.resize( function() {
-						bannerHeight            = $banner.height();
-						bannerContainerBaseSize = $bannerContainer.height() +
-													parseInt( ( $bannerContainer.css( 'margin-top' ) ).replace( 'px', '' ) ) +
-													parseInt( ( $bannerContainer.css( 'margin-bottom' ) ).replace( 'px', '' ) ) +
-													parseInt( ( $bannerContainer.css( 'padding-bottom' ) ).replace( 'px', '' ) );
-					} );
 
 					$window.scroll( function() {
 						bannerParallax();
