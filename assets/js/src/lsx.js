@@ -157,28 +157,30 @@ var lsx = Object.create( null );
 	 * @subpackage scripts
 	 */
 	lsx.set_main_menu_as_fixed = function() {
-		if ( $( 'body' ).hasClass( 'top-menu-fixed' ) ) {
-			$( 'header.navbar' ).scrollToFixed( {
-				marginTop: function() {
-					var wpadminbar = $( '#wpadminbar' );
+		if ( windowWidth > 1199 ) {
+			if ( $( 'body' ).hasClass( 'top-menu-fixed' ) ) {
+				$( 'header.navbar' ).scrollToFixed( {
+					marginTop: function() {
+						var wpadminbar = $( '#wpadminbar' );
 
-					if ( wpadminbar.length > 0 ) {
-						return wpadminbar.outerHeight();
+						if ( wpadminbar.length > 0 ) {
+							return wpadminbar.outerHeight();
+						}
+
+						return 0;
+					},
+
+					minWidth: 768,
+
+					preFixed: function() {
+						$( this ).addClass( 'scrolled' );
+					},
+
+					preUnfixed: function() {
+						$( this ).removeClass( 'scrolled' );
 					}
-
-					return 0;
-				},
-
-				minWidth: 768,
-
-				preFixed: function() {
-					$( this ).addClass( 'scrolled' );
-				},
-
-				preUnfixed: function() {
-					$( this ).removeClass( 'scrolled' );
-				}
-			} );
+				} );
+			}
 		}
 	};
 
