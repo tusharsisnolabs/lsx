@@ -11,20 +11,21 @@
 	&:active,
 	&:visited {
 		font-size: 12px;
+		height: auto;
 		padding: 10px 20px;
 	}
 }
 
-.btn-lg {
-	&,
-	&:active,
-	&:visited,
-	&:hover,
-	&:hover:active,
-	&:focus {
-		font-size: 21px;
-	}
-}
+// .btn-lg {
+// 	&,
+// 	&:active,
+// 	&:visited,
+// 	&:hover,
+// 	&:hover:active,
+// 	&:focus {
+// 		font-size: 21px;
+// 	}
+// }
 
 @include custom-buttons-colours();
 
