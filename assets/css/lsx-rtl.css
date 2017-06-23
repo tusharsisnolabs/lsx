@@ -82,6 +82,8 @@ figure { max-width: 100%; }
 
 #respond > .comment-form input[type="submit"] > .fa { margin-right: 10px; }
 
+.btn-md, .btn-md:active, .btn-md:visited { font-size: 12px; padding: 10px 20px; }
+
 .btn-lg, .btn-lg:active, .btn-lg:visited, .btn-lg:hover, .btn-lg:hover:active, .btn-lg:focus { font-size: 21px; }
 
 .btn, .btn:active, .btn:visited { background-color: #418AD0; box-shadow: -2px 2px 0 0 #27639e; color: #FFF; }

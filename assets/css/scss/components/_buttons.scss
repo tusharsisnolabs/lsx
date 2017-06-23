@@ -6,6 +6,15 @@
 	}
 }
 
+.btn-md {
+	&,
+	&:active,
+	&:visited {
+		font-size: 12px;
+		padding: 10px 20px;
+	}
+}
+
 .btn-lg {
 	&,
 	&:active,
