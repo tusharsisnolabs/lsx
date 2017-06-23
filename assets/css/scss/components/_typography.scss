@@ -98,7 +98,7 @@
 		margin-bottom: $lsx-gap;
 	}
 
-	ol, ul {
+	ol, ul:not(.dropdown-menu) {
 		margin-bottom: $lsx-gap;
 		padding-left: 4rem;
 
