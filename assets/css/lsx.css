@@ -104,7 +104,7 @@ figure { max-width: 100%; }
 
 .border-btn:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
-.border-btn, .border-btn:active, .border-btn:visited { border: 2px solid #418AD0; box-shadow: none; }
+.border-btn, .border-btn:active, .border-btn:visited { border: 2px solid #418AD0; box-shadow: none; height: 50px; }
 
 .border-btn:active { left: 0; top: 0; }
 
@@ -116,7 +116,7 @@ figure { max-width: 100%; }
 
 .white-border-btn:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
-.white-border-btn, .white-border-btn:active, .white-border-btn:visited { border: 2px solid #FFF; box-shadow: none; }
+.white-border-btn, .white-border-btn:active, .white-border-btn:visited { border: 2px solid #FFF; box-shadow: none; height: 50px; }
 
 .white-border-btn:active { left: 0; top: 0; }
 
@@ -140,7 +140,7 @@ figure { max-width: 100%; }
 
 .cta-border-btn:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
-.cta-border-btn, .cta-border-btn:active, .cta-border-btn:visited { border: 2px solid #F7AE00; box-shadow: none; }
+.cta-border-btn, .cta-border-btn:active, .cta-border-btn:visited { border: 2px solid #F7AE00; box-shadow: none; height: 50px; }
 
 .cta-border-btn:active { left: 0; top: 0; }
 
