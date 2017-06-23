@@ -35,13 +35,15 @@
 .widget-area {
 	padding-bottom: $lsx-large-gap;
 	padding-top: $lsx-large-gap;
-	z-index: 4;
 
 	.home & {
 		padding-bottom: 0;
 		padding-top: 0;
 	}
 }
+
+.content-area { z-index: 4; }
+.widget-area { z-index: 5; }
 
 article.page,
 article.post {

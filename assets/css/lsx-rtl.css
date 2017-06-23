@@ -812,9 +812,13 @@ body { background-color: #F6F6F6; }
 
 .archive-header-wrapper .archive-header .archive-title { margin: 0; }
 
-.content-area, .widget-area { padding-bottom: 8.5rem; padding-top: 8.5rem; z-index: 4; }
+.content-area, .widget-area { padding-bottom: 8.5rem; padding-top: 8.5rem; }
 
 .home .content-area, .home .widget-area { padding-bottom: 0; padding-top: 0; }
+
+.content-area { z-index: 4; }
+
+.widget-area { z-index: 5; }
 
 article.page .entry-content .wp-audio-shortcode, article.post .entry-content .wp-audio-shortcode { margin-bottom: 2.4rem; }
 
