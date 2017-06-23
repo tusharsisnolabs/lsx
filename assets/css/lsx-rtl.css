@@ -192,7 +192,7 @@ figure { max-width: 100%; }
 
 #top-menu .top-menu > .menu > .menu-item.cta > a:active { right: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
-#top-menu .top-menu > .menu > .menu-item.cta > a, #top-menu .top-menu > .menu > .menu-item.cta > a:active, #top-menu .top-menu > .menu > .menu-item.cta > a:visited { border-radius: 0; box-shadow: none; display: table-cell; font-size: 12px; padding-bottom: 0; padding-top: 0; transition: all 300ms ease; }
+#top-menu .top-menu > .menu > .menu-item.cta > a, #top-menu .top-menu > .menu > .menu-item.cta > a:active, #top-menu .top-menu > .menu > .menu-item.cta > a:visited { border-radius: 0; box-shadow: none; display: table-cell; font-size: 12px; height: auto; padding-bottom: 0; padding-top: 0; transition: all 300ms ease; }
 
 @media (max-width: 767px) { #top-menu .top-menu.pull-left > .menu > .menu-item:not(.cta) > a { padding: 0 5px; }
   #top-menu .top-menu.pull-left > .menu > .menu-item:not(.cta):first-child { margin-right: 5px; }
@@ -349,7 +349,7 @@ figure { max-width: 100%; }
 
 @media (min-width: 1200px) { #masthead #searchform .search-field:hover, #masthead #searchform .search-field:active, #masthead #searchform .search-field:focus { opacity: 1; width: 290px; z-index: 999; } }
 
-#masthead #searchform .search-submit { background: none; box-shadow: none; line-height: 1; padding: 9px 10px; z-index: 999; }
+#masthead #searchform .search-submit { background: none; box-shadow: none; height: auto; line-height: 1; padding: 9px 10px; z-index: 999; }
 
 #masthead #searchform .search-submit .fa { vertical-align: middle; font-size: 20px; line-height: 1; transition: all 300ms ease; }
 
