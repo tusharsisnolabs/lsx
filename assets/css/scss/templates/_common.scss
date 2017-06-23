@@ -33,12 +33,12 @@
 
 .content-area,
 .widget-area {
-	padding-bottom: $lsx-large-gap;
-	padding-top: $lsx-large-gap;
+	margin-bottom: $lsx-large-gap;
+	margin-top: $lsx-large-gap;
 
 	.home & {
-		padding-bottom: 0;
-		padding-top: 0;
+		margin-bottom: 0;
+		margin-top: 0;
 	}
 }
 
