@@ -36,19 +36,12 @@ article.page {
 			border-radius: 0;
 			display: block;
 			margin-bottom: 0;
-			height: 0;
 			overflow: hidden;
-			padding: 0 0 39.47%;
+			padding: 0;
 			position: relative;
 
 			& > .attachment-responsive {
 				border: 0;
-				bottom: 0;
-				height: auto;
-				left: 0;
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
 				width: 100%;
 			}
 		}
