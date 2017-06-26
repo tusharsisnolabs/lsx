@@ -86,35 +86,39 @@
 				</h1>
 			</header><!-- .entry-header -->
 
-			<?php if ( ! has_post_format( array( 'video', 'audio', 'quote', 'link' ) ) && ! apply_filters( 'lsx_blog_force_content_on_list', false ) ) : ?>
+			<?php if ( has_post_format( array( 'quote' ) ) || apply_filters( 'lsx_blog_display_text_on_list', true ) ) : ?>
 
-				<div class="entry-summary">
-					<?php the_excerpt(); ?>
-					<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<p class="edit-link">', '</p>' ); ?>
-				</div><!-- .entry-summary -->
+				<?php if ( ! has_post_format( array( 'video', 'audio', 'quote', 'link' ) ) && ! apply_filters( 'lsx_blog_force_content_on_list', false ) ) : ?>
 
-			<?php elseif ( has_post_format( array( 'link' ) ) ) : ?>
+					<div class="entry-summary">
+						<?php the_excerpt(); ?>
+						<?php edit_post_link( esc_html__( 'Edit', 'lsx' ), '<p class="edit-link">', '</p>' ); ?>
+					</div><!-- .entry-summary -->
 
-			<?php elseif ( apply_filters( 'lsx_blog_force_content_on_list', false ) ) : ?>
+				<?php elseif ( has_post_format( array( 'link' ) ) ) : ?>
 
-				<div class="entry-content">
-					<?php the_content(); ?>
-				</div><!-- .entry-content -->
+				<?php elseif ( apply_filters( 'lsx_blog_force_content_on_list', false ) ) : ?>
 
-			<?php else : ?>
+					<div class="entry-content">
+						<?php the_content(); ?>
+					</div><!-- .entry-content -->
 
-				<div class="entry-content">
-					<?php
-						the_content();
+				<?php else : ?>
 
-						wp_link_pages( array(
-							'before'      => '<div class="lsx-postnav-wrapper"><div class="lsx-postnav">',
-							'after'       => '</div></div>',
-							'link_before' => '<span>',
-							'link_after'  => '</span>',
-						) );
-					?>
-				</div><!-- .entry-content -->
+					<div class="entry-content">
+						<?php
+							the_content();
+
+							wp_link_pages( array(
+								'before'      => '<div class="lsx-postnav-wrapper"><div class="lsx-postnav">',
+								'after'       => '</div></div>',
+								'link_before' => '<span>',
+								'link_after'  => '</span>',
+							) );
+						?>
+					</div><!-- .entry-content -->
+
+				<?php endif; ?>
 
 			<?php endif; ?>
 
