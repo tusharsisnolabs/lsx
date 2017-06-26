@@ -1,3 +1,27 @@
+.lsx-title {
+	font-size: 30px;
+	line-height: 1.2;
+	margin-bottom: $lsx-large-gap / 2;
+	margin-top: 0;
+	text-align: center;
+
+	&:after {
+		content: '';
+		display: block;
+		height: 2px;
+		margin: $lsx-gap auto 0;
+		width: 80px;
+	}
+
+	& > small {
+		color: inherit;
+		display: block;
+		line-height: inherit;
+		margin-top: 8px;
+	}
+}
+
+
 #home-widgets {
 	margin-top: $lsx-large-gap;
 
@@ -20,26 +44,7 @@
 
 	h3,
 	.widget-title {
-		font-size: 30px;
-		line-height: 1.2;
-		margin-bottom: $lsx-large-gap / 2;
-		margin-top: 0;
-		text-align: center;
-
-		&:after {
-			content: '';
-			display: block;
-			height: 2px;
-			margin: $lsx-gap auto 0;
-			width: 80px;
-		}
-
-		& > small {
-			color: inherit;
-			display: block;
-			line-height: inherit;
-			margin-top: 8px;
-		}
+		@extend .lsx-title;
 	}
 
 	.textwidget, p { margin-bottom: 0; }
@@ -75,5 +80,7 @@
 
 	& > .page-title { margin-bottom: 0; }
 }
+
+
 
 @include content-colours();

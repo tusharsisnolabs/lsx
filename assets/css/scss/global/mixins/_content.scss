@@ -22,6 +22,12 @@
 		border-bottom-color: $breaker;
 	}
 
+	.lsx-title {
+		color: $header;
+
+		&:after { background-color: $breaker; }
+	}
+
 	#masthead {
 		#searchform {
 			@media (min-width: 1200px) {
@@ -69,11 +75,11 @@
 	}
 
 	#home-widgets {
-		h3, .widget-title {
+		h3, .widget-title, .lsx-title {
 			&:after { background-color: $breaker; }
 		}
 
-		h1, h2, h3, h4, h5, h6, .widget-title { color: $header; }
+		h1, h2, h3, h4, h5, h6, .widget-title, .lsx-title { color: $header; }
 	}
 
 
@@ -83,7 +89,7 @@
 			background-color: $full-bg;
 			color: $full-color;
 
-			h1, h2, h3, h4, h5, h6, .widget-title { color: $full-color; }
+			h1, h2, h3, h4, h5, h6, .widget-title, .lsx-title { color: $full-color; }
 
 			a:not(.btn) { @include lsx-link-colour($full-link, $full-hover); }
 		}
@@ -95,7 +101,7 @@
 			background-color: $full-cta-bg;
 			color: $full-cta-color;
 
-			h1, h2, h3, h4, h5, h6, .widget-title { color: $full-cta-color; }
+			h1, h2, h3, h4, h5, h6, .widget-title, .lsx-title { color: $full-cta-color; }
 
 			a:not(.btn) { @include lsx-link-colour($full-cta-link, $full-cta-hover); }
 		}
