@@ -6,10 +6,6 @@
 		<exclude name="Generic.ControlStructures.InlineControlStructure.NotAllowed" />
 		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
 
-		<!-- <exclude name="Squiz.PHP.EmbeddedPhp.ContentAfterOpen" />
-		<exclude name="Squiz.PHP.EmbeddedPhp.ContentBeforeEnd" />
-		<exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace" /> -->
-
 		<!-- We will not fix these (WordPress VIP) -->
 		<exclude name="WordPress.VIP" />
 
