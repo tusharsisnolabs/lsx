@@ -370,7 +370,7 @@ if ( ! function_exists( 'lsx_the_excerpt_filter' ) ) :
 		$show_full_content = has_post_format( apply_filters( 'lsx_the_excerpt_filter_post_types', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio' ) ) );
 
 		if ( ! $show_full_content ) {
-			if ( '' !== $excerpt  && ! stristr( $excerpt, 'moretag' ) ) {
+			if ( '' !== $excerpt && ! stristr( $excerpt, 'moretag' ) ) {
 				$pagination = wp_link_pages( array(
 					'before'      => '<div class="lsx-postnav-wrapper"><div class="lsx-postnav">',
 					'after'       => '</div></div>',
