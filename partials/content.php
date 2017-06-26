@@ -23,7 +23,7 @@
 	$image_class = '';
 
 	$thumbnail_id = get_post_thumbnail_id( get_the_ID() );
-	$image_arr    = wp_get_attachment_image_src( $thumbnail_id, 'lsx-single-thumbnail' );
+	$image_arr    = wp_get_attachment_image_src( $thumbnail_id, 'lsx-thumbnail-single' );
 
 	if ( is_array( $image_arr ) ) {
 		$image_src = $image_arr[0];
@@ -39,7 +39,7 @@
 				<?php if ( $has_thumb ) : ?>
 					<div class="entry-image <?php echo esc_attr( $image_class ); ?>">
 						<a class="thumbnail" href="<?php the_permalink(); ?>">
-							<?php lsx_thumbnail( 'lsx-single-thumbnail' ); ?>
+							<?php lsx_thumbnail( 'lsx-thumbnail-single' ); ?>
 						</a>
 					</div>
 				<?php endif; ?>
@@ -157,7 +157,7 @@
 
 			<div class="entry-image hidden-xs">
 				<a class="thumbnail" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo esc_url( $image_src ); ?>);">
-					<?php lsx_thumbnail( 'lsx-single-thumbnail' ); ?>
+					<?php lsx_thumbnail( 'lsx-thumbnail-single' ); ?>
 				</a>
 			</div>
 
