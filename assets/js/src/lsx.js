@@ -210,10 +210,10 @@ var lsx = Object.create( null );
 			};
 
 		if ( windowWidth > 1199 ) {
-			$banner           = $( '.page-banner:not(.gmap-banner)' );
-			bannerEndPosition = $banner.height() + $banner.offset().top;
+			$banner = $( '.page-banner:not(.gmap-banner)' );
 
 			if ( $banner.length > 0 ) {
+				bannerEndPosition = $banner.height() + $banner.offset().top;
 				$bannerImage = $banner.children( '.page-banner-image' );
 
 				if ( $bannerImage.length > 0 ) {
