@@ -469,6 +469,10 @@ body { background-color: #F6F6F6; }
 
 #masthead #searchform .search-submit { color: #4A4A4A; }
 
+.breadcrumbs-container a:not(.btn), .breadcrumbs-container a:not(.btn):active, .breadcrumbs-container a:not(.btn):visited { color: #418AD0; }
+
+.breadcrumbs-container a:not(.btn):hover, .breadcrumbs-container a:not(.btn):hover:active, .breadcrumbs-container a:not(.btn):focus { color: #F7AE00; }
+
 .content-area, .widget-area { color: #4A4A4A; }
 
 .content-area a:not(.btn), .content-area a:not(.btn):active, .content-area a:not(.btn):visited, .widget-area a:not(.btn), .widget-area a:not(.btn):active, .widget-area a:not(.btn):visited { color: #418AD0; }
