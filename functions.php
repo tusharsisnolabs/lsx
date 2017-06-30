@@ -30,26 +30,32 @@ require get_template_directory() . '/includes/template-tags.php';
 require get_template_directory() . '/includes/extras.php';
 require get_template_directory() . '/includes/welcome.php';
 
-if ( class_exists( 'Jetpack' ) ) {
-	require get_template_directory() . '/includes/plugins/jetpack.php';
-}
+// @TODO - Review/test on LSX 2.0
+// if ( class_exists( 'Jetpack' ) ) {
+// 	require get_template_directory() . '/includes/plugins/jetpack.php';
+// }
 
-if ( class_exists( 'BuddyPress' ) ) {
-	require get_template_directory() . '/includes/plugins/buddypress.php';
-}
+// @TODO - Review/test on LSX 2.0
+// if ( class_exists( 'BuddyPress' ) ) {
+// 	require get_template_directory() . '/includes/plugins/buddypress.php';
+// }
 
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/includes/plugins/woocommerce.php';
-}
+// @TODO - Review/test on LSX 2.0
+// if ( class_exists( 'WooCommerce' ) ) {
+// 	require get_template_directory() . '/includes/plugins/woocommerce.php';
+// }
 
-if ( class_exists( 'WP_Job_Manager' ) ) {
-	require get_template_directory() . '/includes/plugins/wp-job-manager.php';
-}
+// @TODO - Review/test on LSX 2.0
+// if ( class_exists( 'WP_Job_Manager' ) ) {
+// 	require get_template_directory() . '/includes/plugins/wp-job-manager.php';
+// }
 
-if ( class_exists( 'Tribe__Events__Main' ) ) {
-	require get_template_directory() . '/includes/plugins/the-events-calendar.php';
-}
+// @TODO - Review/test on LSX 2.0
+// if ( class_exists( 'Tribe__Events__Main' ) ) {
+// 	require get_template_directory() . '/includes/plugins/the-events-calendar.php';
+// }
 
-if ( class_exists( 'Sensei_WC' ) ) {
-	require get_template_directory() . '/includes/plugins/sensei.php';
-}
+// @TODO - Review/test on LSX 2.0
+// if ( class_exists( 'Sensei_WC' ) ) {
+// 	require get_template_directory() . '/includes/plugins/sensei.php';
+// }
