@@ -251,7 +251,22 @@ gulp.task('js', function() {
 		.pipe(gulp.dest('assets/js'))
 });
 
-gulp.task('compile-js', ['js']);
+gulp.task('vendor-bootstrap-js', function() {
+	return gulp.src('assets/js/vendor/bootstrap.js')
+		.pipe(plumber({
+			errorHandler: function(err) {
+				console.log(err);
+				this.emit('end');
+			}
+		}))
+		.pipe(jshint())
+		//.pipe(errorreporter)
+		.pipe(concat('bootstrap.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('assets/js/vendor'))
+});
+
+gulp.task('compile-js', ['js', 'vendor-bootstrap-js']);
 
 gulp.task('watch-css', function () {
 	return gulp.watch('assets/css/**/*.scss', ['compile-css']);
