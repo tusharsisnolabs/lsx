@@ -1,0 +1,11 @@
+.modal-dialog {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: calc(100vh - 20px);
+	overflow: auto;
+
+	@include media('>=phone') {
+		min-height: calc(100vh - 60px);
+	}
+}
