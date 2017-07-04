@@ -16,7 +16,7 @@ get_header(); ?>
 
 	<?php lsx_content_before(); ?>
 
-	<main id="main" class="site-main">
+	<main id="main" class="site-main" role="main">
 
 		<?php lsx_content_top(); ?>
 
