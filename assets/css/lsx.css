@@ -154,6 +154,8 @@ figure { max-width: 100%; }
 
 .modal .modal-content { border-radius: 0; border-style: solid; border-width: 6px; padding: 20px; }
 
+.modal .modal-header { border-bottom: 0; overflow-x: hidden; padding: 0 0 20px 0; }
+
 .modal .modal-body { overflow-x: hidden; padding: 0; }
 
 .modal .close { border-radius: 50%; border-style: solid; border-width: 2px; height: 32px; opacity: 1; position: absolute; right: -14px; top: -14px; width: 32px; z-index: 2; }

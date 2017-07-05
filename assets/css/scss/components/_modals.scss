@@ -19,6 +19,12 @@
 		padding: 20px;
 	}
 
+	.modal-header {
+		border-bottom: 0;
+		overflow-x: hidden;
+		padding: 0 0 20px 0;
+	}
+
 	.modal-body {
 		overflow-x: hidden;
 		padding: 0;
