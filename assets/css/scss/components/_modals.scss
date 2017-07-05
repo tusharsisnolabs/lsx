@@ -1,11 +1,41 @@
-.modal-dialog {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	min-height: calc(100vh - 20px);
-	overflow: auto;
+.modal {
+	.modal-dialog {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: calc(100vh - 20px);
+		padding-right: 14px;
+		overflow: auto;
 
-	@include media('>=phone') {
-		min-height: calc(100vh - 60px);
+		@include media('>=phone') {
+			min-height: calc(100vh - 60px);
+		}
+	}
+
+	.modal-content {
+		border-radius: 0;
+		border-style: solid;
+		border-width: 6px;
+		padding: 20px;
+	}
+
+	.modal-body {
+		overflow-x: hidden;
+		padding: 0;
+	}
+
+	.close {
+		border-radius: 50%;
+		border-style: solid;
+		border-width: 2px;
+		height: 32px;
+		opacity: 1;
+		position: absolute;
+		right: -14px;
+		top: -14px;
+		width: 32px;
+		z-index: 2;
+
+		&:hover { opacity: 1; }
 	}
 }
