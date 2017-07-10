@@ -126,6 +126,12 @@ figure { max-width: 100%; }
 
 #top-menu .top-menu > .menu > .menu-item.cta > a:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
+#footer-cta input[type="submit"], #footer-cta input[type="submit"]:active, #footer-cta input[type="submit"]:visited { background-color: #418AD0; box-shadow: 2px 2px 0 0 #27639e; color: #FFF; }
+
+#footer-cta input[type="submit"]:hover, #footer-cta input[type="submit"]:hover:active, #footer-cta input[type="submit"]:focus { background-color: #367DC0; color: #FFF; }
+
+#footer-cta input[type="submit"]:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
+
 .cta-btn, .cta-btn:active, .cta-btn:visited { background-color: #F7AE00; box-shadow: 2px 2px 0 0 #ab7800; color: #FFF; }
 
 .cta-btn:hover, .cta-btn:hover:active, .cta-btn:focus { background-color: #EDA700; color: #FFF; }
