@@ -453,7 +453,7 @@ figure { max-width: 100%; }
 
 #home-widgets > .widget.widget_lsx_full_width_alt:last-child, #home-widgets > .widget.widget_lsx_full_width:last-child { margin-bottom: 0; }
 
-@media (max-width: 767px) { #home-widgets > .widget.widget_text [class*="col-"] + [class*="col-"] { margin-top: 8.5rem; } }
+@media (max-width: 767px) { #home-widgets > .widget.widget_text [class*="col-"] + [class*="col-"] { margin-top: 4.25rem; } }
 
 #home-widgets .textwidget, #home-widgets p { margin-bottom: 0; }
 

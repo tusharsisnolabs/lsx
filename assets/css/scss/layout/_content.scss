@@ -36,7 +36,7 @@
 		&.widget_text {
 			[class*="col-"] + [class*="col-"] {
 				@include media('<phone') {
-					margin-top: $lsx-large-gap;
+					margin-top: $lsx-large-gap / 2;
 				}
 			}
 		}
