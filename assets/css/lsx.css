@@ -493,19 +493,19 @@ body { background-color: #F6F6F6; }
 
 .breadcrumbs-container a:not(.btn):hover, .breadcrumbs-container a:not(.btn):hover:active, .breadcrumbs-container a:not(.btn):focus { color: #F7AE00; }
 
-.content-area, .widget-area { color: #4A4A4A; }
+.content-area, .widget-area, .modal-content { color: #4A4A4A; }
 
-.content-area a:not(.btn), .content-area a:not(.btn):active, .content-area a:not(.btn):visited, .widget-area a:not(.btn), .widget-area a:not(.btn):active, .widget-area a:not(.btn):visited { color: #418AD0; }
+.content-area a:not(.btn), .content-area a:not(.btn):active, .content-area a:not(.btn):visited, .widget-area a:not(.btn), .widget-area a:not(.btn):active, .widget-area a:not(.btn):visited, .modal-content a:not(.btn), .modal-content a:not(.btn):active, .modal-content a:not(.btn):visited { color: #418AD0; }
 
-.content-area a:not(.btn):hover, .content-area a:not(.btn):hover:active, .content-area a:not(.btn):focus, .widget-area a:not(.btn):hover, .widget-area a:not(.btn):hover:active, .widget-area a:not(.btn):focus { color: #F7AE00; }
+.content-area a:not(.btn):hover, .content-area a:not(.btn):hover:active, .content-area a:not(.btn):focus, .widget-area a:not(.btn):hover, .widget-area a:not(.btn):hover:active, .widget-area a:not(.btn):focus, .modal-content a:not(.btn):hover, .modal-content a:not(.btn):hover:active, .modal-content a:not(.btn):focus { color: #F7AE00; }
 
-.content-area blockquote, .widget-area blockquote { border-color: #DADDDF; }
+.content-area blockquote, .widget-area blockquote, .modal-content blockquote { border-color: #DADDDF; }
 
-.content-area blockquote:before, .widget-area blockquote:before { background-color: #F6F6F6; }
+.content-area blockquote:before, .widget-area blockquote:before, .modal-content blockquote:before { background-color: #F6F6F6; }
 
-.content-area blockquote cite, .widget-area blockquote cite { color: #919191; }
+.content-area blockquote cite, .widget-area blockquote cite, .modal-content blockquote cite { color: #919191; }
 
-.content-area pre, .widget-area pre { border-color: #DADDDF; color: #4A4A4A; }
+.content-area pre, .widget-area pre, .modal-content pre { border-color: #DADDDF; color: #4A4A4A; }
 
 #home-widgets h3:after, #home-widgets .widget-title:after, #home-widgets .lsx-title:after, #home-widgets h3:after, #home-widgets .widget-title:after { background-color: #DADDDF; }
 

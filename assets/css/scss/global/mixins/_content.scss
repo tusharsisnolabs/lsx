@@ -59,7 +59,8 @@
 	}
 
 	.content-area,
-	.widget-area {
+	.widget-area,
+	.modal-content {
 		color: $color;
 
 		a:not(.btn) { @include lsx-link-colour($link, $hover); }
