@@ -13,11 +13,6 @@
 }
 
 .page-banner-wrap {
-	align-items: center;
-	display: flex;
-	flex-flow: row;
-	justify-content: center;
-
 	.page-has-banner-full & {
 		@include media (">=tablet") {
 			display: flex;
@@ -39,17 +34,24 @@
 		.single-post & { min-height: 46vh; }
 
 		@include media('>=tablet') {
-			min-height: 25rem;
+			height: 25rem;
+			min-height: auto;
 
-			.single-post & { min-height: 39rem; }
+			.single-post & {
+				height: 39rem;
+				min-height: auto;
+			}
 
-			.home & { min-height: 58rem; }
+			.home & {
+				height: 58rem;
+				min-height: auto;
+			}
 		}
 
 		.page-has-banner-full & {
 			@include media (">=tablet") {
 				flex: 1;
-				min-height: 0;
+				min-height: auto;
 			}
 		}
 

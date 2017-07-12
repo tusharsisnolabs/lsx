@@ -399,8 +399,6 @@ figure { max-width: 100%; }
 
 @media (min-width: 992px) { .page-has-banner-full.admin-bar .header-wrap { min-height: calc(100vh - 32px); } }
 
-.page-banner-wrap { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row; flex-flow: row; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-
 @media (min-width: 992px) { .page-has-banner-full .page-banner-wrap { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; } }
 
 .page-banner-wrap .page-banner { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column nowrap; flex-flow: column nowrap; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; overflow: hidden; position: relative; width: 100%; }
@@ -409,11 +407,11 @@ figure { max-width: 100%; }
 
 .single-post .page-banner-wrap .page-banner { min-height: 46vh; }
 
-@media (min-width: 992px) { .page-banner-wrap .page-banner { min-height: 25rem; }
-  .single-post .page-banner-wrap .page-banner { min-height: 39rem; }
-  .home .page-banner-wrap .page-banner { min-height: 58rem; } }
+@media (min-width: 992px) { .page-banner-wrap .page-banner { height: 25rem; min-height: auto; }
+  .single-post .page-banner-wrap .page-banner { height: 39rem; min-height: auto; }
+  .home .page-banner-wrap .page-banner { height: 58rem; min-height: auto; } }
 
-@media (min-width: 992px) { .page-has-banner-full .page-banner-wrap .page-banner { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; min-height: 0; } }
+@media (min-width: 992px) { .page-has-banner-full .page-banner-wrap .page-banner { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; min-height: auto; } }
 
 .page-banner-wrap .page-banner > .page-banner-image { bottom: 0; background-color: #F6F6F6; background-position: center center; background-repeat: no-repeat; background-size: cover; right: 0; position: absolute; left: 0; top: 0; z-index: 1; }
 
