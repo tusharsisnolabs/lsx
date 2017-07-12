@@ -17,6 +17,21 @@ var lsx = Object.create( null );
 		windowWidth  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
 	/**
+	 * Adds browser class to html tag.
+	 *
+	 * @package    lsx
+	 * @subpackage scripts
+	 */
+	lsx.add_class_browser_to_html = function() {
+		if ( 'undefined' !== typeof platform ) {
+			var platform_name = platform.name.toLowerCase(),
+				platform_version = platform.version.toLowerCase().replace(/\..*$/g, '');
+
+			$( 'html' ).addClass( platform_name ).addClass( platform_version );
+		}
+	};
+
+	/**
 	 * Test if the sidebar exists (if exists, add a class to the body).
 	 *
 	 * @package    lsx
@@ -281,6 +296,7 @@ var lsx = Object.create( null );
 
 		// lsx.fix_bootstrap_menus_touchstart();
 
+		lsx.add_class_browser_to_html();
 		lsx.add_class_sidebar_to_body();
 		lsx.add_class_bootstrap_to_table();
 

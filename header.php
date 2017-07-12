@@ -8,11 +8,7 @@
  */
 
 ?><!DOCTYPE html>
-<!--[if IE 8 ]>   <html class="ie8  ie" <?php language_attributes(); ?>><![endif]-->
-<!--[if IE 9 ]>   <html class="ie9  ie" <?php language_attributes(); ?>><![endif]-->
-<!--[if IE 10]>   <html class="ie10 ie" <?php language_attributes(); ?>><![endif]-->
-<!--[if IE 11]>   <html class="ie11 ie" <?php language_attributes(); ?>><![endif]-->
-<!--[if !IE]><!--><html <?php language_attributes(); ?>><!--<![endif]-->
+<html <?php language_attributes(); ?>>
 	<head>
 		<?php lsx_head_top(); ?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
