@@ -23,6 +23,7 @@
 	.page-banner {
 		align-items: center;
 		display: flex;
+		flex-direction: row;
 		flex-flow: column nowrap;
 		justify-content: flex-end;
 		overflow: hidden;
@@ -43,7 +44,7 @@
 
 		.page-has-banner-full & {
 			@include media (">=tablet") {
-				flex: 1;
+				flex: 1 auto;
 				min-height: 0;
 			}
 		}
