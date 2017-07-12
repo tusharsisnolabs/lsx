@@ -267,61 +267,6 @@ endif;
 
 add_action( 'lsx_header_after', 'lsx_page_banner' );
 
-if ( ! function_exists( 'lsx_browser_body_class' ) ) :
-
-	/**
-	 * Adding browser and user-agent classes to body.
-	 *
-	 * @package    lsx
-	 * @subpackage extras
-	 */
-	function lsx_browser_body_class( $classes ) {
-		$http_user_agent = sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) );
-		$http_user_agent = ! empty( $http_user_agent ) ? $http_user_agent : '';
-
-		global $is_lynx, $is_gecko, $is_ie, $is_opera, $is_ns4, $is_safari, $is_chrome, $is_iphone;
-
-		if ( $is_lynx ) {
-			$classes[] = 'lynx';
-		} elseif ( $is_gecko ) {
-			$classes[] = 'gecko';
-		} elseif ( $is_opera ) {
-			$classes[] = 'opera';
-		} elseif ( $is_ns4 ) {
-			$classes[] = 'ns4';
-		} elseif ( $is_safari ) {
-			$classes[] = 'safari';
-		} elseif ( $is_chrome ) {
-			$classes[] = 'chrome';
-		} elseif ( $is_ie ) {
-			$classes[] = 'ie';
-
-			if ( preg_match( '/MSIE ([0-9]+)([a-zA-Z0-9.]+)/', $http_user_agent, $browser_version ) ) {
-				$classes[] = 'ie' . $browser_version[1];
-			}
-		} else {
-			$classes[] = 'unknown';
-		}
-
-		if ( $is_iphone ) {
-			$classes[] = 'iphone';
-		}
-
-		if ( stristr( $http_user_agent, 'mac' ) ) {
-			$classes[] = 'osx';
-		} elseif ( stristr( $http_user_agent, 'linux' ) ) {
-			$classes[] = 'linux';
-		} elseif ( stristr( $http_user_agent, 'windows' ) ) {
-			$classes[] = 'windows';
-		}
-
-		return $classes;
-	}
-
-endif;
-
-add_filter( 'body_class', 'lsx_browser_body_class' );
-
 if ( ! function_exists( 'lsx_form_submit_button' ) ) :
 
 	/**

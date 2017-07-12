@@ -217,11 +217,11 @@ msgstr ""
 msgid "Change the fonts sitewide."
 msgstr ""
 
-#: includes/extras.php:385
+#: includes/extras.php:330
 msgid "Continue reading"
 msgstr ""
 
-#: includes/extras.php:444
+#: includes/extras.php:389
 msgid "More"
 msgstr ""
 

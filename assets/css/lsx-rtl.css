@@ -411,7 +411,7 @@ figure { max-width: 100%; }
   .single-post .page-banner-wrap .page-banner { height: 39rem; min-height: auto; }
   .home .page-banner-wrap .page-banner { height: 58rem; min-height: auto; } }
 
-@media (min-width: 992px) { .page-has-banner-full .page-banner-wrap .page-banner { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; height: auto; min-height: auto; } }
+@media (min-width: 992px) { .page-has-banner-full:not(.ie) .page-banner-wrap .page-banner { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; height: auto; min-height: auto; } }
 
 .page-banner-wrap .page-banner > .page-banner-image { bottom: 0; background-color: #F6F6F6; background-position: center center; background-repeat: no-repeat; background-size: cover; right: 0; position: absolute; left: 0; top: 0; z-index: 1; }
 
