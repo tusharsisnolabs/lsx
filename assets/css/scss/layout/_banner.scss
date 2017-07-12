@@ -48,7 +48,7 @@
 			}
 		}
 
-		.page-has-banner-full:not(.ie) & {
+		html:not(.ie) .page-has-banner-full & {
 			@include media (">=tablet") {
 				flex: 1;
 				height: auto;
