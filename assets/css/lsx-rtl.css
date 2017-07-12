@@ -419,7 +419,7 @@ figure { max-width: 100%; }
 
 .page-banner-wrap .page-banner > .page-banner-image:after { background-color: rgba(55, 71, 80, 0.33); bottom: 0; content: ''; right: 0; position: absolute; left: 0; top: 0; z-index: 2; }
 
-.page-banner-wrap .page-banner > .container { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 50px; margin-top: 50px; z-index: 4; }
+.page-banner-wrap .page-banner > .container { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 50px; margin-top: 50px; position: relative; z-index: 4; }
 
 .page-banner-wrap .page-banner .page-header { border: 0 none; margin: 0; padding: 0; }
 
