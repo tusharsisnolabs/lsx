@@ -13,6 +13,11 @@
 }
 
 .page-banner-wrap {
+	align-items: center;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+
 	.page-has-banner-full & {
 		@include media (">=tablet") {
 			display: flex;
@@ -23,7 +28,6 @@
 	.page-banner {
 		align-items: center;
 		display: flex;
-		flex-direction: row;
 		flex-flow: column nowrap;
 		justify-content: flex-end;
 		overflow: hidden;
@@ -44,7 +48,7 @@
 
 		.page-has-banner-full & {
 			@include media (">=tablet") {
-				flex: 1 auto;
+				flex: 1;
 				min-height: 0;
 			}
 		}
