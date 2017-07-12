@@ -1,5 +1,5 @@
 .header-wrap {
-	.page-has-banner-full & {
+	html:not(.ie) .page-has-banner-full & {
 		@include media (">=tablet") {
 			display: flex;
 			flex-direction: column;
@@ -7,13 +7,13 @@
 		}
 	}
 
-	.page-has-banner-full.admin-bar & {
+	html:not(.ie) .page-has-banner-full.admin-bar & {
 		@include media('>=tablet') { min-height: calc(100vh - 32px); }
 	}
 }
 
 .page-banner-wrap {
-	.page-has-banner-full & {
+	html:not(.ie) .page-has-banner-full & {
 		@include media (">=tablet") {
 			display: flex;
 			flex: 1;
