@@ -20,6 +20,12 @@
 		}
 	}
 
+	html.ie .page-has-banner-full & {
+		@include media (">=tablet") {
+			width: 100%;
+		}
+	}
+
 	.page-banner {
 		align-items: center;
 		display: flex;
