@@ -587,7 +587,7 @@ body { background-color: #F6F6F6; }
 
 #comments .media-list .media .media-body > time > a:hover, #comments .media-list .media .media-body > time > a:hover:active, #comments .media-list .media .media-body > time > a:focus { color: #F7AE00; }
 
-.modal .modal-content { border-color: #418AD0; }
+.modal .modal-content { background-color: #F6F6F6; border-color: #418AD0; }
 
 .modal .close { background-color: #418AD0; border-color: #FFF; box-shadow: 0 0 4px 0 #418AD0; color: #FFF; }
 

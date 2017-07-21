@@ -246,7 +246,10 @@
 	}
 
 	.modal {
-		.modal-content { border-color: $link; }
+		.modal-content {
+			background-color: $bg;
+			border-color: $link;
+		}
 
 		.close {
 			background-color: $link;
