@@ -18,6 +18,8 @@
 		display: block;
 		line-height: inherit;
 		margin-top: 8px;
+
+		&.long-text { margin-top: 16px; }
 	}
 }
 

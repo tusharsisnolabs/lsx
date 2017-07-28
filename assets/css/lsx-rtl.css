@@ -451,6 +451,8 @@ figure { max-width: 100%; }
 
 .lsx-title > small, #home-widgets h3 > small, #home-widgets .widget-title > small { color: inherit; display: block; line-height: inherit; margin-top: 8px; }
 
+.lsx-title > small.long-text, #home-widgets h3 > small.long-text, #home-widgets .widget-title > small.long-text { margin-top: 16px; }
+
 #home-widgets { margin-top: 8.5rem; }
 
 #home-widgets > .widget { margin-bottom: 8.5rem; }
