@@ -631,45 +631,6 @@ if ( ! function_exists( 'lsx_sitemap_taxonomy_clouds' ) ) :
 
 endif;
 
-if ( ! function_exists( 'lsx_footer_subscription_cta' ) ) :
-
-	/**
-	 * Adds subscribe form above footer.
-	 *
-	 * @package    lsx
-	 * @subpackage template-tags
-	 */
-	function lsx_footer_subscription_cta() {
-		if ( ! function_exists( 'lsx_is_form_enabled' ) ) {
-			return;
-		}
-
-		$subscribe_form_id = lsx_is_form_enabled( 'subscribe' );
-
-		if ( false === $subscribe_form_id ) {
-			return;
-		}
-
-		if ( defined( 'CFCORE_VER' ) ) {
-			wp_enqueue_script( 'cf-frontend-fields', CFCORE_URL . 'assets/js/fields.min.js', array( 'jquery' ), CFCORE_VER );
-		}
-
-		?>
-		<section class="footer-subscribe">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h2><?php esc_html_e( 'Subscribe to Our Newsletter', 'lsx' ); ?></h2>
-						<?php echo wp_kses_post( Caldera_Forms::render_form( $subscribe_form_id ) ); ?>
-					</div>
-				</div>
-			</div>
-		</section>
-		<?php
-	}
-
-endif;
-
 add_action( 'lsx_footer_before', 'lsx_footer_subscription_cta', 10 );
 
 if ( ! function_exists( 'lsx_add_top_menu' ) ) :
@@ -715,44 +676,6 @@ if ( ! function_exists( 'lsx_add_top_menu' ) ) :
 endif;
 
 add_action( 'lsx_header_before', 'lsx_add_top_menu' );
-
-if ( ! function_exists( 'lsx_is_form_enabled' ) && class_exists( 'Caldera_Forms' ) ) :
-
-	/**
-	 * Checks if a caldera form with your slug exists.
-	 *
-	 * @package    lsx
-	 * @subpackage template-tags
-	 */
-	function lsx_is_form_enabled( $slug = false ) {
-		if ( false === $slug ) {
-			return false;
-		}
-
-		$match = false;
-		$forms = get_option( '_caldera_forms' , false );
-
-		if ( false !== $forms ) {
-			foreach ( $forms as $form_id => $form_maybe ) {
-				if ( trim( strtolower( $slug ) ) === strtolower( $form_maybe['name'] ) ) {
-					$match = $form_id;
-					break;
-				}
-			}
-		}
-
-		if ( false === $match ) {
-			$is_form = Caldera_Forms::get_form( strtolower( $slug ) );
-
-			if ( ! empty( $is_form ) ) {
-				return strtolower( $slug );
-			}
-		}
-
-		return $match;
-	}
-
-endif;
 
 if ( ! function_exists( 'lsx_get_my_url' ) ) :
 
