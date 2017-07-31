@@ -26,3 +26,5 @@ img { @include img-responsive(inline-block); }
 figure { max-width: 100%; }
 
 .checkbox { line-height: 1.2; }
+
+.dropdown-menu { min-width: 100%; }
