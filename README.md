@@ -26,10 +26,6 @@ experience and SEO.
 LSX has been designed to be minimal and lean, while still having rich customizer options, like allowing you to control fonts, color
 options, home page configuration, widget areas and much more.
 
-It’s a great choice for your next WooCommerce project, supporting the eCommerce plugin beautifully out the box. 
-
-LSX also supports a variety of other top quality plugins like Sensei, WP Job Manager and JetPack. 
-
 ## Installation
 
 * In your admin panel, go to Appearance -> Themes and click the Add New button.

@@ -226,7 +226,7 @@ if ( ! function_exists( 'lsx_global_header' ) ) :
 				<?php lsx_global_header_inner_bottom(); ?>
 			</div>
 			<?php
-		elseif ( is_archive() && class_exists( 'WooCommerce' ) && is_post_type_archive( 'product' ) ) :
+		elseif ( is_archive() ) :
 			?>
 			<div class="archive-header-wrapper col-<?php echo esc_attr( $size ); ?>-12">
 				<header class="archive-header">

@@ -102,7 +102,7 @@ msgstr ""
 msgid "Meta"
 msgstr ""
 
-#: includes/config.php:31, includes/config.php:192
+#: includes/config.php:31, includes/config.php:191
 msgid "Primary Menu"
 msgstr ""
 
@@ -114,58 +114,58 @@ msgstr ""
 msgid "Top Menu (left)"
 msgstr ""
 
-#: includes/config.php:34, includes/config.php:231
+#: includes/config.php:34, includes/config.php:230
 msgid "Social Menu"
 msgstr ""
 
-#: includes/config.php:35, includes/config.php:246
+#: includes/config.php:35, includes/config.php:245
 msgid "Footer Menu"
 msgstr ""
 
-#: includes/config.php:111, includes/config.php:120
+#: includes/config.php:110, includes/config.php:119
 msgid "Space for Footer Widgets"
 msgstr ""
 
-#: includes/config.php:112, includes/config.php:121
+#: includes/config.php:111, includes/config.php:120
 msgid "This is here to showcase some footer widgets. You can decide what to add and what to hide. Nam nostrum evertitur ad, ut pri nibh veniam, urbanitas definitionem eum ex."
 msgstr ""
 
-#: includes/config.php:129
+#: includes/config.php:128
 msgid "Contact us:"
 msgstr ""
 
-#: includes/config.php:140
+#: includes/config.php:139
 msgid "A Footer Call to Action"
 msgstr ""
 
-#: includes/config.php:141
+#: includes/config.php:140
 msgid "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
 msgstr ""
 
-#: includes/config.php:151
+#: includes/config.php:150
 msgid "LSX is a free WordPress theme"
 msgstr ""
 
-#: includes/config.php:168
+#: includes/config.php:167
 msgctxt "Theme starter content"
 msgid "Banner Example 01"
 msgstr ""
 
-#: includes/config.php:173
+#: includes/config.php:172
 msgctxt "Theme starter content"
 msgid "Banner Example 02"
 msgstr ""
 
-#: includes/config.php:178
+#: includes/config.php:177
 msgctxt "Theme starter content"
 msgid "Banner Example 03"
 msgstr ""
 
-#: includes/config.php:187
+#: includes/config.php:186
 msgid "LSX starter content example"
 msgstr ""
 
-#: includes/config.php:203
+#: includes/config.php:202
 msgid "Top Menu"
 msgstr ""
 
@@ -295,10 +295,6 @@ msgstr ""
 msgid "Pages"
 msgstr ""
 
-#: includes/template-tags.php:662
-msgid "Subscribe to Our Newsletter"
-msgstr ""
-
 #: includes/welcome.php:48
 msgid "Thanks for choosing LSX! You can read hints and tips on how get the most out of your new theme on the %1$swelcome screen%2$s."
 msgstr ""
@@ -397,10 +393,6 @@ msgstr[1] ""
 
 #: includes/classes/class-lsx-bootstrap-navwalker.php:223
 msgid "Add a menu"
-msgstr ""
-
-#: includes/plugins/the-events-calendar.php:48, includes/plugins/the-events-calendar.php:58, includes/plugins/the-events-calendar.php:61, includes/plugins/the-events-calendar.php:65, includes/plugins/the-events-calendar.php:69, includes/plugins/the-events-calendar.php:72, includes/plugins/the-events-calendar.php:74
-msgid "Events"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-enhance.php:13

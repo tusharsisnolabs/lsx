@@ -174,67 +174,7 @@ gulp.task('admin-styles-rtl', function () {
 		.pipe(gulp.dest('assets/css/admin'))
 });
 
-gulp.task('plugins-styles', function () {
-	return gulp.src('assets/css/plugins/*.scss')
-		.pipe(plumber({
-			errorHandler: function(err) {
-				console.log(err);
-				this.emit('end');
-			}
-		}))
-		.pipe(sourcemaps.init())
-		.pipe(sass({
-			outputStyle: 'compact',
-			includePaths: ['assets/css/plugins']
-		}).on('error', gutil.log))
-		.pipe(autoprefixer({
-			browsers: browserlist,
-			casacade: true
-		}))
-		.pipe(sourcemaps.write('maps'))
-		.pipe(gulp.dest('assets/css/plugins'))
-});
-
-gulp.task('plugins-styles-rtl', function () {
-	return gulp.src('assets/css/plugins/*.scss')
-		.pipe(plumber({
-			errorHandler: function(err) {
-				console.log(err);
-				this.emit('end');
-			}
-		}))
-		.pipe(sass({
-			outputStyle: 'compact',
-			includePaths: ['assets/css/plugins']
-		}).on('error', gutil.log))
-		.pipe(autoprefixer({
-			browsers: browserlist,
-			casacade: true
-		}))
-		.pipe(rtlcss())
-		.pipe(rename({
-			suffix: '-rtl'
-		}))
-		.pipe(gulp.dest('assets/css/plugins'))
-});
-
-/*
-@TODO
-gulp.task('sass-woocommerce', function() {
-	gulp.src(['sass/woocommerce/woocommerce-layout.scss', 'sass/woocommerce/woocommerce-smallscreen.scss', 'sass/woocommerce/woocommerce.scss'])
-		.pipe(sass().on('error', function(err) { console.log('Error!', err); }))
-		.pipe(gulp.dest('css/'));
-});
-
-@TODO
-gulp.task('sass-sensei', function() {
-	gulp.src('sass/sensei/frontend/sensei.scss')
-		.pipe(sass().on('error', function(err) { console.log('Error!', err); }))
-		.pipe(gulp.dest('css/'));
-});
-*/
-
-gulp.task('compile-css', ['styles', 'styles-rtl', 'vendor-styles', 'vendor-styles-rtl', 'admin-styles', 'admin-styles-rtl', 'plugins-styles', 'plugins-styles-rtl']);
+gulp.task('compile-css', ['styles', 'styles-rtl', 'vendor-styles', 'vendor-styles-rtl', 'admin-styles', 'admin-styles-rtl']);
 
 gulp.task('js', function() {
 	return gulp.src('assets/js/src/**/*.js')

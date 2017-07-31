@@ -67,10 +67,9 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 		) );
 
 		add_theme_support( 'title-tag' );
-		add_theme_support( 'woocommerce' );
 
-		/* @TODO - Check if is still necessary */
-		//add_editor_style( get_template_directory_uri() . '/css/editor-style.css' );
+		/* @TODO - Necessary to test it */
+		// add_theme_support( 'woocommerce' );
 
 		add_theme_support( 'starter-content', array(
 			'widgets' => array(
