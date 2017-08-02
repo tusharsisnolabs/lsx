@@ -77,11 +77,11 @@ var lsx = Object.create( null );
 	 * @package    lsx
 	 * @subpackage scripts
 	 */
-	lsx.fix_bootstrap_menus_touchstart = function() {
-		$( '.dropdown-menu' ).on( 'touchstart.dropdown.data-api', function( e ) {
-			e.stopPropagation();
-		} );
-	};
+	// lsx.fix_bootstrap_menus_touchstart = function() {
+	// 	$( '.dropdown-menu' ).on( 'touchstart.dropdown.data-api', function( e ) {
+	// 		e.stopPropagation();
+	// 	} );
+	// };
 
 	/**
 	 * Fix Bootstrap menus (dropdown).
@@ -90,7 +90,7 @@ var lsx = Object.create( null );
 	 * @subpackage scripts
 	 */
 	lsx.fix_bootstrap_menus_dropdown = function() {
-		$( '.dropdown' ).on( 'show.bs.dropdown', function() {
+		$( '.navbar-nav .dropdown, #top-menu .dropdown' ).on( 'show.bs.dropdown', function() {
 			if ( windowWidth < 1200 ) {
 				$( this ).siblings( '.open' ).removeClass( 'open' ).find( 'a.dropdown-toggle' ).attr( 'data-toggle', 'dropdown' );
 				$( this ).find( 'a.dropdown-toggle' ).removeAttr( 'data-toggle' );
@@ -127,7 +127,7 @@ var lsx = Object.create( null );
 	 */
 	lsx.fix_bootstrap_menus_dropdown_click = function() {
 		if ( windowWidth < 1200 ) {
-			$( '.dropdown .dropdown > a' ).on( 'click', function( e ) {
+			$( '.navbar-nav .dropdown .dropdown > a, #top-menu .dropdown .dropdown > a' ).on( 'click', function( e ) {
 				if ( ! $( this ).parent().hasClass( 'open' ) ) {
 					$( this ).parent().addClass( 'open' );
 					$( this ).next( '.dropdown-menu' ).dropdown( 'toggle' );
@@ -136,7 +136,7 @@ var lsx = Object.create( null );
 				}
 			} );
 
-			$( '.dropdown .dropdown .dropdown-menu a' ).on( 'click', function( e ) {
+			$( '.navbar-nav .dropdown .dropdown .dropdown-menu a, #top-menu .dropdown .dropdown > a' ).on( 'click', function( e ) {
 				document.location.href = this.href;
 			} );
 		}

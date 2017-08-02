@@ -31,6 +31,8 @@ figure { max-width: 100%; }
 
 .dropdown-menu { min-width: 100%; }
 
+.dropdown-menu-two-columns li { float: right; width: 50%; }
+
 .content-area address, .widget-area address { margin-bottom: 2.4rem; }
 
 .content-area a:not(.btn), .widget-area a:not(.btn) { transition: all 300ms ease; word-wrap: break-word; }
