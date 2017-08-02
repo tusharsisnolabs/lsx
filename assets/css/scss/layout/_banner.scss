@@ -74,6 +74,11 @@
 			top: 0;
 			z-index: 1;
 
+			@include media('>=desktop') {
+				bottom: -40px;
+				top: -40px;
+			}
+
 			&:after {
 				background-color: rgba(nth($blue, 2), .33);
 				bottom: 0;
