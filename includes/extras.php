@@ -159,7 +159,7 @@ if ( ! function_exists( 'lsx_get_thumbnail' ) ) :
 		$size = apply_filters( 'lsx_thumbnail_size', $size );
 		$img  = false;
 
-		if ( 'lsx-thumbnail-single' === $size || 'lsx-thumbnail-wide' === $size || 'thumbnail' === $size ) {
+		if ( 'lsx-thumbnail-single' === $size || 'lsx-thumbnail-wide' === $size || 'lsx-thumbnail-square' === $size || 'thumbnail' === $size ) {
 			$srcset = false;
 			$img    = wp_get_attachment_image_src( $post_thumbnail_id, $size );
 			$img    = $img[0];
