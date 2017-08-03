@@ -232,7 +232,7 @@ figure { max-width: 100%; }
 
 @media (min-width: 1200px) { #top-menu .dropdown:hover > .dropdown-menu { opacity: 1; -webkit-transform: scale(1, 1); transform: scale(1, 1); } }
 
-#top-menu .dropdown-menu { box-shadow: none; border: 0 none; border-radius: 0; display: block; left: 15px; margin: 0; opacity: 0; padding: 0; transition: all 300ms ease; -webkit-transform: scale(1, 0); transform: scale(1, 0); -webkit-transform-origin: top center; transform-origin: top center; z-index: 1001; }
+#top-menu .dropdown-menu { box-shadow: none; border: 0 none; border-radius: 0; display: block; left: 0; margin: 0; opacity: 0; padding: 0; transition: all 300ms ease; -webkit-transform: scale(1, 0); transform: scale(1, 0); -webkit-transform-origin: top center; transform-origin: top center; z-index: 1001; }
 
 #top-menu .dropdown-menu > .menu-item { transition: all 300ms ease; }
 
@@ -243,6 +243,8 @@ figure { max-width: 100%; }
 #top-menu .dropdown-menu > .menu-item > a:hover, #top-menu .dropdown-menu > .menu-item > a:active:hover, #top-menu .dropdown-menu > .menu-item > a:focus { background-color: transparent; }
 
 #top-menu .dropdown-menu > .menu-item .dropdown-menu { left: 100%; top: 0; }
+
+#top-menu .top-menu:not(.pull-left) .dropdown-menu { left: auto; right: 0; }
 
 #top-menu { background-color: #F2F2F2; }
 
