@@ -631,8 +631,6 @@ if ( ! function_exists( 'lsx_sitemap_taxonomy_clouds' ) ) :
 
 endif;
 
-add_action( 'lsx_footer_before', 'lsx_footer_subscription_cta', 10 );
-
 if ( ! function_exists( 'lsx_add_top_menu' ) ) :
 
 	/**
