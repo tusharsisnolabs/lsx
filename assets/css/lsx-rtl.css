@@ -27,6 +27,8 @@ img { display: inline-block; max-width: 100%; height: auto; }
 
 figure { max-width: 100%; }
 
+p:empty { display: none; }
+
 .checkbox { line-height: 1.2; }
 
 .dropdown-menu { min-width: 100%; }
