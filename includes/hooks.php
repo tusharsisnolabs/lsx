@@ -153,6 +153,36 @@ function lsx_entry_bottom() {
 }
 
 /**
+ * Widget Semantic <entry> hooks
+ *
+ * $lsx_supports[] = 'entry';
+ */
+
+function lsx_widget_entry_before() {
+	do_action( 'lsx_widget_entry_before' );
+}
+
+function lsx_widget_entry_after() {
+	do_action( 'lsx_widget_entry_after' );
+}
+
+function lsx_widget_entry_top() {
+	do_action( 'lsx_widget_entry_top' );
+}
+
+function lsx_widget_entry_bottom() {
+	do_action( 'lsx_widget_entry_bottom' );
+}
+
+function lsx_widget_entry_content_top() {
+	do_action( 'lsx_widget_entry_content_top' );
+}
+
+function lsx_widget_entry_content_bottom() {
+	do_action( 'lsx_widget_entry_content_bottom' );
+}
+
+/**
  * Comments block hooks
  *
  * $lsx_supports[] = 'comments';
