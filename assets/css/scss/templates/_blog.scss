@@ -1,6 +1,6 @@
 .blog,
 .archive,
-.search.search-results {
+.search-results {
 	&:not(.has-sidebar) {
 		.site-main {
 			@include media ('>=tablet') {
@@ -15,10 +15,9 @@
 
 article.post,
 article.page {
-
 	.blog &,
 	.archive &,
-	.search.search-results &,
+	.search-results &,
 	.lsx-related-posts & {
 
 		& + article.post,
