@@ -291,9 +291,9 @@
   .appearance_page_lsx-welcome #wpbody .col-lg-offset-11 { margin-right: 91.66667%; }
   .appearance_page_lsx-welcome #wpbody .col-lg-offset-12 { margin-right: 100%; } }
 
-.appearance_page_lsx-welcome #wpbody h1 { margin-bottom: 20px; }
+.appearance_page_lsx-welcome #wpbody h1 { line-height: 51px; margin-bottom: 20px; }
 
-.appearance_page_lsx-welcome #wpbody h1 img { margin-left: 12px; }
+.appearance_page_lsx-welcome #wpbody .logo { background: transparent url(../../images/logo-white-bg.svg) no-repeat center center; display: inline-block; height: 51px; margin-left: 12px; text-indent: -9999px; width: 172px; }
 
 .appearance_page_lsx-welcome #wpbody .version { background-color: #fff; border-radius: 3px; color: #337ab7; font-size: 30%; font-weight: 700; padding: 5px 10px; }
 
@@ -321,7 +321,7 @@
 
 .appearance_page_lsx-welcome #wpbody .box.enhance:before { content: "\f106"; }
 
-.appearance_page_lsx-welcome #wpbody .box.customise:before { color: #FFA107; content: "\f540"; }
+.appearance_page_lsx-welcome #wpbody .box.mailchimp:before { content: "\f465"; }
 
 .appearance_page_lsx-welcome #wpbody .box.support:before { content: "\f338"; }
 
@@ -332,8 +332,6 @@
 .appearance_page_lsx-welcome #wpbody .box.news ul { margin-top: 0; }
 
 .appearance_page_lsx-welcome #wpbody .box.news .date { color: #999; text-transform: uppercase; font-size: 11px; }
-
-.appearance_page_lsx-welcome #wpbody .box.customise { border-width: 2px; border-color: #FFA107; box-shadow: 0 1px 1px #FFA107; }
 
 .appearance_page_lsx-welcome #wpbody .box-clean { padding-top: 20px; }
 

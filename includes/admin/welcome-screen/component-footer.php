@@ -9,15 +9,9 @@
 
 <div class="row">
 	<div class="col-md-4">
-		<div class="box customise">
-			<h2><?php esc_html_e( 'Theme Customizer', 'lsx' ); ?> - <span class="price">$59.00</span></h2>
-			<p><?php esc_html_e( 'You\'ve installed LSX, so now why not make it all yours? Whether it\'s a small CSS tweak or changing the entire layout of pages, posts or archives, please make use of the Theme Customizer plugin. Click below to install and get custom!', 'lsx' ); ?></p>
-
-			<div class="more-button">
-				<a href="https://www.lsdev.biz/product/lsx-theme-customizer/" target="_blank" class="button button-primary">
-					<?php esc_html_e( 'Theme Customizer', 'lsx' ); ?>
-				</a>
-			</div>
+		<div class="box mailchimp">
+			<h2><?php esc_html_e( 'Newsletter', 'lsx' ); ?></h2>
+			<p><?php esc_html_e( 'Newsletter text...', 'lsx' ); ?></p>
 		</div>
 	</div>
 

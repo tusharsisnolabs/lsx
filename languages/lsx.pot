@@ -404,82 +404,106 @@ msgid "Take a look at our range of extensions that add to the already rich funct
 msgstr ""
 
 #: includes/admin/welcome-screen/component-enhance.php:19
-msgid "Currencies"
-msgstr ""
-
-#: includes/admin/welcome-screen/component-enhance.php:20
-msgid "The LSX Currencies extension adds currency selection functionality to sites, allowing users to view your products in whatever currencies you choose to sell in."
-msgstr ""
-
-#: includes/admin/welcome-screen/component-enhance.php:26
 msgid "Banners"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-enhance.php:27
+#: includes/admin/welcome-screen/component-enhance.php:20
 msgid "The LSX Banners extension adds advanced banner configuration options to your WordPress site running LSX theme."
 msgstr ""
 
+#: includes/admin/welcome-screen/component-enhance.php:26
+msgid "Currencies"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:27
+msgid "The LSX Currencies extension adds currency selection functionality to sites, allowing users to view your products in whatever currencies you choose to sell in."
+msgstr ""
+
 #: includes/admin/welcome-screen/component-enhance.php:33
-msgid "Testimonials"
+msgid "Blog Customizer"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-enhance.php:34
-msgid "The LSX Testimonials extension adds the \"Testimonials\" post type, which you can display front-and-centre on your site."
+msgid "It allows you it to customize various aspects of the the appearance of your blog, posts widgets, archive pages and single posts so they looks exactly how you want."
 msgstr ""
 
 #: includes/admin/welcome-screen/component-enhance.php:42
-msgid "Team"
+msgid "Customizer"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-enhance.php:43
-msgid "The LSX Team Extension provides a custom post type that allows you to easily show off the people that make up your business."
+msgid "You've installed LSX, so now why not make it all yours? Whether it's a small CSS tweak or changing the entire layout of pages, posts or archives, please make use of the Theme Customizer plugin."
 msgstr ""
 
 #: includes/admin/welcome-screen/component-enhance.php:49
-msgid "Mega Menus"
-msgstr ""
-
-#: includes/admin/welcome-screen/component-enhance.php:50
-msgid "Create custom, full-width dropdown menus that contain images, widgets and more that seamlessly tie into your LSX WordPress site."
-msgstr ""
-
-#: includes/admin/welcome-screen/component-enhance.php:56
 msgid "Login"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-enhance.php:57
+#: includes/admin/welcome-screen/component-enhance.php:50
 msgid "The LSX Login extension allows users to log into a dashboard and then see configurable content based on which users can access which content."
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:13, includes/admin/welcome-screen/component-footer.php:18
-msgid "Theme Customizer"
+#: includes/admin/welcome-screen/component-enhance.php:56
+msgid "Mega Menus"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:57
+msgid "Create custom, full-width dropdown menus that contain images, widgets and more that seamlessly tie into your LSX WordPress site."
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:65
+msgid "Team"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:66
+msgid "The LSX Team Extension provides a custom post type that allows you to easily show off the people that make up your business."
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:72
+msgid "Testimonials"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:73
+msgid "The LSX Testimonials extension adds the \"Testimonials\" post type, which you can display front-and-centre on your site."
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:79
+msgid "Geo Content"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:80
+msgid "Coming Soon!"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-footer.php:13
+msgid "Newsletter"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-footer.php:14
-msgid "You've installed LSX, so now why not make it all yours? Whether it's a small CSS tweak or changing the entire layout of pages, posts or archives, please make use of the Theme Customizer plugin. Click below to install and get custom!"
+msgid "Newsletter text..."
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:26
+#: includes/admin/welcome-screen/component-footer.php:20
 msgid "Get support"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:32
+#: includes/admin/welcome-screen/component-footer.php:26
 msgid "You'll find information on how to use and customize the LSX theme in our %1$sdocumentation%2$s section. However, please do %3$scontact us%4$s for support should you still find yourself unable to achieve your needs."
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:43
+#: includes/admin/welcome-screen/component-footer.php:37
 msgid "Get in touch"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:51
+#: includes/admin/welcome-screen/component-footer.php:45
 msgid "Suggest a feature"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:57
+#: includes/admin/welcome-screen/component-footer.php:51
 msgid "If you'd like to suggest a feature for inclusion in upcoming releases of the LSX theme, please don't hesitate to %1$scontact us%2$s directly. We're always on the lookout for fresh ideas to help make LSX even better."
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:66
+#: includes/admin/welcome-screen/component-footer.php:60
 msgid "Submit a request"
 msgstr ""
 

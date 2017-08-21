@@ -9,7 +9,7 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<h1><?php echo esc_html__( 'LSX', 'lsx' ) . ' <sup class="version">' . esc_attr( LSX_VERSION ) . '</sup>'; ?></h1>
+		<h1><span class="logo"><?php echo esc_html__( 'LSX', 'lsx' ) . '</span> <sup class="version">' . esc_attr( LSX_VERSION ) . '</sup>'; ?></h1>
 	</div>
 
 	<div class="col-md-6">

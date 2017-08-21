@@ -5,25 +5,27 @@
 		@import "../vendor/bootstrap/variables";
 		@import "../vendor/bootstrap/mixins";
 
-		* {
-			@include box-sizing(border-box);
-		}
+		* { @include box-sizing(border-box); }
 
 		*:before,
-		*:after {
-			@include box-sizing(border-box);
-		}
+		*:after { @include box-sizing(border-box); }
 
 		@import "../vendor/bootstrap/grid";
 
 		// Page Styles
 
 		h1 {
+			line-height: 51px;
 			margin-bottom: 20px;
+		}
 
-			img {
-				margin-right: 12px;
-			}
+		.logo {
+			background: transparent url(../../images/logo-white-bg.svg) no-repeat center center;
+			display: inline-block;
+			height: 51px;
+			margin-right: 12px;
+			text-indent: -9999px;
+			width: 172px;
 		}
 
 		.version {
@@ -40,9 +42,7 @@
 			margin-bottom: 20px;
 			max-width: 360px;
 
-			p {
-				font-size: 13px;
-			}
+			p { font-size: 13px; }
 		}
 
 		.box {
@@ -64,9 +64,7 @@
 			ul {
 				font-size: 13px;
 
-				&:last-child {
-					margin-bottom: 0;
-				}
+				&:last-child { margin-bottom: 0; }
 			}
 
 			.more-button {
@@ -76,9 +74,7 @@
 				text-align: right;
 			}
 
-			.price {
-				color: #45B964;
-			}
+			.price { color: #45B964; }
 
 			&:before {
 				content: "\f324";
@@ -92,30 +88,17 @@
 				-webkit-font-smoothing: antialiased;
 			}
 
-			&.enrich:before {
-				content: "\f513";
-			}
+			&.enrich:before { content: "\f513"; }
 
-			&.news:before {
-				content: "\f319";
-			}
+			&.news:before { content: "\f319"; }
 
-			&.enhance:before {
-				content: "\f106";
-			}
+			&.enhance:before { content: "\f106"; }
 
-			&.customise:before {
-				color: #FFA107;
-				content: "\f540";
-			}
+			&.mailchimp:before { content: "\f465"; }
 
-			&.support:before {
-				content: "\f338";
-			}
+			&.support:before { content: "\f338"; }
 
-			&.suggest:before {
-				content: "\f488";
-			}
+			&.suggest:before { content: "\f488"; }
 
 			&.news {
 				h3 {
@@ -126,21 +109,13 @@
 					text-transform: uppercase;
 				}
 
-				ul {
-					margin-top: 0;
-				}
+				ul { margin-top: 0; }
 
 				.date {
 					color: #999;
 					text-transform: uppercase;
 					font-size: 11px;
 				}
-			}
-
-			&.customise {
-				border-width: 2px;
-				border-color: #FFA107;
-				box-shadow: 0 1px 1px #FFA107;
 			}
 		}
 
@@ -152,9 +127,7 @@
 				text-decoration: none;
 			}
 
-			p:last-child {
-				margin-bottom: 0;
-			}
+			p:last-child { margin-bottom: 0; }
 		}
 	}
 }
