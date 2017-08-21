@@ -102,70 +102,70 @@ msgstr ""
 msgid "Meta"
 msgstr ""
 
-#: includes/config.php:32, includes/config.php:192
+#: includes/config.php:33, includes/config.php:193
 msgid "Primary Menu"
 msgstr ""
 
-#: includes/config.php:33
+#: includes/config.php:34
 msgid "Top Menu (right)"
 msgstr ""
 
-#: includes/config.php:34
+#: includes/config.php:35
 msgid "Top Menu (left)"
 msgstr ""
 
-#: includes/config.php:35, includes/config.php:231
+#: includes/config.php:36, includes/config.php:232
 msgid "Social Menu"
 msgstr ""
 
-#: includes/config.php:36, includes/config.php:246
+#: includes/config.php:37, includes/config.php:247
 msgid "Footer Menu"
 msgstr ""
 
-#: includes/config.php:111, includes/config.php:120
+#: includes/config.php:112, includes/config.php:121
 msgid "Space for Footer Widgets"
 msgstr ""
 
-#: includes/config.php:112, includes/config.php:121
+#: includes/config.php:113, includes/config.php:122
 msgid "This is here to showcase some footer widgets. You can decide what to add and what to hide. Nam nostrum evertitur ad, ut pri nibh veniam, urbanitas definitionem eum ex."
 msgstr ""
 
-#: includes/config.php:129
+#: includes/config.php:130
 msgid "Contact us:"
 msgstr ""
 
-#: includes/config.php:140
+#: includes/config.php:141
 msgid "A Footer Call to Action"
 msgstr ""
 
-#: includes/config.php:141
+#: includes/config.php:142
 msgid "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede."
 msgstr ""
 
-#: includes/config.php:151
+#: includes/config.php:152
 msgid "LSX is a free WordPress theme"
 msgstr ""
 
-#: includes/config.php:168
+#: includes/config.php:169
 msgctxt "Theme starter content"
 msgid "Banner Example 01"
 msgstr ""
 
-#: includes/config.php:173
+#: includes/config.php:174
 msgctxt "Theme starter content"
 msgid "Banner Example 02"
 msgstr ""
 
-#: includes/config.php:178
+#: includes/config.php:179
 msgctxt "Theme starter content"
 msgid "Banner Example 03"
 msgstr ""
 
-#: includes/config.php:187
+#: includes/config.php:188
 msgid "LSX starter content example"
 msgstr ""
 
-#: includes/config.php:203
+#: includes/config.php:204
 msgid "Top Menu"
 msgstr ""
 

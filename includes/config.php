@@ -27,6 +27,7 @@ if ( ! function_exists( 'lsx_setup' ) ) :
 		add_image_size( 'lsx-thumbnail-wide',   350, 230, true );
 		add_image_size( 'lsx-thumbnail-square', 350, 350, true );
 		add_image_size( 'lsx-thumbnail-single', 750, 350, true );
+		add_image_size( 'lsx-banner', 1920, 600, true );
 
 		register_nav_menus( array(
 			'primary'       => esc_html__( 'Primary Menu', 'lsx' ),
