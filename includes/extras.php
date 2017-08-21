@@ -96,7 +96,11 @@ if ( ! function_exists( 'lsx_embed_wrap' ) ) :
 	 * @link http://www.readability.com/publishers/guidelines#publisher
 	 */
 	function lsx_embed_wrap( $cache, $url, $attr = '', $post_id = '' ) {
-		return '<div class="entry-content-asset">' . $cache . '</div>';
+		if ( false !== strpos( $cache, '<iframe' ) ) {
+			return '<div class="entry-content-asset">' . $cache . '</div>';
+		}
+
+		return $cache;
 	}
 
 endif;
