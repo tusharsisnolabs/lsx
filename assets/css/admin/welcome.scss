@@ -129,5 +129,17 @@
 
 			p:last-child { margin-bottom: 0; }
 		}
+
+		// Mailchimp
+
+		#mc_embed_signup {
+			font-size: 13px;
+
+			.mc-field-group {
+				padding-bottom: 0.5em;
+
+				&:last-child { padding-bottom: 1em; }
+			}
+		}
 	}
 }

@@ -70,7 +70,8 @@ if ( ! function_exists( 'lsx_welcome_style' ) ) :
 	 */
 	function lsx_welcome_style( $hook_suffix ) {
 		if ( 'appearance_page_lsx-welcome' === $hook_suffix ) {
-			wp_enqueue_style( 'lsx-welcome-screen', get_template_directory_uri() . '/assets/css/admin/welcome.css', array(), LSX_VERSION );
+			wp_enqueue_style( 'lsx-welcome-screen-mailchimp', '//cdn-images.mailchimp.com/embedcode/classic-10_7.css', array(), LSX_VERSION );
+			wp_enqueue_style( 'lsx-welcome-screen', get_template_directory_uri() . '/assets/css/admin/welcome.css', array( 'lsx-welcome-screen-mailchimp' ), LSX_VERSION );
 			wp_style_add_data( 'lsx-welcome-screen', 'rtl', 'replace' );
 		}
 	}

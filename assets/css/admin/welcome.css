@@ -339,4 +339,10 @@
 
 .appearance_page_lsx-welcome #wpbody .box-clean p:last-child { margin-bottom: 0; }
 
+.appearance_page_lsx-welcome #wpbody #mc_embed_signup { font-size: 13px; }
+
+.appearance_page_lsx-welcome #wpbody #mc_embed_signup .mc-field-group { padding-bottom: 0.5em; }
+
+.appearance_page_lsx-welcome #wpbody #mc_embed_signup .mc-field-group:last-child { padding-bottom: 1em; }
+
 /*# sourceMappingURL=maps/welcome.css.map */

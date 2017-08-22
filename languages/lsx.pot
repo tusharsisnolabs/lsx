@@ -480,30 +480,46 @@ msgid "Newsletter"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-footer.php:14
-msgid "Newsletter text..."
+msgid "Subscribe to our mailing list."
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:20
-msgid "Get support"
+#: includes/admin/welcome-screen/component-footer.php:21
+msgid "Email Address"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:26
-msgid "You'll find information on how to use and customize the LSX theme in our %1$sdocumentation%2$s section. However, please do %3$scontact us%4$s for support should you still find yourself unable to achieve your needs."
+#: includes/admin/welcome-screen/component-footer.php:25
+msgid "First Name"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:37
-msgid "Get in touch"
+#: includes/admin/welcome-screen/component-footer.php:29
+msgid "Last Name"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-footer.php:36
+msgid "Subscribe"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-footer.php:45
-msgid "Suggest a feature"
+msgid "Get support"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-footer.php:51
+msgid "You'll find information on how to use and customize the LSX theme in our %1$sdocumentation%2$s section. However, please do %3$scontact us%4$s for support should you still find yourself unable to achieve your needs."
+msgstr ""
+
+#: includes/admin/welcome-screen/component-footer.php:62
+msgid "Get in touch"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-footer.php:70
+msgid "Suggest a feature"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-footer.php:76
 msgid "If you'd like to suggest a feature for inclusion in upcoming releases of the LSX theme, please don't hesitate to %1$scontact us%2$s directly. We're always on the lookout for fresh ideas to help make LSX even better."
 msgstr ""
 
-#: includes/admin/welcome-screen/component-footer.php:60
+#: includes/admin/welcome-screen/component-footer.php:85
 msgid "Submit a request"
 msgstr ""
 
