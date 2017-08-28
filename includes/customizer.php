@@ -164,24 +164,12 @@ if ( ! function_exists( 'lsx_customizer_font_controls' ) ) :
 	 * @return $lsx_controls array()
 	 */
 	function lsx_customizer_font_controls( $lsx_controls ) {
-		global $wp_filesystem;
-
 		$data_fonts_file = get_template_directory() . '/assets/jsons/lsx-fonts.json';
+		$data_fonts = lsx_file_get_contents( $data_fonts_file );
+		$data_fonts = apply_filters( 'lsx_fonts_json', $data_fonts );
 
-		if ( file_exists( $data_fonts_file ) ) {
-			if ( empty( $wp_filesystem ) ) {
-				require_once( ABSPATH . 'wp-admin/includes/file.php' );
-				WP_Filesystem();
-			}
-
-			if ( $wp_filesystem ) {
-				$data_fonts = $wp_filesystem->get_contents( $data_fonts_file );
-				$data_fonts = apply_filters( 'lsx_fonts_json', $data_fonts );
-
-				$data_fonts = '{' . $data_fonts . '}';
-				$data_fonts = json_decode( $data_fonts, true );
-			}
-		}
+		$data_fonts = '{' . $data_fonts . '}';
+		$data_fonts = json_decode( $data_fonts, true );
 
 		$lsx_controls['sections']['lsx-font'] = array(
 			'title'       => esc_html__( 'Font', 'lsx' ),

@@ -209,11 +209,11 @@ msgstr ""
 msgid "Search Box in Header"
 msgstr ""
 
-#: includes/customizer.php:187
+#: includes/customizer.php:175
 msgid "Font"
 msgstr ""
 
-#: includes/customizer.php:188
+#: includes/customizer.php:176
 msgid "Change the fonts sitewide."
 msgstr ""
 

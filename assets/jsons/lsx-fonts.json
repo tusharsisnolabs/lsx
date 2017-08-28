@@ -15,13 +15,13 @@
 "raleway_open_sans": {
   "header": {
     "title": "Raleway",
-    "location": "Raleway:400,400i,700,700i",
+    "location": "Raleway:300,400,400i,700,700i",
     "cssDeclaration": "'Raleway', sans-serif",
     "cssClass": "wp-customizer-raleway"
   },
   "body": {
     "title": "Open Sans",
-    "location": "Open+Sans:400,400i,700,700i",
+    "location": "Open+Sans:300,400,400i,700,700i",
     "cssDeclaration": "'Open Sans', sans-serif",
     "cssClass": "wp-customizer-open-sans"
   }
@@ -29,7 +29,7 @@
 "noto_serif_noto_sans": {
   "header": {
     "title": "Noto Serif",
-    "location": "Noto+Serif:400,400i,700,700i",
+    "location": "Noto+Serif:300,400,400i,700,700i",
     "cssDeclaration": "'Noto Serif', serif",
     "cssClass": "wp-customizer-noto-serif"
   },
@@ -57,13 +57,13 @@
 "alegreya_open_sans": {
   "header": {
     "title": "Alegreya",
-    "location": "Alegreya:400,400i,700,700i",
+    "location": "Alegreya:300,400,400i,700,700i",
     "cssDeclaration": "'Alegreya', serif",
     "cssClass": "wp-customizer-alegreya"
   },
   "body": {
     "title": "Open Sans",
-    "location": "Open+Sans:400,400i,700,700i",
+    "location": "Open+Sans:300,400,400i,700,700i",
     "cssDeclaration": "'Open Sans', sans-serif",
     "cssClass": "wp-customizer-open-sans"
   }

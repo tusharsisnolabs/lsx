@@ -307,3 +307,34 @@ if ( ! function_exists( 'lsx_process_content_width' ) ) :
 endif;
 
 add_action( 'wp_head', 'lsx_process_content_width' );
+
+if ( ! function_exists( 'lsx_file_get_contents' ) ) :
+
+	/**
+	 * Get file contents.
+	 *
+	 * @package    lsx
+	 * @subpackage config
+	 */
+	function lsx_file_get_contents( $file ) {
+		if ( file_exists( $file ) ) {
+			global $wp_filesystem;
+
+			if ( empty( $wp_filesystem ) ) {
+				require_once( ABSPATH . 'wp-admin/includes/file.php' );
+				WP_Filesystem();
+			}
+
+			if ( $wp_filesystem ) {
+				$contents = $wp_filesystem->get_contents( $file );
+
+				if ( ! empty( $contents ) ) {
+					return $contents;
+				}
+			}
+		}
+
+		return '';
+	}
+
+endif;
