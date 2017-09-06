@@ -870,7 +870,7 @@ body { background-color: #F6F6F6; }
 
 .content-area, .widget-area { margin-bottom: 8.5rem; margin-top: 8.5rem; }
 
-.home .content-area, .siteorigin-panels .content-area, .home .widget-area, .siteorigin-panels .widget-area { margin-bottom: 0; margin-top: 0; }
+.home .content-area, .page.siteorigin-panels .content-area, .home .widget-area, .page.siteorigin-panels .widget-area { margin-bottom: 0; margin-top: 0; }
 
 .content-area { z-index: 4; }
 
