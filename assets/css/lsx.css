@@ -521,6 +521,8 @@ body { background-color: #F6F6F6; }
 
 .content-area a:not(.btn):hover, .content-area a:not(.btn):hover:active, .content-area a:not(.btn):focus, .widget-area a:not(.btn):hover, .widget-area a:not(.btn):hover:active, .widget-area a:not(.btn):focus, .modal-content a:not(.btn):hover, .modal-content a:not(.btn):hover:active, .modal-content a:not(.btn):focus { color: #F7AE00; }
 
+.content-area h1, .content-area h2, .content-area h3, .content-area h4, .content-area h5, .content-area h6, .content-area .widget-title, .content-area .lsx-title, .content-area #home-widgets h3, #home-widgets .content-area h3, .content-area #home-widgets .widget-title, #home-widgets .content-area .widget-title, .widget-area h1, .widget-area h2, .widget-area h3, .widget-area h4, .widget-area h5, .widget-area h6, .widget-area .widget-title, .widget-area .lsx-title, .widget-area #home-widgets h3, #home-widgets .widget-area h3, .widget-area #home-widgets .widget-title, #home-widgets .widget-area .widget-title, .modal-content h1, .modal-content h2, .modal-content h3, .modal-content h4, .modal-content h5, .modal-content h6, .modal-content .widget-title, .modal-content .lsx-title, .modal-content #home-widgets h3, #home-widgets .modal-content h3, .modal-content #home-widgets .widget-title, #home-widgets .modal-content .widget-title { color: #4A4A4A; }
+
 .content-area blockquote, .widget-area blockquote, .modal-content blockquote { border-color: #DADDDF; }
 
 .content-area blockquote:before, .widget-area blockquote:before, .modal-content blockquote:before { background-color: #F6F6F6; }

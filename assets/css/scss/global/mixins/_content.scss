@@ -65,6 +65,8 @@
 
 		a:not(.btn) { @include lsx-link-colour($link, $hover); }
 
+		h1, h2, h3, h4, h5, h6, .widget-title, .lsx-title { color: $header; }
+
 		blockquote {
 			border-color: $breaker;
 
