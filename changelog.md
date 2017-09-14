@@ -2,6 +2,7 @@
 
 ### 2.0.0
 * New totally awesome version!
+* Dev - Restricting the #searchform so it does not submit empty searches.
 
 ### 1.8.5
 * Fix - Footer widgets changed breakpoint

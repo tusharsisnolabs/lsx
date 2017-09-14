@@ -271,6 +271,27 @@ var lsx = Object.create( null );
 		} );
 	};
 
+    /**
+     * Search form effect (on mobile).
+     *
+     * @package    lsx
+     * @subpackage scripts
+     */
+    lsx.search_form_prevent_empty_submissions = function() {
+        $document.on( 'submit', '#searchform', function( e ) {
+            if ( '' === $( this ).find('input[name="s"]').val() ) {
+                e.preventDefault();
+            }
+        } );
+
+        $document.on( 'blur', 'header.navbar #searchform .search-field', function( e ) {
+            if ( windowWidth < 1200 ) {
+                var form = $( this ).closest( 'form' );
+                form.removeClass( 'hover' );
+            }
+        } );
+    };
+
 	/**
 	 * On window resize.
 	 *
@@ -317,6 +338,8 @@ var lsx = Object.create( null );
 		lsx.fix_lazyload_envira_gallery();
 
 		lsx.set_search_form_effect_mobile();
+        lsx.search_form_prevent_empty_submissions();
+
 		lsx.set_banner_effect_parallax();
 
 		/* LAST CODE TO EXECUTE */
