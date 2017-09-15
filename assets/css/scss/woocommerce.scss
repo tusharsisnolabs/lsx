@@ -3,7 +3,7 @@
 @import 'global/placeholders';
 
 /**
- * Structure
+ * Global
  */
 
 article.page {
@@ -11,6 +11,77 @@ article.page {
 		@include media ('>=tablet') { width: 100%; }
 		@include media ('>=desktop') { width: 100%; }
 	}
+}
+
+#main .woocommerce {
+	form.checkout_coupon,
+	form.login,
+	form.register {
+		border-color: $breaker;
+		border-radius: 0;
+	}
+}
+
+.form-row {
+	margin-bottom: 15px !important;
+	padding: 0 !important;
+}
+
+.woocommerce-LostPassword {
+	&:last-child { margin-bottom: 0; }
+}
+
+#main .woocommerce {
+	.woocommerce-Input { @extend %lsx-form-field; }
+
+	form {
+		.form-row {
+			label.inline {
+				&:not(:first-child) { margin-left: 15px; }
+			}
+		}
+	}
+
+	#respond input#submit,
+	a.button,
+	button.button,
+	input.button {
+		@include lsx-button-scaffolding();
+		@include lsx-button-colour();
+	}
+}
+
+// Bootstrap pattern
+.woocommerce-message,
+.woocommerce-error,
+.woocommerce-info {
+	border-radius: 4px;
+	border: 1px solid transparent;
+	margin-bottom: 20px;
+	padding: 15px !important;
+
+	&:before { display: none; }
+}
+
+// Bootstrap pattern (success)
+.woocommerce-message {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #3c763d;
+}
+
+// Bootstrap pattern (danger)
+.woocommerce-error {
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	color: #a94442;
+}
+
+// Bootstrap pattern (info)
+.woocommerce-info {
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	color: #31708f;
 }
 
 /**
@@ -101,22 +172,5 @@ article.page {
 			&.woocommerce-MyAccount-navigation-link--customer-logout a:before { content: "\f08b"; }
 			&.woocommerce-MyAccount-navigation-link--subscriptions a:before { content: "\f021"; }
 		}
-	}
-}
-
-.form-row {
-	margin-bottom: 15px !important;
-	padding: 0 !important;
-}
-
-#main .woocommerce {
-	.woocommerce-Input { @extend %lsx-form-field; }
-
-	#respond input#submit,
-	a.button,
-	button.button,
-	input.button {
-		@include lsx-button-scaffolding();
-		@include lsx-button-colour();
 	}
 }

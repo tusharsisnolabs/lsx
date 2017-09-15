@@ -2,10 +2,38 @@
 
 #main .woocommerce .woocommerce-Input:focus { box-shadow: none; }
 
-/** Structure */
+/** Global */
 @media (min-width: 992px) { .page-template-default.woocommerce-page article.page { width: 100%; } }
 
 @media (min-width: 1200px) { .page-template-default.woocommerce-page article.page { width: 100%; } }
+
+#main .woocommerce form.checkout_coupon, #main .woocommerce form.login, #main .woocommerce form.register { border-color: #DADDDF; border-radius: 0; }
+
+.form-row { margin-bottom: 15px !important; padding: 0 !important; }
+
+.woocommerce-LostPassword:last-child { margin-bottom: 0; }
+
+#main .woocommerce form .form-row label.inline:not(:first-child) { margin-left: 15px; }
+
+#main .woocommerce #respond input#submit, #main .woocommerce #respond input#submit:active, #main .woocommerce #respond input#submit:visited, #main .woocommerce a.button, #main .woocommerce a.button:active, #main .woocommerce a.button:visited, #main .woocommerce button.button, #main .woocommerce button.button:active, #main .woocommerce button.button:visited, #main .woocommerce input.button, #main .woocommerce input.button:active, #main .woocommerce input.button:visited { border: 0 none; border-radius: 3px; display: inline-block; font-size: 14px; font-weight: 700; height: 48px; left: 0; letter-spacing: 0.6px; line-height: 1.25; padding: 15px 40px; position: relative; text-transform: uppercase; top: 0; transition: all 100ms ease; }
+
+#main .woocommerce #respond input#submit > .fa, #main .woocommerce a.button > .fa, #main .woocommerce button.button > .fa, #main .woocommerce input.button > .fa { margin-left: 10px; }
+
+#main .woocommerce #respond input#submit, #main .woocommerce #respond input#submit:active, #main .woocommerce #respond input#submit:visited, #main .woocommerce a.button, #main .woocommerce a.button:active, #main .woocommerce a.button:visited, #main .woocommerce button.button, #main .woocommerce button.button:active, #main .woocommerce button.button:visited, #main .woocommerce input.button, #main .woocommerce input.button:active, #main .woocommerce input.button:visited { background-color: #418AD0; box-shadow: 2px 2px 0 0 #27639e; color: #FFF; }
+
+#main .woocommerce #respond input#submit:hover, #main .woocommerce #respond input#submit:hover:active, #main .woocommerce #respond input#submit:focus, #main .woocommerce a.button:hover, #main .woocommerce a.button:hover:active, #main .woocommerce a.button:focus, #main .woocommerce button.button:hover, #main .woocommerce button.button:hover:active, #main .woocommerce button.button:focus, #main .woocommerce input.button:hover, #main .woocommerce input.button:hover:active, #main .woocommerce input.button:focus { background-color: #367DC0; color: #FFF; }
+
+#main .woocommerce #respond input#submit:active, #main .woocommerce a.button:active, #main .woocommerce button.button:active, #main .woocommerce input.button:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
+
+.woocommerce-message, .woocommerce-error, .woocommerce-info { border-radius: 4px; border: 1px solid transparent; margin-bottom: 20px; padding: 15px !important; }
+
+.woocommerce-message:before, .woocommerce-error:before, .woocommerce-info:before { display: none; }
+
+.woocommerce-message { background-color: #dff0d8; border-color: #d6e9c6; color: #3c763d; }
+
+.woocommerce-error { background-color: #f2dede; border-color: #ebccd1; color: #a94442; }
+
+.woocommerce-info { background-color: #d9edf7; border-color: #bce8f1; color: #31708f; }
 
 /** My Account */
 #main .woocommerce .woocommerce-MyAccount-content legend { border-bottom: none; }
@@ -45,17 +73,5 @@
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--customer-logout a:before { content: "\f08b"; }
 
 .woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link--subscriptions a:before { content: "\f021"; }
-
-.form-row { margin-bottom: 15px !important; padding: 0 !important; }
-
-#main .woocommerce #respond input#submit, #main .woocommerce #respond input#submit:active, #main .woocommerce #respond input#submit:visited, #main .woocommerce a.button, #main .woocommerce a.button:active, #main .woocommerce a.button:visited, #main .woocommerce button.button, #main .woocommerce button.button:active, #main .woocommerce button.button:visited, #main .woocommerce input.button, #main .woocommerce input.button:active, #main .woocommerce input.button:visited { border: 0 none; border-radius: 3px; display: inline-block; font-size: 14px; font-weight: 700; height: 48px; left: 0; letter-spacing: 0.6px; line-height: 1.25; padding: 15px 40px; position: relative; text-transform: uppercase; top: 0; transition: all 100ms ease; }
-
-#main .woocommerce #respond input#submit > .fa, #main .woocommerce a.button > .fa, #main .woocommerce button.button > .fa, #main .woocommerce input.button > .fa { margin-left: 10px; }
-
-#main .woocommerce #respond input#submit, #main .woocommerce #respond input#submit:active, #main .woocommerce #respond input#submit:visited, #main .woocommerce a.button, #main .woocommerce a.button:active, #main .woocommerce a.button:visited, #main .woocommerce button.button, #main .woocommerce button.button:active, #main .woocommerce button.button:visited, #main .woocommerce input.button, #main .woocommerce input.button:active, #main .woocommerce input.button:visited { background-color: #418AD0; box-shadow: 2px 2px 0 0 #27639e; color: #FFF; }
-
-#main .woocommerce #respond input#submit:hover, #main .woocommerce #respond input#submit:hover:active, #main .woocommerce #respond input#submit:focus, #main .woocommerce a.button:hover, #main .woocommerce a.button:hover:active, #main .woocommerce a.button:focus, #main .woocommerce button.button:hover, #main .woocommerce button.button:hover:active, #main .woocommerce button.button:focus, #main .woocommerce input.button:hover, #main .woocommerce input.button:hover:active, #main .woocommerce input.button:focus { background-color: #367DC0; color: #FFF; }
-
-#main .woocommerce #respond input#submit:active, #main .woocommerce a.button:active, #main .woocommerce button.button:active, #main .woocommerce input.button:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
 /*# sourceMappingURL=maps/woocommerce.css.map */
