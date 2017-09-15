@@ -3,9 +3,9 @@
 #main .woocommerce .woocommerce-Input:focus { box-shadow: none; }
 
 /** Global */
-@media (min-width: 992px) { .page-template-default.woocommerce-page article.page { width: 100%; } }
+@media (min-width: 992px) { article.page .woocommerce-page { width: 100%; } }
 
-@media (min-width: 1200px) { .page-template-default.woocommerce-page article.page { width: 100%; } }
+@media (min-width: 1200px) { article.page .woocommerce-page { width: 100%; } }
 
 .form-row { margin-bottom: 15px !important; padding: 0 !important; }
 
