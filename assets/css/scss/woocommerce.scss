@@ -1,0 +1,122 @@
+@import 'global/variables';
+@import 'global/mixins';
+@import 'global/placeholders';
+
+/**
+ * Structure
+ */
+
+article.page {
+	.page-template-default.woocommerce-page & {
+		@include media ('>=tablet') { width: 100%; }
+		@include media ('>=desktop') { width: 100%; }
+	}
+}
+
+/**
+ * My Account
+ */
+
+#main .woocommerce {
+	.woocommerce-MyAccount-content {
+		legend { border-bottom: none; }
+
+		.woocommerce-form-row {
+			margin-bottom: 1.41575em;
+		}
+
+		@include media ('>=phone') {
+			width: 76.4705882353%;
+
+			.form-row-first {
+				float: left;
+				margin-right: 7.6923076923%;
+				width: 38.4615384615%;
+			}
+
+			.form-row-last {
+				float: right;
+				width: 53.8461538462%;
+			}
+		}
+	}
+}
+
+#main .woocommerce {
+	.woocommerce-MyAccount-navigation {
+		@include media ('>=phone') {
+			margin-right: 5.8823529412%;
+			width: 17.6470588235%;
+		}
+
+		ul {
+			border-top: 1px solid $breaker;
+			margin-left: 0;
+			padding: 0;
+
+			li {
+				border-bottom: 1px solid $breaker;
+				list-style: none;
+				position: relative;
+
+				a {
+					display: block;
+					padding: .875em 0;
+				}
+			}
+		}
+	}
+}
+
+.woocommerce-MyAccount-navigation {
+	ul {
+		li {
+			&.is-active {
+				a:before { opacity: 1; }
+			}
+
+			a {
+				&:before {
+					@include fa-icon();
+					content: "\f0f6";
+					line-height: 1.618;
+					margin-left: 0.5407911001em;
+					width: 1.41575em;
+					text-align: right;
+					float: right;
+					opacity: .25;
+				}
+
+				&:hover {
+					&:before { opacity: 1; }
+				}
+			}
+
+			&.woocommerce-MyAccount-navigation-link--dashboard a:before { content: "\f0e4"; }
+			&.woocommerce-MyAccount-navigation-link--orders a:before { content: "\f291"; }
+			&.woocommerce-MyAccount-navigation-link--downloads a:before { content: "\f1c6"; }
+			&.woocommerce-MyAccount-navigation-link--edit-address a:before { content: "\f015"; }
+			&.woocommerce-MyAccount-navigation-link--payment-methods a:before { content: "\f09d"; }
+			&.woocommerce-MyAccount-navigation-link--edit-account a:before { content: "\f007"; }
+			&.woocommerce-MyAccount-navigation-link--customer-logout a:before { content: "\f08b"; }
+			&.woocommerce-MyAccount-navigation-link--subscriptions a:before { content: "\f021"; }
+		}
+	}
+}
+
+.form-row {
+	margin-bottom: 15px !important;
+	padding: 0 !important;
+}
+
+#main .woocommerce {
+	.woocommerce-Input { @extend %lsx-form-field; }
+
+	#respond input#submit,
+	a.button,
+	button.button,
+	input.button {
+		@include lsx-button-scaffolding();
+		@include lsx-button-colour();
+	}
+}

@@ -29,3 +29,7 @@ require get_template_directory() . '/includes/classes/class-lsx-lazy-load-images
 require get_template_directory() . '/includes/template-tags.php';
 require get_template_directory() . '/includes/extras.php';
 require get_template_directory() . '/includes/welcome.php';
+
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/includes/woocommerce.php';
+}
