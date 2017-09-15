@@ -48,28 +48,26 @@ article.page {
 		@include lsx-button-colour();
 	}
 
-	.woocommerce-Addresses {
-		header.title {
-			a {
-				display: block;
-				width: 1em;
-				height: 1em;
-				text-indent: -9999px;
-				position: relative;
-				padding: 10px;
+	.woocommerce-Address-title {
+		a {
+			display: block;
+			width: 1em;
+			height: 1em;
+			text-indent: -9999px;
+			position: relative;
+			padding: 10px;
 
-				&:before {
-					@include fa-icon();
-					content: "\f044";
-					line-height: 1.618;
-					position: absolute;
-					top: 2px;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					text-align: center;
-					text-indent: 0;
-				}
+			&:before {
+				@include fa-icon();
+				content: "\f044";
+				line-height: 1.618;
+				position: absolute;
+				top: 2px;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				text-align: center;
+				text-indent: 0;
 			}
 		}
 	}
