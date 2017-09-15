@@ -7,11 +7,11 @@
 
 @media (min-width: 1200px) { .page-template-default.woocommerce-page article.page { width: 100%; } }
 
-#main .woocommerce form.checkout_coupon, #main .woocommerce form.login, #main .woocommerce form.register { border-color: #DADDDF; border-radius: 0; }
-
 .form-row { margin-bottom: 15px !important; padding: 0 !important; }
 
 .woocommerce-LostPassword:last-child { margin-bottom: 0; }
+
+#main .woocommerce form.checkout_coupon, #main .woocommerce form.login, #main .woocommerce form.register { border-color: #DADDDF; border-radius: 0; }
 
 #main .woocommerce form .form-row label.inline:not(:first-child) { margin-right: 15px; }
 
@@ -24,6 +24,10 @@
 #main .woocommerce #respond input#submit:hover, #main .woocommerce #respond input#submit:hover:active, #main .woocommerce #respond input#submit:focus, #main .woocommerce a.button:hover, #main .woocommerce a.button:hover:active, #main .woocommerce a.button:focus, #main .woocommerce button.button:hover, #main .woocommerce button.button:hover:active, #main .woocommerce button.button:focus, #main .woocommerce input.button:hover, #main .woocommerce input.button:hover:active, #main .woocommerce input.button:focus { background-color: #367DC0; color: #FFF; }
 
 #main .woocommerce #respond input#submit:active, #main .woocommerce a.button:active, #main .woocommerce button.button:active, #main .woocommerce input.button:active { right: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
+
+#main .woocommerce .addresses header.title a { display: block; width: 1em; height: 1em; text-indent: -9999px; position: relative; padding: 10px; }
+
+#main .woocommerce .addresses header.title a:before { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; content: "\f044"; line-height: 1.618; position: absolute; top: 2px; right: 0; height: 100%; width: 100%; text-align: center; text-indent: 0; }
 
 .woocommerce-message, .woocommerce-error, .woocommerce-info { border-radius: 4px; border: 1px solid transparent; margin-bottom: 20px; padding: 15px !important; }
 

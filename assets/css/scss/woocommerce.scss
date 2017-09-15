@@ -13,15 +13,6 @@ article.page {
 	}
 }
 
-#main .woocommerce {
-	form.checkout_coupon,
-	form.login,
-	form.register {
-		border-color: $breaker;
-		border-radius: 0;
-	}
-}
-
 .form-row {
 	margin-bottom: 15px !important;
 	padding: 0 !important;
@@ -32,6 +23,13 @@ article.page {
 }
 
 #main .woocommerce {
+	form.checkout_coupon,
+	form.login,
+	form.register {
+		border-color: $breaker;
+		border-radius: 0;
+	}
+
 	.woocommerce-Input { @extend %lsx-form-field; }
 
 	form {
@@ -48,6 +46,32 @@ article.page {
 	input.button {
 		@include lsx-button-scaffolding();
 		@include lsx-button-colour();
+	}
+
+	.addresses {
+		header.title {
+			a {
+				display: block;
+				width: 1em;
+				height: 1em;
+				text-indent: -9999px;
+				position: relative;
+				padding: 10px;
+
+				&:before {
+					@include fa-icon();
+					content: "\f044";
+					line-height: 1.618;
+					position: absolute;
+					top: 2px;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					text-align: center;
+					text-indent: 0;
+				}
+			}
+		}
 	}
 }
 
@@ -111,9 +135,7 @@ article.page {
 			}
 		}
 	}
-}
 
-#main .woocommerce {
 	.woocommerce-MyAccount-navigation {
 		@include media ('>=phone') {
 			margin-right: 5.8823529412%;
