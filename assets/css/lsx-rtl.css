@@ -629,7 +629,13 @@ body { background-color: #F6F6F6; }
 
 .woocommerce-page #main #woochimp_checkout_groups .label { color: #4A4A4A; }
 
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active { background: #F6F6F6; border-bottom-color: #F6F6F6; }
+.woocommerce div.product .woocommerce-tabs .nav-tabs > li > a { background-color: #FFF; }
+
+.woocommerce div.product .woocommerce-tabs .nav-tabs > li > a:hover { background-color: #FFF; }
+
+.woocommerce div.product .woocommerce-tabs .nav-tabs > li.active > a { background-color: #418AD0; color: #FFF; }
+
+.woocommerce div.product .woocommerce-tabs .nav-tabs > li.active > a:after { border-color: transparent transparent #F6F6F6 transparent; }
 
 .woocommerce div.product .woocommerce-tabs .panel { background: #F6F6F6; }
 

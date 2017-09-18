@@ -47,6 +47,69 @@
 	color: #31708f;
 }
 
+%lsx-tabs {
+	&:before,
+	&:after {
+		display: none;
+	}
+
+	align-items: stretch;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	border-bottom: 0 none;
+	margin: 0 0 4.25rem 0;
+	padding-left: 0;
+
+	@include media('>=phone') { flex-flow: row nowrap; }
+
+	@include media('>=tablet') { max-width: 70%; }
+
+	& > li {
+		margin-bottom: 0;
+		width: 100%;
+
+		@include media('>=phone') { max-width: 350px; }
+
+		& + li {
+			@include media('>=phone') { margin-left: 5px; }
+		}
+
+		& > a {
+			border: 0 none;
+			border-radius: 0;
+			font-size: 16px;
+			margin: 0;
+			padding: 1rem 0;
+			text-align: center;
+			transition: all 300ms ease;
+
+			@include media('>=tablet') { font-size: 22px; }
+		}
+
+		&.active > a {
+			border: 0 none;
+			position: relative;
+
+			&:after {
+				@include media('>=phone') {
+					content: '';
+					border-style: solid;
+					border-width: 0 6px 6px 6px;
+					bottom: 0;
+					height: 0;
+					left: 50%;
+					position: absolute;
+					transform: translateX(-50%);
+					width: 0;
+
+					@include media('>=tablet') { border-width: 0 9px 9px 9px; }
+				}
+			}
+		}
+	}
+}
+
 // Structure
 
 article.page {
@@ -90,6 +153,8 @@ article.page {
 .woocommerce {
 	div.product {
 		.woocommerce-tabs {
+			.nav-tabs { @extend %lsx-tabs; }
+
 			.panel { padding-bottom: 2em; }
 
 			#comments { margin-top: 0; }

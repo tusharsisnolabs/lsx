@@ -14,6 +14,30 @@
 
 .woocommerce-info, .woocommerce_info { background-color: #d9edf7; border-color: #bce8f1; color: #31708f; }
 
+.woocommerce div.product .woocommerce-tabs .nav-tabs { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row wrap; flex-flow: row wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; border-bottom: 0 none; margin: 0 0 4.25rem 0; padding-left: 0; }
+
+.woocommerce div.product .woocommerce-tabs .nav-tabs:before, .woocommerce div.product .woocommerce-tabs .nav-tabs:after { display: none; }
+
+@media (min-width: 768px) { .woocommerce div.product .woocommerce-tabs .nav-tabs { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; } }
+
+@media (min-width: 992px) { .woocommerce div.product .woocommerce-tabs .nav-tabs { max-width: 70%; } }
+
+.woocommerce div.product .woocommerce-tabs .nav-tabs > li { margin-bottom: 0; width: 100%; }
+
+@media (min-width: 768px) { .woocommerce div.product .woocommerce-tabs .nav-tabs > li { max-width: 350px; } }
+
+@media (min-width: 768px) { .woocommerce div.product .woocommerce-tabs .nav-tabs > li + li { margin-left: 5px; } }
+
+.woocommerce div.product .woocommerce-tabs .nav-tabs > li > a { border: 0 none; border-radius: 0; font-size: 16px; margin: 0; padding: 1rem 0; text-align: center; transition: all 300ms ease; }
+
+@media (min-width: 992px) { .woocommerce div.product .woocommerce-tabs .nav-tabs > li > a { font-size: 22px; } }
+
+.woocommerce div.product .woocommerce-tabs .nav-tabs > li.active > a { border: 0 none; position: relative; }
+
+@media (min-width: 768px) { .woocommerce div.product .woocommerce-tabs .nav-tabs > li.active > a:after { content: ''; border-style: solid; border-width: 0 6px 6px 6px; bottom: 0; height: 0; left: 50%; position: absolute; -webkit-transform: translateX(-50%); transform: translateX(-50%); width: 0; } }
+
+@media (min-width: 768px) and (min-width: 992px) { .woocommerce div.product .woocommerce-tabs .nav-tabs > li.active > a:after { border-width: 0 9px 9px 9px; } }
+
 .page-template-default:not(.has-sidebar).woocommerce-page article.page, .page-template-default:not(.has-sidebar).lost-api-key article.page { width: 100% !important; }
 
 .archive:not(.has-sidebar).woocommerce-page .site-main { width: 100% !important; }

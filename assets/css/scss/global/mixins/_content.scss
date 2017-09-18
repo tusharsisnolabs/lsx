@@ -274,10 +274,20 @@
 	.woocommerce {
 		div.product {
 			.woocommerce-tabs {
-				ul.tabs {
-					li.active {
-						background: $bg;
-						border-bottom-color: $bg;
+				.nav-tabs {
+					& > li {
+						& > a {
+							background-color: #FFF;
+
+							&:hover { background-color: #FFF; }
+						}
+
+						&.active > a {
+							background-color: $link;
+							color: #FFF;
+
+							&:after { border-color: transparent transparent $bg transparent; }
+						}
 					}
 				}
 
@@ -293,4 +303,6 @@
 			}
 		}
 	}
+
+
 }
