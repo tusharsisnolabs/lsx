@@ -85,6 +85,27 @@ article.page {
 	.woocommerce-tabs & { margin-top: 0; }
 }
 
+.product_meta {
+	.product & {
+		& > span { display: block; }
+	}
+}
+
+#respond {
+	.product & {
+		text-align: left;
+
+		& > .comment-form {
+			& > p {
+				label,
+				span { display: inline-block; }
+			}
+
+			input[type="submit"] { width: auto; }
+		}
+	}
+}
+
 // Buttons and fields
 
 #wc_am_lost_api_key_form {
@@ -123,6 +144,15 @@ article.page {
 	form {
 		.form-row {
 			input.input-text,
+			textarea {
+				@extend %bootstrap-form-control;
+				@extend %lsx-form-field;
+			}
+		}
+
+		&.comment-form {
+			input[type="text"],
+			input[type="email"],
 			textarea {
 				@extend %bootstrap-form-control;
 				@extend %lsx-form-field;
