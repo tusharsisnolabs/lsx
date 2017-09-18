@@ -52,6 +52,8 @@
 
 .woocommerce div.product .woocommerce-tabs #comments { margin-top: 0; }
 
+.woocommerce div.product .woocommerce-tabs p:last-child { margin-bottom: 0; }
+
 .woocommerce div.product form.cart .variations td.label { display: inline-block; font-weight: 400; font-size: 100%; padding: 11px 0; }
 
 .woocommerce div.product form.cart .variations td.label label { font-weight: 400; }
