@@ -76,6 +76,12 @@ article.page {
 		ul.products {
 			li.product {
 				@include media ('<phone') { width: 100%; }
+
+				.woocommerce-loop-category__title,
+				.woocommerce-loop-product__title,
+				h3 {
+					font-size: 22px;
+				}
 			}
 		}
 	}
