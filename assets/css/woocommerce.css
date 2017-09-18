@@ -48,7 +48,7 @@
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3, .woocommerce[class*=columns-] ul.products li.product .woocommerce-loop-category__title, .woocommerce[class*=columns-] ul.products li.product .woocommerce-loop-product__title, .woocommerce[class*=columns-] ul.products li.product h3, .woocommerce-page ul.products li.product .woocommerce-loop-category__title, .woocommerce-page ul.products li.product .woocommerce-loop-product__title, .woocommerce-page ul.products li.product h3, .woocommerce-page[class*=columns-] ul.products li.product .woocommerce-loop-category__title, .woocommerce-page[class*=columns-] ul.products li.product .woocommerce-loop-product__title, .woocommerce-page[class*=columns-] ul.products li.product h3 { font-size: 22px; }
 
-.woocommerce div.product .woocommerce-tabs .panel { padding-bottom: 2em; }
+.woocommerce div.product .woocommerce-tabs .panel { padding: 2em; }
 
 .woocommerce div.product .woocommerce-tabs #comments { margin-top: 0; }
 

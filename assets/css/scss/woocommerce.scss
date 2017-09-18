@@ -156,7 +156,7 @@ article.page {
 		.woocommerce-tabs {
 			.nav-tabs { @extend %lsx-tabs; }
 
-			.panel { padding-bottom: 2em; }
+			.panel { padding: 2em; }
 
 			#comments { margin-top: 0; }
 		}

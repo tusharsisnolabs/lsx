@@ -637,7 +637,7 @@ body { background-color: #F6F6F6; }
 
 .woocommerce div.product .woocommerce-tabs .nav-tabs > li.active > a:after { border-color: transparent transparent #F6F6F6 transparent; }
 
-.woocommerce div.product .woocommerce-tabs .panel { background: #F6F6F6; }
+.woocommerce div.product .woocommerce-tabs .panel { background: #FFF; }
 
 .woocommerce div.product form.cart .variations td.label label { color: #4A4A4A; }
 
