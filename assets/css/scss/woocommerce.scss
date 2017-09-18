@@ -63,8 +63,6 @@
 
 	@include media('>=phone') { flex-flow: row nowrap; }
 
-	// @include media('>=tablet') { max-width: 70%; }
-
 	& > li {
 		margin-bottom: 0;
 		width: 100%;
