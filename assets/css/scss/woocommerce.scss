@@ -112,7 +112,10 @@ article.page {
 
 .product_meta {
 	.product & {
-		& > span { display: block; }
+		& > span {
+			display: block;
+			padding: 5px 0;
+		}
 	}
 }
 
