@@ -156,7 +156,12 @@ article.page {
 		.woocommerce-tabs {
 			.nav-tabs { @extend %lsx-tabs; }
 
-			.panel { padding: 2em; }
+			.panel {
+				border: none;
+				border-radius: none;
+				box-shadow: none;
+				padding: 2em;
+			}
 
 			#comments { margin-top: 0; }
 		}
