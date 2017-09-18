@@ -24,7 +24,9 @@
 
 @media (max-width: 767px) { .woocommerce ul.products li.product, .woocommerce[class*=columns-] ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce-page[class*=columns-] ul.products li.product { width: 100%; } }
 
-.woocommerce-tabs #comments { margin-top: 0; }
+.woocommerce div.product .woocommerce-tabs .panel { padding-bottom: 2em; }
+
+.woocommerce div.product .woocommerce-tabs #comments { margin-top: 0; }
 
 .product .product_meta > span { display: block; }
 

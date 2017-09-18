@@ -81,8 +81,14 @@ article.page {
 	}
 }
 
-#comments {
-	.woocommerce-tabs & { margin-top: 0; }
+.woocommerce {
+	div.product {
+		.woocommerce-tabs {
+			.panel { padding-bottom: 2em; }
+
+			#comments { margin-top: 0; }
+		}
+	}
 }
 
 .product_meta {
