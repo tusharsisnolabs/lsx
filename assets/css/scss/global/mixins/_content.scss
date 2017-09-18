@@ -283,6 +283,14 @@
 
 				.panel { background: $bg; }
 			}
+
+			form.cart {
+				.variations {
+					td.label {
+						label { color: $color; }
+					}
+				}
+			}
 		}
 	}
 }

@@ -88,6 +88,19 @@ article.page {
 
 			#comments { margin-top: 0; }
 		}
+
+		form.cart {
+			.variations {
+				td.label {
+					display: inline-block;
+					font-weight: 400;
+					font-size: 100%;
+					padding: 11px 0;
+
+					label { font-weight: 400; }
+				}
+			}
+		}
 	}
 }
 
@@ -162,6 +175,17 @@ article.page {
 			textarea {
 				@extend %bootstrap-form-control;
 				@extend %lsx-form-field;
+			}
+		}
+	}
+
+	div.product {
+		form.cart {
+			.variations {
+				select {
+					@extend %bootstrap-form-control;
+					@extend %lsx-form-field;
+				}
 			}
 		}
 	}

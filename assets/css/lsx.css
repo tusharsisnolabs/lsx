@@ -633,6 +633,8 @@ body { background-color: #F6F6F6; }
 
 .woocommerce div.product .woocommerce-tabs .panel { background: #F6F6F6; }
 
+.woocommerce div.product form.cart .variations td.label label { color: #4A4A4A; }
+
 .lsx-pagination-wrapper { display: block; margin-top: 8.5rem; position: relative; text-align: center; }
 
 .lsx-pagination > .page-numbers, .lsx-pagination > .page-numbers.prev:before, .lsx-pagination > .page-numbers.next:before { border-radius: 3px; border-style: solid; border-width: 2px; display: inline-block; height: 40px; line-height: 36px; text-align: center; vertical-align: top; width: 40px; }
