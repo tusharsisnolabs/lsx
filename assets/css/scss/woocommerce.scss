@@ -81,6 +81,10 @@ article.page {
 	}
 }
 
+#comments {
+	.woocommerce-tabs & { margin-top: 0; }
+}
+
 // Buttons and fields
 
 #wc_am_lost_api_key_form {
@@ -113,6 +117,12 @@ article.page {
 			}
 		}
 	}
+}
+
+// LSX Sharing
+
+.lsx-sharing-content {
+	.product & { margin-top: 2em; }
 }
 
 // WooCommerce wraper

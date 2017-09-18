@@ -262,4 +262,27 @@
 			&:hover { background-color: $link; }
 		}
 	}
+
+	// WooCommerce
+
+	.woocommerce-page #main {
+		#woochimp_checkout_groups {
+			.label { color: $color; }
+		}
+	}
+
+	.woocommerce {
+		div.product {
+			.woocommerce-tabs {
+				ul.tabs {
+					li.active {
+						background: $bg;
+						border-bottom-color: $bg;
+					}
+				}
+
+				.panel { background: $bg; }
+			}
+		}
+	}
 }

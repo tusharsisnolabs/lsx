@@ -76,6 +76,24 @@
 			@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
 		}
 	}
+
+	// WooCommerce
+
+	#wc_am_lost_api_key_form {
+		input[type="submit"] {
+			@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
+		}
+	}
+
+	.woocommerce-page #main {
+	.woocommerce-ordering select,
+		#respond input#submit,
+		a.button,
+		button.button,
+		input.button {
+			@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
+		}
+	}
 }
 
 @mixin custom-cta-buttons-colours ($color: map-get($cta-buttons, color), $color-hover: map-get($cta-buttons, color-hover), $bg: map-get($cta-buttons, bg), $bg-hover: map-get($cta-buttons, bg-hover), $shadow: map-get($cta-buttons, shadow)) {

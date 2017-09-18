@@ -140,6 +140,18 @@ p:empty { display: none; }
 
 #footer-cta input[type="submit"]:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
+#wc_am_lost_api_key_form input[type="submit"], #wc_am_lost_api_key_form input[type="submit"]:active, #wc_am_lost_api_key_form input[type="submit"]:visited { background-color: #418AD0; box-shadow: 2px 2px 0 0 #27639e; color: #FFF; }
+
+#wc_am_lost_api_key_form input[type="submit"]:hover, #wc_am_lost_api_key_form input[type="submit"]:hover:active, #wc_am_lost_api_key_form input[type="submit"]:focus { background-color: #367DC0; color: #FFF; }
+
+#wc_am_lost_api_key_form input[type="submit"]:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
+
+.woocommerce-page #main .woocommerce-ordering select, .woocommerce-page #main .woocommerce-ordering select:active, .woocommerce-page #main .woocommerce-ordering select:visited, .woocommerce-page #main #respond input#submit, .woocommerce-page #main #respond input#submit:active, .woocommerce-page #main #respond input#submit:visited, .woocommerce-page #main a.button, .woocommerce-page #main a.button:active, .woocommerce-page #main a.button:visited, .woocommerce-page #main button.button, .woocommerce-page #main button.button:active, .woocommerce-page #main button.button:visited, .woocommerce-page #main input.button, .woocommerce-page #main input.button:active, .woocommerce-page #main input.button:visited { background-color: #418AD0; box-shadow: 2px 2px 0 0 #27639e; color: #FFF; }
+
+.woocommerce-page #main .woocommerce-ordering select:hover, .woocommerce-page #main .woocommerce-ordering select:hover:active, .woocommerce-page #main .woocommerce-ordering select:focus, .woocommerce-page #main #respond input#submit:hover, .woocommerce-page #main #respond input#submit:hover:active, .woocommerce-page #main #respond input#submit:focus, .woocommerce-page #main a.button:hover, .woocommerce-page #main a.button:hover:active, .woocommerce-page #main a.button:focus, .woocommerce-page #main button.button:hover, .woocommerce-page #main button.button:hover:active, .woocommerce-page #main button.button:focus, .woocommerce-page #main input.button:hover, .woocommerce-page #main input.button:hover:active, .woocommerce-page #main input.button:focus { background-color: #367DC0; color: #FFF; }
+
+.woocommerce-page #main .woocommerce-ordering select:active, .woocommerce-page #main #respond input#submit:active, .woocommerce-page #main a.button:active, .woocommerce-page #main button.button:active, .woocommerce-page #main input.button:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
+
 .cta-btn, .cta-btn:active, .cta-btn:visited { background-color: #F7AE00; box-shadow: 2px 2px 0 0 #ab7800; color: #FFF; }
 
 .cta-btn:hover, .cta-btn:hover:active, .cta-btn:focus { background-color: #EDA700; color: #FFF; }
@@ -614,6 +626,12 @@ body { background-color: #F6F6F6; }
 .modal .close { background-color: #418AD0; border-color: #FFF; box-shadow: 0 0 4px 0 #418AD0; color: #FFF; }
 
 .modal .close:hover { background-color: #418AD0; }
+
+.woocommerce-page #main #woochimp_checkout_groups .label { color: #4A4A4A; }
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active { background: #F6F6F6; border-bottom-color: #F6F6F6; }
+
+.woocommerce div.product .woocommerce-tabs .panel { background: #F6F6F6; }
 
 .lsx-pagination-wrapper { display: block; margin-top: 8.5rem; position: relative; text-align: center; }
 
