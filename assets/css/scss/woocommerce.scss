@@ -119,6 +119,18 @@ article.page {
 	}
 }
 
+.woocommerce {
+	form {
+		.form-row {
+			input.input-text,
+			textarea {
+				@extend %bootstrap-form-control;
+				@extend %lsx-form-field;
+			}
+		}
+	}
+}
+
 // LSX Sharing
 
 .lsx-sharing-content {
