@@ -161,11 +161,11 @@ article.page {
 				border-radius: none;
 				box-shadow: none;
 				padding: 2em;
+
+				& > *:last-child { margin-bottom: 0; }
 			}
 
 			#comments { margin-top: 0; }
-
-			p:last-child { margin-bottom: 0; }
 		}
 
 		form.cart {
