@@ -69,6 +69,18 @@ article.page {
 	&:last-child { margin-bottom: 0; }
 }
 
+.woocommerce,
+.woocommerce-page {
+	&,
+	&[class*=columns-] {
+		ul.products {
+			li.product {
+				@include media ('<phone') { width: 100%; }
+			}
+		}
+	}
+}
+
 // Buttons and fields
 
 #wc_am_lost_api_key_form {
@@ -94,7 +106,9 @@ article.page {
 				.input-text {
 					@extend %bootstrap-form-control;
 					@extend %lsx-form-field;
-					width: 100px;
+					width: 120px;
+
+					@include media ('<phone') { width: 100%; }
 				}
 			}
 		}
@@ -158,6 +172,14 @@ article.page {
 	input.button {
 		@include lsx-button-scaffolding();
 		@include lsx-button-colour();
+	}
+
+	.coupon input.button {
+		@include media ('<phone') {
+			float: left;
+			margin-top: 7px;
+			width: 100%;
+		}
 	}
 
 	// Edit address link
