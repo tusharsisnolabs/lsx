@@ -40,7 +40,7 @@
 		.single-post & { min-height: 46vh; }
 
 		@include media('>=tablet') {
-			height: 0;
+			height: auto;
 			min-height: 25rem;
 
 			.single-post & { min-height: 39rem; }
@@ -51,7 +51,7 @@
 		html:not(.ie) .page-has-banner-full & {
 			@include media (">=tablet") {
 				flex: 1;
-				height: auto;
+				// height: auto;
 				min-height: auto;
 			}
 		}
