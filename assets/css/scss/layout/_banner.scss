@@ -40,18 +40,26 @@
 		.single-post & { min-height: 46vh; }
 
 		@include media('>=tablet') {
-			height: 25rem;
-			min-height: auto;
+			min-height: 25rem;
 
-			.single-post & {
-				height: 39rem;
-				min-height: auto;
-			}
+			.single-post & { min-height: 39rem; }
 
-			.home & {
-				height: 58rem;
-				min-height: auto;
-			}
+			.home & { min-height: 58rem; }
+
+			// html.ie & {
+			// 	height: 25rem;
+			// 	min-height: auto;
+
+			// 	.single-post & {
+			// 		height: 39rem;
+			// 		min-height: auto;
+			// 	}
+
+			// 	.home & {
+			// 		height: 58rem;
+			// 		min-height: auto;
+			// 	}
+			// }
 		}
 
 		html:not(.ie) .page-has-banner-full & {
