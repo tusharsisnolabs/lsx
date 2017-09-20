@@ -55,7 +55,7 @@
 
 	align-items: stretch;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column wrap;
 	justify-content: flex-start;
 	border-bottom: 0 none;
 	margin: 0 0 4.25rem 0;
@@ -67,7 +67,10 @@
 		margin-bottom: 0;
 		width: 100%;
 
-		@include media('>=phone') { max-width: 350px; }
+		@include media('>=phone') {
+			flex: 1;
+			max-width: 350px;
+		}
 
 		& + li {
 			@include media('>=phone') { margin-left: 5px; }
