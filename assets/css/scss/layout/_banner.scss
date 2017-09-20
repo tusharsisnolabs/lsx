@@ -40,26 +40,12 @@
 		.single-post & { min-height: 46vh; }
 
 		@include media('>=tablet') {
+			height: 0;
 			min-height: 25rem;
-
-			html.ie .page-has-banner-full & {
-				height: 25rem;
-				min-height: auto;
-			}
 
 			.single-post & { min-height: 39rem; }
 
-			html.ie .single-post.page-has-banner-full & {
-				height: 39rem;
-				min-height: auto;
-			}
-
 			.home & { min-height: 58rem; }
-
-			html.ie .home.page-has-banner-full & {
-				height: 58rem;
-				min-height: auto;
-			}
 		}
 
 		html:not(.ie) .page-has-banner-full & {
