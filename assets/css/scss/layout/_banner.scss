@@ -42,23 +42,23 @@
 		@include media('>=tablet') {
 			min-height: 25rem;
 
+			html.ie .page-has-banner-full & {
+				height: 25rem;
+				min-height: auto;
+			}
+
 			.single-post & { min-height: 39rem; }
+
+			html.ie .single-post.page-has-banner-full & {
+				height: 39rem;
+				min-height: auto;
+			}
 
 			.home & { min-height: 58rem; }
 
-			html.ie & {
-				height: 25rem;
+			html.ie .home.page-has-banner-full & {
+				height: 58rem;
 				min-height: auto;
-
-				.single-post & {
-					height: 39rem;
-					min-height: auto;
-				}
-
-				.home & {
-					height: 58rem;
-					min-height: auto;
-				}
 			}
 		}
 

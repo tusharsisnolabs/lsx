@@ -438,11 +438,11 @@ p:empty { display: none; }
 .single-post .page-banner-wrap .page-banner { min-height: 46vh; }
 
 @media (min-width: 992px) { .page-banner-wrap .page-banner { min-height: 25rem; }
+  html.ie .page-has-banner-full .page-banner-wrap .page-banner { height: 25rem; min-height: auto; }
   .single-post .page-banner-wrap .page-banner { min-height: 39rem; }
+  html.ie .single-post.page-has-banner-full .page-banner-wrap .page-banner { height: 39rem; min-height: auto; }
   .home .page-banner-wrap .page-banner { min-height: 58rem; }
-  html.ie .page-banner-wrap .page-banner { height: 25rem; min-height: auto; }
-  .single-post html.ie .page-banner-wrap .page-banner { height: 39rem; min-height: auto; }
-  .home html.ie .page-banner-wrap .page-banner { height: 58rem; min-height: auto; } }
+  html.ie .home.page-has-banner-full .page-banner-wrap .page-banner { height: 58rem; min-height: auto; } }
 
 @media (min-width: 992px) { html:not(.ie) .page-has-banner-full .page-banner-wrap .page-banner { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; height: auto; min-height: auto; } }
 
