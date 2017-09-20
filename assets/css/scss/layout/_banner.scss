@@ -51,7 +51,6 @@
 		html:not(.ie) .page-has-banner-full & {
 			@include media (">=tablet") {
 				flex: 1;
-				// height: auto;
 				min-height: auto;
 			}
 		}
