@@ -467,7 +467,7 @@ p:empty { display: none; }
 
 .lsx:not(.single-post) .archive-header .archive-title { color: #FFF; }
 
-.page-banner-wrap .page-banner .page-title { color: #FFF; }
+.page-banner-wrap .page-banner { color: #FFF; }
 
 .breadcrumbs-container { background-color: #374750; color: #919191; }
 
