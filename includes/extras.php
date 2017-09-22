@@ -10,6 +10,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+/**
+ * Enable shortcode for text widget.
+ *
+ * @package    lsx
+ * @subpackage extras
+ */
+add_filter( 'widget_text', 'shortcode_unautop' );
+add_filter( 'widget_text', 'do_shortcode' );
+
 if ( ! function_exists( 'lsx_kses_allowed_html' ) ) :
 
 	/**
