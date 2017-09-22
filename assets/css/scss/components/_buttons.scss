@@ -16,6 +16,11 @@
 	}
 }
 
+.caldera-forms-modal {
+	@include lsx-button-scaffolding();
+	@include lsx-button-colour();
+}
+
 @include custom-buttons-colours();
 
 @include custom-cta-buttons-colours();

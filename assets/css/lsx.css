@@ -92,6 +92,16 @@ p:empty { display: none; }
 
 .btn-md, .btn-md:active, .btn-md:visited { font-size: 12px; height: auto; padding: 10px 20px; }
 
+.caldera-forms-modal, .caldera-forms-modal:active, .caldera-forms-modal:visited { border: 0 none; border-radius: 3px; display: inline-block; font-size: 14px; font-weight: 700; height: 48px; left: 0; letter-spacing: 0.6px; line-height: 1.25; padding: 15px 40px; position: relative; text-transform: uppercase; top: 0; transition: all 100ms ease; }
+
+.caldera-forms-modal > .fa { margin-left: 10px; }
+
+.caldera-forms-modal, .caldera-forms-modal:active, .caldera-forms-modal:visited { background-color: #418AD0; box-shadow: 2px 2px 0 0 #27639e; color: #FFF; }
+
+.caldera-forms-modal:hover, .caldera-forms-modal:hover:active, .caldera-forms-modal:focus { background-color: #367DC0; color: #FFF; }
+
+.caldera-forms-modal:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
+
 .btn, .btn:active, .btn:visited { background-color: #418AD0; box-shadow: 2px 2px 0 0 #27639e; color: #FFF; }
 
 .btn:hover, .btn:hover:active, .btn:focus { background-color: #367DC0; color: #FFF; }
@@ -151,6 +161,12 @@ p:empty { display: none; }
 .woocommerce-page #main #respond input#submit:hover, .woocommerce-page #main #respond input#submit:hover:active, .woocommerce-page #main #respond input#submit:focus, .woocommerce-page #main a.button:hover, .woocommerce-page #main a.button:hover:active, .woocommerce-page #main a.button:focus, .woocommerce-page #main button.button:hover, .woocommerce-page #main button.button:hover:active, .woocommerce-page #main button.button:focus, .woocommerce-page #main input.button:hover, .woocommerce-page #main input.button:hover:active, .woocommerce-page #main input.button:focus { background-color: #367DC0; color: #FFF; }
 
 .woocommerce-page #main #respond input#submit:active, .woocommerce-page #main a.button:active, .woocommerce-page #main button.button:active, .woocommerce-page #main input.button:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
+
+.caldera-forms-modal, .caldera-forms-modal:active, .caldera-forms-modal:visited { background-color: #418AD0; box-shadow: 2px 2px 0 0 #27639e; color: #FFF; }
+
+.caldera-forms-modal:hover, .caldera-forms-modal:hover:active, .caldera-forms-modal:focus { background-color: #367DC0; color: #FFF; }
+
+.caldera-forms-modal:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
 .cta-btn, .cta-btn:active, .cta-btn:visited { background-color: #F7AE00; box-shadow: 2px 2px 0 0 #ab7800; color: #FFF; }
 

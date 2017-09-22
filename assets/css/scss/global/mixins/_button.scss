@@ -93,6 +93,12 @@
 			@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
 		}
 	}
+
+	// Caldera Form
+
+	.caldera-forms-modal {
+		@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
+	}
 }
 
 @mixin custom-cta-buttons-colours ($color: map-get($cta-buttons, color), $color-hover: map-get($cta-buttons, color-hover), $bg: map-get($cta-buttons, bg), $bg-hover: map-get($cta-buttons, bg-hover), $shadow: map-get($cta-buttons, shadow)) {
