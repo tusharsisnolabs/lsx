@@ -136,6 +136,8 @@ article.page {
 
 .woocommerce,
 .woocommerce-page {
+	.entry-content { overflow: hidden; }
+
 	&,
 	&[class*=columns-] {
 		ul.products {
