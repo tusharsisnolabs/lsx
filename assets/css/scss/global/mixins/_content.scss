@@ -326,29 +326,31 @@
 		}
 	}
 
-	.lsx-woocommerce-slot {
-		background-color: #FFF;
+	#main .product_list_widget {
+		li.lsx-woocommerce-slot {
+			background-color: #FFF;
 
-		.lsx-woocommerce-title > a:not(.btn) {
-			@include lsx-link-colour($color, $hover);
-		}
+			.lsx-woocommerce-title > a:not(.btn) {
+				@include lsx-link-colour($color, $hover);
+			}
 
-		.lsx-woocommerce-price { color: #77a464; }
+			.lsx-woocommerce-price { color: #77a464; }
 
-		.lsx-woocommerce-content {
-			a:not(.btn).moretag {
-				background-color: $link;
-				color: #FFF;
-
-				&:hover {
-					background-color: $hover;
+			.lsx-woocommerce-content {
+				a:not(.btn).moretag {
+					background-color: $link;
 					color: #FFF;
+
+					&:hover {
+						background-color: $hover;
+						color: #FFF;
+					}
 				}
 			}
 		}
 	}
 
-	.product_list_widget {
+	#main .product_list_widget {
 		.slick-dots {
 			& > li {
 				& > button { border-color: $color; }
