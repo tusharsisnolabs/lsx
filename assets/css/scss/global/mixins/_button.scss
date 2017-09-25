@@ -77,11 +77,27 @@
 		}
 	}
 
+	// Caldera Form
+
+	.caldera-forms-modal {
+		@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
+	}
+
 	// WooCommerce
 
 	#wc_am_lost_api_key_form {
 		input[type="submit"] {
 			@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
+		}
+	}
+
+	.lsx-wc-cart-menu-item {
+		.widget_shopping_cart {
+			.buttons {
+				.button {
+					@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
+				}
+			}
 		}
 	}
 
@@ -92,12 +108,6 @@
 		input.button {
 			@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
 		}
-	}
-
-	// Caldera Form
-
-	.caldera-forms-modal {
-		@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
 	}
 }
 

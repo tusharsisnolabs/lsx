@@ -209,11 +209,15 @@ msgstr ""
 msgid "Search Box in Header"
 msgstr ""
 
-#: includes/customizer.php:175
+#: includes/customizer.php:157
+msgid "WooCommerce Cart in Header"
+msgstr ""
+
+#: includes/customizer.php:189
 msgid "Font"
 msgstr ""
 
-#: includes/customizer.php:176
+#: includes/customizer.php:190
 msgid "Change the fonts sitewide."
 msgstr ""
 
@@ -318,6 +322,16 @@ msgstr ""
 #: includes/widgets.php:50
 msgid "Footer Call to Action"
 msgstr ""
+
+#: includes/woocommerce.php:153
+msgid "View your shopping cart"
+msgstr ""
+
+#: includes/woocommerce.php:155
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
 
 #: page-templates/template-archives.php:34
 msgid "The Last 30 Posts"

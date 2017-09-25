@@ -125,3 +125,49 @@ if ( ! function_exists( 'lsx_wc_disable_banner' ) ) :
 endif;
 
 add_filter( 'lsx_banner_disable', 'lsx_wc_disable_lsx_banner' );
+
+if ( ! function_exists( 'lsx_wc_add_cart' ) ) :
+
+	/**
+	 * Adds WC cart to the header.
+	 *
+	 * @package    lsx
+	 * @subpackage template-tags
+	 */
+	function lsx_wc_add_cart( $items, $args ) {
+		if ( 'primary' === $args->theme_location ) {
+			$customizer_option  = get_theme_mod( 'lsx_header_wc_cart', false );
+
+			if ( ! empty( $customizer_option ) ) {
+				ob_start();
+				the_widget( 'WC_Widget_Cart', 'title=' );
+				$widget = ob_get_clean();
+
+				if ( is_cart() ) {
+					$class = 'current-menu-item';
+				} else {
+					$class = '';
+				}
+
+				$item = '<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown lsx-wc-cart-menu-item ' . $class . '">' .
+							'<a title="' . esc_attr__( 'View your shopping cart', 'lsx' ) . '" href="' . esc_url( wc_get_cart_url() ) . '" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">' .
+								/* Translators: %s: items quantity */
+								'<span class="lsx-wc-cart-amount">' . wp_kses_data( WC()->cart->get_cart_subtotal() ) . '</span> <span class="lsx-wc-cart-count">' . wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'lsx' ), WC()->cart->get_cart_contents_count() ) ) . '</span>' .
+							'</a>' .
+							'<ul role="menu" class=" dropdown-menu lsx-wc-cart-sub-menu">' .
+								'<li>' .
+									'<div class="lsx-wc-cart-dropdown">' . $widget . '</div>' .
+								'</li>' .
+							'</ul>' .
+						'</li>';
+
+				$items .= $item;
+			}
+		}
+
+		return $items;
+	}
+
+endif;
+
+add_filter( 'wp_nav_menu_items', 'lsx_wc_add_cart', 10, 2 );

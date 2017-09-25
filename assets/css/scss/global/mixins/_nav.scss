@@ -85,4 +85,34 @@
 			}
 		}
 	}
+
+	// WooCommerce
+
+	.lsx-wc-cart-dropdown {
+		color: $dropdown-link;
+
+		a:not(.button) {
+			&,
+			&:active,
+			&:visited {
+				color: $dropdown-link;
+			}
+
+			&:hover,
+			&:hover:active,
+			&:focus {
+				color: $hover;
+			}
+		}
+	}
+
+	.lsx-wc-cart-menu-item {
+		.widget_shopping_cart {
+			.product_list_widget {
+				li {
+					border-bottom: 1px solid $dropdown-link;
+				}
+			}
+		}
+	}
 }

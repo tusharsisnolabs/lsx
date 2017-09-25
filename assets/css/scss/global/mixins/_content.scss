@@ -303,4 +303,20 @@
 			}
 		}
 	}
+
+	#add_payment_method,
+	.woocommerce-cart,
+	.woocommerce-checkout {
+		#payment {
+			ul.payment_methods {
+				li:not(.woocommerce-notice) {
+					background-color: #FFF;
+
+					&:hover { background-color: $breaker; }
+				}
+			}
+
+			div.payment_box { background-color: $bg; }
+		}
+	}
 }
