@@ -82,7 +82,7 @@
 
 #add_payment_method #payment ul.payment_methods li:not(.woocommerce-notice) > label > img + a, .woocommerce-cart #payment ul.payment_methods li:not(.woocommerce-notice) > label > img + a, .woocommerce-checkout #payment ul.payment_methods li:not(.woocommerce-notice) > label > img + a { line-height: 2; }
 
-#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box { background-color: #f0f0f0; margin: 0; }
+#add_payment_method #payment div.payment_box, .woocommerce-cart #payment div.payment_box, .woocommerce-checkout #payment div.payment_box { background-color: #f6f6f6; margin: 0; }
 
 #add_payment_method #payment div.payment_box:before, .woocommerce-cart #payment div.payment_box:before, .woocommerce-checkout #payment div.payment_box:before { display: none; }
 
