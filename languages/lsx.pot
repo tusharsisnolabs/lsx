@@ -405,6 +405,10 @@ msgid_plural "%s Comments"
 msgstr[0] ""
 msgstr[1] ""
 
+#: woocommerce/content-widget-product.php:50
+msgid "View more"
+msgstr ""
+
 #: includes/classes/class-lsx-bootstrap-navwalker.php:223
 msgid "Add a menu"
 msgstr ""

@@ -271,26 +271,81 @@ var lsx = Object.create( null );
 		} );
 	};
 
-    /**
-     * Search form effect (on mobile).
-     *
-     * @package    lsx
-     * @subpackage scripts
-     */
-    lsx.search_form_prevent_empty_submissions = function() {
-        $document.on( 'submit', '#searchform', function( e ) {
-            if ( '' === $( this ).find('input[name="s"]').val() ) {
-                e.preventDefault();
-            }
-        } );
+	/**
+	 * Search form effect (on mobile).
+	 *
+	 * @package    lsx
+	 * @subpackage scripts
+	 */
+	lsx.search_form_prevent_empty_submissions = function() {
+		$document.on( 'submit', '#searchform', function( e ) {
+			if ( '' === $( this ).find('input[name="s"]').val() ) {
+				e.preventDefault();
+			}
+		} );
 
-        $document.on( 'blur', 'header.navbar #searchform .search-field', function( e ) {
-            if ( windowWidth < 1200 ) {
-                var form = $( this ).closest( 'form' );
-                form.removeClass( 'hover' );
-            }
-        } );
-    };
+		$document.on( 'blur', 'header.navbar #searchform .search-field', function( e ) {
+			if ( windowWidth < 1200 ) {
+				var form = $( this ).closest( 'form' );
+				form.removeClass( 'hover' );
+			}
+		} );
+	};
+
+	/**
+	 * Init WooCommerce slider.
+	 *
+	 * @package	lsx
+	 * @subpackage scripts
+	 */
+	lsx.init_wc_slider = function () {
+		var $wcSlider = $( '.lsx-woocommerce-slider' );
+
+		$wcSlider.each( function( index, el ) {
+			var $self = $( this );
+
+			$self.on( 'init', function( event, slick ) {
+				if ( slick.options.arrows && slick.slideCount > slick.options.slidesToShow ) {
+					$self.addClass( 'slick-has-arrows' );
+				}
+			});
+
+			$self.on( 'setPosition', function( event, slick ) {
+				if ( ! slick.options.arrows ) {
+					$self.removeClass('slick-has-arrows');
+				} else if ( slick.slideCount > slick.options.slidesToShow ) {
+					$self.addClass('slick-has-arrows');
+				}
+			});
+
+			$self.slick( {
+				draggable: false,
+				infinite: true,
+				swipe: false,
+				cssEase: 'ease-out',
+				dots: true,
+				responsive: [{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2,
+						draggable: true,
+						arrows: false,
+						swipe: true
+					}
+				}, {
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						draggable: true,
+						arrows: false,
+						swipe: true
+					}
+				}]
+			} );
+		} );
+	}
 
 	/**
 	 * On window resize.
@@ -323,6 +378,8 @@ var lsx = Object.create( null );
 
 		lsx.set_main_menu_as_fixed();
 
+		lsx.init_wc_slider();
+
 	} );
 
 	/**
@@ -338,7 +395,7 @@ var lsx = Object.create( null );
 		lsx.fix_lazyload_envira_gallery();
 
 		lsx.set_search_form_effect_mobile();
-        lsx.search_form_prevent_empty_submissions();
+		lsx.search_form_prevent_empty_submissions();
 
 		lsx.set_banner_effect_parallax();
 

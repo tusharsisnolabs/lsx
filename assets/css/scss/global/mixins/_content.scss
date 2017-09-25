@@ -265,6 +265,12 @@
 
 	// WooCommerce
 
+	.woocommerce {
+		.star-rating {
+			span:before { color: $link; }
+		}
+	}
+
 	.woocommerce-page #main {
 		#woochimp_checkout_groups {
 			.label { color: $color; }
@@ -317,6 +323,53 @@
 			}
 
 			div.payment_box { background-color: $bg; }
+		}
+	}
+
+	.lsx-woocommerce-slot {
+		background-color: #FFF;
+
+		.lsx-woocommerce-title > a:not(.btn) {
+			@include lsx-link-colour($color, $hover);
+		}
+
+		.lsx-woocommerce-price { color: #77a464; }
+
+		.lsx-woocommerce-content {
+			a:not(.btn).moretag {
+				background-color: $link;
+				color: #FFF;
+
+				&:hover {
+					background-color: $hover;
+					color: #FFF;
+				}
+			}
+		}
+	}
+
+	.lsx-woocommerce-slider {
+		.slick-dots {
+			& > li {
+				& > button { border-color: $color; }
+
+				&.slick-active > button { background-color: $color; }
+			}
+		}
+
+		.slick-arrow {
+			border-color: $color;
+			color: $color;
+
+			&:hover {
+				border-color: $hover;
+				color: $hover;
+			}
+
+			&.slick-disabled {
+				border-color: $breaker;
+				color: $breaker;
+			}
 		}
 	}
 }
