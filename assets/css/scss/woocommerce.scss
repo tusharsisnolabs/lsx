@@ -639,6 +639,11 @@ article.page {
 			li {
 				padding: 1em 1.41575em;
 
+				a {
+					font-size: 1em;
+					padding: 0;
+				}
+
 				.remove { display: none; }
 			}
 		}

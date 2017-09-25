@@ -210,6 +210,8 @@
 
 .lsx-wc-cart-menu-item .widget_shopping_cart .product_list_widget li { padding: 1em 1.41575em; }
 
+.lsx-wc-cart-menu-item .widget_shopping_cart .product_list_widget li a { font-size: 1em; padding: 0; }
+
 .lsx-wc-cart-menu-item .widget_shopping_cart .product_list_widget li .remove { display: none; }
 
 .lsx-wc-cart-menu-item .widget_shopping_cart .total { border-top: none; margin-bottom: 0; padding: 1em 1.41575em; text-align: center; }
