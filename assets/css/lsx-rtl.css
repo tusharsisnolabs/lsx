@@ -691,15 +691,15 @@ body { background-color: #F6F6F6; }
 
 .lsx-woocommerce-slot .lsx-woocommerce-content a:not(.btn).moretag:hover { background-color: #F7AE00; color: #FFF; }
 
-.lsx-woocommerce-slider .slick-dots > li > button { border-color: #4A4A4A; }
+.product_list_widget .slick-dots > li > button { border-color: #4A4A4A; }
 
-.lsx-woocommerce-slider .slick-dots > li.slick-active > button { background-color: #4A4A4A; }
+.product_list_widget .slick-dots > li.slick-active > button { background-color: #4A4A4A; }
 
-.lsx-woocommerce-slider .slick-arrow { border-color: #4A4A4A; color: #4A4A4A; }
+.product_list_widget .slick-arrow { border-color: #4A4A4A; color: #4A4A4A; }
 
-.lsx-woocommerce-slider .slick-arrow:hover { border-color: #F7AE00; color: #F7AE00; }
+.product_list_widget .slick-arrow:hover { border-color: #F7AE00; color: #F7AE00; }
 
-.lsx-woocommerce-slider .slick-arrow.slick-disabled { border-color: #DADDDF; color: #DADDDF; }
+.product_list_widget .slick-arrow.slick-disabled { border-color: #DADDDF; color: #DADDDF; }
 
 .lsx-pagination-wrapper { display: block; margin-top: 8.5rem; position: relative; text-align: center; }
 

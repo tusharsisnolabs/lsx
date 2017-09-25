@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product; ?>
 
-<div class="lsx-woocommerce-slot">
+<li class="lsx-woocommerce-slot">
 	<a href='<?php echo esc_url( $product->get_permalink() ); ?>'>
 		<figure class="lsx-woocommerce-avatar">
 			<?php echo $product->get_image(); ?>
@@ -49,4 +49,4 @@ global $product; ?>
 	<div class="lsx-woocommerce-content">
 		<a href="<?php echo esc_url( $product->get_permalink() ); ?>" class="moretag"><?php esc_attr_e( 'View more', 'lsx' ); ?></a>
 	</div>
-</div>
+</li>

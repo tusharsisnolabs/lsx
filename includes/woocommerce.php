@@ -187,7 +187,7 @@ if ( ! function_exists( 'lsx_wc_products_widget_wrapper_before' ) ) :
 
 endif;
 
-add_filter( 'woocommerce_before_widget_product_list', 'lsx_wc_products_widget_wrapper_before' );
+// add_filter( 'woocommerce_before_widget_product_list', 'lsx_wc_products_widget_wrapper_before' );
 
 if ( ! function_exists( 'lsx_wc_products_widget_wrapper_after' ) ) :
 
@@ -204,4 +204,4 @@ if ( ! function_exists( 'lsx_wc_products_widget_wrapper_after' ) ) :
 
 endif;
 
-add_filter( 'woocommerce_after_widget_product_list', 'lsx_wc_products_widget_wrapper_after' );
+// add_filter( 'woocommerce_after_widget_product_list', 'lsx_wc_products_widget_wrapper_after' );

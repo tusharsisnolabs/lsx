@@ -299,7 +299,7 @@ var lsx = Object.create( null );
 	 * @subpackage scripts
 	 */
 	lsx.init_wc_slider = function () {
-		var $wcSlider = $( '.lsx-woocommerce-slider' );
+		var $wcSlider = $( '.product_list_widget' );
 
 		$wcSlider.each( function( index, el ) {
 			var $self = $( this );
@@ -324,11 +324,13 @@ var lsx = Object.create( null );
 				swipe: false,
 				cssEase: 'ease-out',
 				dots: true,
+				slidesToShow: 4,
+				slidesToScroll: 4,
 				responsive: [{
 					breakpoint: 992,
 					settings: {
-						slidesToShow: 2,
-						slidesToScroll: 2,
+						slidesToShow: 3,
+						slidesToScroll: 3,
 						draggable: true,
 						arrows: false,
 						swipe: true
