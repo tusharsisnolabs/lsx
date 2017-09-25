@@ -675,7 +675,7 @@ ul.lsx-wc-cart-sub-menu {}
 
 // Homepage widgets
 
-.product_list_widget {
+#main .product_list_widget {
 	margin-bottom: 0 !important;
 	padding-left: 0 !important;
 
@@ -751,7 +751,7 @@ ul.lsx-wc-cart-sub-menu {}
 	}
 }
 
-.product_list_widget {
+#main .product_list_widget {
 	&.slick-slider { margin-top: -4rem !important; }
 
 	@include media('>=tablet') {

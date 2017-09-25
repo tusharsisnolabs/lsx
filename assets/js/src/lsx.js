@@ -299,7 +299,7 @@ var lsx = Object.create( null );
 	 * @subpackage scripts
 	 */
 	lsx.init_wc_slider = function () {
-		var $wcSlider = $( '.product_list_widget' );
+		var $wcSlider = $( '#main .product_list_widget' );
 
 		$wcSlider.each( function( index, el ) {
 			var $self = $( this );
