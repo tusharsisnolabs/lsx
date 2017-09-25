@@ -209,6 +209,54 @@ article.page {
 			border-bottom: none;
 			margin-bottom: 2.4rem;
 			padding: 0;
+
+			li.wc_payment_method {
+				& > label:before {
+					@include fa-icon();
+					content: "\f10c";
+					margin-right: 0.5407911001em;
+					transition: color ease .2s;
+				}
+
+				input[type=radio]:first-child:checked + label:before { content: "\f192"; }
+			}
+
+			li:not(.woocommerce-notice) {
+				background-color: #ffffff;
+				line-height: 1.6;
+
+				&:hover { background-color: #f0f0f0; }
+
+				& > input[type="radio"] {
+					clip: rect(1px 1px 1px 1px);
+					clip: rect(1px, 1px, 1px, 1px);
+					position: absolute !important;
+				}
+
+				& > label {
+					cursor: pointer;
+					display: block;
+					margin-bottom: 0;
+					padding: 1.41575em;
+
+					& > img {
+						border: 0;
+						float: right;
+						margin: 0 0 0 0.5em;
+						max-height: 1.618em;
+						padding: 0;
+
+						& + a { line-height: 2; }
+					}
+				}
+			}
+		}
+
+		div.payment_box {
+			background-color: #f0f0f0;
+			margin: 0;
+
+			&:before { display: none; }
 		}
 	}
 }
