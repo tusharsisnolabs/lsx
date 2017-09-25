@@ -171,37 +171,3 @@ if ( ! function_exists( 'lsx_wc_add_cart' ) ) :
 endif;
 
 add_filter( 'wp_nav_menu_items', 'lsx_wc_add_cart', 10, 2 );
-
-if ( ! function_exists( 'lsx_wc_products_widget_wrapper_before' ) ) :
-
-	/**
-	 * Change WC products widget wrapper (before).
-	 *
-	 * @package    lsx
-	 * @subpackage woocommerce
-	 */
-	function lsx_wc_products_widget_wrapper_before( $html ) {
-		$html = '<div class="lsx-woocommerce-slider lsx-woocommerce-shortcode" data-slick=\'{"slidesToShow": 3, "slidesToScroll": 3 }\'>';
-		return $html;
-	}
-
-endif;
-
-// add_filter( 'woocommerce_before_widget_product_list', 'lsx_wc_products_widget_wrapper_before' );
-
-if ( ! function_exists( 'lsx_wc_products_widget_wrapper_after' ) ) :
-
-	/**
-	 * Change WC products widget wrapper (after).
-	 *
-	 * @package    lsx
-	 * @subpackage woocommerce
-	 */
-	function lsx_wc_products_widget_wrapper_after( $html ) {
-		$html = '</div>';
-		return $html;
-	}
-
-endif;
-
-// add_filter( 'woocommerce_after_widget_product_list', 'lsx_wc_products_widget_wrapper_after' );
