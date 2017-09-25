@@ -76,6 +76,8 @@
 
 .woocommerce div.product form.cart .variations td.label label { font-weight: 400; }
 
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register { border: none; padding: 0; margin: 2.4rem 0 4.25rem 0; border-radius: 0; }
+
 .product .product_meta > span { display: block; padding: 5px 0; }
 
 .product #respond { text-align: left; }
