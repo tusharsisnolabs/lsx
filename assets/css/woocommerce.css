@@ -48,6 +48,22 @@
 
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3, .woocommerce[class*=columns-] ul.products li.product .woocommerce-loop-category__title, .woocommerce[class*=columns-] ul.products li.product .woocommerce-loop-product__title, .woocommerce[class*=columns-] ul.products li.product h3, .woocommerce-page ul.products li.product .woocommerce-loop-category__title, .woocommerce-page ul.products li.product .woocommerce-loop-product__title, .woocommerce-page ul.products li.product h3, .woocommerce-page[class*=columns-] ul.products li.product .woocommerce-loop-category__title, .woocommerce-page[class*=columns-] ul.products li.product .woocommerce-loop-product__title, .woocommerce-page[class*=columns-] ul.products li.product h3 { font-size: 22px; }
 
+@media (min-width: 768px) { .woocommerce .col2-set, .woocommerce-page .col2-set { float: left; margin-right: 4.347826087%; width: 47.8260869565%; } }
+
+@media (min-width: 768px) { .woocommerce .col2-set .col-1, .woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-1, .woocommerce-page .col2-set .col-2 { float: none; margin-bottom: 4.25rem; width: 100%; } }
+
+@media (min-width: 768px) { .woocommerce #order_review, .woocommerce #order_review_heading, .woocommerce .woochimp_checkout_checkbox, .woocommerce #woochimp_checkout_groups, .woocommerce-page #order_review, .woocommerce-page #order_review_heading, .woocommerce-page .woochimp_checkout_checkbox, .woocommerce-page #woochimp_checkout_groups { float: right; margin-right: 0; width: 47.8260869565%; } }
+
+.woocommerce .woochimp_checkout_checkbox, .woocommerce-page .woochimp_checkout_checkbox { margin-bottom: 2.4rem; padding: 0 0 0 20px !important; }
+
+.woocommerce .woochimp_checkout_checkbox input[type="checkbox"], .woocommerce-page .woochimp_checkout_checkbox input[type="checkbox"] { margin-left: -20px; position: absolute; }
+
+.woocommerce #woochimp_checkout_groups, .woocommerce-page #woochimp_checkout_groups { padding-left: 20px; margin-bottom: 2.4rem; }
+
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment { background: transparent; }
+
+#add_payment_method #payment ul.payment_methods, .woocommerce-cart #payment ul.payment_methods, .woocommerce-checkout #payment ul.payment_methods { border-bottom: none; margin-bottom: 2.4rem; padding: 0; }
+
 .woocommerce div.product .woocommerce-tabs .panel { border: none; border-radius: none; box-shadow: none; padding: 2em; }
 
 .woocommerce div.product .woocommerce-tabs .panel > *:last-child { margin-bottom: 0; }
@@ -78,8 +94,6 @@
 
 #wc_am_lost_api_key_form input[type="submit"]:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
-#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment { background: transparent; }
-
 #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text { width: 120px; }
 
 @media (max-width: 767px) { #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text { width: 100%; } }
@@ -90,11 +104,11 @@
 
 .woocommerce-page #main form .form-row label.inline:not(:first-child) { margin-left: 15px; }
 
-.woocommerce-page #main #woochimp_checkout_groups { margin-left: 20px; margin-top: -2.4rem; }
+.woocommerce-page #main #woochimp_checkout_groups .label { display: none; }
 
-.woocommerce-page #main #woochimp_checkout_groups .label { color: #4A4A4A; display: inline-block; margin-bottom: 15px; }
+.woocommerce-page #main #woochimp_checkout_groups br { display: none; }
 
-.woocommerce-page #main #woochimp_checkout_groups label.checkbox { margin-bottom: 0; margin-top: 0; }
+.woocommerce-page #main #woochimp_checkout_groups label.checkbox { margin-top: 0; }
 
 .woocommerce-page #main .quantity .qty { width: 70px; }
 

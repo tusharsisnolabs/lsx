@@ -150,6 +150,65 @@ article.page {
 			}
 		}
 	}
+
+	.col2-set  {
+		@include media ('>=phone') {
+			float: left;
+			margin-right: 4.347826087%;
+			width: 47.8260869565%;
+		}
+	}
+
+	.col2-set {
+		.col-1,
+		.col-2 {
+			@include media ('>=phone') {
+				float: none;
+				margin-bottom: 4.25rem;
+				width: 100%;
+			}
+		}
+	}
+
+	#order_review,
+	#order_review_heading,
+	.woochimp_checkout_checkbox,
+	#woochimp_checkout_groups {
+		@include media ('>=phone') {
+			float: right;
+			margin-right: 0;
+			width: 47.8260869565%;
+		}
+	}
+
+	.woochimp_checkout_checkbox {
+		margin-bottom: 2.4rem;
+		padding: 0 0 0 20px !important;
+
+		input[type="checkbox"] {
+			margin-left: -20px;
+			position: absolute;
+		}
+	}
+
+	#woochimp_checkout_groups {
+		padding-left: 20px;
+		margin-bottom: 2.4rem;
+	}
+}
+
+#add_payment_method,
+.woocommerce-cart,
+.woocommerce-checkout {
+	#payment {
+		background: transparent;
+
+		ul.payment_methods {
+			border-bottom: none;
+			margin-bottom: 2.4rem;
+			padding: 0;
+		}
+	}
 }
 
 .woocommerce {
@@ -227,8 +286,6 @@ article.page {
 #add_payment_method,
 .woocommerce-cart,
 .woocommerce-checkout {
-	#payment { background: transparent; }
-
 	table.cart {
 		td.actions {
 			.coupon {
@@ -301,19 +358,16 @@ article.page {
 	}
 
 	#woochimp_checkout_groups {
-		margin-left: 20px;
-		margin-top: -2.4rem;
-
 		.label {
-			color: $text-color;
-			display: inline-block;
-			margin-bottom: 15px;
+			// color: $text-color;
+			// display: inline-block;
+			// margin-bottom: 15px;
+			display: none;
 		}
 
-		label.checkbox {
-			margin-bottom: 0;
-			margin-top: 0;
-		}
+		br { display: none; }
+
+		label.checkbox { margin-top: 0; }
 	}
 
 	// Fields

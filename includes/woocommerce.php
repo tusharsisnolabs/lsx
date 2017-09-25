@@ -105,3 +105,23 @@ endif;
 
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 add_action( 'woocommerce_after_main_content', 'lsx_wc_theme_wrapper_end' );
+
+if ( ! function_exists( 'lsx_wc_disable_banner' ) ) :
+
+	/**
+	 * Disable LSX Banners banner in some WC pages.
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_disable_lsx_banner( $disabled ) {
+		if ( is_cart() || is_checkout() || is_account_page() ) {
+			$disabled = true;
+		}
+
+		return $disabled;
+	}
+
+endif;
+
+add_filter( 'lsx_banner_disable', 'lsx_wc_disable_lsx_banner' );
