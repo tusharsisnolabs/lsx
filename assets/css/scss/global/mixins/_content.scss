@@ -288,6 +288,20 @@
 
 	// WooCommerce
 
+	.woocommerce-MyAccount-navigation {
+		background-color: #FFF;
+
+		ul {
+			// border-top: 1px solid $breaker;
+
+			li {
+				border-bottom: 1px solid $breaker;
+
+				&:last-child { border-bottom: none; }
+			}
+		}
+	}
+
 	.woocommerce {
 		.star-rating {
 			span:before { color: $link; }

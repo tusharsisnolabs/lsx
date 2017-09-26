@@ -565,18 +565,18 @@ p.no-comments,
 	// My account - Menu
 
 	.woocommerce-MyAccount-navigation {
+		padding: 0 15px;
+
 		@include media ('>=phone') {
 			margin-right: 5.8823529412%;
 			width: 17.6470588235%;
 		}
 
 		ul {
-			border-top: 1px solid $breaker;
 			margin-left: 0;
 			padding: 0;
 
 			li {
-				border-bottom: 1px solid $breaker;
 				list-style: none;
 				position: relative;
 

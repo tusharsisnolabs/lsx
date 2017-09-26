@@ -675,6 +675,12 @@ body { background-color: #F6F6F6; }
 
 .remodal-wrapper .remodal-close:hover { background-color: #418AD0; color: #FFF; }
 
+.woocommerce-MyAccount-navigation { background-color: #FFF; }
+
+.woocommerce-MyAccount-navigation ul li { border-bottom: 1px solid #DADDDF; }
+
+.woocommerce-MyAccount-navigation ul li:last-child { border-bottom: none; }
+
 .woocommerce .star-rating span:before { color: #418AD0; }
 
 .woocommerce-page #main #woochimp_checkout_groups .label { color: #4A4A4A; }

@@ -168,11 +168,13 @@
   .woocommerce-page #main .woocommerce-MyAccount-content .form-row-first { float: right; margin-left: 7.6923076923%; width: 38.4615384615%; }
   .woocommerce-page #main .woocommerce-MyAccount-content .form-row-last { float: left; width: 53.8461538462%; } }
 
+.woocommerce-page #main .woocommerce-MyAccount-navigation { padding: 0 15px; }
+
 @media (min-width: 768px) { .woocommerce-page #main .woocommerce-MyAccount-navigation { margin-left: 5.8823529412%; width: 17.6470588235%; } }
 
-.woocommerce-page #main .woocommerce-MyAccount-navigation ul { border-top: 1px solid #DADDDF; margin-right: 0; padding: 0; }
+.woocommerce-page #main .woocommerce-MyAccount-navigation ul { margin-right: 0; padding: 0; }
 
-.woocommerce-page #main .woocommerce-MyAccount-navigation ul li { border-bottom: 1px solid #DADDDF; list-style: none; position: relative; }
+.woocommerce-page #main .woocommerce-MyAccount-navigation ul li { list-style: none; position: relative; }
 
 .woocommerce-page #main .woocommerce-MyAccount-navigation ul li a { display: block; padding: .875em 0; }
 
