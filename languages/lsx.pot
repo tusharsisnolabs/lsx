@@ -333,6 +333,10 @@ msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
 
+#: includes/woocommerce.php:245, includes/woocommerce.php:247
+msgid "Free!"
+msgstr ""
+
 #: page-templates/template-archives.php:34
 msgid "The Last 30 Posts"
 msgstr ""

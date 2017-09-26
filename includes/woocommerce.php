@@ -225,3 +225,32 @@ if ( ! function_exists( 'lsx_wc_reviews_widget_override' ) ) :
 endif;
 
 add_action( 'widgets_init', 'lsx_wc_reviews_widget_override', 15 );
+
+if ( ! function_exists( 'lsx_wc_change_price_html' ) ) :
+
+	/**
+	 * Change WC ZERO price to "free".
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_change_price_html( $price, $product ) {
+		if ( 0 === $product->get_price() ) {
+			if ( $product->is_on_sale() && $product->get_regular_price() ) {
+				$regular_price = wc_get_price_to_display( $product, array(
+					'qty' => 1,
+					'price' => $product->get_regular_price(),
+				) );
+
+				$price = wc_format_price_range( $regular_price, esc_html__( 'Free!', 'lsx' ) );
+			} else {
+				$price = '<span class="amount">' . esc_html__( 'Free!', 'lsx' ) . '</span>';
+			}
+		}
+
+		return $price;
+	}
+
+endif;
+
+add_filter( 'woocommerce_get_price_html', 'lsx_wc_change_price_html', 15, 2 );
