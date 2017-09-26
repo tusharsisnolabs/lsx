@@ -235,7 +235,7 @@ if ( ! function_exists( 'lsx_wc_change_price_html' ) ) :
 	 * @subpackage woocommerce
 	 */
 	function lsx_wc_change_price_html( $price, $product ) {
-		if ( 0 === $product->get_price() ) {
+		if ( empty( $product->get_price() ) ) {
 			if ( $product->is_on_sale() && $product->get_regular_price() ) {
 				$regular_price = wc_get_price_to_display( $product, array(
 					'qty' => 1,
