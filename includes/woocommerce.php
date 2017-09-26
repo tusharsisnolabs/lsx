@@ -171,3 +171,57 @@ if ( ! function_exists( 'lsx_wc_add_cart' ) ) :
 endif;
 
 add_filter( 'wp_nav_menu_items', 'lsx_wc_add_cart', 10, 2 );
+
+if ( ! function_exists( 'lsx_wc_products_widget_wrapper_before' ) ) :
+
+	/**
+	 * Change WC products widget wrapper (before).
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_products_widget_wrapper_before( $html ) {
+		$html = '<div class="lsx-woocommerce-slider lsx-woocommerce-shortcode">';
+		return $html;
+	}
+
+endif;
+
+add_filter( 'woocommerce_before_widget_product_list', 'lsx_wc_products_widget_wrapper_before', 15 );
+
+if ( ! function_exists( 'lsx_wc_products_widget_wrapper_after' ) ) :
+
+	/**
+	 * Change WC products widget wrapper (after).
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_products_widget_wrapper_after( $html ) {
+		$html = '</div>';
+		return $html;
+	}
+
+endif;
+
+add_filter( 'woocommerce_after_widget_product_list', 'lsx_wc_products_widget_wrapper_after', 15 );
+
+if ( ! function_exists( 'lsx_wc_reviews_widget_override' ) ) :
+
+	/**
+	 * Override WC ewviews widget.
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_reviews_widget_override() {
+		if ( class_exists( 'WC_Widget_Recent_Reviews' ) ) {
+			unregister_widget( 'WC_Widget_Recent_Reviews' );
+			require get_template_directory() . '/includes/classes/class-lsx-wc-widget-recent-reviews.php';
+			register_widget( 'LSX_WC_Widget_Recent_Reviews' );
+		}
+	}
+
+endif;
+
+add_action( 'widgets_init', 'lsx_wc_reviews_widget_override', 15 );

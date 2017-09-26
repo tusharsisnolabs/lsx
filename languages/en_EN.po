@@ -405,7 +405,7 @@ msgid_plural "%s Comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: woocommerce/content-widget-product.php:50
+#: woocommerce/content-widget-product.php:50, woocommerce/content-widget-review.php:34
 msgid "View more"
 msgstr ""
 

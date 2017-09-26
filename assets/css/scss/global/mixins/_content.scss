@@ -326,31 +326,38 @@
 		}
 	}
 
-	#main .product_list_widget {
-		li.lsx-woocommerce-slot {
-			background-color: #FFF;
+	.lsx-woocommerce-slot,
+	.lsx-woocommerce-review-slot {
+		.lsx-woocommerce-title > a:not(.btn) {
+			@include lsx-link-colour($color, $hover);
+		}
+	}
 
-			.lsx-woocommerce-title > a:not(.btn) {
-				@include lsx-link-colour($color, $hover);
-			}
+	.lsx-woocommerce-slot {
+		background-color: #FFF;
 
-			.lsx-woocommerce-price { color: #77a464; }
+		.lsx-woocommerce-price { color: #77a464; }
 
-			.lsx-woocommerce-content {
-				a:not(.btn).moretag {
-					background-color: $link;
+		.lsx-woocommerce-content {
+			a:not(.btn).moretag {
+				background-color: $link;
+				color: #FFF;
+
+				&:hover {
+					background-color: $hover;
 					color: #FFF;
-
-					&:hover {
-						background-color: $hover;
-						color: #FFF;
-					}
 				}
 			}
 		}
 	}
 
-	#main .product_list_widget {
+	.lsx-woocommerce-review-slot {
+		.lsx-woocommerce-review-box { background-color: #FFF; }
+
+		.lsx-woocommerce-content { border-top: 1px solid $breaker; }
+	}
+
+	.lsx-woocommerce-slider {
 		.slick-dots {
 			& > li {
 				& > button { border-color: $color; }

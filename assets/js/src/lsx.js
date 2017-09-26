@@ -299,10 +299,23 @@ var lsx = Object.create( null );
 	 * @subpackage scripts
 	 */
 	lsx.init_wc_slider = function () {
-		var $wcSlider = $( '#main .product_list_widget' );
+		var $wcSlider = $( '.lsx-woocommerce-slider' );
 
 		$wcSlider.each( function( index, el ) {
-			var $self = $( this );
+			var $self = $( this ),
+				_slidesToShow = 4,
+				_slidesToScroll = 4,
+				_slidesToShow_992 = 3,
+				_slidesToScroll_992 = 3,
+				_slidesToShow_768 = 1,
+				_slidesToScroll_768 = 1;
+
+			if ( $self.find( '.lsx-woocommerce-review-slot' ).length > 0 ) {
+				_slidesToShow = 2;
+				_slidesToScroll = 2;
+				_slidesToShow_992 = 2;
+				_slidesToScroll_992 = 2;
+			}
 
 			$self.on( 'init', function( event, slick ) {
 				if ( slick.options.arrows && slick.slideCount > slick.options.slidesToShow ) {
@@ -324,13 +337,13 @@ var lsx = Object.create( null );
 				swipe: false,
 				cssEase: 'ease-out',
 				dots: true,
-				slidesToShow: 4,
-				slidesToScroll: 4,
+				slidesToShow: _slidesToShow,
+				slidesToScroll: _slidesToScroll,
 				responsive: [{
 					breakpoint: 992,
 					settings: {
-						slidesToShow: 3,
-						slidesToScroll: 3,
+						slidesToShow: _slidesToShow_992,
+						slidesToScroll: _slidesToScroll_992,
 						draggable: true,
 						arrows: false,
 						swipe: true
@@ -338,8 +351,8 @@ var lsx = Object.create( null );
 				}, {
 					breakpoint: 768,
 					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1,
+						slidesToShow: _slidesToShow_768,
+						slidesToScroll: _slidesToScroll_768,
 						draggable: true,
 						arrows: false,
 						swipe: true
