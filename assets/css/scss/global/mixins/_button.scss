@@ -77,12 +77,6 @@
 		}
 	}
 
-	// Caldera Form
-
-	.caldera-forms-modal {
-		@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
-	}
-
 	// WooCommerce
 
 	#wc_am_lost_api_key_form {
@@ -115,4 +109,10 @@
 	.cta-btn { @include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow); }
 
 	.cta-border-btn { @include lsx-bordered-button($bg, #FFF, transparent, $bg); }
+
+	// Caldera Form
+
+	.caldera-forms-modal {
+		@include lsx-button-colour($color, $color-hover, $bg, $bg-hover, $shadow);
+	}
 }

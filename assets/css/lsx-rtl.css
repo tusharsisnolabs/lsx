@@ -150,12 +150,6 @@ p:empty { display: none; }
 
 #footer-cta input[type="submit"]:active { right: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
 
-.caldera-forms-modal, .caldera-forms-modal:active, .caldera-forms-modal:visited { background-color: #418AD0; box-shadow: -2px 2px 0 0 #27639e; color: #FFF; }
-
-.caldera-forms-modal:hover, .caldera-forms-modal:hover:active, .caldera-forms-modal:focus { background-color: #367DC0; color: #FFF; }
-
-.caldera-forms-modal:active { right: 2px; top: 2px; box-shadow: 0 0 0 0 #27639e; }
-
 #wc_am_lost_api_key_form input[type="submit"], #wc_am_lost_api_key_form input[type="submit"]:active, #wc_am_lost_api_key_form input[type="submit"]:visited { background-color: #418AD0; box-shadow: -2px 2px 0 0 #27639e; color: #FFF; }
 
 #wc_am_lost_api_key_form input[type="submit"]:hover, #wc_am_lost_api_key_form input[type="submit"]:hover:active, #wc_am_lost_api_key_form input[type="submit"]:focus { background-color: #367DC0; color: #FFF; }
@@ -191,6 +185,12 @@ p:empty { display: none; }
 .cta-border-btn, .cta-border-btn:active, .cta-border-btn:visited { border: 2px solid #F7AE00; box-shadow: none; height: 50px; }
 
 .cta-border-btn:active { right: 0; top: 0; }
+
+.caldera-forms-modal, .caldera-forms-modal:active, .caldera-forms-modal:visited { background-color: #F7AE00; box-shadow: -2px 2px 0 0 #ab7800; color: #FFF; }
+
+.caldera-forms-modal:hover, .caldera-forms-modal:hover:active, .caldera-forms-modal:focus { background-color: #EDA700; color: #FFF; }
+
+.caldera-forms-modal:active { right: 2px; top: 2px; box-shadow: 0 0 0 0 #ab7800; }
 
 .entry-content-asset { display: block; height: 0; margin-bottom: 2.4rem; overflow: hidden; padding: 0 0 56.25%; position: relative; }
 
