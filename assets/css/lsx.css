@@ -216,6 +216,8 @@ p:empty { display: none; }
 
 .remodal-wrapper .caldera-modal-body { overflow-x: hidden; padding: 0; }
 
+.remodal-wrapper .modal-title { margin: 0 0 20px 0; }
+
 .remodal-wrapper .remodal-close { border-radius: 50%; border-style: solid; border-width: 2px; height: 32px; opacity: 1; position: absolute; right: -14px; top: -14px; width: 32px; z-index: 2; }
 
 .remodal-wrapper .remodal-close:hover { opacity: 1; }
