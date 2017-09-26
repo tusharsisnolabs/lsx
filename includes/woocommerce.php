@@ -301,3 +301,73 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 } else {
 	add_filter( 'add_to_cart_fragments', 'lsx_wc_cart_link_fragment' );
 }
+
+remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
+
+add_action( 'woocommerce_after_shop_loop', 'lsx_wc_sorting_wrapper', 9 );
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_catalog_ordering', 10 );
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_result_count', 20 );
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 30 );
+add_action( 'woocommerce_after_shop_loop', 'lsx_wc_sorting_wrapper_close', 31 );
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+add_action( 'woocommerce_before_shop_loop', 'lsx_wc_sorting_wrapper', 9 );
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 10 );
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+add_action( 'woocommerce_before_shop_loop', 'lsx_wc_woocommerce_pagination', 30 );
+add_action( 'woocommerce_before_shop_loop', 'lsx_wc_sorting_wrapper_close', 31 );
+
+if ( ! function_exists( 'lsx_wc_sorting_wrapper' ) ) {
+	/**
+	 * Sorting wrapper.
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_sorting_wrapper() {
+		echo '<div class="lsx-wc-sorting">';
+	}
+}
+
+if ( ! function_exists( 'lsx_wc_sorting_wrapper_close' ) ) {
+	/**
+	 * Sorting wrapper close.
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_sorting_wrapper_close() {
+		echo '</div>';
+	}
+}
+
+if ( ! function_exists( 'lsx_wc_product_columns_wrapper_close' ) ) {
+	/**
+	 * Product columns wrapper close.
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_product_columns_wrapper_close() {
+		echo '</div>';
+	}
+}
+
+if ( ! function_exists( 'lsx_wc_woocommerce_pagination' ) ) {
+	/**
+	 * LSX WooCommerce Pagination
+	 * WooCommerce disables the product pagination inside the woocommerce_product_subcategories() function
+	 * but since LSX adds pagination before that function is excuted we need a separate function to
+	 * determine whether or not to display the pagination.
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_woocommerce_pagination() {
+		if ( woocommerce_products_will_display() ) {
+			woocommerce_pagination();
+		}
+	}
+}

@@ -324,6 +324,42 @@ article.page {
 
 .woocommerce-variation-price { margin-bottom: 1.618em; }
 
+.lsx-wc-sorting {
+	margin-bottom: 2.617924em;
+	overflow: hidden;
+
+	.woocommerce-ordering {
+		float: none;
+
+		@include media ('>=phone') {
+			float: left;
+			margin-bottom: 0;
+			margin-right: 1em;
+		}
+	}
+
+	.woocommerce-result-count {
+		float: none;
+
+		@include media ('>=phone') {
+			float: left;
+			line-height: 50px;
+			margin-bottom: 0;
+			position: relative;
+		}
+	}
+
+	.lsx-pagination-wrapper {
+		margin-top: 0;
+		text-align: left;
+
+		@include media ('>=phone') {
+			float: right;
+			margin-top: 5px;
+		}
+	}
+}
+
 // Buttons and fields
 
 #wc_am_lost_api_key_form {
