@@ -323,11 +323,11 @@ msgstr ""
 msgid "Footer Call to Action"
 msgstr ""
 
-#: includes/woocommerce.php:153
+#: includes/woocommerce.php:153, includes/woocommerce.php:290
 msgid "View your shopping cart"
 msgstr ""
 
-#: includes/woocommerce.php:155
+#: includes/woocommerce.php:155, includes/woocommerce.php:292
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""

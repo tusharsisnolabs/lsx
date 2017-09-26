@@ -254,3 +254,50 @@ if ( ! function_exists( 'lsx_wc_change_price_html' ) ) :
 endif;
 
 add_filter( 'woocommerce_get_price_html', 'lsx_wc_change_price_html', 15, 2 );
+
+if ( ! function_exists( 'lsx_wc_cart_link_fragment' ) ) :
+
+	/**
+	 * Cart Fragments.
+	 * Ensure cart contents update when products are added to the cart via AJAX.
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_cart_link_fragment( $fragments ) {
+		global $woocommerce;
+
+		ob_start();
+		lsx_wc_cart_link();
+		$fragments['li.lsx-wc-cart-menu-item > a'] = ob_get_clean();
+
+		return $fragments;
+	}
+
+endif;
+
+if ( ! function_exists( 'lsx_wc_cart_link' ) ) :
+
+	/**
+	 * Cart Link.
+	 * Displayed a link to the cart including the number of items present and the cart total.
+	 *
+	 * @package    lsx
+	 * @subpackage woocommerce
+	 */
+	function lsx_wc_cart_link() {
+		?>
+			<a title="<?php esc_attr_e( 'View your shopping cart', 'lsx' ); ?>" href="<?php echo esc_url( wc_get_cart_url() ); ?>" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">
+				<?php /* Translators: %s: items quantity */ ?>
+				<span class="lsx-wc-cart-amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="lsx-wc-cart-count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'lsx' ), WC()->cart->get_cart_contents_count() ) );?></span>
+			</a>
+		<?php
+	}
+
+endif;
+
+if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
+	add_filter( 'woocommerce_add_to_cart_fragments', 'lsx_wc_cart_link_fragment' );
+} else {
+	add_filter( 'add_to_cart_fragments', 'lsx_wc_cart_link_fragment' );
+}
