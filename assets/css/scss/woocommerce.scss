@@ -499,26 +499,37 @@ article.page {
 // Messages
 
 .woocommerce-message,
-.woocommerce-error,
 .woocommerce-info,
+.woocommerce-error,
+.woocommerce-noreviews,
 .woocommerce_message,
+.woocommerce_info,
 .woocommerce_error,
-.woocommerce_info {
+.woocommerce_noreviews,
+p.no-comments,
+.stock,
+.woocommerce-password-strength {
 	@extend %bootstrap-message;
 }
 
 .woocommerce-message,
-.woocommerce_message {
+.woocommerce_message,
+.stock.in-stock,
+.woocommerce-password-strength.strong {
 	@extend %bootstrap-message-success;
 }
 
 .woocommerce-error,
-.woocommerce_error {
+.woocommerce_error,
+.stock.out-of-stock,
+.woocommerce-password-strength.short,
+.woocommerce-password-strength.bad {
 	@extend %bootstrap-message-error;
 }
 
 .woocommerce-info,
-.woocommerce_info {
+.woocommerce_info,
+.woocommerce-password-strength.info {
 	@extend %bootstrap-message-info;
 }
 
