@@ -60,7 +60,9 @@
 
 	.content-area,
 	.widget-area,
-	.modal-content {
+	.modal-content,
+	// Caldera Forms
+	.remodal-wrapper {
 		color: $color;
 
 		a:not(.btn) { @include lsx-link-colour($link, $hover); }
@@ -260,6 +262,27 @@
 			color: #FFF;
 
 			&:hover { background-color: $link; }
+		}
+	}
+
+	// Caldera Forms
+
+	.remodal-wrapper {
+		.remodal {
+			background-color: $bg;
+			border-color: $link;
+		}
+
+		.remodal-close {
+			background-color: $link;
+			border-color: #FFF;
+			box-shadow: 0 0 4px 0 $link;
+			color: #FFF;
+
+			&:hover {
+				background-color: $link;
+				color: #FFF;
+			}
 		}
 	}
 
