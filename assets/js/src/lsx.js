@@ -378,6 +378,23 @@ var lsx = Object.create( null );
 	};
 
 	/**
+	 * Helper function to scroll to an element.
+	 *
+	 * @package	lsx
+	 * @subpackage scripts
+	 */
+	lsx.do_scroll = function( _$el ) {
+		var _href = ( _$el.href ).replace( /^[^#]*(#.+$)/gi, '$1' ),
+			_$to = $( _href ),
+			_top = parseInt( _$to.offset().top ),
+			_extra = -100;
+
+		$( 'html, body' ).animate( {
+			scrollTop: ( _top+_extra )
+		}, 800);
+	};
+
+	/**
 	 * On window resize.
 	 *
 	 * @package    lsx
