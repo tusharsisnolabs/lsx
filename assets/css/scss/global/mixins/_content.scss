@@ -286,6 +286,25 @@
 		}
 	}
 
+	.caldera-grid {
+		.breadcrumb {
+			& > li {
+				& > a {
+					background-color: #FFF;
+
+					&:hover { background-color: #FFF; }
+				}
+
+				&.active > a {
+					background-color: $link;
+					color: #FFF;
+
+					&:after { border-color: transparent transparent $bg transparent; }
+				}
+			}
+		}
+	}
+
 	// WooCommerce
 
 	.woocommerce-MyAccount-navigation {

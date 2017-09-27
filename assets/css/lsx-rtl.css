@@ -9,6 +9,30 @@
 
 .form-control:focus { box-shadow: none; }
 
+.caldera-grid .breadcrumb { -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-flow: column wrap; flex-flow: column wrap; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; border-bottom: 0 none; margin: 0 0 4.25rem 0; padding-right: 0; }
+
+.caldera-grid .breadcrumb:before, .caldera-grid .breadcrumb:after { display: none; }
+
+@media (min-width: 768px) { .caldera-grid .breadcrumb { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; } }
+
+.caldera-grid .breadcrumb > li { margin-bottom: 0; width: 100%; }
+
+@media (min-width: 768px) { .caldera-grid .breadcrumb > li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; max-width: 350px; } }
+
+@media (min-width: 768px) { .caldera-grid .breadcrumb > li + li { margin-right: 5px; } }
+
+.caldera-grid .breadcrumb > li > a { border: 0 none; border-radius: 0; font-size: 16px; margin: 0; padding: 1rem; text-align: center; transition: all 300ms ease; }
+
+@media (min-width: 768px) { .caldera-grid .breadcrumb > li > a { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; } }
+
+@media (min-width: 992px) { .caldera-grid .breadcrumb > li > a { font-size: 22px; } }
+
+.caldera-grid .breadcrumb > li.active > a { border: 0 none; position: relative; }
+
+@media (min-width: 768px) { .caldera-grid .breadcrumb > li.active > a:after { content: ''; border-style: solid; border-width: 0 6px 6px 6px; bottom: 0; height: 0; right: 50%; position: absolute; -webkit-transform: translateX(50%); transform: translateX(50%); width: 0; } }
+
+@media (min-width: 768px) and (min-width: 992px) { .caldera-grid .breadcrumb > li.active > a:after { border-width: 0 9px 9px 9px; } }
+
 *, *:focus, *:active:focus { outline: none !important; }
 
 html, body { overflow-x: hidden; }
@@ -191,6 +215,8 @@ p:empty { display: none; }
 .caldera-forms-modal:hover, .caldera-forms-modal:hover:active, .caldera-forms-modal:focus { background-color: #EDA700; color: #FFF; }
 
 .caldera-forms-modal:active { right: 2px; top: 2px; box-shadow: 0 0 0 0 #ab7800; }
+
+.caldera-grid .breadcrumb { list-style: none; }
 
 .entry-content-asset { display: block; height: 0; margin-bottom: 2.4rem; overflow: hidden; padding: 0 0 56.25%; position: relative; }
 
@@ -678,6 +704,14 @@ body { background-color: #F6F6F6; }
 .remodal-wrapper .remodal-close { background-color: #418AD0; border-color: #FFF; box-shadow: 0 0 4px 0 #418AD0; color: #FFF; }
 
 .remodal-wrapper .remodal-close:hover { background-color: #418AD0; color: #FFF; }
+
+.caldera-grid .breadcrumb > li > a { background-color: #FFF; }
+
+.caldera-grid .breadcrumb > li > a:hover { background-color: #FFF; }
+
+.caldera-grid .breadcrumb > li.active > a { background-color: #418AD0; color: #FFF; }
+
+.caldera-grid .breadcrumb > li.active > a:after { border-color: transparent transparent #F6F6F6 transparent; }
 
 .woocommerce-MyAccount-navigation { background-color: #FFF; }
 

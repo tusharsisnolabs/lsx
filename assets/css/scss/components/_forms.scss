@@ -1,3 +1,10 @@
 .form-control {
 	@extend %lsx-form-field;
 }
+
+.caldera-grid {
+	.breadcrumb {
+		list-style: none;
+		@extend %lsx-tabs;
+	}
+}
