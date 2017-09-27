@@ -363,6 +363,21 @@ var lsx = Object.create( null );
 	}
 
 	/**
+	 * Remove gallery IMG width and height.
+	 *
+	 * @package	lsx
+	 * @subpackage scripts
+	 */
+	lsx.remove_gallery_img_width_height = function () {
+		$( '.gallery-size-full img' ).each( function() {
+			var $self = $( this );
+
+			$self.removeAttr( 'height' );
+			$self.removeAttr( 'width' );
+		} );
+	};
+
+	/**
 	 * On window resize.
 	 *
 	 * @package    lsx
@@ -394,6 +409,8 @@ var lsx = Object.create( null );
 		lsx.set_main_menu_as_fixed();
 
 		lsx.init_wc_slider();
+
+		lsx.remove_gallery_img_width_height();
 
 	} );
 

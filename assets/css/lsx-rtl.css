@@ -224,11 +224,11 @@ p:empty { display: none; }
 
 .remodal-wrapper .remodal-close:before { line-height: 29px; width: 29px; }
 
-.gallery.gallery-size-thumbnail .gallery-item { margin-bottom: 2.4rem; margin-top: 0 !important; padding: 0 5px; }
+.gallery .gallery-item { margin-bottom: 2.4rem; margin-top: 0 !important; padding: 0 5px; }
 
-.gallery.gallery-size-thumbnail img { border: none !important; }
+.gallery img { border: none !important; }
 
-.gallery.gallery-size-thumbnail .gallery-caption { font-size: 13px; margin: 1.2rem auto 0 !important; max-width: 150px; }
+.gallery .gallery-caption { font-size: 13px; margin: 1.2rem auto 0 !important; max-width: 150px; }
 
 #top-menu > .container { -webkit-box-align: center; -ms-flex-align: center; align-items: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-flow: row nowrap; flex-flow: row nowrap; height: 32px; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; padding: 0; width: 100%; }
 
