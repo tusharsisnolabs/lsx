@@ -216,6 +216,8 @@ p:empty { display: none; }
 
 .caldera-forms-modal:active { left: 2px; top: 2px; box-shadow: 0 0 0 0 #ab7800; }
 
+.caldera-form-page { padding: 2em; }
+
 .caldera-grid .breadcrumb { list-style: none; }
 
 .entry-content-asset { display: block; height: 0; margin-bottom: 2.4rem; overflow: hidden; padding: 0 0 56.25%; position: relative; }
@@ -704,6 +706,8 @@ body { background-color: #F6F6F6; }
 .remodal-wrapper .remodal-close { background-color: #418AD0; border-color: #FFF; box-shadow: 0 0 4px 0 #418AD0; color: #FFF; }
 
 .remodal-wrapper .remodal-close:hover { background-color: #418AD0; color: #FFF; }
+
+.caldera-form-page { background-color: #FFF; }
 
 .caldera-grid .breadcrumb > li > a { background-color: #FFF; }
 
