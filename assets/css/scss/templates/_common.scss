@@ -37,7 +37,8 @@
 	margin-top: $lsx-large-gap;
 
 	.home &,
-	.page.siteorigin-panels & {
+	.page.siteorigin-panels &,
+	.page-template-template-full-width-no-margins & {
 		margin-bottom: 0;
 		margin-top: 0;
 	}

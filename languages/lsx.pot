@@ -361,6 +361,10 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
+#: page-templates/template-full-width-no-margins.php:4
+msgid "Full Width (no margins)"
+msgstr ""
+
 #: page-templates/template-full-width.php:4
 msgid "Full Width"
 msgstr ""

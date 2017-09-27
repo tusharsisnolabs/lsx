@@ -543,9 +543,9 @@ p:empty { display: none; }
 
 #home-widgets .btn { margin-top: 4.25rem; }
 
-.content-area .lsx-full-width, .content-area .lsx-full-width-alt { margin: 0 -9999rem; padding: 8.5rem 9999rem; }
+.content-area .lsx-full-width-base, .content-area .lsx-full-width, .content-area .lsx-full-width-alt { margin: 0 -9999rem; padding: 8.5rem 9999rem; }
 
-.content-area .lsx-full-width h1:after, .content-area .lsx-full-width h2:after, .content-area .lsx-full-width h3:after, .content-area .lsx-full-width h4:after, .content-area .lsx-full-width h5:after, .content-area .lsx-full-width h6:after, .content-area .lsx-full-width .widget-title:after, .content-area .lsx-full-width-alt h1:after, .content-area .lsx-full-width-alt h2:after, .content-area .lsx-full-width-alt h3:after, .content-area .lsx-full-width-alt h4:after, .content-area .lsx-full-width-alt h5:after, .content-area .lsx-full-width-alt h6:after, .content-area .lsx-full-width-alt .widget-title:after { display: none; }
+.content-area .lsx-full-width-base h1:after, .content-area .lsx-full-width-base h2:after, .content-area .lsx-full-width-base h3:after, .content-area .lsx-full-width-base h4:after, .content-area .lsx-full-width-base h5:after, .content-area .lsx-full-width-base h6:after, .content-area .lsx-full-width-base .widget-title:after, .content-area .lsx-full-width h1:after, .content-area .lsx-full-width h2:after, .content-area .lsx-full-width h3:after, .content-area .lsx-full-width h4:after, .content-area .lsx-full-width h5:after, .content-area .lsx-full-width h6:after, .content-area .lsx-full-width .widget-title:after, .content-area .lsx-full-width-alt h1:after, .content-area .lsx-full-width-alt h2:after, .content-area .lsx-full-width-alt h3:after, .content-area .lsx-full-width-alt h4:after, .content-area .lsx-full-width-alt h5:after, .content-area .lsx-full-width-alt h6:after, .content-area .lsx-full-width-alt .widget-title:after { display: none; }
 
 .page-header { border: 0 none; margin: 0 0 2.4rem; padding: 0; }
 
@@ -988,7 +988,7 @@ body { background-color: #F6F6F6; }
 
 .content-area, .widget-area { margin-bottom: 8.5rem; margin-top: 8.5rem; }
 
-.home .content-area, .page.siteorigin-panels .content-area, .home .widget-area, .page.siteorigin-panels .widget-area { margin-bottom: 0; margin-top: 0; }
+.home .content-area, .page.siteorigin-panels .content-area, .page-template-template-full-width-no-margins .content-area, .home .widget-area, .page.siteorigin-panels .widget-area, .page-template-template-full-width-no-margins .widget-area { margin-bottom: 0; margin-top: 0; }
 
 .content-area { z-index: 4; }
 
