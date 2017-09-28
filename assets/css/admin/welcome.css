@@ -317,11 +317,11 @@
 
 .appearance_page_lsx-welcome #wpbody .box:before { content: "\f324"; display: block; position: absolute; top: 30px; right: 30px; font-size: 1.618em; font-family: 'Dashicons'; font-weight: 400; -webkit-font-smoothing: antialiased; }
 
-.appearance_page_lsx-welcome #wpbody .box.enrich:before { content: ""; }
+.appearance_page_lsx-welcome #wpbody .box.enrich:before { content: "\f116"; }
 
 .appearance_page_lsx-welcome #wpbody .box.news:before { content: "\f319"; }
 
-.appearance_page_lsx-welcome #wpbody .box.enhance:before { content: ""; }
+.appearance_page_lsx-welcome #wpbody .box.enhance:before { content: "\f106"; }
 
 .appearance_page_lsx-welcome #wpbody .box.mailchimp:before { content: ""; }
 
