@@ -303,7 +303,9 @@
 
 .appearance_page_lsx-welcome #wpbody .box { background: #fff; border: 1px solid #ddd; border-radius: 4px; margin-bottom: 40px; padding: 25px 30px; position: relative; }
 
-.appearance_page_lsx-welcome #wpbody .box h2 { font-size: 17px; font-weight: 700; margin-top: 0; text-align: right; }
+.appearance_page_lsx-welcome #wpbody .box h2 { font-size: 17px; font-weight: 700; margin-top: 40px; text-align: right; }
+
+.appearance_page_lsx-welcome #wpbody .box h2:first-child { margin-top: 0; }
 
 .appearance_page_lsx-welcome #wpbody .box p, .appearance_page_lsx-welcome #wpbody .box ul { font-size: 13px; }
 
@@ -315,17 +317,17 @@
 
 .appearance_page_lsx-welcome #wpbody .box:before { content: "\f324"; display: block; position: absolute; top: 30px; left: 30px; font-size: 1.618em; font-family: 'Dashicons'; font-weight: 400; -webkit-font-smoothing: antialiased; }
 
-.appearance_page_lsx-welcome #wpbody .box.enrich:before { content: "\f513"; }
+.appearance_page_lsx-welcome #wpbody .box.enrich:before { content: ""; }
 
 .appearance_page_lsx-welcome #wpbody .box.news:before { content: "\f319"; }
 
-.appearance_page_lsx-welcome #wpbody .box.enhance:before { content: "\f106"; }
+.appearance_page_lsx-welcome #wpbody .box.enhance:before { content: ""; }
 
-.appearance_page_lsx-welcome #wpbody .box.mailchimp:before { content: "\f465"; }
+.appearance_page_lsx-welcome #wpbody .box.mailchimp:before { content: ""; }
 
 .appearance_page_lsx-welcome #wpbody .box.support:before { content: "\f338"; }
 
-.appearance_page_lsx-welcome #wpbody .box.suggest:before { content: "\f488"; }
+.appearance_page_lsx-welcome #wpbody .box.suggest:before { content: ""; }
 
 .appearance_page_lsx-welcome #wpbody .box.news h3 { color: #999; font-size: 13px; margin-top: 10px; margin-bottom: 5px; text-transform: uppercase; }
 

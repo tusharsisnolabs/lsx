@@ -56,8 +56,10 @@
 			h2 {
 				font-size: 17px;
 				font-weight: 700;
-				margin-top: 0;
+				margin-top: 40px;
 				text-align: left;
+
+				&:first-child { margin-top: 0; }
 			}
 
 			p,
@@ -88,17 +90,21 @@
 				-webkit-font-smoothing: antialiased;
 			}
 
-			&.enrich:before { content: "\f513"; }
+			//&.enrich:before { content: "\f513"; }
+			&.enrich:before { content: ""; }
 
 			&.news:before { content: "\f319"; }
 
-			&.enhance:before { content: "\f106"; }
+			//&.enhance:before { content: "\f106"; }
+			&.enhance:before { content: ""; }
 
-			&.mailchimp:before { content: "\f465"; }
+			//&.mailchimp:before { content: "\f465"; }
+			&.mailchimp:before { content: ""; }
 
 			&.support:before { content: "\f338"; }
 
-			&.suggest:before { content: "\f488"; }
+			//&.suggest:before { content: "\f488"; }
+			&.suggest:before { content: ""; }
 
 			&.news {
 				h3 {

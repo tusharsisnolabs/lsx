@@ -426,7 +426,7 @@ msgid "Enhance LSX"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-enhance.php:14
-msgid "Take a look at our range of extensions that add to the already rich functionality of the LSX WordPress theme.."
+msgid "Take a look at our range of extensions that add to the already rich functionality of the LSX WordPress theme."
 msgstr ""
 
 #: includes/admin/welcome-screen/component-enhance.php:19
@@ -498,7 +498,47 @@ msgid "Geo Content"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-enhance.php:80
-msgid "Coming Soon!"
+msgid "LSX Geo Content allows you to serve different content to users based on their automatically-detected IP address."
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:88
+msgid "Services"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:89
+msgid "Adds the \"Service\" post type to your LSX website which allows you to display and categorize the services your business provides."
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:95
+msgid "Projects"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:96
+msgid "Show off your finest work with the LSX Projects Extension! It adds a \"Project\" post type, allowing you to categorize and display your Projects on your LSX website."
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:101
+msgid "LSX extensions bundles"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:102
+msgid "We've created two bundles to help you to get the most out of LSX Theme."
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:107
+msgid "LSX Essentials"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:108
+msgid "A collection of essential LSX extensions giving you more functionality, additional content types and greater control over the styling of your theme."
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:114
+msgid "LSX Complete"
+msgstr ""
+
+#: includes/admin/welcome-screen/component-enhance.php:115
+msgid "A full set of LSX extensions giving you all the functionality, content types and customization tools you may need!"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-footer.php:13
@@ -526,57 +566,37 @@ msgid "Subscribe"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-footer.php:45
-msgid "Get support"
+msgid "Enjoying LSX?"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-footer.php:51
-msgid "You'll find information on how to use and customize the LSX theme in our %1$sdocumentation%2$s section. However, please do %3$scontact us%4$s for support should you still find yourself unable to achieve your needs."
-msgstr ""
-
-#: includes/admin/welcome-screen/component-footer.php:62
-msgid "Get in touch"
-msgstr ""
-
-#: includes/admin/welcome-screen/component-footer.php:70
-msgid "Suggest a feature"
-msgstr ""
-
-#: includes/admin/welcome-screen/component-footer.php:76
-msgid "If you'd like to suggest a feature for inclusion in upcoming releases of the LSX theme, please don't hesitate to %1$scontact us%2$s directly. We're always on the lookout for fresh ideas to help make LSX even better."
-msgstr ""
-
-#: includes/admin/welcome-screen/component-footer.php:85
-msgid "Submit a request"
+msgid "Why not %1$sleave a review%2$s on WordPress.org? We're looking foward to all our users' feedback!"
 msgstr ""
 
 #: includes/admin/welcome-screen/component-header.php:12
 msgid "LSX"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-header.php:20
-msgid "%1$sEnjoying LSX?%2$s Why not %3$sleave a review%4$s on WordPress.org? We're looking foward to all our users' feedback!"
-msgstr ""
-
-#: includes/admin/welcome-screen/component-header.php:34
+#: includes/admin/welcome-screen/component-header.php:19
 msgid "Built to enrich your WordPress experience"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-header.php:35
+#: includes/admin/welcome-screen/component-header.php:20
 msgid "Whether you're using LSX for your personal blog, as the platform for a powerful WooCommerce store or as the foundation for your own child-theme, you'll find it's the perfect fit for WordPress."
 msgstr ""
 
-#: includes/admin/welcome-screen/component-header.php:41
-msgid "LSX News &amp; Documentation"
+#: includes/admin/welcome-screen/component-header.php:26
+msgid "Use LSX with our %1$sTour Operator Plugin%2$s to create the ultimate tour operators website!"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-header.php:45
-msgid "Recent News"
+#: includes/admin/welcome-screen/component-header.php:37
+msgid "Get support"
 msgstr ""
 
-#: includes/admin/welcome-screen/component-header.php:71
-msgid "Documentation"
+#: includes/admin/welcome-screen/component-header.php:43
+msgid "You'll find information on how to use and customize the LSX theme in our %1$sdocumentation%2$s section. However, please do %3$scontact us%4$s for support should you still find yourself unable to achieve your needs."
 msgstr ""
 
-#: includes/admin/welcome-screen/component-header.php:75
-msgid "Installation &amp; configuration"
+#: includes/admin/welcome-screen/component-header.php:54
+msgid "Get in touch"
 msgstr ""
