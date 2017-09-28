@@ -26,7 +26,7 @@ global $product; ?>
 <div class="lsx-woocommerce-slot">
 	<a href="<?php echo esc_url( $product->get_permalink() ); ?>">
 		<figure class="lsx-woocommerce-avatar">
-			<?php echo $product->get_image(); ?>
+			<?php echo $product->get_image( 'lsx-thumbnail-square' ); ?>
 		</figure>
 	</a>
 

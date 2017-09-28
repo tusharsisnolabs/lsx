@@ -9,7 +9,7 @@ global $comment, $_product, $rating; ?>
 	<div class="lsx-woocommerce-review-flex">
 		<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 			<figure class="lsx-woocommerce-avatar">
-				<?php echo $_product->get_image(); ?>
+				<?php echo $_product->get_image( 'lsx-thumbnail-square' ); ?>
 			</figure>
 		</a>
 
