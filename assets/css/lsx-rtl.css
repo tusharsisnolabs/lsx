@@ -258,7 +258,7 @@ p:empty { display: none; }
 
 .gallery .gallery-caption { font-size: 13px; margin: 1.2rem auto 0 !important; max-width: 150px; }
 
-.slick-lightbox-close { left: 32px; top: 32px; }
+.slick-lightbox-close { left: 32px; top: 47px; }
 
 .gallery .slick-arrow, .slick-lightbox-inner .slick-arrow { background: transparent; border-radius: 50%; border-style: solid; border-width: 2px; font: 0/0 a; height: 4rem; margin-top: calc((2.25rem - 17px) / 2); padding: 0; position: absolute; text-shadow: none; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); transition: border 300ms ease; width: 4rem; z-index: 3; }
 
