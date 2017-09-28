@@ -44,9 +44,10 @@ if ( ! function_exists( 'lsx_scripts_add_styles' ) ) :
 		wp_style_add_data( 'bootstrap', 'rtl', 'replace' );
 
 		wp_enqueue_style( 'slick', get_template_directory_uri() . '/assets/css/vendor/slick.css', array(), LSX_VERSION, null );
+		wp_enqueue_style( 'slick-lightbox', get_template_directory_uri() . '/assets/css/vendor/slick-lightbox.css', array( 'slick' ), LSX_VERSION, null );
 
 		wp_enqueue_style( 'lsx_main_style', get_template_directory_uri() . '/style.css', array(), LSX_VERSION );
-		wp_enqueue_style( 'lsx_main', get_template_directory_uri() . '/assets/css/lsx.css', array( 'lsx_main_style', 'fontawesome', 'bootstrap', 'slick' ), LSX_VERSION );
+		wp_enqueue_style( 'lsx_main', get_template_directory_uri() . '/assets/css/lsx.css', array( 'lsx_main_style', 'fontawesome', 'bootstrap', 'slick', 'slick-lightbox' ), LSX_VERSION );
 		wp_style_add_data( 'lsx_main', 'rtl', 'replace' );
 	}
 
@@ -209,9 +210,10 @@ if ( ! function_exists( 'lsx_scripts_add_scripts' ) ) :
 		wp_enqueue_script( 'imagesLoaded', get_template_directory_uri() . '/assets/js/vendor/imagesloaded.pkgd.min.js', array( 'masonry' ), LSX_VERSION, true );
 		wp_enqueue_script( 'scrolltofixed', get_template_directory_uri() . '/assets/js/vendor/jquery-scrolltofixed-min.js', array( 'jquery' ), LSX_VERSION, true );
 		wp_enqueue_script( 'slick', get_template_directory_uri() . '/assets/js/vendor/slick.min.js', array( 'jquery' ), LSX_VERSION, true );
+		wp_enqueue_script( 'slick-lightbox', get_template_directory_uri() . '/assets/js/vendor/slick-lightbox.min.js', array( 'jquery', 'slick' ), LSX_VERSION, true );
 		wp_enqueue_script( 'picturefill', get_template_directory_uri() . '/assets/js/vendor/picturefill.min.js', array(), LSX_VERSION, true );
 
-		wp_enqueue_script( 'lsx_script', get_template_directory_uri() . '/assets/js/lsx.min.js', array( 'jquery', 'platform', 'bootstrap', 'masonry', 'imagesLoaded', 'scrolltofixed', 'slick', 'picturefill' ), LSX_VERSION, true );
+		wp_enqueue_script( 'lsx_script', get_template_directory_uri() . '/assets/js/lsx.min.js', array( 'jquery', 'platform', 'bootstrap', 'masonry', 'imagesLoaded', 'scrolltofixed', 'slick', 'slick-lightbox', 'picturefill' ), LSX_VERSION, true );
 
 		$param_array = array(
 			'columns' => apply_filters( 'lsx_archive_column_number', 3 ),

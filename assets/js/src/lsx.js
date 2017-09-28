@@ -293,6 +293,16 @@ var lsx = Object.create( null );
 	};
 
 	/**
+	 * Slider Lightbox.
+	 *
+	 * @package    lsx
+	 * @subpackage scripts
+	 */
+	lsx.build_slider_lightbox = function() {
+		$( '.gallery' ).slickLightbox();
+	};
+
+	/**
 	 * Init WooCommerce slider.
 	 *
 	 * @package	lsx
@@ -425,8 +435,6 @@ var lsx = Object.create( null );
 
 		lsx.set_main_menu_as_fixed();
 
-		lsx.init_wc_slider();
-
 		lsx.remove_gallery_img_width_height();
 
 	} );
@@ -445,6 +453,9 @@ var lsx = Object.create( null );
 
 		lsx.set_search_form_effect_mobile();
 		lsx.search_form_prevent_empty_submissions();
+
+		lsx.init_wc_slider();
+		lsx.build_slider_lightbox();
 
 		lsx.set_banner_effect_parallax();
 

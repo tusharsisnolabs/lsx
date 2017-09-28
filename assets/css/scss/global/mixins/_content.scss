@@ -265,6 +265,48 @@
 		}
 	}
 
+	.gallery {
+		.slick-dots {
+			& > li {
+				& > button { border-color: $color; }
+
+				&.slick-active > button { background-color: $color; }
+			}
+		}
+
+		.slick-arrow {
+			border-color: $color;
+			color: $color;
+
+			&:hover {
+				border-color: $hover;
+				color: $hover;
+			}
+
+			&.slick-disabled {
+				border-color: $breaker;
+				color: $breaker;
+			}
+		}
+	}
+
+	.slick-lightbox-inner {
+		.slick-arrow {
+			border-color: white;
+			color: white;
+
+			&:hover {
+				border-color: white;
+				color: white;
+			}
+
+			&.slick-disabled {
+				border-color: #ccc;
+				color: #ccc;
+			}
+		}
+	}
+
 	// Caldera Forms
 
 	.remodal-wrapper {
