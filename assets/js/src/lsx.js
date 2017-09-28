@@ -299,7 +299,7 @@ var lsx = Object.create( null );
 	 * @subpackage scripts
 	 */
 	lsx.build_slider_lightbox = function() {
-		$( '.gallery' ).slickLightbox();
+		$( 'body:not(.single-tour-operator) .gallery' ).slickLightbox();
 	};
 
 	/**
