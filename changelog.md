@@ -1,8 +1,40 @@
 ## LSX Changelog
 
 ### 2.0.0
-* New totally awesome version!
-* Dev - Restricting the #searchform so it does not submit empty searches.
+* New totally awesome version! The visual was fully redesigned
+* Dev - Restricting the #searchform so it does not submit empty searches
+* Dev - Changed WordPress versions: Requires at least: 4.3, Tested up to: 4.8, Stable tag: 4.8
+* Dev - New project structure
+* Dev - Update CSS’s vendors structure
+* Dev - Added .editorconfig specs for unifying the coding style for different editors and IDEs
+* Dev - LSX extensions integration updated
+* Dev - WooCommerce integration updated
+* Dev - Caldera Forms integration updated
+* Dev - Removed reference to glyphicons
+* Dev - Modernizer lib removed
+* Dev - Jetpack integration removed
+* Dev - BudyPress integration removed
+* Dev - Job Manager integration removed
+* Dev - Tribe Events integration removed
+* Dev - Sensei integration removed
+* Dev - Removed from compiled Bootstrap: Glyphicons and Jumbotron
+* Dev - Removed from compiled Bootstrap: Carousel
+* Dev - Removed from compiled Bootstrap: Advanced buttons, Carousel, Affix
+* Dev - Removed from compiled Bootstrap: Breadcrumbs, Pagination, Progress Bars, List Groups, Wells
+* Dev - New filter available (for LSX Blog Customizer): lsx_blog_display_text_on_list
+* Dev - New global class .lsx-full-width-base
+* Dev - New global class .lsx-full-width-base-small
+* Dev - New global class .lsx-title
+* Dev - New template full-width-no-margins
+* Fix - Fixed the display of top menu right without the top menu left
+* Fix - Fixed issues from GitHub (many issues)
+* Fix - Fixed issues from Code Sniffer (PHP and WordPress)
+* Tweak - Added WordPress core pagination
+* Tweak - Load RTL style from child theme
+* Tweak - Added selective refresh in the LSX Customizer options
+* Tweak - Added LSX Sharing integration
+* Tweak - Fonts optimization (try first load theme fonts; only after - if necessary - load google fonts)
+* Tweak - Enabled shortcode for text widget
 
 ### 1.8.5
 * Fix - Footer widgets changed breakpoint
